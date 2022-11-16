@@ -1,10 +1,10 @@
 .sidebar{
   width:18%;
   min-width:180px ;
-  height:87vh;
-  background-color:aliceblue;
-  overflow: auto;
 
+  background-color:aliceblue;
+  height:87vh;
+  overflow:auto;
 }
 .main{
   width:100% ;
@@ -16,3 +16,50 @@
   background-color: aliceblue;
   height: 13vh;
 }
+.dashboard-card{
+  background-color:#f7f8f9;
+}
+.admin-card{
+  background-color:#e4e4e4;
+
+}
+.admin-dashboard-card{
+  background-color:rgb(47, 47, 233);
+  border: 1px solid rgb(47, 47, 233);
+}
+.employe-card{
+  background-color:rgb(45, 45, 197);
+}
+.employe-dashboard-card{
+  background-color:#ced0d1;
+  border: 1px solid #ced0d1;
+}
+.company-card{
+  background-color: darkorange;
+}
+.leave-card{
+  background-color: rgb(208, 78, 78);
+}
+.salary-card{
+  background-color: rgb(35, 91, 35);
+}
+.links{
+  text-decoration: none;
+}
+.links:hover{
+  background-color: white;
+}
+.admin-dashboard-card:hover{
+background-color: white;
+color:rgb(47, 47, 233) ;
+border: 1px solid rgb(47, 47, 233);
+transition: 0.5s;
+box-shadow: 5px 5px 10px lightgray;
+}
+.employe-dashboard-card:hover{
+  background-color: white;
+  border: 1px solid black;
+  transition: 0.5s;
+  box-shadow: 5px 5px 10px lightgray;
+}
+

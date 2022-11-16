@@ -26,3 +26,9 @@ sidebar-item{
 /* .bgrd{
     background-color:aliceblue;
 } */
+.position-absolute{
+   bottom: 10px;
+}
+.company-icon-color{
+color:  darkorange;
+}
