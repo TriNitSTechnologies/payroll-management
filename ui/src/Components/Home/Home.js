@@ -14,19 +14,21 @@ function Home() {
             <div>
               <b> Welcome Admin</b>
             </div>
-            <div>Sun,11,2022</div>
+            <div>{new Date().toDateString()}</div>
           </div>
         </div>
         <div className="d-flex mt-4">
           <div className="w-50">
             <div className="card me-3">
-              <div className="d-flex justify-content-between p-3 ">
-                <div> <span className="back p-2 rounded shadow ms-2"> <BsHouseFill /></span> Home / Dashboard</div>
-                <div className="fs-4">Admin Dashboard</div>
+              <div className="d-flex justify-content-between p-3 shadow">
+                <div> <span className="back rounded shadow ms-2 p-2"> <BsHouseFill /></span> Home / Dashboard</div>
+                <div className="fs-5">
+                  <b>Admin Dashboard</b>
+                </div>
               </div>
             </div>
             <div className="d-flex ">
-              <div className="employe-card rounded  w-50 p-2 text-white me-3 mt-3">
+              <div className="employe-card rounded  w-50 p-2 text-white me-3 mt-3 shadow">
                 <div className="d-flex justify-content-between">
                   <div className="fs-4">
                     <div>
@@ -43,7 +45,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="d-flex justify-content-between w-50 company-card fs-4 p-2 rounded text-white mt-3 me-3">
+              <div className="d-flex justify-content-between w-50 company-card fs-4 p-2 rounded text-white mt-3 me-3 shadow">
                 <div>
                   <div>Companies</div>
                   <div>30</div>
@@ -72,7 +74,7 @@ function Home() {
               </Link>
             </div>
             <div className="d-flex mt-4 text-white">
-              <div className="w-50 d-flex justify-content-between leave-card p-3 fs-4 me-3 rounded">
+              <div className="w-50 d-flex justify-content-between leave-card p-3 fs-4 me-3 rounded shadow">
                 <div>
                 <div>Leaves</div>
                 <div>9</div>
@@ -83,7 +85,7 @@ function Home() {
                   </div>
                 </div>
               </div>
-              <div className="d-flex justify-content-between w-50 rounded p-3 fs-4 salary-card">
+              <div className="d-flex justify-content-between w-50 rounded p-3 fs-4 salary-card shadow">
                 <div>
                   <div>Salary</div>
                   <div>$5.8M</div>
