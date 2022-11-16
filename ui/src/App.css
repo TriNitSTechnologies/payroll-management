@@ -1,0 +1,15 @@
+.sidebar{
+  width:18%;
+  min-width:180px ;
+  height:;
+  background-color:aliceblue;
+
+}
+.main{
+  width:100% ;
+  background-color:rgb(238, 241, 244);
+}
+.head{
+  background-color: aliceblue;
+  height: 13vh;
+}

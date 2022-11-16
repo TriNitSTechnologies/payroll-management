@@ -1,0 +1,27 @@
+.back{
+    background-color: rgb(220, 213, 243);
+    color: rgb(9, 9, 133);
+    border: none;
+}
+.selected:hover{
+    background-color:#c4dcf2 ;
+    /* color: blueviolet; */
+}
+/* .color:hover{
+    color: blueviolet;
+} */
+sidebar-item{
+    padding: 3px;
+}
+/* .weit{
+    width:18%;
+    min-width:180px ;
+    height: 90vh;
+
+} */
+.bottum{
+    margin-bottom:160px ;
+}
+/* .bgrd{
+    background-color:aliceblue;
+} */
