@@ -1,6 +1,5 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
-// import { object } from "yup/lib/locale";
 function Report() {
   return (
     <div>
@@ -18,11 +17,11 @@ function Report() {
       </div>
       <Formik
         initialValues={{
-          CompanyName: "",
-          EmployeeNo: "",
-          Dom: "",
-          NoOfWorkingDays: "",
-          GrossSalary: "",
+          companyName: "",
+          empNo: "",
+          paymentMonth: "",
+          noOfWorkingDays: "",
+          grossSalary: "",
         }}
         validationSchema={Yup.object({
           CompanyName: Yup.string().trim().required("Companyname is required"),
@@ -49,10 +48,10 @@ function Report() {
                     className="form-control p-3 "
                     placeholder="Company Name"
                     type="text"
-                    name="CompanyName"
+                    name="companyName"
                   />
                   <div className="text-danger">
-                    <ErrorMessage name="CompanyName" />
+                    <ErrorMessage name="companyName" />
                   </div>
                 </div>
                 <div className="col-5  m-2">
@@ -60,10 +59,10 @@ function Report() {
                     className="form-control p-3"
                     placeholder="Employee No"
                     type="text"
-                    name="EmployeeNo"
+                    name="empNo"
                   />
                   <div className="text-danger">
-                    <ErrorMessage name="EmployeeNo" />
+                    <ErrorMessage name="empNo" />
                   </div>
                 </div>
               </div>
@@ -73,10 +72,10 @@ function Report() {
                     className="form-control p-3"
                     placeholder="Date Of Month /year"
                     type="date"
-                    name="Dom"
+                    name="paymentMonth"
                   />
                   <div className="text-danger">
-                    <ErrorMessage name="Dom" />
+                    <ErrorMessage name="paymentMonth" />
                   </div>
                 </div>
                 <div className="col-5  m-2">
@@ -84,10 +83,10 @@ function Report() {
                     className="form-control p-3"
                     placeholder="Number Of Working Days"
                     type="text"
-                    name="NoOfWorkingDays"
+                    name="noOfWorkingDays"
                   />
                   <div className="text-danger">
-                    <ErrorMessage name="NoOfWorkingDays" />
+                    <ErrorMessage name="noOfWorkingDays" />
                   </div>
                 </div>
               </div>
@@ -97,10 +96,10 @@ function Report() {
                     className="form-control p-3"
                     placeholder="Gross Salary"
                     type="text"
-                    name="GrossSalary"
+                    name="grossSalary"
                   />
                   <div className="text-danger">
-                    <ErrorMessage name="GrossSalary" />
+                    <ErrorMessage name="grossSalary" />
                   </div>
                 </div>
                 <div className="col-5  m-2"></div>
