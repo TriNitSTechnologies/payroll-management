@@ -1,13 +1,15 @@
 .sidebar{
   width:18%;
   min-width:180px ;
-  height:;
+  height:87vh;
   background-color:aliceblue;
+  overflow: auto;
 
 }
 .main{
   width:100% ;
   background-color:rgb(238, 241, 244);
+  height:87vh;
   overflow: auto;
 }
 .head{
