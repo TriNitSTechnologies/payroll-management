@@ -1,6 +1,7 @@
 import "./Header.css";
 import logo from "../Image/logo-dark.png";
 import photo from "../Image/pexels-photo.jpeg";
+import { Link } from "react-router-dom";
 function Header() {
   return (
     <div className="border d-flex shadow">
@@ -24,7 +25,8 @@ function Header() {
           <div className="m-3 ms-2">
             <img src={photo} alt="circle" className="rounded-circle round" />
           </div>
-          <div className="fw-bold m-4 ms-1">Trinits Technologies</div>
+          <div className="fw-bold m-4 ms-1"> Trinits Technologies</div>
+         <Link to='/Loginpage'><button>login</button></Link> 
           </div>
         </div>
       </div>

@@ -9,6 +9,9 @@ import Company from "./Components/Company/Company";
 import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
+import Loginpage from "./Components/LoginPage/Login";
+import Forgatpasswordpage from "./Components/LoginPage/ForgotPassword";
+import Register from "./Components/LoginPage/Register";
 
 function App() {
   return (
@@ -29,6 +32,18 @@ function App() {
 
             <Route path="/report">
               <Report />
+            </Route>
+            <Route path="/Forgatpasswordpage">
+              <Forgatpasswordpage />
+            </Route>
+            <Route path="/Register">
+              <Register />
+            </Route>
+            {/* <Route path="/Loginpage">
+              <Loginpage />
+            </Route> */}
+            <Route path="/Loginpage">
+              <Loginpage />
             </Route>
             <Route path="/company">
               <Company />
