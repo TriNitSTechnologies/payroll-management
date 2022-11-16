@@ -1,9 +1,8 @@
 .sidebar{
   width:18%;
   min-width:180px ;
-  height:;
   background-color:aliceblue;
-
+  height:87vh
 }
 .main{
   width:100% ;
@@ -13,3 +12,34 @@
   background-color: aliceblue;
   height: 13vh;
 }
+.dashboard-card{
+  background-color:#f7f8f9;
+  
+
+}
+.admin-card{
+  background-color:#e4e4e4;
+
+}
+.admin-dashboard-card{
+  background-color:rgb(47, 47, 233);
+}
+.employe-card{
+  background-color:rgb(45, 45, 197);
+}
+.employe-dashboard-card{
+  background-color:#ced0d1;
+}
+.company-card{
+  background-color: darkorange;
+}
+.leave-card{
+  background-color: rgb(208, 78, 78);
+}
+.salary-card{
+  background-color: rgb(35, 91, 35);
+}
+.links{
+  text-decoration: none;
+}
+
