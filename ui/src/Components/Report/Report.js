@@ -1,14 +1,24 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import { BsHouseFill } from "react-icons/bs";
 function Report() {
   return (
     <div>
-      {/* eMyB6qGRzMGUXCu */}
-      {/* trinitstechnologies@gmail.com */}
       <div className="card m-4 pay shadow ">
         <div className="card-body d-flex justify-content-between ">
           <div>
-            <small className="fs-6">Home / Reports</small>
+            <small className="fs-6">
+              <button className="rounded shadow back me-2 ">
+                <Link to="/" className="text-decoration-none back">
+                  <BsHouseFill />
+                </Link>
+              </button>
+              <Link to="/" className="text-decoration-none text-dark me-1">
+                Home
+              </Link>
+               / Reports
+            </small>
           </div>
           <div>
             <h5>Payslip Report</h5>
@@ -24,13 +34,15 @@ function Report() {
           grossSalary: "",
         }}
         validationSchema={Yup.object({
-          companyName: Yup.string().trim().required("Companyname is required"),
-          empNo: Yup.string().trim().required("EmployeeNo is required"),
-          paymentMonth: Yup.string().trim().required("date of month/year is required"),
+          companyName: Yup.string().trim().required("Company name is required"),
+          empNo: Yup.string().trim().required("Employee no is required"),
+          paymentMonth: Yup.string()
+            .trim()
+            .required("date of month/year is required"),
           noOfWorkingDays: Yup.string()
             .trim()
-            .required("No Of Working Days is required"),
-            grossSalary: Yup.string().trim().required("Gross Salary is required"),
+            .required("No of working days is required"),
+          grossSalary: Yup.string().trim().required("Gross salary is required"),
         })}
         onSubmit={(values) => {
           alert(JSON.stringify(values));
@@ -39,7 +51,7 @@ function Report() {
         <Form>
           <div className="card m-4 shadow ">
             <div className="card-header">
-              <h5>Payslip Details</h5>
+              <h5>Payslip details</h5>
             </div>
             <div className="card-body pay  ">
               <div className="d-flex  justify-content-evenly">
@@ -107,7 +119,9 @@ function Report() {
             </div>
           </div>
           <div className=" ms-4 mb-2">
-            <button className="btn btn-primary btn-lg" type="submit">Get Payslip</button>
+            <button className="btn btn-primary btn-lg" type="submit">
+              Get Payslip
+            </button>
           </div>
         </Form>
       </Formik>
