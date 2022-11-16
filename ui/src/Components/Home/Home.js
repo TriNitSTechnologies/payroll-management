@@ -3,7 +3,7 @@ import { MdOutlinePeopleAlt } from "react-icons/md";
 import { GrMoney } from "react-icons/gr";
 import { Link } from "react-router-dom";
 import { ImExit } from "react-icons/im"
-
+import { BsHouseFill } from "react-icons/bs";
 function Home() {
    
   return (
@@ -21,7 +21,7 @@ function Home() {
           <div className="w-50">
             <div className="card me-3">
               <div className="d-flex justify-content-between p-3 ">
-                <div>Home / Dashboard</div>
+                <div> <span className="back p-2 rounded shadow ms-2"> <BsHouseFill /></span> Home / Dashboard</div>
                 <div className="fs-4">Admin Dashboard</div>
               </div>
             </div>
