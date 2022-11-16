@@ -3,9 +3,8 @@
   min-width:180px ;
 
   background-color:aliceblue;
-  height:87vh
-  overflow: auto;
-
+  height:87vh;
+  overflow:auto;
 }
 .main{
   width:100% ;
