@@ -24,13 +24,13 @@ function Report() {
           grossSalary: "",
         }}
         validationSchema={Yup.object({
-          CompanyName: Yup.string().trim().required("Companyname is required"),
-          EmployeeNo: Yup.string().trim().required("EmployeeNo is required"),
-          Dom: Yup.string().trim().required("date of month/year is required"),
-          NoOfWorkingDays: Yup.string()
+          companyName: Yup.string().trim().required("Companyname is required"),
+          empNo: Yup.string().trim().required("EmployeeNo is required"),
+          paymentMonth: Yup.string().trim().required("date of month/year is required"),
+          noOfWorkingDays: Yup.string()
             .trim()
             .required("No Of Working Days is required"),
-          GrossSalary: Yup.string().trim().required("Gross Salary is required"),
+            grossSalary: Yup.string().trim().required("Gross Salary is required"),
         })}
         onSubmit={(values) => {
           alert(JSON.stringify(values));
@@ -38,7 +38,7 @@ function Report() {
       >
         <Form>
           <div className="card m-4 shadow ">
-            <div class="card-header">
+            <div className="card-header">
               <h5>Payslip Details</h5>
             </div>
             <div className="card-body pay  ">
@@ -107,7 +107,7 @@ function Report() {
             </div>
           </div>
           <div className=" ms-4 mb-2">
-            <button className="btn btn-primary btn-lg ">Get Payslip</button>
+            <button className="btn btn-primary btn-lg" type="submit">Get Payslip</button>
           </div>
         </Form>
       </Formik>
