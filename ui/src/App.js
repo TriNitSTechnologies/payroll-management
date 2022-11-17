@@ -17,7 +17,6 @@ function App() {
       <div className="head">
         <Header />
       </div>
-
       <div className="d-flex">
         <div className="sidebar">
           <Sidebar />
@@ -27,7 +26,6 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-
             <Route path="/report">
               <Report />
             </Route>
@@ -43,12 +41,9 @@ function App() {
             <Route path="/documents">
               <Documents />
             </Route>
-
             <Route path="/appointment">
               <Appointment />
             </Route>
-
-            
           </Switch>
         </div>
       </div>
