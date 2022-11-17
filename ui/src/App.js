@@ -9,6 +9,7 @@ import Company from "./Components/Company/Company";
 import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
+import Appointment from "./Components/Documents/Appointment";
 
 function App() {
   return (
@@ -41,6 +42,9 @@ function App() {
             </Route>
             <Route path="/documents">
               <Documents />
+            </Route>
+            <Route path='/appointment'>
+              <Appointment/>
             </Route>
           </Switch>
         </div>
