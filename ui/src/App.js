@@ -9,6 +9,7 @@ import Company from "./Components/Company/Company";
 import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
+import Appointment from "./Components/Appointment/appointment";
 import { useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
@@ -29,7 +30,6 @@ function handlesidebarstatus(){
       <div className="head">
         <Header handlesidebarstatus={handlesidebarstatus}/>
       </div>
-
       <div className="d-flex">
         <div className={sidebarclass}>
           <Sidebar/>
@@ -39,7 +39,6 @@ function handlesidebarstatus(){
             <Route path="/" exact>
               <Home />
             </Route>
-
             <Route path="/report">
               <Report />
             </Route>
@@ -64,6 +63,9 @@ function handlesidebarstatus(){
             </Route>
             <Route path="/documents">
               <Documents />
+            </Route>
+            <Route path="/appointment">
+              <Appointment />
             </Route>
           </Switch>
         </div>

@@ -1,9 +1,10 @@
 .sidebar{
-  width:220px;
+  width:18%;
+  min-width:180px ;
   background-color:aliceblue;
-  height:87vh;
-  overflow:auto;
 }
+
+
 .sidebar-collapse{
   width:65px ;
   overflow: hidden;
