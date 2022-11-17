@@ -33,7 +33,7 @@ export default function Appointment() {
       })}
       onSubmit={(values) => {
         alert(JSON.stringify(values));
-      }}
+      }}  
     >
       <div>
         <Form>
@@ -48,12 +48,12 @@ export default function Appointment() {
             </div>
           </div>
           <div className="card m-4 shadow ">
-            <div class="card-header">
+            <div className="card-header">
               <h5>Appointment Letter</h5>
             </div>
             <div className="card-body pay  ">
               <div className="d-flex  justify-content-evenly">
-                <div className="col-5 m-2 ">
+                <div className="col-5 m--">
                   <Field
                     className="form-control p-3  "
                     name="CompanyName"
@@ -188,14 +188,14 @@ export default function Appointment() {
               <div className="d-flex justify-content-evenly">
                 <div className="col-5  ">
                  
-              <div class="form-check  ">
+              <div className="form-check  ">
                 <input
                   className="form-check-input "
                   type="checkbox"
                
-                  id="defaultCheck1"
+                  
                 />
-                <label className="form-check-label  text-primary text-opacity-75" about="defaultCheck1">
+                <label className="form-check-label  text-primary text-opacity-75">
                   Include Xpayroll generated salary structure from annual CTC
                 </label>
               </div>
