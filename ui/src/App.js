@@ -39,9 +39,7 @@ function App() {
             <Route path="/Register">
               <Register />
             </Route>
-            {/* <Route path="/Loginpage">
-              <Loginpage />
-            </Route> */}
+            
             <Route path="/Loginpage">
               <Loginpage />
             </Route>
