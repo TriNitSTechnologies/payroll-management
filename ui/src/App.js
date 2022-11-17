@@ -33,7 +33,7 @@ function App() {
             <Route path="/report">
               <Report />
             </Route>
-            <Route path="/Forgatpasswordpage">
+            <Route path="/forgot-password">
               <Forgatpasswordpage />
             </Route>
             <Route path="/Register">
