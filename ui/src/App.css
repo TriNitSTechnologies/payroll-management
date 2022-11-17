@@ -1,10 +1,13 @@
 .sidebar{
-  width:18%;
-  min-width:180px ;
-
+  width:220px;
+  /* min-width:180px ; */
   background-color:aliceblue;
   height:87vh;
   overflow:auto;
+}
+.sidebar-collapse{
+  width:65px ;
+  overflow: hidden;
 }
 .main{
   width:100% ;

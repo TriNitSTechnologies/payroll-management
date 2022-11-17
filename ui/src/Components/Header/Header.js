@@ -1,7 +1,8 @@
 import "./Header.css";
 import logo from "../Image/logo-dark.png";
 import photo from "../Image/pexels-photo.jpeg";
-function Header() {
+
+function Header({handlesidebarstatus}) {
   return (
     <div className="border d-flex shadow">
       <div className="d-flex">
@@ -12,12 +13,13 @@ function Header() {
             className="logo m-2"
           />
         </div>
-          <div className="dash  ms-4">
-            <i className="bi bi-list "></i>
-          </div>
+        
+        <div className="dash  ms-4" onClick={handlesidebarstatus}>
+          <i className="bi bi-list "></i>
         </div>
-        <div className="flex ">
-            <div className="float-end d-flex">
+      </div>
+      <div className="flex ">
+        <div className="float-end d-flex">
           <div className="notification  ms-4">
             <i className="bi bi-bell"></i>
           </div>
@@ -25,10 +27,10 @@ function Header() {
             <img src={photo} alt="circle" className="rounded-circle round" />
           </div>
           <div className="fw-bold m-4 ms-1">Trinits Technologies</div>
-          </div>
         </div>
       </div>
-  
+    </div>
+    
   );
 }
 export default Header;

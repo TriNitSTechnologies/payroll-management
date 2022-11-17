@@ -9,17 +9,26 @@ import Company from "./Components/Company/Company";
 import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
+import { useState } from "react";
 
 function App() {
+const[sidebarstatus,setSidebarStatus] = useState(false);
+const sidebarclass = sidebarstatus ? 'sidebar': "sidebar sidebar-collapse";
+function handlesidebarstatus(){
+  setSidebarStatus((previousstate)=>{
+    return !previousstate;
+  })
+}
+
   return (
     <div>
       <div className="head">
-        <Header />
+        <Header handlesidebarstatus={handlesidebarstatus}/>
       </div>
 
       <div className="d-flex">
-        <div className="sidebar">
-          <Sidebar />
+        <div className={sidebarclass}>
+          <Sidebar/>
         </div>
         <div className="main">
           <Switch>
