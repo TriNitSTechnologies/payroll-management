@@ -62,7 +62,7 @@ export default function Loginpage() {
                 </span>
                 <span className="p-2">
                   {" "}
-                  <Link to="/Forgatpasswordpage">Forgot Password ?</Link>
+                  <Link to="/forgot-password">Forgot Password ?</Link>
                 </span>
               </div>
 
