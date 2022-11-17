@@ -2,7 +2,7 @@
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 
-export default function Forgatpasswordpage() {
+export default function ForgotPassword() {
   return (
     <>
       <Formik
@@ -12,14 +12,13 @@ export default function Forgatpasswordpage() {
         }}
         validationSchema={Yup.object({
           
-          conformationemail: Yup.string().required("Enter your email").trim(),
+          conformationemail: Yup.string().required("Email is required").trim(),
          
         })}
-        onSubmit={(values, { setSubmitting }) => {
-          setTimeout(() => {
+        onSubmit={(values) => {
+          
             alert(JSON.stringify(values, null, 2));
-            setSubmitting(false);
-          }, 400);
+            
         }}
       >
         <div className="formbg ">

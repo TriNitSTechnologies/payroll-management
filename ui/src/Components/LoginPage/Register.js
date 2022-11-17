@@ -99,7 +99,7 @@ export default function Register() {
               </p>
             </div>
             <p className="text-center">
-              Already have an account?<Link to="/loginpage"> Login</Link>{" "}
+              Already have an account?<Link to="/login"> Login</Link>{" "}
             </p>
           </Form>
         </div>

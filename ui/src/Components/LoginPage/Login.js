@@ -5,7 +5,7 @@ import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 
-export default function Loginpage() {
+export default function Login() {
   return (
     <>
       <div className="w-100">
@@ -81,7 +81,7 @@ export default function Loginpage() {
                 </p>
               </div>
               <p className="text-center">
-                Don't have an account yet?<Link to="/Register"> Register </Link>
+                Don't have an account yet?<Link to="/register"> Register </Link>
               </p>
             </Form>
           </div>

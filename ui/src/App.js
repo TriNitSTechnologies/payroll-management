@@ -9,9 +9,9 @@ import Company from "./Components/Company/Company";
 import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
-import Loginpage from "./Components/LoginPage/Login";
-import Forgatpasswordpage from "./Components/LoginPage/ForgotPassword";
 import Register from "./Components/LoginPage/Register";
+import Login from "./Components/LoginPage/Login";
+import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 
 function App() {
   return (
@@ -34,14 +34,14 @@ function App() {
               <Report />
             </Route>
             <Route path="/forgot-password">
-              <Forgatpasswordpage />
+              <ForgotPassword />
             </Route>
-            <Route path="/Register">
+            <Route path="/register">
               <Register />
             </Route>
             
-            <Route path="/Loginpage">
-              <Loginpage />
+            <Route path="/login">
+              <Login />
             </Route>
             <Route path="/company">
               <Company />
