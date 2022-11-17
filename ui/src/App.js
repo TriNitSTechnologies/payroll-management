@@ -13,6 +13,7 @@ import { useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
+import MainPage from "./Components/MainPage/MainPage";
 
 
 function App() {
@@ -38,6 +39,9 @@ function handlesidebarstatus(){
           <Switch>
             <Route path="/" exact>
               <Home />
+            </Route>
+            <Route path="/Mainpage">
+              <MainPage />
             </Route>
 
             <Route path="/report">
