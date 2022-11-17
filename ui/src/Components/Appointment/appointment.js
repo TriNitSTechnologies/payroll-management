@@ -31,7 +31,7 @@ export default function Appointment() {
         acceptanceLastDate: Yup.string().required("Acceptance date is Requried"),
         hrName: Yup.string().required("HR Name is requried"),
       })}
-      onSubmit={(values) => {
+      onSubmit={(values) =>{
         alert(JSON.stringify(values));
       }}
     >
