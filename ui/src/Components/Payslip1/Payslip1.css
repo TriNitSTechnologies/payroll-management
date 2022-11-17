@@ -1,0 +1,72 @@
+.mann{
+ 
+    background-color: rgba(192, 192, 192, 0.678)
+  }
+  .mann2{
+  
+  
+    background-color:white;
+   
+  
+  }
+  .header1{
+  
+    padding-top: 10vh;
+  }
+  
+  
+  .a{
+    color: firebrick;
+    font-weight: bold;
+  }
+  .b{
+    color: indigo;
+    font-weight: bold;
+  }
+  .c{
+    color: indianred;
+    font-weight: bold;
+  }
+  .body1{
+  
+  padding-top: 10vh;
+  }
+  .body1a {
+    color: indigo;
+    font-weight: bold;
+  }
+  .body1b{
+  
+    color: indigo;
+    font-weight: bold;
+  } 
+  .aa{
+    padding-left: 5vw;
+  }
+  .bb{
+  padding-left: 5vw;
+  }
+  .footer1{
+  
+  padding-top: 10vh;
+  }
+  tbody, td, tfoot, th, thead, tr {
+    border-width: 1px!important;
+  }
+  
+  .tthh{
+    font-weight: bolder;
+    font-size: 20px;
+  }
+  .hh{
+    height: 8vh;
+    font-size: 16px;
+    
+   
+  }
+  .net{
+    font-size: 20px;
+  }
+  .spn{
+    font-size: 17px;
+  }

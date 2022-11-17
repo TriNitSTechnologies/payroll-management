@@ -8,7 +8,7 @@ import "./Sidebar.css";
 import { Link } from "react-router-dom";
 function Sidebar() {
   return (
-    <div className="border weit h-100 shadow bgrd">
+    <div className="border weit h-100 shadow bgrd position-relative">
       <div className="selected d-flex mt-3 sidebar-item">
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
@@ -79,15 +79,15 @@ function Sidebar() {
           </Link>
         </div>
       </div>
-      <div className="selected d-flex mt-3 mb-3">
-        <div className="m-2 ms-3 ">
+      <div className="selected d-flex mt-3 w-100 p-2  position-absolute">
+        <div className=" ms-3 ">
           <button className="rounded shadow back">
             <Link to="/settings" className="text-decoration-none back">
               <AiFillSetting />
             </Link>
           </button>
         </div>
-        <div className="fw-semibold m-2 ">
+        <div className="fw-semibold ms-3">
           <Link to="/settings" className="text-decoration-none  text-dark">
             Settings
           </Link>
