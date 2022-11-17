@@ -69,7 +69,6 @@
 }
 .admin-card{
   background-color:#e4e4e4;
-
 }
 .admin-dashboard-card{
   background-color:rgb(47, 47, 233);
@@ -109,5 +108,11 @@ box-shadow: 5px 5px 10px lightgray;
   border: 1px solid black;
   transition: 0.5s;
   box-shadow: 5px 5px 10px lightgray;
+}
+.w-45{
+  width:49%;
+}
+.w-35{
+  width:24%
 }
 
