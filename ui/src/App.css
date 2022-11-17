@@ -1,73 +1,17 @@
 .sidebar{
   width:18%;
   min-width:180px ;
-  /* height:; */
   background-color:aliceblue;
-
+  height:87vh;
+  overflow:auto;
 }
 .main{
   width:100% ;
   background-color:rgb(238, 241, 244);
+  height:87vh;
+  overflow: auto;
 }
 .head{
   background-color: aliceblue;
   height: 13vh;
 }
-
-.appcss{
-  text-align: center;
-  margin: 20%;
-  }
-  .buttoncolor{
-    background-color: rgb(16, 162, 23);
-    width: 100%;
-    
-  }
-  .login-or{
-    color: #390c0c;
-    margin-bottom: 20px;
-    margin-top: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    position: relative;
-  
-  }
-  .fontstyless{
-  
-    color: #0b2a7f;
-    text-shadow: 50px;
-  }
-  
-  .formbg{
-    background-color: #f7f8f9;
-    width: 100%;
-    height: 100%;
-  }
-  .formdata{
-    
-    margin-left:10%;
-    
-  }
-  .or-line{
-    background-color: #c4bdbd;
-    height: 1px;
-    margin-top: 0;
-    margin-bottom: 0;
-    display: block;
-  }
-  .span-or{
-    background-color: #fff;
-    display:block;
-    left: 50%;
-    margin-left: -20px;
-    position: absolute;
-    text-align: center;
-    text-transform: uppercase;
-    top:0;
-    width: 42px;
-  }
-  
-  
-  
-  
-  

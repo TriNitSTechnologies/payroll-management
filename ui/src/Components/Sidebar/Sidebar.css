@@ -3,6 +3,7 @@
     color: rgb(9, 9, 133);
     border: none;
 }
+
 .selected:hover{
     background-color:#c4dcf2 ;
     /* color: blueviolet; */
@@ -25,3 +26,9 @@ sidebar-item{
 /* .bgrd{
     background-color:aliceblue;
 } */
+.position-absolute{
+   bottom: 10px;
+}
+.company-icon-color{
+color:  darkorange;
+}
