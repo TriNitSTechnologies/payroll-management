@@ -1,0 +1,46 @@
+.maindata{
+    display: flex;
+    justify-content: space-between;
+    
+    
+  }
+  .icondata{
+    font-size: 20px;
+    color: blue;
+   
+  }
+  
+  .widthinc{
+    height: 10vh;
+   
+  }
+  .data{
+    display: flex;
+    justify-content: space-between;
+    width: 95vw;
+  
+  }
+  .buttonClass{
+    width: 15vw;
+   
+  }
+  
+  .updatedata{
+    background-color: rgb(7, 194, 7);
+    border: 3px solid green;
+    color: white;
+    
+  }
+  
+  
+  
+  
+  .w{
+   height: 8vh;
+   background-color: blanchedalmond;
+  }
+  .tabledata{
+    width: 100%;
+    
+  }
+  

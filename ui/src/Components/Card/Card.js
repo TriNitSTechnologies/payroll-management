@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import axios from "axios";
 import trinits from '../Image/photo_2022-11-16_13-15-16.jpg'
+import './Card.css'
 
 import { Link } from "react-router-dom";
 

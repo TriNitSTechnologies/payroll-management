@@ -6,6 +6,7 @@ import { BsFillGridFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { IoAddSharp } from "react-icons/io5";
+import './Company.css'
 
 
 
