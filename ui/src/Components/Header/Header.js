@@ -26,7 +26,9 @@ function Header({handlesidebarstatus}) {
           <div className="m-3 ms-2">
             <img src={photo} alt="circle" className="rounded-circle round" />
           </div>
+
           <div className="fw-bold m-4 ms-1">Trinits Technologies</div>
+
         </div>
       </div>
     </div>

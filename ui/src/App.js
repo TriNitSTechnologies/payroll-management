@@ -10,6 +10,10 @@ import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
 import { useState } from "react";
+import Register from "./Components/LoginPage/Register";
+import Login from "./Components/LoginPage/Login";
+import ForgotPassword from "./Components/LoginPage/ForgotPassword";
+
 
 function App() {
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -38,6 +42,16 @@ function handlesidebarstatus(){
 
             <Route path="/report">
               <Report />
+            </Route>
+            <Route path="/forgot-password">
+              <ForgotPassword />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            
+            <Route path="/login">
+              <Login />
             </Route>
             <Route path="/company">
               <Company />
