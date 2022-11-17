@@ -5,3 +5,118 @@
 }
 
 
+.sidebar-collapse{
+  width:65px ;
+  overflow: hidden;
+}
+.main{
+  width:100% ;
+  background-color:rgb(238, 241, 244);
+  height:87vh;
+  overflow: auto;
+}
+.head{
+  background-color: aliceblue;
+  height: 13vh;
+}
+
+  .buttoncolor{
+    background-color: rgb(16, 162, 23);
+    width: 100%;
+    
+  }
+  .login-or{
+    color: #390c0c;
+    margin-bottom: 20px;
+    margin-top: 20px;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    position: relative;
+  
+  }
+  .fontstyless{
+  
+    color: #0b2a7f;
+    text-shadow: 50px;
+  }
+  
+  .formbg{
+    background-color: #f7f8f9;
+    width: 100%;
+    height: 100%;
+  }
+  .formdata{
+    
+    margin-left: 30%;
+    width: 40%;
+  }
+  .or-line{
+    background-color: #c4bdbd;
+    height: 1px;
+    margin-top: 0;
+    margin-bottom: 0;
+    display: block;
+  }
+  .span-or{
+    background-color: #fff;
+    display:block;
+    left: 50%;
+    margin-left: -20px;
+    position: absolute;
+    text-align: center;
+    text-transform: uppercase;
+    top:0;
+    width: 42px;
+  }
+.dashboard-card{
+  background-color:#f7f8f9;
+}
+.admin-card{
+  background-color:#e4e4e4;
+}
+.admin-dashboard-card{
+  background-color:rgb(47, 47, 233);
+  border: 1px solid rgb(47, 47, 233);
+}
+.employe-card{
+  background-color:rgb(45, 45, 197);
+}
+.employe-dashboard-card{
+  background-color:#ced0d1;
+  border: 1px solid #ced0d1;
+}
+.company-card{
+  background-color: darkorange;
+}
+.leave-card{
+  background-color: rgb(208, 78, 78);
+}
+.salary-card{
+  background-color: rgb(35, 91, 35);
+}
+.links{
+  text-decoration: none;
+}
+.links:hover{
+  background-color: white;
+}
+.admin-dashboard-card:hover{
+background-color: white;
+color:rgb(47, 47, 233) ;
+border: 1px solid rgb(47, 47, 233);
+transition: 0.5s;
+box-shadow: 5px 5px 10px lightgray;
+}
+.employe-dashboard-card:hover{
+  background-color: white;
+  border: 1px solid black;
+  transition: 0.5s;
+  box-shadow: 5px 5px 10px lightgray;
+}
+.w-45{
+  width:49%;
+}
+.w-35{
+  width:24%
+}
+

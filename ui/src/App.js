@@ -10,16 +10,29 @@ import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
 import Appointment from "./Components/Appointment/appointment";
+import { useState } from "react";
+import Register from "./Components/LoginPage/Register";
+import Login from "./Components/LoginPage/Login";
+import ForgotPassword from "./Components/LoginPage/ForgotPassword";
+
 
 function App() {
+const[sidebarstatus,setSidebarStatus] = useState(false);
+const sidebarclass = sidebarstatus ? 'sidebar': "sidebar sidebar-collapse";
+function handlesidebarstatus(){
+  setSidebarStatus((previousstate)=>{
+    return !previousstate;
+  })
+}
+
   return (
     <div>
       <div className="head">
-        <Header />
+        <Header handlesidebarstatus={handlesidebarstatus}/>
       </div>
       <div className="d-flex">
-        <div className="sidebar">
-          <Sidebar />
+        <div className={sidebarclass}>
+          <Sidebar/>
         </div>
         <div className="main">
           <Switch>
@@ -28,6 +41,16 @@ function App() {
             </Route>
             <Route path="/report">
               <Report />
+            </Route>
+            <Route path="/forgot-password">
+              <ForgotPassword />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            
+            <Route path="/login">
+              <Login />
             </Route>
             <Route path="/company">
               <Company />

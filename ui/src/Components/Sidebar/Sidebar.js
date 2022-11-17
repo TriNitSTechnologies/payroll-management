@@ -5,15 +5,20 @@ import { MdOutlinePeopleAlt } from "react-icons/md";
 import { BsHouseFill } from "react-icons/bs";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import "./Sidebar.css";
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
+
 function Sidebar() {
+ const locationobj= useLocation();
+ const pathname=locationobj.pathname;
+
   return (
-    <div className="border weit h-100 shadow bgrd">
-      <div className="selected d-flex mt-3 sidebar-item">
+    <div className= "border weit h-100 shadow bgrd position-relative"> 
+      <div className={pathname ==="/" ? " sidebar-item": ''}>
+        <div className="d-flex mt-3 selected">
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
             <Link to="/" className="text-decoration-none back">
-              <BsHouseFill/>
+              <BsHouseFill />
             </Link>
           </button>
         </div>
@@ -22,8 +27,10 @@ function Sidebar() {
             Dashboard
           </Link>
         </div>
+        </div>
       </div>
-      <div className="selected d-flex mt-3">
+      <div className={pathname === "/company" ? " sidebar-item":''}>
+        <div className="d-flex mt-3 selected">
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
             <Link to="/company" className="text-decoration-none back">
@@ -36,8 +43,10 @@ function Sidebar() {
             Company
           </Link>
         </div>
+        </div>
       </div>
-      <div className="selected d-flex mt-3">
+      <div className={pathname === "/employees" ? " sidebar-item":""}>
+        <div className="d-flex mt-3 selected">
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
             <Link to="/employees" className="text-decoration-none back">
@@ -50,8 +59,10 @@ function Sidebar() {
             Employees
           </Link>
         </div>
+        </div>
       </div>
-      <div className="selected d-flex mt-3">
+      <div className={pathname === "/report" ? " sidebar-item":""}>
+        <div className=" d-flex mt-3 selected">
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
             <Link to="/report" className="text-decoration-none back">
@@ -64,11 +75,13 @@ function Sidebar() {
             Reports
           </Link>
         </div>
+        </div>
       </div>
-      <div className="selected d-flex mt-3 bottum">
+      <div className={pathname === "/documents" ? " sidebar-item":""}>
+        <div className="d-flex mt-3  selected">
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
-            <Link to="/documents" className="text-decoration-none back">
+            <Link to="/documents" className="text-decoration-none back ">
               <HiDocumentText />
             </Link>
           </button>
@@ -78,22 +91,29 @@ function Sidebar() {
             Documents
           </Link>
         </div>
+        </div>
       </div>
-      <div className="selected d-flex mt-3 mb-3">
-        <div className="m-2 ms-3 ">
+      <div className=" mt-3 w-100  position-absolute selected">
+      <div className={pathname === "/settings" ? " sidebar-item " :""}>
+      <div className="d-flex">
+        <div className=" ms-3 m-2">
           <button className="rounded shadow back">
             <Link to="/settings" className="text-decoration-none back">
               <AiFillSetting />
             </Link>
           </button>
         </div>
-        <div className="fw-semibold m-2 ">
+        <div className="fw-semibold ms-3">
           <Link to="/settings" className="text-decoration-none  text-dark">
             Settings
           </Link>
         </div>
+        </div>
+        </div>
+        </div>
       </div>
-    </div>
+      
+    
   );
 }
 export default Sidebar;
