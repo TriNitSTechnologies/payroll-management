@@ -26,9 +26,8 @@ export default function Appointment() {
         AnnualCTC: Yup.string().required("Annual CTC is requried"),
         ManagerName: Yup.string().required("Manager Name is requried"),
         EmployeeJoiningDate: Yup.string().required(
-          "Employee Joining Date  is requried"
-        ),
-        AcceptanceLastDate: Yup.string().required(" requried"),
+          "Employee Joining Date  is requried"),
+        AcceptanceLastDate: Yup.string().required(" Requried"),
         HRName: Yup.string().required("HR Name is requried"),
       })}
       onSubmit={(values) => {
@@ -53,7 +52,7 @@ export default function Appointment() {
             </div>
             <div className="card-body pay  ">
               <div className="d-flex  justify-content-evenly">
-                <div className="col-5 m--">
+                <div className="col-5 m-2">
                   <Field
                     className="form-control p-3  "
                     name="CompanyName"
