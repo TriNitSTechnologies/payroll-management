@@ -16,9 +16,9 @@ export default function Joinletter() {
         <div className="float-end me-5 mt-3 ">
           <b>16/11/2020</b>
         </div>
-        <div className="mt-5 fs-2  text-center">Offer Letter</div>
+        <div className="mt-5 fs-2  text-center"><b>Offer Letter</b></div>
         <div className="p-5">
-          <p>Dear Trinits Technologies,</p>
+          <p><b>Dear Trinits Technologies,</b></p>
           <div>
             <p>
               Congratulations! We are pleased to confirm that you have been
@@ -203,30 +203,30 @@ export default function Joinletter() {
           <div className="mt-5">
             <h3 className="fs-2 fw-bold mb-3">Annexure B</h3>
             <div className="mb-4 fs-5">This is your expected monthly salary structure</div>
-            <table className="table">
+            <table className="table ">
               <tr>
-                <th>Salary Component</th>
-                <th>Amount</th>
+                <th className="ps-3">Salary Component</th>
+                <th className="ps-3">Amount</th>
               </tr>
               <tr>
-                <td>Basic Salary</td>
-                <td>50,926</td>
+                <td className="ps-3">Basic Salary</td>
+                <td className="ps-3">50,926</td>
               </tr>
               <tr>
-                <td>HRA</td>
-                <td>25,463</td>
+                <td className="ps-3">HRA</td>
+                <td className="ps-3">25,463</td>
               </tr>
               <tr>
-                <td>Special Allowance</td>
-                <td>15,278</td>
+                <td className="ps-3">Special Allowance</td>
+                <td className="ps-3">15,278</td>
               </tr>
               <tr>
-                <td>LTA</td>
-                <td>10,184</td>
+                <td className="ps-3">LTA</td>
+                <td className="ps-3">10,184</td>
               </tr>
               <tr className="fw-bold">
-                <td>Total</td>
-                <td>1,01,851</td>
+                <td className="ps-3">Total</td>
+                <td className="ps-3">1,01,851</td>
               </tr>
             </table>
           </div>
