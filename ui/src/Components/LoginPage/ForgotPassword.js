@@ -28,7 +28,7 @@ export default function ForgotPassword() {
 
           <Form className="border formdata shadow-lg rounded-4 m-4 p-4 w-75 m-auto ">
             <div className="text-center">
-              <h2>Forgot Password?</h2>
+              <h2>Forgot password?</h2>
               <p>Enter your email to get a password reset link</p>
             </div>
             <div>
@@ -48,7 +48,7 @@ export default function ForgotPassword() {
               </button>
             </div>
             
-            <p className="text-center">Remember your password?<Link to="/loginpage"> Login</Link> </p>
+            <p className="text-center">Remember your password?<Link to="/Login"> Login</Link> </p>
           </Form>
         </div>
       </Formik>

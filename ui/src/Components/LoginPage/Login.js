@@ -1,7 +1,5 @@
 import axios from "axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { FaRegEnvelope } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 
@@ -62,7 +60,7 @@ export default function Login() {
                 </span>
                 <span className="p-2">
                   {" "}
-                  <Link to="/forgot-password">Forgot Password ?</Link>
+                  <Link to="/forgot-password">Forgot password ?</Link>
                 </span>
               </div>
 
@@ -75,11 +73,7 @@ export default function Login() {
                 <span className="or-line"></span>
                 <span className="span-or">or</span>
               </div>
-              <div className="text-center">
-                <p>
-                  Login with <FcGoogle /> <FaRegEnvelope />
-                </p>
-              </div>
+            
               <p className="text-center">
                 Don't have an account yet?<Link to="/register"> Register </Link>
               </p>

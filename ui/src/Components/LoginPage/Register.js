@@ -1,7 +1,5 @@
 import axios from "axios";
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { FaRegEnvelope } from "react-icons/fa";
-import { FcGoogle } from "react-icons/fc";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 
@@ -93,11 +91,7 @@ export default function Register() {
               <span className="or-line"></span>
               <span className="span-or">or</span>
             </div>
-            <div className="text-center">
-              <p>
-                Register with <FcGoogle /> <FaRegEnvelope />
-              </p>
-            </div>
+           
             <p className="text-center">
               Already have an account?<Link to="/login"> Login</Link>{" "}
             </p>
