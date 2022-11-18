@@ -34,18 +34,18 @@ export default function Appointment() {
 
       }} 
       validationSchema={Yup.object({
-          firstName:Yup.string().trim().required(' firstName is required'),
-          lastName:Yup.string().trim().required('Lastname is required'),
-          email:Yup.string().trim().required('Email.must be rquired'),
-          companyName:Yup.string().trim().required('Companyname must be rquired'),
-          addressLine1:Yup.string().trim().required('Address must be rquired'),
-          date:Yup.string().trim().required('Date must be rquired'),
-          empName:Yup.string().trim().required('Employee name must be rquired'),
-          designation:Yup.string().trim().required('Designation must be rquired'),
-          doj:Yup.string().trim().required('Date of Joining must be rquired'),
-          empNo:Yup.string().trim().required('Employee Number must be rquired'),
-          hrname:Yup.string().trim().required('Hr Name must be rquired'),
-          hrdesignaation:Yup.string().trim().required('Hr Designation must be rquired'),
+          firstName:Yup.string().trim().min(10,'enter minimum 10 char').required(' First name is required'),
+          lastName:Yup.string().trim().min(10,'enter minimum 10 char').required('Last name is required'),
+          email:Yup.string().trim().email('invalid email address').required('Email is required'),
+          companyName:Yup.string().trim().min(8,'enter minimum 8 char' ).required('Company name is required'),
+          addressLine1:Yup.string().trim().min(10,'enter address minimum 10 char').required('Company address is required'),
+          date:Yup.string().trim().required('Date is required'),
+          empName:Yup.string().trim().min(10,'enter minimum 10 char').required('Employee name is required'),
+          designation:Yup.string().trim().min(8,'enter minimum 10 char ').required('Designation  is required'),
+          doj:Yup.string().trim().required('Date of Joining is required'),
+          empNo:Yup.string().trim().min(10,'enter minimum 10 numbers').required('Employee number is required'),
+          hrname:Yup.string().trim().min(10,'enter minimum 10 char').required('Hr name is required'),
+          hrdesignaation:Yup.string().trim().min(10,'enter minimum 10 char').required('Hr designation is required'),
 
       })}
       onSubmit={(values)=>{
@@ -62,12 +62,12 @@ export default function Appointment() {
           <div className="d-flex basic-details-log justify-content-evenly">
             <div className="col-5 m-2 main-cont-sag">
               <Field
-                name='firstname'
+                name='firstName'
                 className="form-control p-3 "
                 placeholder="First name"
                 type="text"
               />
-              <div className='text-danger'><ErrorMessage name="firstName" /></div>
+              <div className='text-danger fw-light'><ErrorMessage name="firstName" /></div>
             </div>
             <div className="col-5  m-2 main-cont-sag">
               <Field
@@ -76,7 +76,7 @@ export default function Appointment() {
                 placeholder="Last name"
                 type="text"
               />
-               <div className='text-danger'><ErrorMessage name="lastName" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="lastName" /></div>
             </div>
           </div>
           <div className="d-flex basic-details-log justify-content-evenly">
@@ -87,7 +87,7 @@ export default function Appointment() {
                 placeholder="Email address"
                 type="text"
               />
-               <div className='text-danger'><ErrorMessage name="email" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="email" /></div>
             </div>
 
             <div className="col-5  m-2"></div>
@@ -111,7 +111,7 @@ export default function Appointment() {
                 placeholder="Company name"
                 type="text"
               />
-               <div className='text-danger'><ErrorMessage name="companyName" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="companyName" /></div>
             </div>
             <div className="col-5  m-2 main-cont-sag">
               <Field
@@ -120,7 +120,7 @@ export default function Appointment() {
                 placeholder="Company addresss"
                 type="text"
               />
-               <div className='text-danger'><ErrorMessage name="addressLine1" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="addressLine1" /></div>
             </div>
           </div>
           <div className="d-flex basic-details-log justify-content-evenly">
@@ -131,7 +131,7 @@ export default function Appointment() {
                 placeholder="Date Of Month /year"
                 type="Date"
               />
-               <div className='text-danger'><ErrorMessage name="date" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="date" /></div>
             </div>
             <div className="col-5  m-2 main-cont-sag"></div>
               
@@ -155,7 +155,7 @@ export default function Appointment() {
                 placeholder="Employee name"
                 type="text"
               />
-               <div className='text-danger'><ErrorMessage name="empName" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="empName" /></div>
             </div>
             <div className="col-5  m-2 main-cont-sag">
               <Field
@@ -164,7 +164,7 @@ export default function Appointment() {
                 placeholder="Employee designation"
                 type="text"
               />
-               <div className='text-danger'><ErrorMessage name="designation" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="designation" /></div>
             </div>
           </div>
           <div className="d-flex basic-details-log justify-content-evenly">
@@ -175,7 +175,7 @@ export default function Appointment() {
                 placeholder="Employee joining date"
                 type="Date"
               />
-               <div className='text-danger'><ErrorMessage name="doj" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="doj" /></div>
             </div>
             <div className='col-5 m-2 main-cont-sag'>
             <Field
@@ -184,7 +184,7 @@ export default function Appointment() {
                 placeholder="Employee id"
                 type="text"
               />
-               <div className='text-danger'><ErrorMessage name="empNo" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="empNo" /></div>
             </div>
             
               
@@ -209,7 +209,7 @@ export default function Appointment() {
                 placeholder="HR name"
                 type="text"
               />
-               <div className='text-danger'><ErrorMessage name="hrname" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="hrname" /></div>
             </div>
             <div className=" m-2 col-5  main-cont-sag ">
               <Field
@@ -218,7 +218,7 @@ export default function Appointment() {
                 placeholder="HR designation"
                 type="text"
               />
-               <div className='text-danger'><ErrorMessage name="hrdesignaation" /></div>
+               <div className='text-danger fw-light'><ErrorMessage name="hrdesignaation" /></div>
             </div>
           </div>
           
