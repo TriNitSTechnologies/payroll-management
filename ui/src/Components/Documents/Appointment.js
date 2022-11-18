@@ -4,10 +4,16 @@ import './Appointment.css'
 
 export default function Appointment() {
 
+  
+
+  function Formsubmithandler(event){
+      event.preventDefault();
+  }
+
   return (
-    <div  className="border py-2 doc-home-log">
+    <div  className="border py-2 p-1 doc-home-log">
       
-      <div className="card m-4 pay shadow ">
+      <div className="card m-3 pay shadow ">
         <div className="card-body d-flex justify-content-between ">
           <div>
             <small className="fs-6">Home / company</small>
@@ -34,26 +40,26 @@ export default function Appointment() {
 
       }} 
       validationSchema={Yup.object({
-          firstName:Yup.string().trim().min(10,'enter minimum 10 char').required(' First name is required'),
-          lastName:Yup.string().trim().min(10,'enter minimum 10 char').required('Last name is required'),
-          email:Yup.string().trim().email('invalid email address').required('Email is required'),
-          companyName:Yup.string().trim().min(8,'enter minimum 8 char' ).required('Company name is required'),
-          addressLine1:Yup.string().trim().min(10,'enter address minimum 10 char').required('Company address is required'),
+          firstName:Yup.string().trim().min(10,'Enter minimum 10 characters').required(' First name is required'),
+          lastName:Yup.string().trim().min(10,'Enter minimum 10 characters').required('Last name is required'),
+          email:Yup.string().trim().email(' You have entering invalid email address').required('Email is required'),
+          companyName:Yup.string().trim().min(8,'Enter minimum 8 characters' ).required('Company name is required'),
+          addressLine1:Yup.string().trim().min(10,'Enter address minimum 10 characters').required('Company address is required'),
           date:Yup.string().trim().required('Date is required'),
-          empName:Yup.string().trim().min(10,'enter minimum 10 char').required('Employee name is required'),
-          designation:Yup.string().trim().min(8,'enter minimum 10 char ').required('Designation  is required'),
+          empName:Yup.string().trim().min(10,'Enter minimum 10 characters').required('Employee name is required'),
+          designation:Yup.string().trim().min(8,'Enter minimum 8 characters ').required('Designation  is required'),
           doj:Yup.string().trim().required('Date of Joining is required'),
-          empNo:Yup.string().trim().min(10,'enter minimum 10 numbers').required('Employee number is required'),
-          hrname:Yup.string().trim().min(10,'enter minimum 10 char').required('Hr name is required'),
-          hrdesignaation:Yup.string().trim().min(10,'enter minimum 10 char').required('Hr designation is required'),
+          empNo:Yup.string().trim().min(8,'Enter minimum 8 numbers').required('Employee number is required'),
+          hrname:Yup.string().trim().min(10,'Enter minimum 10 characters').required('Hr name is required'),
+          hrdesignaation:Yup.string().trim().min(10,'Enter minimum 10 characters').required('Hr designation is required'),
 
       })}
       onSubmit={(values)=>{
         alert(JSON.stringify(values, null, 2))
       }}
     >
-      <Form>
-      <div className="card  m-4  shadow ">
+      <Form onSubmit={Formsubmithandler}>
+      <div className="card m-3  shadow ">
         <div class="card-header bg-white">
           <h4>Basic details</h4>
           <p className='fw-light'>Organized and secure</p>
@@ -97,7 +103,7 @@ export default function Appointment() {
         </div>
       </div>
 
-      <div className="card m-4  shadow ">
+      <div className="card m-3  shadow ">
         <div class="card-header bg-white">
           <h4>Company details</h4>
           <p className='fw-light'>Let every one know the essentials so they're fully prepared</p>
@@ -141,7 +147,7 @@ export default function Appointment() {
         </div>
       </div>
 
-      <div className="card m-4  shadow ">
+      <div className="card m-3  shadow ">
         <div class="card-header bg-white">
           <h4>Employee details</h4>
           <p className='fw-light'>Let every one know the essentials so they're fully prepared</p>
@@ -194,7 +200,7 @@ export default function Appointment() {
       </div>
 
 
-      <div className="card m-4  shadow ">
+      <div className="card m-3  shadow ">
         <div class="card-header bg-white">
           <h4>Human resource</h4>
           <p className=' fw-light'>Let every one know the essentials so they're fully prepared</p>
