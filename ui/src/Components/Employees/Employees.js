@@ -1,4 +1,4 @@
-import { FiAirplay } from "react-icons/fi";
+
 import { Link } from "react-router-dom";
 
 import { useEffect, useState } from "react";
@@ -13,7 +13,6 @@ import EmployeeForm from "../EmployeeForm/EmployeeForm";
 import { ToastContainer, toast } from 'react-toastify';
 import EmployeeCard from "../EmployeeCard/EmployeeCard";
 import ReactTooltip from 'react-tooltip';
-import { Dialog } from 'primereact/dialog';
 
 
 const empurl="https://trinitstechnologies.com/demo/api/v1/employees";
