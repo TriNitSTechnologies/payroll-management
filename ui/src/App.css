@@ -1,12 +1,11 @@
 .sidebar{
-  width:18%;
-  min-width:180px ;
+  width:220px;
   background-color:aliceblue;
 }
 
 
 .sidebar-collapse{
-  width:65px ;
+  width:63px ;
   overflow: hidden;
 }
 .main{

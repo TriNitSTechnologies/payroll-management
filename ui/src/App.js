@@ -10,32 +10,37 @@ import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
 
-import Appointment from "./Components/Documents/Appointment";
 import Appointment from "./Components/Appointment/appointment";
 import { useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
-
+import MyProfile from "./Components/My-Profile/My-Profile";
+import OfferLetter from "./Components/Documents/Appointment";
 
 
 function App() {
-const[sidebarstatus,setSidebarStatus] = useState(false);
-const sidebarclass = sidebarstatus ? 'sidebar': "sidebar sidebar-collapse";
-function handlesidebarstatus(){
-  setSidebarStatus((previousstate)=>{
-    return !previousstate;
-  })
-}
+  const [sidebarstatus, setSidebarStatus] = useState(false);
+  const sidebarclass = sidebarstatus ? "sidebar" : "sidebar sidebar-collapse";
+  // function handlesidebarstatus(){
+  //   setSidebarStatus((previousstate)=>{
+  //     return !previousstate;
+  //   })
+  // }
+  function handlesidebarstatus() {
+    setSidebarStatus((previousstate) => {
+      return !previousstate;
+    });
+  }
 
   return (
     <div>
       <div className="head">
-        <Header handlesidebarstatus={handlesidebarstatus}/>
+        <Header hidesidebar={handlesidebarstatus} />
       </div>
       <div className="d-flex">
         <div className={sidebarclass}>
-          <Sidebar/>
+          <Sidebar />
         </div>
         <div className="main">
           <Switch>
@@ -51,7 +56,7 @@ function handlesidebarstatus(){
             <Route path="/register">
               <Register />
             </Route>
-            
+
             <Route path="/login">
               <Login />
             </Route>
@@ -67,11 +72,14 @@ function handlesidebarstatus(){
             <Route path="/documents">
               <Documents />
             </Route>
-
-            <Route path='/appointment'>
-              <Appointment/>
-         
+            <Route path="/appointment">
+              <Appointment />
             </Route>
+
+            <Route path='/offer-letter'>
+              <OfferLetter/>
+            </Route>
+
           </Switch>
         </div>
       </div>

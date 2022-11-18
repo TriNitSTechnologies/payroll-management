@@ -13,7 +13,7 @@ export default function Documents() {
             <Payslip2 />
             <Payslip3 />
 
-            <Link to='/appointment'>appointment</Link>
+            <Link to='/offer-letter'>Offerleter</Link>
 
             <Joinletter />
 

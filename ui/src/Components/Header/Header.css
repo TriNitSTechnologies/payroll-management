@@ -1,22 +1,28 @@
-.logo{
-    width:150px;
+.logo {
+  width: 150px;
 }
 
-.dash{
-    font-size:35px;
-    color:rgb(3, 3, 188) ;
-    margin:13px;
+.dash {
+  font-size: 35px;
+  color: rgb(3, 3, 188);
+  margin: 13px;
+  cursor: pointer;
 }
-.notification{
-    font-size:25px;
-    margin: 22px;
-
-   
+.notification {
+  font-size: 25px;
+  margin: 22px;
 }
-.round{
-    width: 50px;
-    height: 50px;
+.round {
+  width: 50px;
+  height: 50px;
 }
-.flex{
-    flex-grow:1;
+.flex {
+  flex-grow: 1;
+}
+.bg {
+  background-color: aliceblue;
+}
+.dropdown-style:hover {
+  background-color: rgb(168, 208, 243);
+  border-radius: 3px;
 }
