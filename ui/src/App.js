@@ -9,6 +9,7 @@ import Company from "./Components/Company/Company";
 import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
+import Appointment from "./Components/Appointment/appointment";
 import { useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
@@ -34,7 +35,6 @@ function App() {
       <div className="head">
         <Header hidesidebar={handlesidebarstatus} />
       </div>
-
       <div className="d-flex">
         <div className={sidebarclass}>
           <Sidebar />
@@ -44,7 +44,6 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-
             <Route path="/report">
               <Report />
             </Route>
@@ -72,6 +71,9 @@ function App() {
             </Route>
             <Route path="/profile">
               <MyProfile />
+            </Route>
+            <Route path="/appointment">
+              <Appointment />
             </Route>
           </Switch>
         </div>
