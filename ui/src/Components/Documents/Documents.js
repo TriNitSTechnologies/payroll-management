@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import sss from "../Image/logo-dark.png";
 import Joinletter from "../Offer Letter/offerletter";
 import Payslip1 from "../Payslip1/Payslip1";
@@ -10,7 +12,11 @@ export default function Documents() {
             <Payslip1 />
             <Payslip2 />
             <Payslip3 />
+
+            <Link to='/offer-letter'>Offerleter</Link>
+
             <Joinletter />
+
         </>
     )
 }
