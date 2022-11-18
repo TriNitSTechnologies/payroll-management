@@ -1,10 +1,10 @@
-import "./Capgemini.css";
+import "./Payslip4.css";
 
 // import './Capgemini.css';
 import { React } from "react";
 import telegram from "./../../Image/trinits.jpg";
 
-function Capgemini() {
+function Payslip4() {
   return (
     <div className=" bg-white w-80  m-auto padding p-5 mb-5">
       <div>
@@ -220,93 +220,10 @@ function Capgemini() {
             </tr>
           </table>
 
-          {/* <table  className=" mt-2 tables">
-            <tr className="">
-              
-                <th>SUMMARY OF TAX COMPUTATION AS PEROLD REGIME</th>
-                <th></th>
-                </tr>
-                <tr>
-                <td>GROSS SALARY (EXCL.REIMBURSEMENT)</td>
-                
-                <td>4,19,741</td>
-                </tr>
-                <tr>
-                    <td>ADD: PERQUISITES AND OTHER INCOME</td>
-                    <td>0</td>
-                </tr>
-
-                <tr>
-                    <td>LESS : EXEMPT REIMBURSEMENT</td>
-                    <td>0</td>
-                </tr>
-           
-                <tr>
-                    <td>LESS : DEDUCTION U/s 10</td>
-                    <td>0</td>
-                </tr>
-           
-                <tr>
-                    <td>LESS : DEDUCTION U/s 16 (STD.DEDUCTION + P.TAX) </td>
-                    <td>51,250</td>
-                </tr>
-           
-                <tr>
-                    <td>LESS : DEDUCTION U/s 24 (HOUSING LOSS) </td>
-                    <td>0</td>
-                </tr>
-           
-                <tr>
-                    <td>LESS : DEDUCTION U/s CHAPTER VIA</td>
-                    <td>18,736</td>
-                </tr>
-           
-                <tr>
-                    <td>NET TAXABLE INCOME</td>
-                    <td>3,49,755</td>
-                </tr>
-           
-                <tr>
-                    <td>TOTAL TAX PAYABLE</td>
-                    <td>0</td>
-                </tr>
-           
-                <tr>
-                    <td>TOTAL TAX RECOVERED (INCL. CURR MONTH)</td>
-                    <td>0</td>
-                </tr>
-           
-                <tr>
-                    <td>BALANCE TAX RECOVERABLE</td>
-                    <td>0</td>
-                </tr>
-           
-               </table>
-
-               <table  className="las">
-                <tr>
-                    <td>------------------------------------------------</td>
-                    
-                </tr>
-                <tr>
-                    <td>MPLOYER'S CONTRIBUTIONS | MONTHLY RATE | CURRENT MONTH | </td>
-                </tr>
-                <tr>
-                    <td>------------------------------------------------</td>
-                    
-                </tr>
-                <tr>
-                    <td>NATIONAL PENSION SCHEME | 0 | 0 |</td>
-                </tr>
-
-                <tr>
-                    <td>------------------------------------------------</td>
-                    
-                </tr>
-               </table> */}
+         
         </div>
       </div>
     </div>
   );
 }
-export default Capgemini;
+export default Payslip4;

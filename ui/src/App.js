@@ -15,7 +15,7 @@ import Appointment from "./Components/Appointment/appointment";
 import { useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
-import Capgemini from "./Components/Capg/Capgemini";
+import Payslip4 from "./Components/Payslip4/Payslip4";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 import MyProfile from "./Components/My-Profile/My-Profile";
 import OfferLetter from "./Components/Documents/Appointment";
@@ -75,8 +75,8 @@ function App() {
               <Documents />
             </Route>
 
-            <Route path="/capgemini">
-              <Capgemini />
+            <Route path="/payslip">
+              <Payslip4 />
             </Route>
             <Route path="/appointment">
               <Appointment />
