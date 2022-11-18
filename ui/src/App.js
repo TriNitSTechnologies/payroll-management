@@ -14,25 +14,30 @@ import { useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
-
+import MyProfile from "./Components/My-Profile/My-Profile";
 
 function App() {
-const[sidebarstatus,setSidebarStatus] = useState(false);
-const sidebarclass = sidebarstatus ? 'sidebar': "sidebar sidebar-collapse";
-function handlesidebarstatus(){
-  setSidebarStatus((previousstate)=>{
-    return !previousstate;
-  })
-}
+  const [sidebarstatus, setSidebarStatus] = useState(false);
+  const sidebarclass = sidebarstatus ? "sidebar" : "sidebar sidebar-collapse";
+  // function handlesidebarstatus(){
+  //   setSidebarStatus((previousstate)=>{
+  //     return !previousstate;
+  //   })
+  // }
+  function handlesidebarstatus() {
+    setSidebarStatus((previousstate) => {
+      return !previousstate;
+    });
+  }
 
   return (
     <div>
       <div className="head">
-        <Header handlesidebarstatus={handlesidebarstatus}/>
+        <Header hidesidebar={handlesidebarstatus} />
       </div>
       <div className="d-flex">
         <div className={sidebarclass}>
-          <Sidebar/>
+          <Sidebar />
         </div>
         <div className="main">
           <Switch>
@@ -48,7 +53,7 @@ function handlesidebarstatus(){
             <Route path="/register">
               <Register />
             </Route>
-            
+
             <Route path="/login">
               <Login />
             </Route>
@@ -63,6 +68,9 @@ function handlesidebarstatus(){
             </Route>
             <Route path="/documents">
               <Documents />
+            </Route>
+            <Route path="/profile">
+              <MyProfile />
             </Route>
             <Route path="/appointment">
               <Appointment />

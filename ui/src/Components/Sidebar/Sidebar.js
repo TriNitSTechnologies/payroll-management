@@ -15,7 +15,7 @@ function Sidebar() {
     <div className= "border weit h-100 shadow bgrd position-relative"> 
       <div className={pathname ==="/" ? " sidebar-item": ''}>
         <div className="d-flex mt-3 selected">
-        <div className="m-2 ms-3 ">
+        <div className="m-2 button ">
           <button className="rounded shadow back">
             <Link to="/" className="text-decoration-none back">
               <BsHouseFill />
@@ -31,7 +31,7 @@ function Sidebar() {
       </div>
       <div className={pathname === "/company" ? " sidebar-item":''}>
         <div className="d-flex mt-3 selected">
-        <div className="m-2 ms-3 ">
+        <div className="m-2  button ">
           <button className="rounded shadow back">
             <Link to="/company" className="text-decoration-none back">
               <HiOutlineBuildingOffice2/>
@@ -47,7 +47,7 @@ function Sidebar() {
       </div>
       <div className={pathname === "/employees" ? " sidebar-item":""}>
         <div className="d-flex mt-3 selected">
-        <div className="m-2 ms-3 ">
+        <div className="m-2 button ">
           <button className="rounded shadow back">
             <Link to="/employees" className="text-decoration-none back">
              <MdOutlinePeopleAlt/>
@@ -63,7 +63,7 @@ function Sidebar() {
       </div>
       <div className={pathname === "/report" ? " sidebar-item":""}>
         <div className=" d-flex mt-3 selected">
-        <div className="m-2 ms-3 ">
+        <div className="m-2 button ">
           <button className="rounded shadow back">
             <Link to="/report" className="text-decoration-none back">
               <TbAddressBook />
@@ -79,7 +79,7 @@ function Sidebar() {
       </div>
       <div className={pathname === "/documents" ? " sidebar-item":""}>
         <div className="d-flex mt-3  selected">
-        <div className="m-2 ms-3 ">
+        <div className="m-2 button ">
           <button className="rounded shadow back">
             <Link to="/documents" className="text-decoration-none back ">
               <HiDocumentText />
@@ -96,14 +96,14 @@ function Sidebar() {
       <div className=" mt-3 w-100  position-absolute selected">
       <div className={pathname === "/settings" ? " sidebar-item " :""}>
       <div className="d-flex">
-        <div className=" ms-3 m-2">
+        <div className=" button m-2">
           <button className="rounded shadow back">
             <Link to="/settings" className="text-decoration-none back">
               <AiFillSetting />
             </Link>
           </button>
         </div>
-        <div className="fw-semibold ms-3">
+        <div className="fw-semibold  m-2">
           <Link to="/settings" className="text-decoration-none  text-dark">
             Settings
           </Link>

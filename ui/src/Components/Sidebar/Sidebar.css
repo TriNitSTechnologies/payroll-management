@@ -6,19 +6,20 @@
 
 .selected:hover{
     background-color:#c4dcf2 ;
+    border-radius: 3px;
     /* color: blueviolet; */
 }
  .sidebar-item{
     background-color:#c4dcf2 ;
+    border-radius:3px;
   } 
-
-sidebar-item{
-    padding: 3px;
-}
 
 .position-absolute{
    bottom: 30px;
 }
 .company-icon-color{
 color:  darkorange;
+}
+.button{
+padding-left:6px;
 }
