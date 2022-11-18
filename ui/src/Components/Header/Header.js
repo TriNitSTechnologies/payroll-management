@@ -2,10 +2,12 @@ import "./Header.css";
 import logo from "../Image/logo-dark.png";
 import photo from "../Image/pexels-photo.jpeg";
 
+
 function Header({handlesidebarstatus}) {
   return (
     <div className="border d-flex shadow">
       <div className="d-flex">
+       
         <div>
           <img
             src={logo}
