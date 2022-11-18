@@ -1,0 +1,146 @@
+/* .mar {
+     margin: auto;
+   
+    width: 60vw; 
+} */
+/* table,tr,
+td {
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-left: 10px;
+
+
+
+}      */
+
+.image {
+    width: 140px;
+    height: 98px;
+   
+    margin-top: 10px;
+    border: none;
+}
+
+
+.t {
+    border: none !important;
+}
+
+.text {
+
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding-left: 10px;
+    margin: auto;
+
+
+
+
+
+
+}
+
+/* .table-border {
+    border-left: 2px solid black;
+} */
+
+
+.mar {
+    margin: auto;
+    margin-top: 20px;
+}
+
+.w {
+    width: 100%;
+    height: 100%;
+}
+
+.bor {
+    margin: auto;
+    width: 60vw;
+    height: 15vh;
+    margin-top: 20px;
+
+}
+
+.style {
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.wi {
+    width: 60vw;
+    margin: auto;
+    margin-top: 20px;
+}
+
+
+.tt {
+    background-color: #369336;
+    text-align: center;
+}
+
+.text {
+    /* margin: auto; */
+    /* width: 100%; */
+}
+
+.last {
+    width: 60vw;
+    margin-top: 20px;
+}
+
+.tables {
+    width: 73.5%;
+    margin: auto;
+}
+
+.las {
+    width: 73.5%;
+    margin: auto;
+}
+
+.fo {
+    font-size: 20px;
+    text-align: center;
+    color: crimson;
+    width: 25vw;
+
+}
+.w-80{
+    width: 81%;
+}
+.fon {
+    font-size: 15px;
+    width: 100%;
+}
+
+.w-200 {
+    width: 200px;
+    display: inline-block;
+}
+
+@media print {
+    .wi {
+        width: 100%;
+    }
+
+    .bor {
+        width: 100%;
+        height: 2vh;
+
+    }
+
+    .last {
+        width: 100%;
+
+    }
+
+    .w {
+        width: 90%;
+        margin: auto;
+    }
+
+}

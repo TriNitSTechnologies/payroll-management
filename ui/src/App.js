@@ -11,6 +11,7 @@ import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
+import Capgemini from "./Components/Capg/Capgemini";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 
 function App() {
@@ -54,6 +55,10 @@ function App() {
             </Route>
             <Route path="/documents">
               <Documents />
+            </Route>
+
+            <Route path="/capgemini">
+              <Capgemini />
             </Route>
           </Switch>
         </div>
