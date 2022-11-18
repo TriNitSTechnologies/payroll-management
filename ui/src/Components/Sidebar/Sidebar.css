@@ -8,26 +8,16 @@
     background-color:#c4dcf2 ;
     /* color: blueviolet; */
 }
-/* .color:hover{
-    color: blueviolet;
-} */
+ .sidebar-item{
+    background-color:#c4dcf2 ;
+  } 
+
 sidebar-item{
     padding: 3px;
 }
-/* .weit{
-    width:18%;
-    min-width:180px ;
-    height: 90vh;
 
-} */
-.bottum{
-    margin-bottom:160px ;
-}
-/* .bgrd{
-    background-color:aliceblue;
-} */
 .position-absolute{
-   bottom: 10px;
+   bottom: 30px;
 }
 .company-icon-color{
 color:  darkorange;
