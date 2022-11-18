@@ -16,8 +16,11 @@ export default function EmployeeForm({onSave,onCancel,selected}){
     }}
   )
     return(
-        <div>
-             <div className="border  w-100 p-4 shadow m-auto text-white rounded">
+        <div className="w-100 shadow">
+          <h1 className="text-center text-primary">EmployeeForm</h1>
+             <div className="border  w-100 p-5 shadow m-2 text rounded">
+              
+          
 
 <Formik 
  initialValues={{empName:'',empNo:'',designation:'',bankAccount:'',pan:'',doj:'',}}
@@ -50,8 +53,8 @@ export default function EmployeeForm({onSave,onCancel,selected}){
   
   <div className="w-50"> 
    <Field name="empName" type="text" placeholder="empName"   className="form-control p-3 " />
-  <small className="text-center">
-     <ErrorMessage name="empName" className="text-danger" />
+  <small className="text-danger">
+     <ErrorMessage name="empName"  />
      </small>
   
      </div>

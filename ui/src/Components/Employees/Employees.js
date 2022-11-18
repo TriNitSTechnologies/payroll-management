@@ -117,6 +117,11 @@ export default function Employees(){
 
         loadcompanydata();
     }, [])
+    if(showForm){
+      return(
+        <EmployeeForm  onCancel={oncancelForm} onSave={onsaveForm} selected={selected}/>
+           
+      )}
 
     return(
     <>
@@ -125,13 +130,13 @@ export default function Employees(){
       <ReactTooltip /> 
       <ToastContainer />
 
-    {showForm ? <EmployeeForm  onCancel={oncancelForm} onSave={onsaveForm} selected={selected}/>:null}
-       
-        <div className="w-100 shadow p-4 text-white  ">
+
+    
+        <div className="w-100 shadow p-4">
         
         
         <div 
-        className=' w-100 shadow  p-3 rounded mt-2 '>
+        className=' w-100 shadow  p-3 rounded mt-2 text '>
         <Link to="/" > <AiFillHome className="font border border-white shadow rounded " /> Home </Link>
         <Link to="/Employees">/Employees</Link>
         <div  className=" float-end">
@@ -142,20 +147,20 @@ export default function Employees(){
         </div>
        
        
-        <div className="w-100 mt-4">
+        <div className="w-100 mt-4 ">
         
             <button className="button1 rounded p-2 button1:hover float-end shadow" onClick={ ()=>{ setshowForm(true);setSelected(null);}} data-tip="Add Employee Information"><FiPlusCircle /> AddEmployee</button>
         </div>
      
       
       <div className="w-100 flex ">
-      <div className="shadow w-50 rounded p-3 text-black mt-4">
+      <div className="shadow w-50 rounded p-3 text-black mt-4 text">
       Total: {employeemodel.length}    
       </div>
       <div className="mt-4 ">
 "
         <button className= {card == 'Card' ?" btn btn-primary p-2 shadow":"btn btn-outline-primary p-2 shadow "} data-tip="Card Data">< AiOutlineAppstore onClick={()=>setcard("Card")} className="font2 "/></button>
-        <button className={card == 'table' ?"btn btn-primary p-2 ms-2 shadow":"btn btn-primary p-2 ms-2 shadow "} data-tip="Table Data"><AiOutlineBars onClick={()=>setcard("table")} className="font2"/> </button>
+        <button className={card == 'table' ?" btn btn-primary p-2 ms-2 shadow":"btn btn-primary p-2 ms-2 shadow "} data-tip="Table Data"><AiOutlineBars onClick={()=>setcard("table")} className="font2"/> </button>
       </div>
       </div>
       <div className={card == 'Card' ? 'd-block':'d-none'}>
@@ -167,7 +172,7 @@ export default function Employees(){
            
 
      
-      <table className={card== 'table'?"table table-hover table-striped mt-4 ":'table table-hover table-striped shadow mt-4 '}>
+      <table className={card== 'table'?"table table-hover mt-4 text":'table table-hover shadow mt-4 text'}>
         <tbody>
             <tr>
              
