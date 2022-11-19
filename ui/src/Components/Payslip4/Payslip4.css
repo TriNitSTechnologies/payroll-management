@@ -1,24 +1,9 @@
-
-
 .payslip-logo {
     width: 140px;
     height: 98px;
    
     margin-top: 10px;
     border: none;
-}
-
-
-.payslip-title {
-    border: none !important;
-}
-
-.payslip-body-data-text {
-
-    border: 1px solid black;
-    border-collapse: collapse;
-    padding-left: 10px;
-    margin: auto;
 }
 
 .w-80{

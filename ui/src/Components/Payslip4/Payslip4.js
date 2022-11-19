@@ -1,8 +1,6 @@
 import "./Payslip4.css";
-
-
 import { React } from "react";
- import telegram from "./../../Image/trinits.jpg";
+import telegram from "./../../Image/trinits.jpg";
 
 function Payslip4() {
   return (
@@ -34,24 +32,21 @@ function Payslip4() {
           </div>
           <div className=" mt-3 ">
             <table className="w-100  ">
-            
-              <tr >
-               
+              <tr>
                 <th className="p-2">Emp Code</th>
-   
-                <th  className="p-2">46238707</th>
-                <th  className="p-2">DOJ</th>
-                <th  className="p-2">26/05/2022</th>
-               
+
+                <th className="p-2">46238707</th>
+                <th className="p-2">DOJ</th>
+                <th className="p-2">26/05/2022</th>
               </tr>
-             
+
               <tr>
                 <th className="p-2"> Global Id</th>
-              
+
                 <th className="p-2">46238707</th>
-             
+
                 <th className="p-2">Global DOJ</th>
-           
+
                 <th className="p-2">26/05/2022</th>
               </tr>
               <tr>
@@ -108,8 +103,8 @@ function Payslip4() {
                   LOP Reversal Days:0.00 , Arrear Days:0.00
                 </th>
               </tr>
-              </table>
-        <table className="w-100 ">
+            </table>
+            <table className="w-100 ">
               <tr>
                 <th className="p-2">EARNINGS</th>
 
@@ -170,7 +165,7 @@ function Payslip4() {
                 <td className="p-2">2,200</td>
                 <td className="p-2">0</td>
                 <td className="p-2">2,200</td>
-                <td ></td>
+                <td></td>
               </tr>
               <tr>
                 <td className="p-2">REMOTE WORKING ALLOWANCE</td>
@@ -219,8 +214,6 @@ function Payslip4() {
               <th className="text-center">38,089</th>
             </tr>
           </table>
-
-         
         </div>
       </div>
     </div>
