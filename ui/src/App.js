@@ -1,3 +1,4 @@
+
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Components/Header/Header";
@@ -13,6 +14,7 @@ import Appointment from "./Components/Appointment/appointment";
 import React, { useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
+import Payslip4 from "./Components/Payslip4/Payslip4";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 import MyProfile from "./Components/My-Profile/My-Profile";
 import OfferLetter from "./Components/Documents/Appointment";
@@ -67,6 +69,8 @@ function App() {
             <Route path="/documents">
               <Documents />
             </Route>
+
+            
             <Route path="/appointment">
               <Appointment />
             </Route>
