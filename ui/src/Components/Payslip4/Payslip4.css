@@ -61,10 +61,7 @@
 }
 
 
-.title {
-    background-color: #369336;
-    text-align: center;
-}
+
 
 
 
@@ -83,13 +80,8 @@
     margin: auto;
 }
 
-.font {
-    font-size: 20px;
-    text-align: center;
-    color: crimson;
-    width: 25vw;
 
-}
+
 .w-80{
     width: 81%;
 }
