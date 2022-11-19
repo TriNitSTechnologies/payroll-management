@@ -27,7 +27,7 @@ import Notifications from "./Components/Notifications/Notifications";
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
-const islogdin= useSelector(action=>action.login.islogdin)
+const isUserLoggedIn= useSelector(state=>state.login.isUserLoggedIn)
 const sidebarclass = sidebarstatus ? 'sidebar': "sidebar sidebar-collapse";
 function handlesidebarstatus(){
   setSidebarStatus((previousstate)=>{
@@ -35,13 +35,13 @@ function handlesidebarstatus(){
   })
 }
 useEffect(()=>{
-  console.log(islogdin)
-  if(islogdin){
+  
+  if(isUserLoggedIn){
     userrouter.push("/Home")
   }else{
     userrouter.push("/")
   }
-},[islogdin])
+},[isUserLoggedIn])
 
 
 
@@ -49,22 +49,22 @@ useEffect(()=>{
   return (
     <div>
       <div className="head">
-        {!islogdin && <>
+        {!isUserLoggedIn && <>
       <MainPage />
         </>}
-        {islogdin && <>
+        {isUserLoggedIn && <>
         <Header hidesidebar={handlesidebarstatus}/>
         </>}
       </div>
       <div className="d-flex">
-        {islogdin && <>
+        {isUserLoggedIn && <>
         <div className={sidebarclass}>
           <Sidebar />
         </div>
         </>}
         <div className="main">
           <Switch>
-          {!islogdin && <>
+          {!isUserLoggedIn && <>
             
             <Route path="/report">
               <Report />
@@ -84,7 +84,7 @@ useEffect(()=>{
             </Route>
           </> }
              
-            {islogdin && <>
+            {isUserLoggedIn && <>
             <Route path="/report">
               <Report />
             </Route>
@@ -100,7 +100,7 @@ useEffect(()=>{
             <Route path="/documents">
               <Documents />
             </Route>
-            <Route path="/Home" exact>
+            <Route path="/home" exact>
               <Home />
             </Route>
 

@@ -3,7 +3,7 @@ import axios from "axios"
 let username = '';
 export const logindata  = createAsyncThunk('user/logindata', async (payload)=>{
     username = payload.username;
-    console.log( "ddd " +payload.username)
+    
    return axios.post('https://trinitstechnologies.com/demo/api/v1/user/login',payload)
 
 
@@ -13,7 +13,7 @@ export const logindata  = createAsyncThunk('user/logindata', async (payload)=>{
 
 const initialState ={
     username:"",
-    islogdin:false
+    isUserLoggedIn:false
 
 }
 
@@ -23,7 +23,7 @@ export const counterSlice = createSlice({
     reducers: {
         loginSlice:(State,action) =>{
             State.username = action.payload.username;
-            State.islogdin = action.payload.islogdin
+            State.isUserLoggedIn = action.payload.isUserLoggedIn
            
         }
 
@@ -33,9 +33,9 @@ export const counterSlice = createSlice({
     extraReducers(builder) {
         builder.addCase(logindata.fulfilled, (state, action) => {
             state.username = username
-            state.islogdin=true
-            console.log("fgg "+state.username);
-        //   return action.payload;
+            state.isUserLoggedIn=true
+           
+       
         })
       }
     
