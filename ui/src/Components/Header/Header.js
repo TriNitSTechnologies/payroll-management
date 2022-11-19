@@ -1,9 +1,19 @@
 import "./Header.css";
 import logo from "../Image/logo-dark.png";
 import photo from "../Image/pexels-photo.jpeg";
+import { useDispatch } from "react-redux";
+import { loginSlice } from "../Store/LoginSice";
 
 
 function Header({handlesidebarstatus}) {
+  let userdispatch=useDispatch()
+  function logoutuser(){
+    userdispatch(loginSlice({
+      username:"",
+      islogdin:false
+
+    }))
+  }
   return (
     <div className="border d-flex shadow">
       <div className="d-flex">
@@ -30,6 +40,7 @@ function Header({handlesidebarstatus}) {
           </div>
 
           <div className="fw-bold m-4 ms-1">Trinits Technologies</div>
+          <button onClick={logoutuser}>logout</button>
 
         </div>
       </div>

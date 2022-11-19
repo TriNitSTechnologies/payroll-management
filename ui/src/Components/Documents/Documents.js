@@ -1,4 +1,4 @@
-import sss from "../Image/logo-dark.png";
+
 import Payslip1 from "../Payslip1/Payslip1";
 import Payslip2 from "../Payslip2/Payslip2";
 import Payslip3 from "../Payslip3/Payslip3";

@@ -1,21 +1,19 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import axios from "axios"
+let username = '';
+export const logindata  = createAsyncThunk('user/logindata', async (payload)=>{
+    username = payload.username;
+    console.log( "ddd " +payload.username)
+   return axios.post('https://trinitstechnologies.com/demo/api/v1/user/login',payload)
 
-export const logindata=createAsyncThunk('user/logindata',async (payload)=>{
-
-    axios.post('https://trinitstechnologies.com/demo/api/v1/user/login',payload).then((Response) =>{
-
-    console.log(Response)
-    }).catch(error=>{
-        console.log(error)
-    })
 
 
 
 })
 
 const initialState ={
-    username:""
+    username:"",
+    islogdin:false
 
 }
 
@@ -24,7 +22,9 @@ export const counterSlice = createSlice({
     initialState,
     reducers: {
         loginSlice:(State,action) =>{
-            State.username=action.payload
+            State.username = action.payload.username;
+            State.islogdin = action.payload.islogdin
+           
         }
 
 
@@ -32,9 +32,10 @@ export const counterSlice = createSlice({
     },
     extraReducers(builder) {
         builder.addCase(logindata.fulfilled, (state, action) => {
-          console.log(action.payload);
-          state.users = state.users.concat(action.payload)
-          return action.payload;
+            state.username = username
+            state.islogdin=true
+            console.log("fgg "+state.username);
+        //   return action.payload;
         })
       }
     

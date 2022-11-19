@@ -1,12 +1,21 @@
 
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { useDispatch } from "react-redux";
-import { Link } from "react-router-dom";
+import { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import { logindata } from "../Store/LoginSice";
 
 export default function Login() {
-  const loginpage = useDispatch()
+  const dispatch = useDispatch();
+  const islogdin= useSelector(action=>action.login.islogdin)
+  
+  useEffect(()=>{
+    if(islogdin){
+    }
+
+    
+  },[islogdin])
   return (
     <>
 
@@ -22,7 +31,8 @@ export default function Login() {
           })}
           onSubmit={(values) => {
 
-            loginpage(logindata(values))
+            console.log(values)
+            dispatch(logindata(values))
             
             
           }}
@@ -67,7 +77,7 @@ export default function Login() {
               </div>
 
               <div className="mt-3 rounded-4 " bg-success>
-                <button className=" buttoncolor rounded-3 p-2 text-light">
+                <button type="submit" className=" buttoncolor rounded-3 p-2 text-light">
                   Login
                 </button>
               </div>

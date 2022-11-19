@@ -17,13 +17,13 @@ function Sidebar() {
         <div className="d-flex mt-3 selected">
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
-            <Link to="/" className="text-decoration-none back">
+            <Link to="/Home" className="text-decoration-none back">
               <BsHouseFill />
             </Link>
           </button>
         </div>
         <div className="fw-semibold m-2 ">
-          <Link to="/" className="text-decoration-none text-dark color">
+          <Link to="/Home" className="text-decoration-none text-dark color">
             Dashboard
           </Link>
         </div>
