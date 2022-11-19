@@ -53,22 +53,19 @@ useEffect(()=>{
       <MainPage />
         </>}
         {islogdin && <>
-        <Header handlesidebarstatus={handlesidebarstatus}/>
+        <Header hidesidebar={handlesidebarstatus}/>
         </>}
       </div>
       <div className="d-flex">
+        {islogdin && <>
         <div className={sidebarclass}>
           <Sidebar />
         </div>
-      
-        
-
+        </>}
         <div className="main">
           <Switch>
           {!islogdin && <>
-            <Route path="/" exact>
-              <Home />
-            </Route>
+            
             <Route path="/report">
               <Report />
             </Route>

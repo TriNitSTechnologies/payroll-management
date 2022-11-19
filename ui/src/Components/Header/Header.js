@@ -8,7 +8,7 @@ import { Link } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
 
 
-function Header({props}) {
+function Header(props) {
   let userdispatch=useDispatch()
   function logoutuser(){
     userdispatch(loginSlice({
@@ -127,12 +127,10 @@ function Header({props}) {
                   </Link>
                 </li>
                 <li className=" mt-2  dropdown-style mt-1 p-1">
-                  <Link to="/login" className="text-decoration-none fs-5 ms-3">
                     <FiLogIn className="bi bi-gear-fill  text-dark " />
-                    <span className="text-dark fw-lighter fs-6 ms-2"  onClick={logoutuser}>
+                    <span className="text-dark fw-lighter fs-6 ms-2" onClick={logoutuser}>
                       Logout
                     </span>
-                  </Link>
                 </li>
               </ul>
             </div>
