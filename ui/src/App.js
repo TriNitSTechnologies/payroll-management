@@ -75,9 +75,7 @@ function App() {
               <Documents />
             </Route>
 
-            <Route path="/payslip">
-              <Payslip4 />
-            </Route>
+            
             <Route path="/appointment">
               <Appointment />
             </Route>
