@@ -9,19 +9,32 @@ import Company from "./Components/Company/Company";
 import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
+import Appointment from "./Components/Appointment/appointment";
+import React, { useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
+import MyProfile from "./Components/My-Profile/My-Profile";
+import OfferLetter from "./Components/Documents/Appointment";
+import Notifications from "./Components/Notifications/Notifications";
+
 
 function App() {
+  const [sidebarstatus, setSidebarStatus] = useState(false);
+  const sidebarclass = sidebarstatus ? "sidebar" : "sidebar sidebar-collapse";
+  function handlesidebarstatus() {
+    setSidebarStatus((previousstate) => {
+      return !previousstate;
+    });
+  }
+
   return (
     <div>
       <div className="head">
-        <Header />
+        <Header hidesidebar={handlesidebarstatus} />
       </div>
-
       <div className="d-flex">
-        <div className="sidebar">
+        <div className={sidebarclass}>
           <Sidebar />
         </div>
         <div className="main">
@@ -29,7 +42,6 @@ function App() {
             <Route path="/" exact>
               <Home />
             </Route>
-
             <Route path="/report">
               <Report />
             </Route>
@@ -39,7 +51,7 @@ function App() {
             <Route path="/register">
               <Register />
             </Route>
-            
+
             <Route path="/login">
               <Login />
             </Route>
@@ -54,6 +66,19 @@ function App() {
             </Route>
             <Route path="/documents">
               <Documents />
+            </Route>
+            <Route path="/appointment">
+              <Appointment />
+            </Route>
+
+            <Route path="/offer-letter">
+              <OfferLetter />
+            </Route>
+            <Route path="profile">
+              <MyProfile />
+            </Route>
+            <Route path="/notifications">
+              <Notifications/>
             </Route>
           </Switch>
         </div>

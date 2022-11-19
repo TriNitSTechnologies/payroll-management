@@ -1,9 +1,12 @@
 .sidebar{
-  width:18%;
-  min-width:180px ;
+  width:220px;
   background-color:aliceblue;
-  height:87vh;
-  overflow:auto;
+}
+
+
+.sidebar-collapse{
+  width:63px ;
+  overflow: hidden;
 }
 .main{
   width:100% ;
@@ -116,3 +119,67 @@ box-shadow: 5px 5px 10px lightgray;
   width:24%
 }
 
+.font{
+  font-size: 25px;
+  color: blue;
+}
+.flex{
+  display: flex;
+justify-content: space-between;
+
+}
+.button-f{
+ margin-left: 10%;
+
+}
+.button1{
+  background-color: rgb(8, 119, 8);
+color: white;
+border: none;
+}
+
+.button1:hover{
+  background-color:green;
+ 
+
+}
+.card:hover{
+  background-color: rgb(241, 229, 229);
+}
+ .cardsize{
+  
+  height: 600px;
+  width: 300px;
+ 
+ }
+.titlecolor{
+  color:green;
+}
+.bodycolor{
+  color:blue;
+  font-size: 20px;
+}
+.font1{
+  font-size: 60px;
+  color:rgb(180, 180, 219);
+border:1px solid rgb(14, 147, 236);
+border-radius: 50%;
+  margin-left: 37%;
+}
+.font2{
+ 
+  font-size: 25px;
+ 
+}
+.font3{
+  font-size: 20px;
+}
+.bg-white{
+  background-color: white;
+}
+.fontsize{
+font-size: 30px;
+color:rgb(180, 180, 219);
+border:1px solid rgb(14, 147, 236);
+border-radius: 50%;
+}
