@@ -17,6 +17,16 @@ import Login from "./Components/LoginPage/Login";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 import MyProfile from "./Components/My-Profile/My-Profile";
 import OfferLetter from "./Components/Documents/Appointment";
+import Reports from "./Components/NewReport/Reports";
+
+import "primereact/resources/themes/lara-light-indigo/theme.css"; 
+import "primereact/resources/primereact.min.css";                
+import "primeicons/primeicons.css";                              
+import Joinletter from "./Components/Offer Letter/offerletter";
+import Payslip1 from "./Components/Payslip1/Payslip1";
+import Payslip2 from "./Components/Payslip2/Payslip2";
+import Payslip3 from "./Components/Payslip3/Payslip3";
+ 
 
 
 function App() {
@@ -72,8 +82,23 @@ function App() {
             <Route path="/documents">
               <Documents />
             </Route>
+            <Route path="/joinletter">
+              <Joinletter />
+            </Route>
             <Route path="/appointment">
               <Appointment />
+            </Route>
+            <Route path="/newReport">
+            <Reports />
+            </Route>
+            <Route path="/Payslip1">
+            <Payslip1 />
+            </Route>
+            <Route path="/Payslip2">
+            <Payslip2 />
+            </Route>
+            <Route path="/Payslip3">
+            <Payslip3 />
             </Route>
 
             <Route path='/offer-letter'>
