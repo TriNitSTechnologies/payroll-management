@@ -4,6 +4,7 @@ import { GiTakeMyMoney } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { ImExit } from "react-icons/im";
 import { BsHouseFill } from "react-icons/bs";
+import Company from "../Company/Company";
 function Home() {
   return (
     <div>
@@ -54,10 +55,13 @@ function Home() {
             <div className="d-flex justify-content-between">
               <div>
                 <div>
-                  <b> Employess</b>
+                  {/* <b> Employess</b> */}
+                  <Link to="/employees" className="text-decoration-none  text-white">
+                    <b>Employees</b>
+                  </Link>
                 </div>
                 <div className="fs-4">
-                  <b> 700</b>
+                  <b>700</b>
                 </div>
               </div>
               <div className="fs-4 card text-primary ps-2 pe-2">
@@ -70,10 +74,13 @@ function Home() {
           <div className="d-flex justify-content-between w-35 company-card p-2 rounded text-white  shadow">
             <div>
               <div>
-                <b>Companies</b>
+                {/* <b>Companies</b> */}
+                <Link to="/company" className="text-decoration-none  text-white">
+                  <b>Companies</b>
+                </Link>
               </div>
               <div className="fs-4">
-                <b>30</b>
+                <b>9</b>
               </div>
             </div>
             <div className="card text-black">
@@ -89,7 +96,7 @@ function Home() {
                   <b> Leaves</b>
                 </div>
                 <div className="fs-4">
-                  <b> 700</b>
+                  <b>700</b>
                 </div>
               </div>
               <div className="fs-4 card text-danger ps-2 pe-2">
