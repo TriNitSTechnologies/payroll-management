@@ -133,12 +133,22 @@ function Company() {
 
 
 
+ 
 
 
 
 
             <div className=" w-100 mt-3 d-flex justify-content-between">
                 <div className="shadow border rounded widthinc p-3">
+
+            <div>
+                <button className="btn btn-success mt-2 float-end" onClick={() => setShowcompanyForm(true)}>
+                    <IoAddSharp className="bg-white " />Add Company
+                </button>
+            </div>
+            <div className="data w-100 mt-3">
+                <div className="shadow border  w-75 rounded widthinc p-3">
+
                     <b>Total:{Company.length}</b>
 
                 </div>
