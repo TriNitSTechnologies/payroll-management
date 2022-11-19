@@ -70,12 +70,9 @@ function Company() {
 
             <div>
                 <button className="btn btn-success mt-2 float-end" onClick={() => setShowcompanyForm(true)}>
-                    <IoAddSharp className="text-white " />Add Company
+                    <IoAddSharp className="bg-white " />Add Company
                 </button>
             </div>
-
-
-
             <div className="data w-100 mt-3">
                 <div className="shadow border  w-75 rounded widthinc p-3">
                     <b>Total:{Company.length}</b>
