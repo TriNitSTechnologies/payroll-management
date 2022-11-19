@@ -12,7 +12,7 @@ return(
             alt="it represents company logo"
             className="logo m-2"
           />
-           <h1 className="mt-3"> Payroll-Management</h1>
+           <h1 className="mt-3"> Payroll management</h1>
         </div>
        
         <div className="mt-2 p-2 selected:hover rounded">
