@@ -1,21 +1,14 @@
 
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import { Link, useHistory } from "react-router-dom";
+import { useDispatch  } from "react-redux";
+import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { logindata } from "../Store/LoginSlice";
 
 export default function Login() {
   const dispatch = useDispatch();
-  const islogdin= useSelector(action=>action.login.islogdin)
   
-  useEffect(()=>{
-    if(islogdin){
-    }
 
-    
-  },[islogdin])
   return (
     <>
 
