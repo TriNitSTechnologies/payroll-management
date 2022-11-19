@@ -16,6 +16,10 @@ import Login from "./Components/LoginPage/Login";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 
 
+import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
+import "primereact/resources/primereact.min.css";                  //core css
+import "primeicons/primeicons.css";                                //icons
+ 
 function App() {
 const[sidebarstatus,setSidebarStatus] = useState(false);
 const sidebarclass = sidebarstatus ? 'sidebar': "sidebar sidebar-collapse";
