@@ -3,7 +3,7 @@ import logo from "../Image/logo-dark.png";
 import business from "../Image/download.jpeg"
 import photo from "../Image/pexels-photo.jpeg";
 import { useDispatch } from "react-redux";
-import { loginSlice } from "../Store/LoginSice";
+import { loginSlice } from "../Store/LoginSlice";
 import { Link } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
 
@@ -13,7 +13,7 @@ function Header(props) {
   function logoutuser(){
     userdispatch(loginSlice({
       username:"",
-      islogdin:false
+      isUserLoggedIn:false
 
     }))
   }

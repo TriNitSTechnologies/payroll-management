@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
-import { logindata } from "../Store/LoginSice";
+import { logindata } from "../Store/LoginSlice";
 
 export default function Login() {
   const dispatch = useDispatch();

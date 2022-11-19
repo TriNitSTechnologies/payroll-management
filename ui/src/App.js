@@ -13,14 +13,15 @@ import { useEffect, useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
-import MainPage from "./Components/MainPage/MainPage";
-import Mainbody from "./Components/MainPage/mainbody";
+import MainPage from "./Components/MainPage/Main-Head";
+import Mainbody from "./Components/MainPage/Main-Body";
 import { useSelector } from "react-redux";
 import Appointment from "./Components/Appointment/appointment";
 import React from "react";
 import MyProfile from "./Components/My-Profile/My-Profile";
 import OfferLetter from "./Components/Documents/Appointment";
 import Notifications from "./Components/Notifications/Notifications";
+import MainHead from "./Components/MainPage/Main-Head";
 
 
 
@@ -50,7 +51,7 @@ useEffect(()=>{
     <div>
       <div className="head">
         {!isUserLoggedIn && <>
-      <MainPage />
+      <MainHead />
         </>}
         {isUserLoggedIn && <>
         <Header hidesidebar={handlesidebarstatus}/>

@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "../Image/logo-dark.png";
 
 
-export default function MainPage(){
+export default function MainHead(){
 return(
     <div className="h-100">
         <div className="d-flex h-100 border justify-content-between shadow-lg">
