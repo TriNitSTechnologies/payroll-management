@@ -1,6 +1,6 @@
 
 
-.image {
+.payslip-logo {
     width: 140px;
     height: 98px;
    
@@ -9,11 +9,11 @@
 }
 
 
-.paysliptitle {
+.payslip-title {
     border: none !important;
 }
 
-.payslipbodydatatext {
+.payslip-body-data-text {
 
     border: 1px solid black;
     border-collapse: collapse;
@@ -21,6 +21,6 @@
     margin: auto;
 }
 
-.overallwidth-80{
+.w-80{
     width: 81%;
 }

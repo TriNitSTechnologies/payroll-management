@@ -6,7 +6,7 @@ import { React } from "react";
 
 function Payslip4() {
   return (
-    <div className=" bg-white overallwidth-80  m-auto padding p-5 mb-5">
+    <div className=" bg-white w-80  m-auto padding p-5 mb-5">
       <div>
         <div className="   Larger    ">
           <div>
@@ -17,7 +17,7 @@ function Payslip4() {
                     <tr>
                       <th>
                         {" "}
-                        <img className="image" src={telegram} alt="" />
+                        <img className="payslip-logo" src={telegram} alt="" />
                       </th>
                     </tr>
                   </div>
