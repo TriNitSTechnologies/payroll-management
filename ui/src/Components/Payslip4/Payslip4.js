@@ -1,6 +1,6 @@
 import "./Payslip4.css";
 
-// import './Capgemini.css';
+
 import { React } from "react";
  import telegram from "./../../Image/trinits.jpg";
 
