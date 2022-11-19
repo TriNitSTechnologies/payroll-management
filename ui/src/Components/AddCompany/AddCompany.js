@@ -10,11 +10,11 @@ import { toast } from 'react-toastify';
 import { BsCheckCircleFill } from "react-icons/bs";
 import { AiOutlineClose } from "react-icons/ai";
 
+const SERVER_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
+
 function AddCompany(props) {
 
-    const showToast = () => {
-        toast("Sucessfully cancel the data")
-      };
+    
     return (
         <div>
              <div className="shadow border p-3 rounded m-3 maindata-content  mt-3">
@@ -36,19 +36,19 @@ function AddCompany(props) {
 
             <Formik initialValues={props.initialValues}
                 validationSchema={Yup.object({
-                    companyName: Yup.string().required('company name is required'),
-                    mobileNumber: Yup.string().required('phone number is required'),
-                    addressLine1: Yup.string().required('address is required'),
-                    logoName: Yup.string().required('logo name is required'),
-                    addressLine2: Yup.string().required('address  is required'),
-                    state: Yup.string().required('state is required'),
-                    town: Yup.string().required('town is required'),
-                    pinCode: Yup.string().required('pincode is required')
+                    companyName: Yup.string().required('Company name is required'),
+                    mobileNumber: Yup.string().required('Phone number is required'),
+                    addressLine1: Yup.string().required('Address is required'),
+                    logoName: Yup.string().required('Logo name is required'),
+                    addressLine2: Yup.string().required('Address  is required'),
+                    state: Yup.string().required('State is required'),
+                    town: Yup.string().required('Town is required'),
+                    pinCode: Yup.string().required('Pincode is required')
 
                 })}
                 onSubmit={(values) => {
                     if(values && values.id){
-                        axios.put("https://trinitstechnologies.com/demo/api/v1/companies/"+values.id, values)
+                        axios.put(SERVER_URL+"/"+values.id, values)
                             .then(response => {
                                 toast.success("Successfully updated to the server", {
                                     position: toast.POSITION.BOTTOM_LEFT
@@ -59,7 +59,7 @@ function AddCompany(props) {
                             })
                             .catch(error => toast.error('error occurred while saving it ' + error));
                     }else {
-                        axios.post("https://trinitstechnologies.com/demo/api/v1/companies", values)
+                        axios.post(SERVER_URL+"/", values)
                             .then(response => {
                                 
                                 toast.success("Successfully Saved to the server", {

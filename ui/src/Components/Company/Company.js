@@ -44,9 +44,7 @@ function Company() {
 
     function onCloseHandler() {
         setShowcompanyForm(false);
-        toast.success("Sucessfully Canceled", {
-            position: toast.POSITION.BOTTOM_LEFT
-        });
+      
     }
     function DeleteCompany(index) {
 
