@@ -37,7 +37,7 @@ function handlesidebarstatus(){
 useEffect(()=>{
   
   if(isUserLoggedIn){
-    userrouter.push("/Home")
+    userrouter.push("/home")
   }else{
     userrouter.push("/")
   }
