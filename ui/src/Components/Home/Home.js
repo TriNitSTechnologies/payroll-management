@@ -21,7 +21,6 @@ function Home() {
             <div className="card">
               <div className="d-flex justify-content-between p-3 shadow">
                 <div>
-                  {" "}
                   <span className="back rounded shadow ms-2 p-2">
                     {" "}
                     <BsHouseFill />

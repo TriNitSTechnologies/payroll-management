@@ -9,24 +9,19 @@ import Company from "./Components/Company/Company";
 import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
-
 import Appointment from "./Components/Appointment/appointment";
-import { useState } from "react";
+import React, { useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 import MyProfile from "./Components/My-Profile/My-Profile";
 import OfferLetter from "./Components/Documents/Appointment";
+import Notifications from "./Components/Notifications/Notifications";
 
 
 function App() {
   const [sidebarstatus, setSidebarStatus] = useState(false);
   const sidebarclass = sidebarstatus ? "sidebar" : "sidebar sidebar-collapse";
-  // function handlesidebarstatus(){
-  //   setSidebarStatus((previousstate)=>{
-  //     return !previousstate;
-  //   })
-  // }
   function handlesidebarstatus() {
     setSidebarStatus((previousstate) => {
       return !previousstate;
@@ -76,10 +71,15 @@ function App() {
               <Appointment />
             </Route>
 
-            <Route path='/offer-letter'>
-              <OfferLetter/>
+            <Route path="/offer-letter">
+              <OfferLetter />
             </Route>
-
+            <Route path="profile">
+              <MyProfile />
+            </Route>
+            <Route path="/notifications">
+              <Notifications/>
+            </Route>
           </Switch>
         </div>
       </div>
