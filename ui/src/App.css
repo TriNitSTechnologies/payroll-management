@@ -140,14 +140,9 @@ border: none;
 
 .button1:hover{
   background-color:green;
- 
+ }
 
-}
-.card:hover{
-  background-color: rgb(241, 229, 229);
-}
  .cardsize{
-  
   height: 600px;
   width: 300px;
  
