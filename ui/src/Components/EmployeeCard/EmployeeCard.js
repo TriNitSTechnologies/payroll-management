@@ -37,7 +37,7 @@ export default function EmployeeCard(){
                  
                   </div>     
                   <div className="  text-center titlecolor mt-2 ">{data.empName}</div>
-                <div className="text-center"> <small >{data.empNo}</small></div>
+                <div className="text-center text-dark"> <small >{data.empNo}</small></div>
                 <div className="text-center bodycolor"> <small>{data.designation}</small></div>
                
               

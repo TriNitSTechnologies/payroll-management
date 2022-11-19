@@ -13,6 +13,7 @@ import EmployeeForm from "../EmployeeForm/EmployeeForm";
 import { ToastContainer, toast } from 'react-toastify';
 import EmployeeCard from "../EmployeeCard/EmployeeCard";
 import ReactTooltip from 'react-tooltip';
+import { FaUserFriends } from "react-icons/fa";
 
 
 const empurl="https://trinitstechnologies.com/demo/api/v1/employees";
@@ -126,11 +127,10 @@ export default function Employees(){
 
     {showForm ? <EmployeeForm  onCancel={oncancelForm} onSave={onsaveForm} selected={selected}/>:null}
        
+
         <div className="w-100 shadow p-4 bg-white ">
-        
-        
         <div 
-        className=' w-75 shadow  p-3 rounded mt-2 '>
+        className=' w-100 shadow  p-3 rounded mt-2 '>
         <Link to="/" > <AiFillHome className="font border border-white shadow rounded " /> Home </Link>
         <Link to="/Employees">/Employees</Link>
         <div  className=" float-end">
@@ -141,17 +141,17 @@ export default function Employees(){
         </div>
        
        
-        <div className="w-75 mt-2">
+        <div className="w-100 mt-4">
         
             <button className="button1 rounded p-2 button1:hover float-end shadow" onClick={ ()=>{ setshowForm(true);setSelected(null);}} data-tip="Add Employee Information"><FiPlusCircle /> AddEmployee</button>
         </div>
      
       
-      <div className="w-75 flex mt-5">
-      <div className="shadow w-50 rounded p-3 text-black">
+      <div className="w-100 flex ">
+      <div className="shadow w-50 rounded p-3 text-black mt-4">
       Total: {employeemodel.length}    
       </div>
-      <div className="mt-2 ">
+      <div className="mt-4 ">
 "
         <button className= {card == 'Card' ?" btn btn-primary p-2 shadow":"btn btn-outline-primary p-2 shadow "} data-tip="Card Data">< AiOutlineAppstore onClick={()=>setcard("Card")} className="font2 "/></button>
         <button className={card == 'table' ?"btn btn-primary p-2 ms-2 shadow":"btn btn-primary p-2 ms-2 shadow "} data-tip="Table Data"><AiOutlineBars onClick={()=>setcard("table")} className="font2"/> </button>
@@ -166,9 +166,10 @@ export default function Employees(){
            
 
      
-      <table className={card== 'table'?"table table-hover table-striped mt-4 w-75":'table table-hover table-striped shadow mt-4'}>
+      <table className={card== 'table'?"table table-hover table-striped mt-4 ":'table table-hover table-striped shadow mt-4 '}>
         <tbody>
             <tr>
+             
                 <th>empName</th>
                 <th>empNo</th>
                 <th>designation</th>
@@ -180,7 +181,8 @@ export default function Employees(){
             {employeemodel.map((data,index)=>{
                 return(
                     <tr key={data.id}>
-                    <td>{data.empName}</td>
+                      
+                    <td> <FaUserFriends className="fontsize me-2"/>{data.empName}</td>
                     <td>{data.empNo}</td>
                     <td>{data.designation}</td>
                     <td>{data.bankAccount}</td>

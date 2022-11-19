@@ -144,7 +144,7 @@ border: none;
 
 }
 .card:hover{
-  background-color: rgb(253, 249, 249);
+  background-color: rgb(241, 229, 229);
 }
  .cardsize{
   
@@ -176,4 +176,10 @@ border-radius: 50%;
 }
 .bg-white{
   background-color: white;
+}
+.fontsize{
+font-size: 30px;
+color:rgb(180, 180, 219);
+border:1px solid rgb(14, 147, 236);
+border-radius: 50%;
 }
