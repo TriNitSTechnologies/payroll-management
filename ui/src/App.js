@@ -1,3 +1,4 @@
+
 import "./App.css";
 import "../node_modules/bootstrap/dist/css/bootstrap.min.css";
 import Header from "./Components/Header/Header";
@@ -12,6 +13,7 @@ import Documents from "./Components/Documents/Documents";
 import { useEffect, useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
+import Payslip4 from "./Components/Payslip4/Payslip4";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 import MainPage from "./Components/MainPage/Main-Head";
 import Mainbody from "./Components/MainPage/Main-Body";
@@ -104,7 +106,6 @@ useEffect(()=>{
             <Route path="/home" exact>
               <Home />
             </Route>
-
             <Route path="/appointment">
               <Appointment />
             </Route>

@@ -55,7 +55,7 @@ function Sidebar() {
           </button>
         </div>
         <div className="fw-semibold m-2 ">
-          <Link to="/employees" className="text-decoration-none  text-dark">
+        <Link to="/employees" className="text-decoration-none  text-dark">
             Employees
           </Link>
         </div>

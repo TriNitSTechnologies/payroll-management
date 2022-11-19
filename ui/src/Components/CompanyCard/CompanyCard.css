@@ -1,6 +1,6 @@
 .company-Carddata{
-    width: 250px;
-    height: 200px;
+    width: 270px;
+    height: 210px;
   }
   .imagedata{
     font-size: 30px;
@@ -8,4 +8,7 @@
   .width-card{
     color: darkgreen;
     
+  }
+  .Card-data{
+    background-color: white;
   }
