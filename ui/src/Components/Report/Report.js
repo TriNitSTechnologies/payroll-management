@@ -38,7 +38,7 @@ function Report() {
           empNo: Yup.string().trim().required("Employee no is required"),
           paymentMonth: Yup.string()
             .trim()
-            .required("date of month/year is required"),
+            .required("Date of month/year is required"),
           noOfWorkingDays: Yup.string()
             .trim()
             .required("No of working days is required"),

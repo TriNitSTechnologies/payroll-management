@@ -15,6 +15,7 @@ import { FaPenAlt } from "react-icons/fa";
 import CompanyCard from "../CompanyCard/CompanyCard";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import AddCompany from "../AddCompany/AddCompany";
 
 
 const COMPANY_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
@@ -22,8 +23,15 @@ function Company() {
 
     const [Company, setCompanydata] = useState([]);
     const [data, setData] = useState("");
-   
-    
+    const [ShowCompanyForm, setShowcompanyForm] = useState([]);
+
+    function onCloseHandler() {
+        setShowcompanyForm(false);
+    }
+    function DeleteCompany(){
+        
+    }
+
     function getData() {
         const Url = COMPANY_URL;
         axios.get(Url).then(response => setCompanydata(response.data)).catch((error) => {
@@ -34,12 +42,12 @@ function Company() {
     useEffect(() => {
         getData();
     }, []);
-    
+
     return (
         <div className="border shadow p-4 m-4">
             <ToastContainer />
             <ReactTooltip />
-           
+
 
             <h4>Company data</h4>
             <div className="shadow border  p-3 rounded maindata-button w-100">
@@ -54,24 +62,24 @@ function Company() {
                 </div>
 
             </div>
+            {
+                ShowCompanyForm ? <AddCompany  onCancel={onCloseHandler}/> : null
+            }
 
-            <div className="maindata-button  w-100 mt-2">
 
-                <div>
-                    <button className="btn btn-success" >
-                    <IoAddSharp className="text-white " />Add Company
-                    </button>
-                </div>
 
+            <div>
+                <button className="btn btn-success mt-2 float-end" onClick={() => setShowcompanyForm(true)}>
+                    <IoAddSharp className="bg-white " />Add Company
+                </button>
             </div>
-
-            <div className="data w-100 mt-2">
+            <div className="data w-100 mt-3">
                 <div className="shadow border  w-75 rounded widthinc p-3">
                     <b>Total:{Company.length}</b>
 
                 </div>
 
-                <div className="btn-group buttonClass" role="group" aria-label="Basic radio toggle button group">
+                <div className="btn-group buttonClass mt-2" role="group" aria-label="Basic radio toggle button group">
                     <button className={data === 'companyCard' ? 'btn btn-primary rounded shadow w ' : 'btn btn-outline-primary w '} data-tip="Company Card data">
                         <BsFillGridFill className="icondata text-black" onClick={() => { setData("companyCard") }} />
 
@@ -87,7 +95,7 @@ function Company() {
                 }
             </div>
 
-            <div className={data === 'Table' ? 'd-block tabledata mt-3 ' : 'Table'}>
+            <div className={data === 'Table' ? 'd-block tabledata mt-3 ' : 'd-none'}>
                 <table className="table table-striped table-hover table-bordered border-primary mt-3">
                     <tbody>
                         <tr>
@@ -110,8 +118,8 @@ function Company() {
                                         <td>
 
 
-                                            <button className="btn btn-primary" data-tip="update companydata"><FaPenAlt  /></button>
-                                            <button className="btn btn-danger ms-3" data-tip="delete companydata"><FaTrash  /></button>
+                                            <button className="btn btn-primary" data-tip="update companydata"><FaPenAlt /></button>
+                                            <button className="btn btn-danger ms-3" data-tip="delete companydata"><FaTrash /></button>
 
                                         </td>
 

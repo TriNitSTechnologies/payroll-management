@@ -16,6 +16,12 @@ import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 import MainPage from "./Components/MainPage/MainPage";
 import Mainbody from "./Components/MainPage/mainbody";
 import { useSelector } from "react-redux";
+import Appointment from "./Components/Appointment/appointment";
+import React from "react";
+import MyProfile from "./Components/My-Profile/My-Profile";
+import OfferLetter from "./Components/Documents/Appointment";
+import Notifications from "./Components/Notifications/Notifications";
+
 
 
 function App() {
@@ -37,6 +43,9 @@ useEffect(()=>{
   }
 },[islogdin])
 
+
+
+
   return (
     <div>
       <div className="head">
@@ -46,20 +55,23 @@ useEffect(()=>{
         {islogdin && <>
         <Header handlesidebarstatus={handlesidebarstatus}/>
         </>}
-
       </div>
-
       <div className="d-flex">
-        {islogdin && <>
-          <div className={sidebarclass}>
-          <Sidebar/>
+        <div className={sidebarclass}>
+          <Sidebar />
         </div>
-        </>}
+      
         
 
         <div className="main">
           <Switch>
           {!islogdin && <>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/report">
+              <Report />
+            </Route>
             <Route path="/forgot-password">
               <ForgotPassword />
             </Route>
@@ -76,14 +88,9 @@ useEffect(()=>{
           </> }
              
             {islogdin && <>
-              
-           
-
             <Route path="/report">
               <Report />
             </Route>
-            
-            
             <Route path="/company">
               <Company />
             </Route>
@@ -99,9 +106,21 @@ useEffect(()=>{
             <Route path="/Home" exact>
               <Home />
             </Route>
-            </>}
 
-           
+            <Route path="/appointment">
+              <Appointment />
+            </Route>
+
+            <Route path="/offer-letter">
+              <OfferLetter />
+            </Route>
+            <Route path="profile">
+              <MyProfile />
+            </Route>
+            <Route path="/notifications">
+              <Notifications/>
+            </Route>
+            </>}
           </Switch>
         </div>
       </div>
