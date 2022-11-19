@@ -44,7 +44,7 @@ function Company() {
 
     function onCloseHandler() {
         setShowcompanyForm(false);
-      
+
     }
     function DeleteCompany(index) {
 
@@ -128,31 +128,11 @@ function Company() {
                 </div>
 
             </div>
-
-
-
- 
-
-
-
-
             <div className=" w-100 mt-3 d-flex justify-content-between">
                 <div className="shadow border rounded widthinc p-3">
-
-            <div>
-                <button className="btn btn-success mt-2 float-end" onClick={() => setShowcompanyForm(true)}>
-                    <IoAddSharp className="bg-white " />Add Company
-                </button>
-            </div>
-            <div className="data w-100 mt-3">
-                <div className="shadow border  w-75 rounded widthinc p-3">
-
                     <b>Total:{Company.length}</b>
 
                 </div>
-
-
-
                 <div className="btn-group buttonClass" role="group" aria-label="Basic radio toggle button group">
                     <div>
                         <button className="btn btn-success  float-end me-2 styles-height" onClick={() => setShowcompanyForm(true)}>
@@ -192,24 +172,16 @@ function Company() {
                             Company.map((companyModel, index) => {
                                 return (
                                     <tr key={companyModel.id}>
-
-
-
                                         <td> <img src={trinits} alt="trinits logo" style={{ width: '35px' }} className="me-2" />
-
-
                                             {companyModel.companyName}</td>
                                         <td>{companyModel.mobileNumber}</td>
                                         <td>{companyModel.addressLine1}</td>
                                         <td>{companyModel.addressLine2}</td>
                                         <td>{companyModel.logoName}</td>
                                         <td className="d-flex">
-
-
                                             <button className="btn btn-primary " data-tip="update companydata" onClick={() => editCompany(companyModel)}><FaPenAlt /></button>
                                             <button className="btn btn-danger ms-3 " data-tip="delete companydata" onClick={() => DeleteCompany(index)}
                                             >
-
                                                 <FaTrash /></button>
 
                                         </td>
