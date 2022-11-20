@@ -5,7 +5,35 @@ import { Link } from "react-router-dom";
 import { ImExit } from "react-icons/im";
 import { BsHouseFill } from "react-icons/bs";
 import Company from "../Company/Company";
+import { useState } from "react";
+import axios from "axios";
 function Home() {
+
+  const [CompanyLength, setCompanyLength] = useState("");
+  const [employeeLength,setEmployeLength] = useState("");
+
+  function getData() {
+    const Url ="https://trinitstechnologies.com/demo/api/v1/companies";
+    axios.get(Url).then(response => setCompanyLength(response.data)).catch((error) => {
+
+       
+    })
+
+}
+
+getData();
+
+
+function employeeData() {
+  const Url ="https://trinitstechnologies.com/demo/api/v1/employees";
+  axios.get(Url).then(response => setEmployeLength(response.data)).catch((error) => {
+
+     
+  })
+
+}
+
+employeeData();
   return (
     <div>
       <div className="dashboard-card p-5">
@@ -60,7 +88,7 @@ function Home() {
                   </Link>
                 </div>
                 <div className="fs-4">
-                  <b>700</b>
+                  <b>{employeeLength.length}</b>
                 </div>
               </div>
               <div className="fs-4 card text-primary ps-2 pe-2">
@@ -79,7 +107,7 @@ function Home() {
                 </Link>
               </div>
               <div className="fs-4">
-                <b>9</b>
+                <b>{CompanyLength.length}</b>
               </div>
             </div>
             <div className="card text-black">
