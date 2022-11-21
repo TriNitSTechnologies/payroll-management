@@ -2,7 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { BsHouseFill } from "react-icons/bs";
-function Report() {
+function Report(props) { 
   return (
 
     <div>
@@ -47,6 +47,7 @@ function Report() {
           grossSalary: Yup.string().trim().required("Gross salary is required"),
         })}
         onSubmit={(values) => {
+props.DataTransfer(values)
           alert(JSON.stringify(values));
         }}
       >

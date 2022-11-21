@@ -102,7 +102,7 @@ function App() {
             </Route>
 
             <Route path='/offer-letter'>
-              <OfferLetter/>
+              <OfferLetter />
             </Route>
 
           </Switch>
