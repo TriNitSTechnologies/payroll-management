@@ -1,46 +1,39 @@
 .maindata-button{
     display: flex;
     justify-content: space-between;
+    background-color: white;
     
     
   }
   .icondata{
-    font-size: 20px;
+    font-size: 17px;
     color: blue;
    
   }
   
-  .widthinc{
-    height: 10vh;
-   
-  }
+  
   .data{
     display: flex;
     justify-content: space-between;
-    width: 95vw;
-  
-  }
-  .buttonClass{
-    width: 10vw;
-   
-  }
-  
-  /* .updatedata{
-    background-color: rgb(7, 194, 7);
-    border: 3px solid green;
-    color: white;
     
-  } */
   
+  }
   
-  
-  
-  .w{
+  .widthinc{
+    background-color: white;
+    width: 53vw;
+  }
+ .w{
    height: 8vh;
    
   }
   .tabledata{
     width: 100%;
+    background-color: white;
+    overflow: auto;
     
+  }
+  .styles-height{
+    height: 9vh;
   }
   

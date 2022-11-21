@@ -17,7 +17,7 @@ export default function EmployeeForm({onSave,onCancel,selected}){
   )
     return(
         <div>
-             <div className="border  w-100 p-4 shadow m-auto text-white rounded">
+             <div className="border  w-100 p-4 shadow m-auto bg-white rounded">
 
 <Formik 
  initialValues={{empName:'',empNo:'',designation:'',bankAccount:'',pan:'',doj:'',}}

@@ -127,9 +127,8 @@ export default function Employees(){
 
     {showForm ? <EmployeeForm  onCancel={oncancelForm} onSave={onsaveForm} selected={selected}/>:null}
        
-        <div className="w-100 shadow p-4 text-white  ">
-        
-        
+
+        <div className="w-100 shadow p-4 bg-white ">
         <div 
         className=' w-100 shadow  p-3 rounded mt-2 '>
         <Link to="/" > <AiFillHome className="font border border-white shadow rounded " /> Home </Link>
