@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
 import loginSlice  from "./LoginSlice";
+import payslipReducer  from "./PayslipSlice";
 
-
-export default configureStore({
+export default  configureStore({
     reducer :{
-        login:loginSlice
+        login:loginSlice,
+        payslip:payslipReducer
     }
 
 })

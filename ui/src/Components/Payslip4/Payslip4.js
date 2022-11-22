@@ -1,8 +1,12 @@
 import "./Payslip4.css";
 import { React } from "react";
 import telegram from "./../../Image/trinits.jpg";
+import { useSelector } from "react-redux";
+
 
 function Payslip4() {
+ const payslipData= useSelector((state)=>state.payslip.payslipData);
+ console.log(payslipData);
   return (
     <div className=" bg-white w-80  m-auto padding p-5 mb-5">
       <div>
