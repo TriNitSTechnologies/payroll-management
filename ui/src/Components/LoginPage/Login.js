@@ -1,11 +1,17 @@
-import axios from "axios";
+
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useDispatch  } from "react-redux";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import { logindata } from "../Store/LoginSlice";
 
 export default function Login() {
+  const dispatch = useDispatch();
+  
+
   return (
     <>
+
       <div className="w-100">
         <Formik
           initialValues={{
@@ -17,12 +23,11 @@ export default function Login() {
             password: Yup.string().required("Password is Required").trim(),
           })}
           onSubmit={(values) => {
-            axios
-              .post(
-                "https://trinitstechnologies.com/demo/api/v1/user/login",
-                values
-              )
-              .then((response) => {});
+
+            console.log(values)
+            dispatch(logindata(values))
+            
+            
           }}
         >
           <div className="formbg">
@@ -65,7 +70,7 @@ export default function Login() {
               </div>
 
               <div className="mt-3 rounded-4 " bg-success>
-                <button className=" buttoncolor rounded-3 p-2 text-light">
+                <button type="submit" className=" buttoncolor rounded-3 p-2 text-light">
                   Login
                 </button>
               </div>

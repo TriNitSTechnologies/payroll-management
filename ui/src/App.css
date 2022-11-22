@@ -8,6 +8,11 @@
   width:63px ;
   overflow: hidden;
 }
+.mainform{
+  background-color: #fbfcfd;
+  margin-left: 15%;
+  padding: 5%;
+}
 .main{
   width:100% ;
   background-color:rgb(238, 241, 244);
@@ -144,15 +149,14 @@ font-size: 20px;
   background-color:white;
   color: green;
   border:green
- 
-
 }
-
- .cardsize{
-  
+.cardsize{
   height: 300px;
+  background-color:green;
+ }
+ .cardsize{
+  height: 600px; main
   width: 300px;
- 
  }
 .titlecolor{
   color:green;
@@ -174,7 +178,7 @@ font-size: 20px;
   font-size: 20px;
 }
 .text{
-  background-color: white;
+background-color: white;
 }
 .fontsize{
 font-size: 30px;
@@ -185,14 +189,11 @@ border-radius: 50%;
 .summerysize{
   font-size: 20px;
  height:50px;
- 
 }
 .imagesize{
-
-  height: 40px;
+ height: 40px;
   width: 40px;
- 
-}
+ }
 .imagesize2{
   height: 90px;
   width: 90px;

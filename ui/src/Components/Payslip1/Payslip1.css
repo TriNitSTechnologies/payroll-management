@@ -50,9 +50,9 @@
   
   padding-top: 10vh;
   }
-  tbody, td, tfoot, th, thead, tr {
+   tbody, td, tfoot, th, thead, tr {
     border-width: 1px!important;
-  }
+  } 
   
   .tthh{
     font-weight: bolder;
@@ -61,6 +61,7 @@
   .hh{
     height: 8vh;
     font-size: 16px;
+    
     
    
   }

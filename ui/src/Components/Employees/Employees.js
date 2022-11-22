@@ -136,7 +136,6 @@ export default function Employees() {
     <>
       <ReactTooltip />
       <ToastContainer />
-
       <div className="card">
 
         <ConfirmDialog visible={visible} onHide={() => setVisible(false)} message="Are you sure you want to Delete?"
@@ -153,8 +152,17 @@ export default function Employees() {
           <div className="float-end">
             <h4 className="text-dark">Employees</h4>
           </div>
+    {showForm ? <EmployeeForm  onCancel={oncancelForm} onSave={onsaveForm} selected={selected}/>:null}
+       
 
-
+        <div className="w-100 shadow p-4 bg-white ">
+        <div 
+        className=' w-100 shadow  p-3 rounded mt-2 '>
+        <Link to="/" > <AiFillHome className="font border border-white shadow rounded " /> Home </Link>
+        <Link to="/Employees">/Employees</Link>
+        <div  className=" float-end">
+        <h4 className="text-info">Employees</h4>
+             </div>
         </div>
 
 

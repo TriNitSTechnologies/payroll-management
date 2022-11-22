@@ -16,22 +16,16 @@ export default function EmployeeForm({onCancel ,onaddeddata,initialValues}){
  
     return(
         <div>
-           <div 
+        <div 
         className=' m-4 shadow  p-3 rounded text '>
         <Link to="/" > <AiFillHome className="font border border-white shadow rounded " /> Home </Link>/Employee
-        
         <div  className=" float-end">
         <h4 className="text-dark">Employees</h4>
              </div>
-        
-         
-        </div>
-       
-        
-             <div className="border p-4 shadow m-4 text rounded">
+          </div>
+        <div className="border p-4 shadow m-4 text rounded">
            <div> <h3 className="text-center text-dark ">EmployeeForm</h3></div> 
-
-
+ <div className="border  w-100 p-4 shadow m-auto bg-white rounded">
 <Formik 
  initialValues={initialValues}
  validationSchema={Yup.object({

@@ -1,8 +1,38 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import { BsHouseFill } from "react-icons/bs";
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { initpayslipData } from "../Store/PayslipSlice";
+
+import Documents from "../Documents/Documents";
+
+
+
+const PAYSLIP_URL ="https://trinitstechnologies.com/demo/api/v1/payroll?authorization=12"
 function Report() {
+
+ const dispatch= useDispatch();
+ const history = useHistory();
+
+  function fetchPayslip(event){
+    const payload =event;
+    if(payload){
+      axios
+      .post(PAYSLIP_URL,payload)
+      .then((response)=>{
+        let data = response.data;
+        dispatch(initpayslipData(data))
+        history.push('/documents')
+      })
+      .catch((error)=>alert.error("error whill fetching the data"+error));
+    }
+    event.preventDefault();
+
+
+  }
+
   return (
     <div>
       <div className="card m-4 pay shadow ">
@@ -45,6 +75,8 @@ function Report() {
           grossSalary: Yup.string().trim().required("Gross salary is required"),
         })}
         onSubmit={(values) => {
+          fetchPayslip(values)
+          console.log("value" + values)
           alert(JSON.stringify(values));
         }}
       >
@@ -119,8 +151,12 @@ function Report() {
             </div>
           </div>
           <div className=" ms-4 mb-2">
-            <button className="btn btn-primary btn-lg" type="submit">
+            <button className="btn btn-primary btn-lg" type="submit"
+   
+          >
+                  
               Get Payslip
+             
             </button>
           </div>
         </Form>
@@ -128,4 +164,5 @@ function Report() {
     </div>
   );
 }
+
 export default Report;
