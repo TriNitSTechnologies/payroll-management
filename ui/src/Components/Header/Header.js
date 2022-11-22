@@ -37,7 +37,7 @@ function Header(props) {
 
          </button>
          <ul className="dropdown-menu ">
-            <li className=" dropdown-style mt-1 p-1"><Link to="/profile" className="text-decoration-none fs-5 ms-3 "><i className="bi bi-person text-dark"></i><small className=" text-dark fw-lighter fs-6 ms-2">Profile</small></Link></li>
+            <li className=" dropdown-style mt-1 p-1"><Link to="/selectprofile" className="text-decoration-none fs-5 ms-3 "><i className="bi bi-person text-dark"></i><small className=" text-dark fw-lighter fs-6 ms-2">Profile</small></Link></li>
             <li className="mt-2  dropdown-style mt-1 p-1"><Link to="/settings" className="text-decoration-none fs-5 ms-3"><i className="bi bi-gear-fill  text-dark  "></i><span className=" text-dark fw-lighter fs-6 ms-2">settings</span></Link></li>
             <li className=" mt-2  dropdown-style mt-1 p-1"><Link to="/login" className="text-decoration-none fs-5 ms-3"><FiLogIn  className="bi bi-gear-fill  text-dark "/><span className="text-dark fw-lighter fs-6 ms-2">Logout</span></Link></li>
          </ul>

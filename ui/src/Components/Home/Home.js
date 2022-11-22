@@ -7,7 +7,7 @@ import { BsHouseFill } from "react-icons/bs";
 function Home() {
   return (
     <div>
-      <div className="dashboard-card p-5">
+      <div className="dashboard-card p-4">
         <div className="rounded admin-card ">
           <div className="d-flex fs-4 justify-content-between  p-3 ">
             <div>
@@ -16,7 +16,7 @@ function Home() {
             <div>{new Date().toDateString()}</div>
           </div>
         </div>
-        <div className="d-flex mt-4 justify-content-between">
+        <div className=" home-main-logi mt-4 justify-content-between">
           <div className="w-45">
             <div className="card">
               <div className="d-flex justify-content-between p-3 shadow">
@@ -49,7 +49,7 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-between mt-3">
+        <div className=" home-main-logi justify-content-between mt-3">
           <div className="employe-card rounded  w-35 p-2 text-white shadow">
             <div className="d-flex justify-content-between">
               <div>

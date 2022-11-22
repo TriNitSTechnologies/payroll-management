@@ -17,6 +17,11 @@ import Login from "./Components/LoginPage/Login";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 import MyProfile from "./Components/My-Profile/My-Profile";
 import OfferLetter from "./Components/Documents/Appointment";
+import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
+import "primereact/resources/primereact.min.css";                  //core css
+import "primeicons/primeicons.css"; 
+import Details from "./Components/Details/details";
+import SelectProfile from "./Components/Selected-profile/selected-profile";
 
 
 function App() {
@@ -78,6 +83,18 @@ function App() {
 
             <Route path='/offer-letter'>
               <OfferLetter/>
+            </Route>
+
+            <Route path='/profile'>
+              <MyProfile/>
+            </Route>
+
+            <Route path='/details'>
+                <Details/>
+            </Route>
+
+            <Route path='/selectprofile'>
+              <SelectProfile />
             </Route>
 
           </Switch>
