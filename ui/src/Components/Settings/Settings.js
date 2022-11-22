@@ -232,8 +232,8 @@ export default function Settings() {
         {value1 === "Time Off" && (
           <>
             <div>
-              <div className="row ">
-                <div className="col-sm-6 ">
+              <div className="row time-off-height">
+                <div className="col-sm-6 time-off-height">
                   <div className="card m-4 pay shadow height-content-card ">
                     <div className="card-header d-flex justify-content-between align-items-center">
                       <div className=" h-80px d-flex justify-content-between  align-items-center">
@@ -282,7 +282,7 @@ export default function Settings() {
                       </div>
                     </div>
 
-                    <div className="d-flex justify-content-between card-body p-5   align-items-center h-100 w-100 height-content-card">
+                    <div className="d-flex justify-content-between card-body p-5   align-items-center  w-100 height-content-card">
                       <table className="table table-hover text-center  ">
                         <thead>
                           <tr>
@@ -320,7 +320,7 @@ export default function Settings() {
                     </div>
                   </div>
                 </div>
-                <div className="col-sm-6">
+                <div className="col-sm-6 time-off-height">
                   <div className="card m-4 pay shadow ">
                     <div className="card-header d-flex justify-content-between align-items-center ">
                       <div className="h-80px">
