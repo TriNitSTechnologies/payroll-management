@@ -32,6 +32,7 @@ import Payslip2 from "./Components/Payslip2/Payslip2";
 import Payslip3 from "./Components/Payslip3/Payslip3";
 import Notifications from "./Components/Notifications/Notifications";
 import MainHead from "./Components/MainPage/Main-Head";
+import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print";
 
 function App() {
   let userrouter=useHistory()
@@ -133,6 +134,9 @@ useEffect(()=>{
             </Route>
             <Route path="profile">
               <MyProfile />
+            </Route>
+            <Route path="PrintAppoiement">
+              <PrintAppoiement />
             </Route>
             <Route path="/notifications">
               <Notifications/>
