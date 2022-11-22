@@ -32,8 +32,10 @@ import Payslip2 from "./Components/Payslip2/Payslip2";
 import Payslip3 from "./Components/Payslip3/Payslip3";
 import Notifications from "./Components/Notifications/Notifications";
 import MainHead from "./Components/MainPage/Main-Head";
-
-function App() {
+import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
+import "primereact/resources/primereact.min.css";                  //core css
+import "primeicons/primeicons.css";                                //icons
+ function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
 const isUserLoggedIn= useSelector(state=>state.login.isUserLoggedIn)
