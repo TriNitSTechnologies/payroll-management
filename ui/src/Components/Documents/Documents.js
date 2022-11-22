@@ -2,9 +2,9 @@ import { SelectButton } from "primereact/selectbutton";
 import Payslip1 from "../Payslip1/Payslip1";
 import Payslip2 from "../Payslip2/Payslip2";
 import Payslip3 from "../Payslip3/Payslip3";
-
 import "./../../App.css";
 import { useState } from "react";
+import Payslip4 from "../Payslip4/Payslip4";
 export default function Documents() {
 
   const [value3, setValue3] = useState(" ");
@@ -49,6 +49,14 @@ export default function Documents() {
               <>
                 <div>
                   <Payslip3 />
+                </div>
+              </>
+            )} 
+            
+            {value3 === "Payslip 4" && (
+              <>
+                <div>
+                  <Payslip4 />
                 </div>
               </>
             )} 

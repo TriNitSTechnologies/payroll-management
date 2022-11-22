@@ -127,6 +127,9 @@ useEffect(()=>{
             <Route path="/Payslip3">
             <Payslip3 />
             </Route>
+            <Route path="/Payslip4">
+            <Payslip4 />
+            </Route>
 
             <Route path="/offer-letter">
               <OfferLetter />

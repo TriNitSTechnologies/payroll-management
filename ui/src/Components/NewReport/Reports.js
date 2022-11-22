@@ -30,7 +30,7 @@ export default function Reports() {
   
   return (
     <>
-      <div className=" over-flow-auto h-100 bg-success bg-opacity-10 border border-3 rounded m-4">
+      <div className="  h-over-flow-auto bg-success bg-opacity-10 border border-3 rounded m-4">
         <div className="card p-2 mt-3 ms-3 me-3 m-5 m-auto border border-3 bg-primary bg-opacity-25">
           <h3 className=" ms-4 fw-bold ">Report's-Page</h3>
         </div>
