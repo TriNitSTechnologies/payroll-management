@@ -1,12 +1,16 @@
 import { SelectButton } from "primereact/selectbutton";
+import Joinletter from "../Offer Letter/offerletter";
 import Payslip1 from "../Payslip1/Payslip1";
 import Payslip2 from "../Payslip2/Payslip2";
 import Payslip3 from "../Payslip3/Payslip3";
-
 import "./../../App.css";
 import { useState } from "react";
 export default function Documents() {
-
+    return (
+        <>
+            <Payslip1 />
+            <Payslip2 />
+            <Payslip3 />
   const [value3, setValue3] = useState(" ");
   const paySliparray = ["Payslip 1", "Payslip 2", "Payslip 3","Payslip 4"];
   return (
