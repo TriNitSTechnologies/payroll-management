@@ -107,8 +107,8 @@ export default function Employees() {
     loadEmployeedata();
   }
 
-  function showDeleteDialog(index){
-    setVisible(true); 
+  function showDeleteDialog(index) {
+    setVisible(true);
     setSelectedIndex(index)
   }
 
@@ -152,100 +152,99 @@ export default function Employees() {
           <div className="float-end">
             <h4 className="text-dark">Employees</h4>
           </div>
-    {showForm ? <EmployeeForm  onCancel={oncancelForm} onSave={onsaveForm} selected={selected}/>:null}
-       
-
-        <div className="w-100 shadow p-4 bg-white ">
-        <div 
-        className=' w-100 shadow  p-3 rounded mt-2 '>
-        <Link to="/" > <AiFillHome className="font border border-white shadow rounded " /> Home </Link>
-        <Link to="/Employees">/Employees</Link>
-        <div  className=" float-end">
-        <h4 className="text-info">Employees</h4>
-             </div>
-        </div>
-
-
-
-
-
-        <div className="w-100 flex  mt-3 ">
-          <div className="shadow w-75 rounded text-dark text p-4 ">
-            <b> Total: {employeemodel.length}</b>
-          </div>
-          <div >
-
-            <button className="button1 rounded p-2 button1:hover  shadow mt-3" onClick={() => { addEmployee() }} data-tip="Add Employee Information"><FiPlusCircle /> AddEmployee</button>
-          </div>
-          <div className="mt-2 p-2">
-
-            <button className={card == 'Card' ? " btn btn-primary p-2 shadow" : "btn btn-outline-primary p-2 shadow"} data-tip="Employee data in card">< AiOutlineAppstore onClick={() => setcard("Card")} className="font2 " /></button>
-            <button className={card == 'table' ? "btn btn-primary p-2 ms-1 shadow" : "btn btn-outline-primary p-2 ms-1 shadow "} data-tip="Employee data in table"><AiOutlineBars onClick={() => setcard("table")} className="font2" /> </button>
-          </div>
-        </div>
-        <div className={card == 'Card' ?"d-block" : 'd-none'}>
           
-           <div className="d-flex flex-row flex-wrap card  border shadow mt-4 rounded p-4">
-          {
-        
-            employeemodel.map((data, index) => {
-              return (
-                <EmployeeCard key={data.id} index={index} data = {data} ondelete={showDeleteDialog} onedit={oneditEmployee}/>
-                
-              )
-            })
 
 
-          }
+          <div className="w-100 shadow p-4 text ">
+            <div
+              className=' w-100 shadow  p-3 rounded mt-2 '>
+              <Link to="/" > <AiFillHome className="font border border-white shadow rounded " /> Home </Link>
+              <Link to="/Employees">/Employees</Link>
+              <div className=" float-end">
+                <h4 className="text-info">Employees</h4>
+              </div>
+            </div>
+
+
+
+
+
+
+            <div className="w-100 flex  mt-3 ">
+              <div className="shadow w-75 rounded text-dark text p-4 ">
+                <b> Total: {employeemodel.length}</b>
+              </div>
+              <div >
+
+                <button className="button1 rounded p-2 button1:hover  shadow mt-3" onClick={() => { addEmployee() }} data-tip="Add Employee Information"><FiPlusCircle /> AddEmployee</button>
+              </div>
+              <div className="mt-2 p-2">
+
+                <button className={card == 'Card' ? " btn btn-primary p-2 shadow" : "btn btn-outline-primary p-2 shadow"} data-tip="Employee data in card">< AiOutlineAppstore onClick={() => setcard("Card")} className="font2 " /></button>
+                <button className={card == 'table' ? "btn btn-primary p-2 ms-1 shadow" : "btn btn-outline-primary p-2 ms-1 shadow "} data-tip="Employee data in table"><AiOutlineBars onClick={() => setcard("table")} className="font2" /> </button>
+              </div>
+            </div>
+            <div className={card == 'Card' ? "d-block" : 'd-none'}>
+
+              <div className="d-flex flex-row flex-wrap card  border shadow mt-4 rounded p-4">
+                {
+
+                  employeemodel.map((data, index) => {
+                    return (
+                      <EmployeeCard key={data.id} index={index} data={data} ondelete={showDeleteDialog} onedit={oneditEmployee} />
+
+                    )
+                  })
+
+
+                }
+              </div>
+            </div>
+
+
+
+
+            <table className={card == 'table' ? "table table-hover text shadow mt-4 rounded " : "d-none"}>
+              <tbody>
+                <tr className="text-dark summerysize "><b>EmployeeSummery</b></tr>
+                <tr>
+
+                  <th>Emp Name</th>
+                  <th>EmpNo</th>
+                  <th>Designation</th>
+                  <th>BankAccount</th>
+                  <th>Pan</th>
+                  <th>Doj</th>
+                  <th>Actions</th>
+                </tr>
+                {employeemodel.map((data, index) => {
+                  return (
+                    <tr key={data.id}>
+
+                      <td> <img src={photo} alt="circle" className="rounded-circle imagesize me-2" />{data.empName}</td>
+                      <td>{data.empNo}</td>
+                      <td>{data.designation}</td>
+                      <td>{data.bankAccount}</td>
+                      <td>{data.pan}</td>
+                      <td>{data.doj}</td>
+                      <td>
+
+                        <button className="btn btn-outline-primary" onClick={() => oneditEmployee(data)} data-tip="Edit Employee" > <AiFillEdit className="font3" /> </button>
+
+                        <button className="btn btn-outline-danger ms-2" onClick={() => { showDeleteDialog(index) }} data-tip="Delete Employee "><AiFillRest className="font3" /> </button>
+                        <ReactTooltip />
+                      </td>
+                    </tr>
+
+                  )
+                })}
+
+
+              </tbody>
+            </table>
           </div>
         </div>
-
-
-
-
-        <table className={card == 'table' ? "table table-hover text shadow mt-4 rounded " : "d-none"}>
-          <tbody>
-            <tr className="text-dark summerysize "><b>EmployeeSummery</b></tr>
-            <tr>
-
-              <th>Emp Name</th>
-              <th>EmpNo</th>
-              <th>Designation</th>
-              <th>BankAccount</th>
-              <th>Pan</th>
-              <th>Doj</th>
-              <th>Actions</th>
-            </tr>
-            {employeemodel.map((data, index) => {
-              return (
-                <tr key={data.id}>
-
-                  <td> <img src={photo} alt="circle" className="rounded-circle imagesize me-2" />{data.empName}</td>
-                  <td>{data.empNo}</td>
-                  <td>{data.designation}</td>
-                  <td>{data.bankAccount}</td>
-                  <td>{data.pan}</td>
-                  <td>{data.doj}</td>
-                  <td>
-
-                    <button className="btn btn-outline-primary" onClick={() => oneditEmployee(data)} data-tip="Edit Employee" > <AiFillEdit className="font3" /> </button>
-
-                    <button className="btn btn-outline-danger ms-2" onClick={() => { showDeleteDialog(index) }} data-tip="Delete Employee "><AiFillRest className="font3" /> </button>
-                    <ReactTooltip />
-                  </td>
-                </tr>
-
-              )
-            })}
-
-
-          </tbody>
-        </table>
-
-
-
       </div>
-
     </>
   )
 }
