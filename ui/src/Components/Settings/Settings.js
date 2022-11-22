@@ -32,41 +32,37 @@ export default function Settings() {
   });
   const [position, setPosition] = useState("center");
 
-  const [festival,setfestival]  =   useState('')
-  const [date,setdate]  = useState('')
-  const [form,setform]  = useState([])
+  const [festival, setfestival] = useState("");
+  const [date, setdate] = useState("");
+  const [form, setform] = useState([]);
 
-  function onhandlerfestival(event){
-    setfestival(event.target.value)
-
+  function onhandlerfestival(event) {
+    setfestival(event.target.value);
   }
-  function onhandlerdate(event){
-    setdate(event.target.value)
+  function onhandlerdate(event) {
+    setdate(event.target.value);
   }
 
-  function saveBtn (){
-    
-
-    let formObj ={
+  function saveBtn() {
+    let formObj = {
       festival,
-      date
+      date,
+    };
 
-    }
-   
-    form.push(formObj)
-    onHide("displayBasic2")
-    console.log(form)
+    form.push(formObj);
+    onHide("displayBasic2");
+    console.log(form);
   }
 
-  function addbtn(){
+  function addbtn() {
     weekObj.mon = mon;
-    weekObj.tue=tue;
-    weekObj.wed=wed;
-    weekObj.thur=thur;
-    weekObj.fri=fri;
-    weekObj.sat=sat;
-    weekObj.sun=sun;
-    onHide("displayBasic")
+    weekObj.tue = tue;
+    weekObj.wed = wed;
+    weekObj.thur = thur;
+    weekObj.fri = fri;
+    weekObj.sat = sat;
+    weekObj.sun = sun;
+    onHide("displayBasic");
   }
 
   const justifyTemplate = (option) => {
@@ -85,7 +81,6 @@ export default function Settings() {
   };
 
   const onHide = (name) => {
-
     dialogFuncMap[`${name}`](false);
   };
 
@@ -93,12 +88,10 @@ export default function Settings() {
     return (
       <div>
         <Button
-        label="Apply"
-          
+          label="Apply"
           onClick={() => {
             saveBtn();
-            }}
-          
+          }}
           className="bg-warning float-start w-25 "
         />
         <Button
@@ -110,17 +103,14 @@ export default function Settings() {
     );
   };
 
-
   const renderadd = (name) => {
     return (
       <div>
         <Button
-        label="Add"
-          
+          label="Add"
           onClick={() => {
-          addbtn()
-            }}
-          
+            addbtn();
+          }}
           className="bg-warning float-start w-25 "
         />
         <Button
@@ -250,7 +240,6 @@ export default function Settings() {
                         <h4>Festivals</h4>
                       </div>
                       <div className=" border p-1 float-end me-4 rounded fs-4 text-primary border-primary border-opacity-25 ">
-                        
                         <Button
                           label=""
                           icon="pi pi-external-link"
@@ -261,7 +250,6 @@ export default function Settings() {
                           visible={displayBasic2}
                           style={{ width: "50vw" }}
                           footer={renderFooter("displayBasic2")}
-                         
                           onHide={() => onHide("displayBasic2")}
                         >
                           <hr></hr>
@@ -281,7 +269,6 @@ export default function Settings() {
                                 type="date"
                                 className="p-inputtext-lg block w-100  mt-1"
                                 placeholder="enter the date"
-                                
                                 onChange={onhandlerdate}
                                 value={date}
                               />
@@ -296,7 +283,6 @@ export default function Settings() {
                     </div>
 
                     <div className="d-flex justify-content-between card-body p-5   align-items-center h-100 w-100 height-content-card">
-                     
                       <table className="table table-hover text-center  ">
                         <thead>
                           <tr>
@@ -305,15 +291,13 @@ export default function Settings() {
                           </tr>
                         </thead>
                         <tbody>
-                          {form.map((data,index) => {
-                            return(
-
-                          <tr key={index} >
-                            <td>{data.date}</td>
-                            <td>{data.festival}</td>
-                            
-                          </tr>
-                            )
+                          {form.map((data, index) => {
+                            return (
+                              <tr key={index}>
+                                <td>{data.date}</td>
+                                <td>{data.festival}</td>
+                              </tr>
+                            );
                           })}
                           <tr>
                             <td>19/09/2022</td>
@@ -331,7 +315,6 @@ export default function Settings() {
                             <td>20/11/2022</td>
                             <td>Sunday</td>
                           </tr>
-                          
                         </tbody>
                       </table>
                     </div>
@@ -345,7 +328,6 @@ export default function Settings() {
                         <small> Set the dates that your company works.</small>
                       </div>
                       <div className=" border p-1 float-end me-4 rounded  fs-4 text-primary border-primary border-opacity-25 ">
-                        
                         <div className="card">
                           <Button
                             label=""
@@ -368,13 +350,13 @@ export default function Settings() {
                                   id="inlineCheckbox1"
                                   value={mon}
                                   checked={mon}
-                                  onChange={() =>{
-                                    setMon(!mon)}}
+                                  onChange={() => {
+                                    setMon(!mon);
+                                  }}
                                 />
                                 <label
                                   className="form-check-label "
                                   htmlFor="inlineCheckbox1"
-                                  
                                 >
                                   Mon
                                 </label>
@@ -386,9 +368,9 @@ export default function Settings() {
                                   id="inlineCheckbox2"
                                   value={tue}
                                   checked={tue}
-                                  onChange={() =>{
-                                    setTue(!tue)}}
-                                 
+                                  onChange={() => {
+                                    setTue(!tue);
+                                  }}
                                 />
                                 <label
                                   className="form-check-label"
@@ -404,9 +386,9 @@ export default function Settings() {
                                   id="inlineCheckbox3"
                                   value={wed}
                                   checked={wed}
-                                  onChange={() =>{
-                                    setWed(!wed)}}
-                                 
+                                  onChange={() => {
+                                    setWed(!wed);
+                                  }}
                                 />
                                 <label
                                   className="form-check-label"
@@ -420,11 +402,11 @@ export default function Settings() {
                                   className="form-check-input p-2"
                                   type="checkbox"
                                   id="inlineCheckbox4"
-                                  
-                                    value={thur}
-                                    checked={thur}
-                                    onChange={() =>{
-                                      setThur(!thur)}}
+                                  value={thur}
+                                  checked={thur}
+                                  onChange={() => {
+                                    setThur(!thur);
+                                  }}
                                 />
                                 <label
                                   className="form-check-label"
@@ -440,9 +422,9 @@ export default function Settings() {
                                   id="inlineCheckbox5"
                                   value={fri}
                                   checked={fri}
-                                  onChange={() =>{
-                                    setFri(!fri)}}
-                                 
+                                  onChange={() => {
+                                    setFri(!fri);
+                                  }}
                                 />
                                 <label
                                   className="form-check-label"
@@ -458,9 +440,9 @@ export default function Settings() {
                                   id="inlineCheckbox6"
                                   value={sat}
                                   checked={sat}
-                                  onChange={() =>{
-                                    setSat(!sat)}}
-                                 
+                                  onChange={() => {
+                                    setSat(!sat);
+                                  }}
                                 />
                                 <label
                                   className="form-check-label"
@@ -476,8 +458,9 @@ export default function Settings() {
                                   id="inlineCheckbox7"
                                   value={sun}
                                   checked={sun}
-                                  onChange={() =>{
-                                    setSun(!sun)}}
+                                  onChange={() => {
+                                    setSun(!sun);
+                                  }}
                                 />
                                 <label
                                   className="form-check-label"
@@ -494,23 +477,67 @@ export default function Settings() {
 
                     <div className="card-body d-flex justify-content-between align-items-center p-5   w-100  height-content-card">
                       <div>
-                        <button className={weekObj.mon ? 'btn btn-primary shadow ms-2':'btn btn-danger shadow ms-2'}>Mon</button>
-                        <button className={weekObj.tue ? 'btn btn-primary shadow ms-2':'btn btn-danger shadow ms-2'}>
+                        <button
+                          className={
+                            weekObj.mon
+                              ? "btn btn-primary shadow ms-2"
+                              : "btn btn-danger shadow ms-2"
+                          }
+                        >
+                          Mon
+                        </button>
+                        <button
+                          className={
+                            weekObj.tue
+                              ? "btn btn-primary shadow ms-2"
+                              : "btn btn-danger shadow ms-2"
+                          }
+                        >
                           Tue
                         </button>
-                        <button className={weekObj.wed ? 'btn btn-primary shadow ms-2':'btn btn-danger shadow ms-2'}>
+                        <button
+                          className={
+                            weekObj.wed
+                              ? "btn btn-primary shadow ms-2"
+                              : "btn btn-danger shadow ms-2"
+                          }
+                        >
                           Wed
                         </button>
-                        <button className={weekObj.thur ? 'btn btn-primary shadow ms-2':'btn btn-danger shadow ms-2'}>
+                        <button
+                          className={
+                            weekObj.thur
+                              ? "btn btn-primary shadow ms-2"
+                              : "btn btn-danger shadow ms-2"
+                          }
+                        >
                           Thur
                         </button>
-                        <button className={weekObj.fri ? 'btn btn-primary shadow ms-2':'btn btn-danger shadow ms-2'}>
+                        <button
+                          className={
+                            weekObj.fri
+                              ? "btn btn-primary shadow ms-2"
+                              : "btn btn-danger shadow ms-2"
+                          }
+                        >
                           Fri
                         </button>
-                        <button className={weekObj.sat ? 'btn btn-primary shadow ms-2':'btn btn-danger shadow ms-2'}>
+                        <button
+                          className={
+                            weekObj.sat
+                              ? "btn btn-primary shadow ms-2"
+                              : "btn btn-danger shadow ms-2"
+                          }
+                        >
                           Sat
                         </button>
-                        <button className={weekObj.sun ? 'btn btn-primary shadow ms-2':'btn btn-danger shadow ms-2'}>
+                        <button
+                          className={
+                            weekObj.sun
+                              ? "btn btn-primary shadow ms-2"
+                              : "btn btn-danger shadow ms-2"
+                          }
+                        >
                           Sun
                         </button>
                       </div>
