@@ -2,20 +2,15 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import { BsHouseFill } from "react-icons/bs";
+function Report(props) { 
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { initpayslipData } from "../Store/PayslipSlice";
-
 import Documents from "../Documents/Documents";
-
-
-
 const PAYSLIP_URL ="https://trinitstechnologies.com/demo/api/v1/payroll?authorization=12"
 function Report() {
-
  const dispatch= useDispatch();
  const history = useHistory();
-
   function fetchPayslip(event){
     const payload =event;
     if(payload){
@@ -34,7 +29,9 @@ function Report() {
   }
 
   return (
+
     <div>
+
       <div className="card m-4 pay shadow ">
         <div className="card-body d-flex justify-content-between ">
           <div>
@@ -75,6 +72,7 @@ function Report() {
           grossSalary: Yup.string().trim().required("Gross salary is required"),
         })}
         onSubmit={(values) => {
+props.DataTransfer(values)
           fetchPayslip(values)
           console.log("value" + values)
           alert(JSON.stringify(values));
