@@ -3,7 +3,7 @@ import sss from  "../Image/logo-dark.png";
 import './Payslip1.css';
 export default function Payslip1() {
     const payslipData= useSelector((state)=>state.payslip.payslipData);
-    console.log(payslipData);
+ 
    
     return (
         <>

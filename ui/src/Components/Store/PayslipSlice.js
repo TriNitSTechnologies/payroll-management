@@ -63,28 +63,3 @@ export default payslipSlice.reducer;
 
 
 
-// import { createSlice } from "@reduxjs/toolkit";
-
-// const initialState = {
-//     paySlipData: {
-//         employeeData: {},
-//         companyDetails: {}
-//     }
-// }
-// let PayslipSlice = createSlice({
-//     name: 'payslip',
-//     initialState: initialState,
-//     reducers: {
-//         initPayslipData: (state, action) => {
-//             state.paySlipData = action.payload;
-
-
-//         }
-//     }, extraReducers(builder) {
-
-//     }
-
-// })
-// export const { initPayslipData } = PayslipSlice.actions;
-// // export default userDataslice.reducer;
-// export default PayslipSlice.reducer;

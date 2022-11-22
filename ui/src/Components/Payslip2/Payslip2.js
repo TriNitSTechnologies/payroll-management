@@ -3,7 +3,7 @@ import sss from  "../Image/logo-dark.png";
 import './Payslip2.css';
 export default function Payslip2() {
     const payslipData= useSelector((state)=>state.payslip.payslipData);
-    console.log(payslipData);
+
  
     return (
         <>
@@ -63,10 +63,10 @@ export default function Payslip2() {
                                 </tr>
                                 <tr>
                                     <td className="ps-2"><b>LOP Credit days</b>   </td>
-                                    <td  className="text-center" colspan="2"><b>Nil</b></td>
+                                    <td  className="text-center" colspan="2"><b></b></td>
 
                                     <td className="ps-2"><b>LOP Debit Days</b></td>
-                                    <td className="text-center" colspan="2"><b>Nil</b></td>
+                                    <td className="text-center" colspan="2"><b></b></td>
 
 
                                 </tr>

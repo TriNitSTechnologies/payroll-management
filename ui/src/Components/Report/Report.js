@@ -5,16 +5,17 @@ import { BsHouseFill } from "react-icons/bs";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { initpayslipData } from "../Store/PayslipSlice";
-import { useState } from "react";
+
 import Documents from "../Documents/Documents";
 
 
 
 const PAYSLIP_URL ="https://trinitstechnologies.com/demo/api/v1/payroll?authorization=12"
 function Report() {
+
  const dispatch= useDispatch();
  const history = useHistory();
-//  const[showpayslipform,setshowPayslipform] =useState(false);
+
   function fetchPayslip(event){
     const payload =event;
     if(payload){
@@ -31,26 +32,7 @@ function Report() {
 
 
   }
-//   if(showpayslipform){
 
- 
-  // return(
-  //   <>
-  // <div className="">
-  // <div className="container  d-flex  my-2 border shodow p-2">
-  //   <span className="ms-auto">
-  //     <button className="btn btn-primary" onClick={() => alert('will print later')} >Print</button>
-  //     <button className=" ms-2 btn btn-primary" onClick={() => setshowPayslipform(false)}>Closepayslip</button></span>
-
-
-  // </div>
-
-  // <Documents />
-         
-  // </div>
- 
-  // </>
-  // )
   return (
     <div>
       <div className="card m-4 pay shadow ">
@@ -170,8 +152,9 @@ function Report() {
           </div>
           <div className=" ms-4 mb-2">
             <button className="btn btn-primary btn-lg" type="submit"
-            //  onClick={ ()=>{ setshowPayslipform(true)}}
-            >
+   
+          >
+                  
               Get Payslip
              
             </button>
