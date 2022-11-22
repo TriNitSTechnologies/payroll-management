@@ -21,7 +21,7 @@
   
   .widthinc{
     background-color: white;
-    width: 53vw;
+    width: 65vw;
   }
  .w{
    height: 8vh;
@@ -34,6 +34,16 @@
     
   }
   .styles-height{
-    height: 9vh;
+    height: 8vh;
   }
-  
+
+  .company-Carddata{
+    width: 300px;
+    height: 300px;
+  }
+  .Card-data{
+    background-color: white;
+  }
+  .company-Carddata:hover{
+    background-color:#d3d9ec;
+  }
