@@ -4,36 +4,36 @@ import { GiTakeMyMoney } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { ImExit } from "react-icons/im";
 import { BsHouseFill } from "react-icons/bs";
-import Company from "../Company/Company";
+
 import { useState } from "react";
 import axios from "axios";
 function Home() {
 
   const [CompanyLength, setCompanyLength] = useState("");
-  const [employeeLength,setEmployeLength] = useState("");
+  const [employeeLength, setEmployeLength] = useState("");
 
   function getData() {
-    const Url ="https://trinitstechnologies.com/demo/api/v1/companies";
+    const Url = "https://trinitstechnologies.com/demo/api/v1/companies";
     axios.get(Url).then(response => setCompanyLength(response.data)).catch((error) => {
 
-       
+
     })
 
-}
+  }
 
-getData();
+  getData();
 
 
-function employeeData() {
-  const Url ="https://trinitstechnologies.com/demo/api/v1/employees";
-  axios.get(Url).then(response => setEmployeLength(response.data)).catch((error) => {
+  function employeeData() {
+    const Url = "https://trinitstechnologies.com/demo/api/v1/employees";
+    axios.get(Url).then(response => setEmployeLength(response.data)).catch((error) => {
 
-     
-  })
 
-}
+    })
 
-employeeData();
+  }
+
+  employeeData();
   return (
     <div>
       <div className="dashboard-card p-5">
@@ -78,43 +78,44 @@ employeeData();
           </div>
         </div>
         <div className="d-flex justify-content-between mt-3">
+
           <div className="employe-card rounded  w-35 p-2 text-white shadow">
-            <div className="d-flex justify-content-between">
-              <div>
+            <Link to="/employees" className="text-decoration-none  text-white">
+              <div className="d-flex justify-content-between">
                 <div>
-                  {/* <b> Employess</b> */}
-                  <Link to="/employees" className="text-decoration-none  text-white">
+                  <div>
                     <b>Employees</b>
-                  </Link>
+                  </div>
+                  <div className="fs-4">
+                    <b>{employeeLength.length}</b>
+                  </div>
                 </div>
-                <div className="fs-4">
-                  <b>{employeeLength.length}</b>
+                <div className="fs-4 card text-primary ps-2 pe-2">
+                  <div className="fs-1">
+                    <MdOutlinePeopleAlt />
+                  </div>
                 </div>
               </div>
-              <div className="fs-4 card text-primary ps-2 pe-2">
-                <div className="fs-1">
-                  <MdOutlinePeopleAlt />
-                </div>
-              </div>
-            </div>
+            </Link>
           </div>
-          <div className="d-flex justify-content-between w-35 company-card p-2 rounded text-white  shadow">
-            <div>
-              <div>
-                {/* <b>Companies</b> */}
-                <Link to="/company" className="text-decoration-none  text-white">
-                  <b>Companies</b>
-                </Link>
+          <div className="company-card rounded  w-35 p-2 text-white shadow">
+            <Link to="/company" className="text-decoration-none  text-white">
+              <div className="d-flex justify-content-between">
+                <div>
+                  <div>
+                    <b>Companies</b>
+                  </div>
+                  <div className="fs-4">
+                    <b>{CompanyLength.length}</b>
+                  </div>
+                </div>
+                <div className="fs-4 card text-primary ps-2 pe-2">
+                  <div className="fs-1">
+                    <HiOutlineBuildingOffice2 />
+                  </div>
+                </div>
               </div>
-              <div className="fs-4">
-                <b>{CompanyLength.length}</b>
-              </div>
-            </div>
-            <div className="card text-black">
-              <div className="fs-1 company-icon-color ps-2 pe-2">
-                <HiOutlineBuildingOffice2 />
-              </div>
-            </div>
+            </Link>
           </div>
           <div className="leave-card rounded  w-35 p-2 text-white shadow">
             <div className="d-flex justify-content-between">
