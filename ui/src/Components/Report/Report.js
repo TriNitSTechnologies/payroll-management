@@ -2,13 +2,13 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import { BsHouseFill } from "react-icons/bs";
-function Report(props) { 
+
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { initpayslipData } from "../Store/PayslipSlice";
 import Documents from "../Documents/Documents";
 const PAYSLIP_URL ="https://trinitstechnologies.com/demo/api/v1/payroll?authorization=12"
-function Report() {
+function Report(props) {
  const dispatch= useDispatch();
  const history = useHistory();
   function fetchPayslip(event){
