@@ -1,11 +1,12 @@
-import { SelectButton } from "primereact/selectbutton";
+import { Link } from "react-router-dom";
 import Joinletter from "../Offer Letter/offerletter";
-import Payslip1 from "../Payslip1/Payslip1";
-import Payslip2 from "../Payslip2/Payslip2";
-import Payslip3 from "../Payslip3/Payslip3";
 import "./../../App.css";
 import { useState } from "react";
 import Payslip4 from "../Payslip4/Payslip4";
+import { SelectButton } from "primereact/selectbutton";
+import Payslip1 from "../Payslip1/Payslip1";
+import Payslip2 from "../Payslip2/Payslip2";
+import Payslip3 from "../Payslip3/Payslip3";
 export default function Documents() {
   const [value3, setValue3] = useState(" ");
   const paySliparray = ["Payslip 1", "Payslip 2", "Payslip 3","Payslip 4"];
@@ -24,32 +25,29 @@ export default function Documents() {
             }}
           />
         </div>
-          
-            
           {value3 === "Payslip 1" && (
-              <>
-                <div>
-                  <Payslip1 />
-                </div>
-              </>
-            )}
+            <>
+              <div>
+                <Payslip1 />
+              </div>
+            </>
+          )}
 
-            {value3 === "Payslip 2" && (
-              <>
-                <div>
-                  <Payslip2 />
-                </div>
-              </>
-            )}
+          {value3 === "Payslip 2" && (
+            <>
+              <div>
+                <Payslip2 />
+              </div>
+            </>
+          )}
 
-            {value3 === "Payslip 3" && (
-              <>
-                <div>
-                  <Payslip3 />
-                </div>
-              </>
-            )} 
-            
+          {value3 === "Payslip 3" && (
+            <>
+              <div>
+                <Payslip3 />
+              </div>
+            </>
+          )}
             {value3 === "Payslip 4" && (
               <>
                 <div>
@@ -60,5 +58,5 @@ export default function Documents() {
       </div>
       
     </>
-  );
+  )
 }

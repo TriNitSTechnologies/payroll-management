@@ -6,7 +6,7 @@ import { useSelector } from "react-redux";
 
 function Payslip4() {
  const payslipData= useSelector((state)=>state.payslip.payslipData);
- console.log(payslipData);
+
   return (
     <div className=" bg-white w-80  m-auto padding p-5 mb-5">
       <div>
@@ -18,18 +18,16 @@ function Payslip4() {
                   <div>
                     <tr>
                       <th>
-                        {" "}
+                       
                         <img className="payslip-logo" src={telegram} alt="" />
                       </th>
                     </tr>
                   </div>
                   <div className="ms-5 text-center">
-                    <h4>TRINITS TECHNOLOGY SERVICES INDIA LIMITED</h4>
-                    <div>Plot No. 14,Rajiv Infotech Park,</div>
-                    <div>Hinjawadi Phase-3,MIDC-SEZ, Village Man,</div>
-                    <span>Taluka Mulshi,PUNE-411057</span>
-                    <span>Payslip for the month of AUGUST 2022</span>
-                  </div>
+                    <h4>{payslipData.companyDetails.companyName}</h4>
+                    <h5 className="">{payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2},{payslipData.companyDetails.state},  {payslipData.companyDetails.pinCode}.</h5>
+                     <h6 className="p23">Pay Slip for the month of {payslipData.dateOfMonth} </h6>
+                     </div>
                 </th>
               </tr>
             </table>
@@ -39,64 +37,64 @@ function Payslip4() {
               <tr>
                 <th className="p-2">Emp Code</th>
 
-                <th className="p-2">46238707</th>
+                <th className="p-2">{payslipData.employeeData.empNo}</th>
                 <th className="p-2">DOJ</th>
-                <th className="p-2">26/05/2022</th>
+                <th className="p-2">{payslipData.employeeData.doj}</th>
               </tr>
 
               <tr>
                 <th className="p-2"> Global Id</th>
 
-                <th className="p-2">46238707</th>
+                <th className="p-2"></th>
 
                 <th className="p-2">Global DOJ</th>
 
-                <th className="p-2">26/05/2022</th>
+                <th className="p-2"></th>
               </tr>
               <tr>
                 <th className="p-2">Emp Name</th>
-                <th className="p-2">BADUGU VENKAIAH</th>
+                <th className="p-2">{payslipData.employeeData.empName}</th>
                 <th className="p-2">DOB</th>
-                <th className="p-2">05/06/1993</th>
+                <th className="p-2"></th>
               </tr>
               <tr>
                 <th className="p-2">Location</th>
-                <th className="p-2">CHN-3</th>
+                <th className="p-2"></th>
                 <th className="p-2">Gender</th>
-                <th className="p-2">M</th>
+                <th className="p-2"></th>
               </tr>
 
               <tr>
                 <th className="p-2">Unit Code</th>
-                <th className="p-2">FTE</th>
+                <th className="p-2"></th>
                 <th className="p-2">PAN</th>
-                <th className="p-2">BKGPV0823D</th>
+                <th className="p-2">{payslipData.employeeData.pan}</th>
               </tr>
 
               <tr>
                 <th className="p-2">Designation</th>
-                <th className="p-2">Process Lead</th>
+                <th className="p-2">{payslipData.employeeData.designation}</th>
                 <th className="p-2">PF No</th>
-                <th className="p-2">MHBAN00187340000593883</th>
+                <th className="p-2"></th>
               </tr>
 
               <tr>
                 <th className="p-2">Bank Ac No</th>
-                <th className="p-2">50100218500451</th>
+                <th className="p-2">{payslipData.employeeData.bankAccount}</th>
                 <th className="p-2">PF UAN</th>
-                <th className="p-2">101517220852</th>
+                <th className="p-2"></th>
               </tr>
 
               <tr>
                 <th className="p-2">Bank Ac Name</th>
-                <th className="p-2">HDFC BANK LIMITED</th>
+                <th className="p-2"></th>
                 <th className="p-2">EPS NO</th>
-                <th className="p-2">MHBAN00187340000593883</th>
+                <th className="p-2"></th>
               </tr>
 
               <tr>
                 <th className="p-2">Grade</th>
-                <th className="p-2">B1</th>
+                <th className="p-2"></th>
                 <th className="p-2">ESI No</th>
                 <th className="p-2"></th>
               </tr>
@@ -128,84 +126,84 @@ function Payslip4() {
               <tr>
                 <td className="p-2">BASIC</td>
 
-                <td className="p-2">15,313</td>
+                <td className="p-2">{payslipData.basic}</td>
 
-                <td className="p-2">15,313</td>
+                <td className="p-2"></td>
 
-                <td className="p-2">0</td>
+                <td className="p-2"></td>
 
-                <td className="p-2">15,313</td>
+                <td className="p-2"></td>
 
                 <td className="p-2">P.F.</td>
-                <td className="p-2">1,838</td>
+                <td className="p-2"></td>
               </tr>
 
               <tr>
                 <td className="p-2">HOUSE RENT ALLOWANCE</td>
 
-                <td className="p-2">9,188</td>
+                <td className="p-2">{payslipData.hra}</td>
 
-                <td className="p-2">9,188</td>
+                <td className="p-2"></td>
 
-                <td className="p-2">0</td>
+                <td className="p-2"></td>
 
-                <td className="p-2">9,188</td>
+                <td className="p-2"></td>
                 <td className="p-2">PROFESSION TAX</td>
-                <td className="p-2">1,250</td>
+                <td className="p-2">{payslipData.professionalTax}</td>
               </tr>
               <tr>
                 <td className="p-2">PERSONAL ALLOWANCE</td>
 
-                <td className="p-2">6,194</td>
-                <td className="p-2">6,194</td>
-                <td className="p-2">0</td>
-                <td className="p-2">6,194</td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
                 <td></td>
               </tr>
               <tr>
                 <td className="p-2">ADVANCE STATUTORY BONUS</td>
 
-                <td className="p-2">2,200</td>
-                <td className="p-2">2,200</td>
-                <td className="p-2">0</td>
-                <td className="p-2">2,200</td>
+                <td className="p-2">{payslipData.bonus}</td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
                 <td></td>
               </tr>
               <tr>
                 <td className="p-2">REMOTE WORKING ALLOWANCE</td>
 
-                <td className="p-2">3000</td>
-                <td className="p-2">3000</td>
-                <td className="p-2">0</td>
-                <td className="p-2">3000</td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
                 <td></td>
               </tr>
               <tr>
                 <td className="p-2">BOOKS AND JOURNALS</td>
 
-                <td className="p-2">3000</td>
-                <td className="p-2">3000</td>
-                <td className="p-2">0</td>
-                <td className="p-2">3000</td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
                 <td></td>
               </tr>
               <tr>
                 <td className="p-2">PROFESSIONAL PURSUIT</td>
 
-                <td className="p-2">2,282</td>
-                <td className="p-2">2,282</td>
-                <td className="p-2">0</td>
-                <td className="p-2">2,282</td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
+                <td className="p-2"></td>
                 <td></td>
               </tr>
               <tr className="text">
                 <th className="p-2">PROFESSIONAL PURSUIT</th>
                 <td></td>
-                <th className="p-2">41,177</th>
-                <th className="p-2">0</th>
-                <th className="p-2">41,177</th>
+                <th className="p-2"></th>
+                <th className="p-2"></th>
+                <th className="p-2"></th>
                 <th className="p-2">TOTAL DEDUCTIONS</th>
-                <th className="p-2">3,088</th>
+                <th className="p-2">{payslipData.totalDeduction}</th>
               </tr>
             </table>
           </div>
@@ -215,7 +213,7 @@ function Payslip4() {
                 NET PAY <br /> (RUPEES THIRTY EIGHT THOUSAND EIGHTY NINE ONLY)
               </th>
 
-              <th className="text-center">38,089</th>
+              <th className="text-center">{payslipData.netSalary}</th>
             </tr>
           </table>
         </div>

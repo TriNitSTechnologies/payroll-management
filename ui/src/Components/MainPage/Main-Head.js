@@ -4,7 +4,7 @@ import logo from "../Image/logo-dark.png";
 
 export default function MainHead(){
 return(
-    <div className="h-100">
+    <div className="h-100  headpostion">
         <div className="d-flex h-100 border justify-content-between shadow-lg">
         <div className="d-flex">
           <img

@@ -5,6 +5,7 @@ import * as Yup from "yup";
 export default function ForgotPassword() {
   return (
     <>
+    <div  className="background w-100 h-100 ">
       <Formik
         initialValues={{
           conformationemail: "",
@@ -21,13 +22,10 @@ export default function ForgotPassword() {
             
         }}
       >
-        <div className="formbg ">
-          <h1 className="text-center mt-5 mb-4 fontstyless fw-bold">
-            TriNitS Technologies Pvt Ltd
-          </h1>
+        <div className="formbg  ">
 
-          <Form className="border formdata shadow-lg rounded-4 m-4 p-4 w-75 m-auto ">
-            <div className="text-center">
+          <Form className="border formdata bgform shadow-lg formformate rounded-4   p-4 w-25  ">
+            <div className="text-center ">
               <h2>Forgot password?</h2>
               <p>Enter your email to get a password reset link</p>
             </div>
@@ -52,6 +50,7 @@ export default function ForgotPassword() {
           </Form>
         </div>
       </Formik>
+      </div>
     </>
   );
 }

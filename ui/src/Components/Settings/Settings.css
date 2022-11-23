@@ -48,4 +48,10 @@ justify-content: center;
 .height-content-card{
     height: calc(100% - 48px);
     overflow: auto;
+    height: calc(100% - 30px);
+    overflow: auto;
+}
+.time-off-height{
+    height: calc(100vh - 300px);
+
 }
