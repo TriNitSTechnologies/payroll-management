@@ -8,18 +8,18 @@ export default function Payslip2() {
     return (
         <>
             <div className="w-100 border  text center">
-                <div className=" pye w-75 m-auto shadow  m-4 p-4">
+                <div className=" pye w-75 m-auto shadow mt-3  m-4 p-4">
                     <div className=" p2header w-100 d-flex  ">
                         <div className="p2header1 w-25">
                             <img src={sss} alt="this is img" className="imege w-75 mt-2 ms-4 h-75 ms-3" />
                         </div>
-                        <div className="p2header2  w-50 "><h5 className="p22">TriNitS Technologies Private Limited
+                        <div className="p2header2  w-50 "><h5 className="p22">{payslipData.companyDetails.companyName}
 
                         </h5>
-                            <h6 className="p23">No. 6-2-204, Naidupeta,
+                            <h6 className="p23">{payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2},
 
                             </h6>
-                            <h6 className="p23"> Andhra Pradesh, India - 524421
+                            <h6 className="p23">  {payslipData.companyDetails.state},  {payslipData.companyDetails.pinCode}
 
                             </h6>
 
