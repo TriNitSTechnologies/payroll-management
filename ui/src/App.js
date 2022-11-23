@@ -37,8 +37,13 @@ import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print"
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
+
+import Upload from "./Components/upload-documents/upload-documents";
+ 
+
 import Attendense from "./Components/Attendense/Attendense";
 import Payslips from "./Components/Payslip/Payslips";
+
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -153,10 +158,16 @@ useEffect(()=>{
             <Route path="/notifications">
               <Notifications/>
             </Route>
+ 
+            <Route path="/uploadD">
+              <Upload/>
+            </Route>
+
           
          <Route path='/Payslip4'>
          <Payslip4 />
          </Route>
+
             </>}
           </Switch>
         </div>
