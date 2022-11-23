@@ -72,7 +72,7 @@ function Report(props) {
           grossSalary: Yup.string().trim().required("Gross salary is required"),
         })}
         onSubmit={(values) => {
-props.DataTransfer(values)
+
           fetchPayslip(values)
           console.log("value" + values)
           alert(JSON.stringify(values));

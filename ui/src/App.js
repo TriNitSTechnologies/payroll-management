@@ -37,9 +37,6 @@ import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print"
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
-import Payslip1 from "./Components/Payslip1/Payslip1";
-import Payslip2 from "./Components/Payslip2/Payslip2";
-import Payslip3 from "./Components/Payslip3/Payslip3";
 import Payslips from "./Components/Payslip/Payslips";
 
 function App() {
@@ -152,15 +149,7 @@ useEffect(()=>{
             <Route path="/notifications">
               <Notifications/>
             </Route>
-            <Route path='/Payslip1'>
-         <Payslip1 />
-         </Route>
-         <Route path='/Payslip2'>
-         <Payslip2 />
-         </Route>
-         <Route path='/Payslip3'>
-         <Payslip3 />
-         </Route>
+          
          <Route path='/Payslip4'>
          <Payslip4 />
          </Route>
