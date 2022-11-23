@@ -33,6 +33,7 @@ import "primeicons/primeicons.css";                                //icons
 import Payslip1 from "./Components/Payslip1/Payslip1";
 import Payslip2 from "./Components/Payslip2/Payslip2";
 import Payslip3 from "./Components/Payslip3/Payslip3";
+import Payslips from "./Components/Payslip/Payslips";
 
 function App() {
   let userrouter=useHistory()
@@ -110,6 +111,9 @@ useEffect(()=>{
             <Route path="/documents">
               <Documents />
             </Route>
+            <Route path="/Payslips">
+              <Payslips/>
+            </Route>
             <Route path="/home" exact>
               <Home />
             </Route>
@@ -134,6 +138,9 @@ useEffect(()=>{
          </Route>
          <Route path='/Payslip3'>
          <Payslip3 />
+         </Route>
+         <Route path='/Payslip4'>
+         <Payslip4 />
          </Route>
             </>}
           </Switch>

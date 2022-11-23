@@ -8,7 +8,7 @@ export default function Payslip2() {
     return (
         <>
             <div className="w-100 border  text center">
-                <div className=" pye w-75 m-auto shadow  m-4 p-4">
+                <div className=" pye w-75 m-auto shadow mt-3  m-4 p-4">
                     <div className=" p2header w-100 d-flex  ">
                         <div className="p2header1 w-25">
                             <img src={sss} alt="this is img" className="imege w-75 mt-2 ms-4 h-75 ms-3" />

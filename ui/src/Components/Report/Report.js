@@ -6,7 +6,7 @@ import axios from "axios";
 import { useDispatch } from "react-redux";
 import { initpayslipData } from "../Store/PayslipSlice";
 
-import Documents from "../Documents/Documents";
+
 
 
 
@@ -24,7 +24,7 @@ function Report() {
       .then((response)=>{
         let data = response.data;
         dispatch(initpayslipData(data))
-        history.push('/documents')
+        history.push('/Payslips')
       })
       .catch((error)=>alert.error("error whill fetching the data"+error));
     }
