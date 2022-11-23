@@ -36,6 +36,11 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
  function App() {
+import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print";
+import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
+import "primereact/resources/primereact.min.css";                  //core css
+import "primeicons/primeicons.css";                                //icons
+function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
 const isUserLoggedIn= useSelector(state=>state.login.isUserLoggedIn)
@@ -138,6 +143,9 @@ useEffect(()=>{
             </Route>
             <Route path="profile">
               <MyProfile />
+            </Route>
+            <Route path="PrintAppoiement">
+              <PrintAppoiement />
             </Route>
             <Route path="/notifications">
               <Notifications/>

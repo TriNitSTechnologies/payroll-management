@@ -1,12 +1,8 @@
 import { SelectButton } from "primereact/selectbutton";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import Appointment from "../Appointment/appointment";
 import OfferLetter from "../Documents/Appointment";
-import Joinletter from "../Offer Letter/offerletter";
-import Payslip1 from "../Payslip1/Payslip1";
-import Payslip2 from "../Payslip2/Payslip2";
-import Payslip3 from "../Payslip3/Payslip3";
+import PrintAppoiement from "../Letter of Appoiement/APPOIEMENT.print";
 import Report from "../Report/Report";
 
 export default function Reports() {
@@ -61,6 +57,13 @@ export default function Reports() {
           <>
             <div>
               <Appointment DataTransfer={DataTransfer}/>
+            </div>
+          </>
+        )}
+         {value2 === "Joining Letter" && (
+          <>
+            <div>
+              <PrintAppoiement />
             </div>
           </>
         )}

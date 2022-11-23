@@ -1,8 +1,33 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import { BsHouseFill } from "react-icons/bs";
-function Report(props) { 
+
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { initpayslipData } from "../Store/PayslipSlice";
+import Documents from "../Documents/Documents";
+const PAYSLIP_URL ="https://trinitstechnologies.com/demo/api/v1/payroll?authorization=12"
+function Report(props) {
+ const dispatch= useDispatch();
+ const history = useHistory();
+  function fetchPayslip(event){
+    const payload =event;
+    if(payload){
+      axios
+      .post(PAYSLIP_URL,payload)
+      .then((response)=>{
+        let data = response.data;
+        dispatch(initpayslipData(data))
+        history.push('/documents')
+      })
+      .catch((error)=>alert.error("error whill fetching the data"+error));
+    }
+    event.preventDefault();
+
+
+  }
+
   return (
 
     <div>
@@ -48,6 +73,8 @@ function Report(props) {
         })}
         onSubmit={(values) => {
 props.DataTransfer(values)
+          fetchPayslip(values)
+          console.log("value" + values)
           alert(JSON.stringify(values));
         }}
       >
@@ -122,8 +149,12 @@ props.DataTransfer(values)
             </div>
           </div>
           <div className=" ms-4 mb-2">
-            <button className="btn btn-primary btn-lg" type="submit">
+            <button className="btn btn-primary btn-lg" type="submit"
+   
+          >
+                  
               Get Payslip
+             
             </button>
           </div>
         </Form>
@@ -131,4 +162,5 @@ props.DataTransfer(values)
     </div>
   );
 }
+
 export default Report;

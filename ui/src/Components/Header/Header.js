@@ -126,8 +126,8 @@ function Header(props) {
                     </span>
                   </Link>
                 </li>
-                <li className=" mt-2  dropdown-style mt-1 p-1">
-                    <FiLogIn className="bi bi-gear-fill  text-dark " />
+                <li className=" mt-2 ps-4 dropdown-style mt-1 p-1">
+                    <FiLogIn className="bi bi-gear-fill   text-dark " />
                     <span className="text-dark fw-lighter fs-6 ms-2" onClick={logoutuser}>
                       Logout
                     </span>

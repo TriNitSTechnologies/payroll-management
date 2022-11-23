@@ -1,54 +1,46 @@
-import axios from "axios";
-import { useEffect, useState } from "react";
-import { FaUserFriends } from "react-icons/fa"
-const url='https://trinitstechnologies.com/demo/api/v1/employees';
+import { AiFillEdit, AiFillRest } from "react-icons/ai";
+import ReactTooltip from "react-tooltip";
+import photo from "../Image/pexels-photo.jpeg";
+
+const url = 'https://trinitstechnologies.com/demo/api/v1/employees';
 
 
-export default function EmployeeCard(){
- const[load,setload]=useState([]);
- 
- function getdata(){
-  axios.get(url).then(response => {
-      setload(response.data);
-  }).catch(error => {
-      alert("error in loading") ;
-  })
-}
- useEffect(()=>{
-    getdata();
- },[])
-
- 
+export default function EmployeeCard({ data, ondelete, onedit, index }) {
 
 
 
 
-  return(
+
+
+  return (
     <>
-        <div className="d-flex flex-row flex-wrap border shadow mt-4 ">
-          {
-          load.map(data => {
-            return (
-              <div key={data.id} className="card cardsize card:hover m-4 shadow">
-                
-                 <div className="card-body">
-                  <div>
-                 <FaUserFriends className="font1 "/>  
-                 
-                  </div>     
-                  <div className="  text-center titlecolor mt-2 ">{data.empName}</div>
-                <div className="text-center text-dark"> <small >{data.empNo}</small></div>
-                <div className="text-center bodycolor"> <small>{data.designation}</small></div>
-               
-              
-              </div>
-              
-              </div>
-            );
-          })
-          }
-         
+      <div className="card cardsize ccolor m-4 rounded  text shadow text p-2">
+
+        <div className="card-body ">
+          <div>
+            <img src={photo} alt="circle" className="rounded-circle imagesize2 me-2 font1" />
+
+          </div>
+          <div className="d-flex mt-2">
+            <div className=" titlecolor ms-5">{data.empName}</div>
+            <div className=" titlecolor ms-5"> {data.empNo}</div>
+          </div>
+          <div className="d-flex">
+            <div className=" titlecolor ms-5"> {data.pan}</div>
+            <div className=" titlecolor ms-4"> {data.doj}</div>
+          </div>
+          <div className=" bodycolor text-center"> {data.designation}</div>
+          <div className=" bodycolor text-center"> {data.bankAccount}</div>
+
+        </div>
+        <div>
+          <ReactTooltip />
+          <button className="btn btn-outline-primary font1" onClick={() => onedit(data)} data-tip="Edit Employee"><AiFillEdit className="font3" /></button>
+          <button className="btn btn-outline-danger ms-2 " onClick={() => ondelete(index)} data-tip="Delete Employee "><AiFillRest className="font3" /></button>
+        </div>
       </div>
-        </>
-    )
+
+
+    </>
+  )
 }
