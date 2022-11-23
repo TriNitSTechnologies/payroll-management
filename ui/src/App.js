@@ -37,6 +37,7 @@ import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print"
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
+import Upload from "./Components/upload-documents/upload-documents";
  
 function App() {
   let userrouter=useHistory()
@@ -144,6 +145,9 @@ useEffect(()=>{
             </Route>
             <Route path="/notifications">
               <Notifications/>
+            </Route>
+            <Route path="/uploadD">
+              <Upload/>
             </Route>
             </>}
           </Switch>
