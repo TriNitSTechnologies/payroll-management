@@ -37,6 +37,7 @@ import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print"
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
+import Attendense from "./Components/Attendense/Attendense";
  
 function App() {
   let userrouter=useHistory()
@@ -111,6 +112,10 @@ useEffect(()=>{
             <Route path="/settings">
               <Settings />
             </Route>
+            <Route path="/Attendense" >
+              <Attendense />
+            </Route>
+
             <Route path="/documents">
               <Documents />
             </Route>
