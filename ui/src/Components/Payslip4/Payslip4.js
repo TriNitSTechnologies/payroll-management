@@ -24,9 +24,9 @@ function Payslip4() {
                     </tr>
                   </div>
                   <div className="ms-5 text-center">
-                    <h4>TRINITS TECHNOLOGY SERVICES INDIA LIMITED</h4>
-                    <h5 className="">No. 6-2-204, Naidupeta,Andhra Pradesh, India - 524421</h5>
-                     <h6 className="p23"> </h6>
+                    <h4>{payslipData.companyDetails.companyName}</h4>
+                    <h5 className="">{payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2},{payslipData.companyDetails.state},  {payslipData.companyDetails.pinCode}.</h5>
+                     <h6 className="p23">Pay Slip for the month of {payslipData.dateOfMonth} </h6>
                      </div>
                 </th>
               </tr>

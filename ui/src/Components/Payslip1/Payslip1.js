@@ -15,10 +15,12 @@ export default function Payslip1() {
                         </div>
               
                         <div className="header1b w-75 ms-2  mt-1 text-center">
-                            <h3 className="a">TriNitS Technologies Private Limited </h3>
-                            <h6 className="b"> No. 6-2-204, Naidupeta, Andhra Pradesh, India - 524421.</h6>
+                            <h3 className="a">{payslipData.companyDetails.companyName} </h3>
+                            <h6 className="b"> {payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2}, {payslipData.companyDetails.state},  {payslipData.companyDetails.pinCode}.</h6>
                             <h6 className="b"></h6>
-                            <h5 className="c">Pay Slip for the month of {payslipData.companyDetails.createdDate}</h5>
+                            <h5 className="c">Pay Slip for the month of {payslipData.dateOfMonth}
+                            
+                            </h5>
                         </div>
                     </div>
                     <div className="body1 mt-2 m-auto ms-2  d-flex">

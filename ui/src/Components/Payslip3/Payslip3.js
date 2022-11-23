@@ -13,10 +13,11 @@ export default function Payslip3(){
         <img src={sss} alt="this is img" className="imege nmr w-75 mt-2  ms-4 h-75 ms-3" />
         </div>
         <div className="  p3h text-center w-50">
-            <h4 ><b>Trinits Technlogogies </b></h4>
-            <h6><b>Naidupeta 0 Muncipality office,Nellore 0</b></h6>
+            <h4 ><b>{payslipData.companyDetails.companyName} </b></h4>
+            <h6><b>{payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2}, </b></h6>
           
-            <h6 ><b>PINCode:524421,Andhra pradesh</b></h6>
+            <h6 ><b> {payslipData.companyDetails.pinCode},{payslipData.companyDetails.state}. </b></h6>
+            <h6><b>Pay Slip for the month of {payslipData.dateOfMonth}</b></h6>
         
 
         </div>
