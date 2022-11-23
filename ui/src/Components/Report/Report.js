@@ -6,7 +6,7 @@ import { BsHouseFill } from "react-icons/bs";
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { initpayslipData } from "../Store/PayslipSlice";
-import Documents from "../Documents/Documents";
+
 const PAYSLIP_URL ="https://trinitstechnologies.com/demo/api/v1/payroll?authorization=12"
 function Report(props) {
  const dispatch= useDispatch();
@@ -19,7 +19,7 @@ function Report(props) {
       .then((response)=>{
         let data = response.data;
         dispatch(initpayslipData(data))
-        history.push('/documents')
+        history.push('/Payslips')
       })
       .catch((error)=>alert.error("error whill fetching the data"+error));
     }
@@ -72,7 +72,7 @@ function Report(props) {
           grossSalary: Yup.string().trim().required("Gross salary is required"),
         })}
         onSubmit={(values) => {
-props.DataTransfer(values)
+
           fetchPayslip(values)
           console.log("value" + values)
           alert(JSON.stringify(values));
