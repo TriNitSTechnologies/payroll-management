@@ -25,11 +25,9 @@ function Payslip4() {
                   </div>
                   <div className="ms-5 text-center">
                     <h4>TRINITS TECHNOLOGY SERVICES INDIA LIMITED</h4>
-                    <div>Plot No. 14,Rajiv Infotech Park,</div>
-                    <div>Hinjawadi Phase-3,MIDC-SEZ, Village Man,</div>
-                    <span>Taluka Mulshi,PUNE-411057</span>
-                    <span>Payslip for the month of AUGUST 2022</span>
-                  </div>
+                    <h5 className="">No. 6-2-204, Naidupeta,Andhra Pradesh, India - 524421</h5>
+                     <h6 className="p23"> </h6>
+                     </div>
                 </th>
               </tr>
             </table>
