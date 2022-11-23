@@ -9,6 +9,8 @@ import Company from "./Components/Company/Company";
 import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
+import Help from "./Components/Help/Help";
+import Refer from "./Components/Refer/Refer";
 
 function App() {
   return (
@@ -42,6 +44,13 @@ function App() {
             <Route path="/documents">
               <Documents />
             </Route>
+            <Route path="/help">
+              <Help />
+            </Route>
+            <Route path="/refer">
+              <Refer />
+            </Route>
+        
           </Switch>
         </div>
       </div>

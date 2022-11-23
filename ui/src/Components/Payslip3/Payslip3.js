@@ -7,7 +7,7 @@ export default function Payslip3(){
 <div className=" w-75 border m-auto m-4 mt-4 p-4 shadow ">
     <div className="d-flex  w-100 h-100  ms-4">
         <div className=" w-50 p3h  ">
-        <img src={sss} alt="this is img" className="imege nmr w-75 mt-2  ms-4 h-75 ms-3" />
+        <img src={sss} alt="this is img" className="image nmr w-75 mt-2  ms-4 h-75 ms-3" />
         </div>
         <div className="  p3h text-center w-50">
             <h4><b>Trinits Technlogogies </b></h4>

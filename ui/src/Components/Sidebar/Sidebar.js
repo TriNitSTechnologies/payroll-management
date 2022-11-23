@@ -77,7 +77,19 @@ function Sidebar() {
           <Link to="/documents" className="text-decoration-none text-dark ">
             Documents
           </Link>
-        </div>
+          </div>
+          
+       
+      </div>
+      <div className="fw-semibold m-2 ">
+        <Link to="/help" className="text-decoration-none text-dark">
+          Help
+        </Link>
+      </div>
+      <div className="fw-semibold m-2 ">
+        <Link to="/refer" className="text-decoration-none text-dark">
+         Refer
+        </Link>
       </div>
       <div className="selected d-flex mt-3 w-100 p-2  position-absolute">
         <div className=" ms-3 ">

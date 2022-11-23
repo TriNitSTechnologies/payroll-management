@@ -1,0 +1,37 @@
+
+
+.maincontainer{
+    display: flex;
+   justify-content: between;
+
+    
+}
+.helpdata{
+    width: 75%;
+}
+.bb{
+    margin-left: 232px;
+}
+.aa{
+    margin-left: 250px;
+}
+   .cc{
+    margin-left: 115px;
+   }
+   .dd{
+    margin-left: 265px;
+   }
+   .ee{
+    margin-left: 115px;
+   }
+   .ff{
+    margin-left: 220px;
+   }
+   .chatData{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+
+   }
+   
+   
