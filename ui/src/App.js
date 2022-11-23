@@ -30,7 +30,10 @@ import MainHead from "./Components/MainPage/Main-Head";
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
- 
+import Payslip1 from "./Components/Payslip1/Payslip1";
+import Payslip2 from "./Components/Payslip2/Payslip2";
+import Payslip3 from "./Components/Payslip3/Payslip3";
+
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -123,6 +126,15 @@ useEffect(()=>{
             <Route path="/notifications">
               <Notifications/>
             </Route>
+            <Route path='/Payslip1'>
+         <Payslip1 />
+         </Route>
+         <Route path='/Payslip2'>
+         <Payslip2 />
+         </Route>
+         <Route path='/Payslip3'>
+         <Payslip3 />
+         </Route>
             </>}
           </Switch>
         </div>
