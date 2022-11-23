@@ -6,4 +6,11 @@
     color: darkgreen;
     
   }
+
+  .Editcard{
+    visibility: hidden;
+  }
+  .visibledata:hover .Editcard{
+    visibility: visible;
+  }
   
