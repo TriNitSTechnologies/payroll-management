@@ -1,6 +1,9 @@
+import { useSelector } from "react-redux";
 import sss from  "../Image/logo-dark.png";
 import './Payslip2.css';
 export default function Payslip2() {
+    const payslipData= useSelector((state)=>state.payslip.payslipData);
+
  
     return (
         <>
@@ -31,18 +34,18 @@ export default function Payslip2() {
                             <tbody>
                                 <tr>
                                     <th className="w-25 ps-2">Emp Code</th>
-                                    <th className="w-25 text-center ps-2" colspan="2"></th>
+                                    <th className="w-25 text-center ps-2" colspan="2">{payslipData.employeeData.empNo}</th>
 
                                     <th className="w-25 ps-2" >Name</th>
-                                    <th className="text-center"   colspan="2"></th>
+                                    <th className="text-center"   colspan="2">{payslipData.employeeData.empName}</th>
 
                                 </tr>
                                 <tr >
                                     <td className="ps-2"> <b>Date of Joining</b></td>
-                                    <td  className="text-center" colspan="2"></td>
+                                    <td  className="text-center" colspan="2">{payslipData.employeeData.doj}</td>
 
                                     <td className="ps-2"> <b>Designation</b></td>
-                                    <td  className="text-center" colspan="2"></td>
+                                    <td  className="text-center" colspan="2">{payslipData.employeeData.designation}</td>
 
 
 
@@ -53,17 +56,17 @@ export default function Payslip2() {
                                     <td  className="text-center"  colspan="2"></td>
 
                                     <td className="ps-2"><b> Bank A/c No</b></td>
-                                    <td  className="text-center" colspan="2">
+                                    <td  className="text-center" colspan="2">{payslipData.employeeData.bankAccount}
                                 
                                     </td>
 
                                 </tr>
                                 <tr>
                                     <td className="ps-2"><b>LOP Credit days</b>   </td>
-                                    <td  className="text-center" colspan="2"></td>
+                                    <td  className="text-center" colspan="2"><b></b></td>
 
                                     <td className="ps-2"><b>LOP Debit Days</b></td>
-                                    <td className="text-center" colspan="2"></td>
+                                    <td className="text-center" colspan="2"><b></b></td>
 
 
                                 </tr>
@@ -89,7 +92,7 @@ export default function Payslip2() {
                                 <tr className="hi">
                                     <td className="ps-2 ssn">Basic
                                     </td>
-                                    <td></td>
+                                    <td className=" text-center">{payslipData.basic}</td>
                                     <td> </td>
                                     <td> Provident Found</td>
                                     <td>  </td>
@@ -97,7 +100,7 @@ export default function Payslip2() {
                                 </tr>
                                 <tr className="hi">
                                     <td className="ps-2">House Rent Allowance</td>
-                                    <td></td>
+                                    <td  className=" text-center">{payslipData.hra}</td>
                                     <td></td>
                                     <td> Tax Deducted at Source</td>
                                     <td></td>
@@ -105,7 +108,7 @@ export default function Payslip2() {
                                 </tr>
                                 <tr className="hi">
                                     <td className="ps-2">Conveyance Allowance</td>
-                                    <td></td>
+                                    <td  className=" text-center">{payslipData.convAllowance}</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -113,7 +116,7 @@ export default function Payslip2() {
                                 </tr>
                                 <tr className="hi">
                                     <td className="ps-2">Medical Reimbursement</td>
-                                    <td></td>
+                                    <td  className=" text-center">{payslipData.medicalAllowance}</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -121,7 +124,7 @@ export default function Payslip2() {
                                 </tr>
                                 <tr className="hi">
                                     <td className="ps-2">Professional Development Allowance</td>
-                                    <td></td>
+                                    <td className=" text-center">{payslipData.professionalTax}</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -137,7 +140,7 @@ export default function Payslip2() {
                                 </tr>
                                 <tr className="hi">
                                     <td className="ps-2">Leave Travel Allowance</td>
-                                    <td></td>
+                                    <td className=" text-center">{payslipData.leaveTravelAllowance}</td>
                                     <td></td>
                                     <td></td>
                                     <td></td>
@@ -169,19 +172,20 @@ export default function Payslip2() {
                                 </tr>
                                 <tr className="hi">
                                     <td className="ps-2"><b>Gross Total</b></td>
-                                    <td></td>
+                                    <td className="text-center"><b>{payslipData.totalSalary}</b></td>
                                     <td></td>
                                     <td className="ps-2"><b>Total Deductions</b></td>
-                                    <td></td>
+                                    <td className=" text-center"> {payslipData.totalDeduction}</td>
                                     <td></td>
                                 </tr>
                                 <tr className="hi hee">
-                                    <td  className="ps-2" colSpan="6" ><b>Net Pay :</b></td>
+                                    <td  className="ps-2" colSpan="6" ><b>Net Pay :</b>   <span className="ps-3 "><b>RS.  {payslipData.netSalary}</b> </span> </td>
+                             
                                 
 
                                 </tr>
                                 <tr className=" hi hee">
-                                    <td  className="ps-2" colSpan="6" ><b>In Words: Rupees Twenty Six Thousand Five Hundred Seventy Eighty Only.</b></td>
+                                    <td  className="ps-2" colSpan="6" ><b>In Words: Rupees ... Only.</b></td>
                                  
                                 </tr>
                                 <tr className=" hi hee">

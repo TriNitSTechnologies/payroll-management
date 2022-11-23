@@ -1,6 +1,6 @@
 import axios from 'axios';
 import { ErrorMessage, Field, Form, Formik } from 'formik';
-import { useState } from 'react';
+
 import { Link } from 'react-router-dom';
 import ReactTooltip from 'react-tooltip';
 import * as Yup from 'yup';
@@ -14,14 +14,14 @@ const SERVER_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
 
 function AddCompany(props) {
 
-    
+
     return (
         <div>
-             <div className="shadow border p-3 rounded m-3 maindata-content  mt-3">
+            <div className="shadow border p-3 rounded m-3 maindata-content  mt-3">
                 <div>
-               
-                    
-                    <Link to="/" className="text-black text-decoration-none ms-2"> <BsHouseFill  className='me-2'/>Home</Link>/
+
+
+                    <Link to="/" className="text-black text-decoration-none ms-2"> <BsHouseFill className='me-2' />Home</Link>/
                     <Link to="/Company" className="text-black text-decoration-none">Company</Link>
 
                 </div>
@@ -47,24 +47,24 @@ function AddCompany(props) {
 
                 })}
                 onSubmit={(values) => {
-                    if(values && values.id){
-                        axios.put(SERVER_URL+"/"+values.id, values)
+                    if (values && values.id) {
+                        axios.put(SERVER_URL + "/" + values.id, values)
                             .then(response => {
                                 toast.success("Successfully updated to the server", {
                                     position: toast.POSITION.BOTTOM_LEFT
-                                  });
-                              
-                                
+                                });
+
+
                                 props.onAddCompnay();
                             })
                             .catch(error => toast.error('error occurred while saving it ' + error));
-                    }else {
-                        axios.post(SERVER_URL+"/", values)
+                    } else {
+                        axios.post(SERVER_URL + "/", values)
                             .then(response => {
-                                
+
                                 toast.success("Successfully Saved to the server", {
                                     position: toast.POSITION.BOTTOM_LEFT
-                                  });
+                                });
                                 props.onAddCompnay();
                             })
                             .catch(error => toast.error('error occurred while saving it ' + error));
@@ -176,23 +176,13 @@ function AddCompany(props) {
                             </div>
                         </div>
                         <div className=" ms-5  mb-2 ">
-                        <button className="btn btn-outline-success rounded shadow " data-tip="sucessfully saved"> <BsCheckCircleFill className='me-2'/>Save</button>
-                        <button className="btn btn-outline-danger ms-3 rounded shadow " onClick={props.onCancel} data-tip="Cancel"><AiOutlineClose className='me-2'/>Cancel</button>
 
-
+                            <button className="btn btn-outline-success rounded shadow " data-tip="Saved"> <BsCheckCircleFill className='me-2' />Save</button>
+                            <button className="btn btn-outline-danger ms-3 rounded shadow " onClick={props.onCancel} data-tip="Cancel"><AiOutlineClose className='me-2' />Cancel</button>
+                        </div>
                     </div>
-
-
-
-                    </div>
-                    
-
-
                 </Form>
-
             </Formik>
-
-
         </div>
     )
 }

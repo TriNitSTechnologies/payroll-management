@@ -5,6 +5,8 @@ import { FaListUl } from "react-icons/fa";
 import { BsFillGridFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { ConfirmDialog } from 'primereact/confirmdialog';
+
 
 import './Company.css';
 import ReactTooltip from 'react-tooltip';
@@ -24,6 +26,10 @@ import AddCompany from "../AddCompany/AddCompany";
 const COMPANY_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
 function Company() {
     const [Company, setCompanydata] = useState([]);
+
+    const [visible, setVisible] = useState(false);
+    const [selectedIndex, setSelectedIndex] = useState();
+    const [posts, setPost] = useState([]);
 
 
     const [data, setData] = useState("Table");
@@ -48,19 +54,19 @@ function Company() {
     }
     function DeleteCompany(index) {
 
-        let value = window.confirm('Are you sure to delete this?')
+        let value = Company[selectedIndex];
 
         if (value) {
-            let model = Company[index];
 
-            let url = COMPANY_URL + "/" + model.id
+
+            let url = COMPANY_URL + "/" + value.id
             axios.delete(url).then(data => {
                 toast.success("Sucessfully deleted !", {
                     position: toast.POSITION.BOTTOM_LEFT
                 });
             })
             setCompanydata(previousModels => {
-                previousModels.splice(index, 1);
+                previousModels.splice(selectedIndex, 1);
                 return previousModels.slice();
 
 
@@ -94,6 +100,28 @@ function Company() {
         getData();
     }, []);
 
+    function AddCompanyForm() {
+        setShowcompanyForm(true);
+        setselectedCompany({
+            companyName: '',
+            mobileNumber: '',
+            addressLine1: '',
+            addressLine2: '',
+            logoName: '',
+            state: '',
+            town: '',
+            pinCode: ''
+
+        })
+
+
+    }
+    function showDeletePrompt(index) {
+        setVisible(true);
+        setSelectedIndex(index);
+
+    }
+
     if (ShowCompanyForm) {
         return (
             <AddCompany
@@ -101,18 +129,21 @@ function Company() {
                 selectedCompany={selectedCompany}
                 onAddCompnay={handleSave}
                 initialValues={selectedCompany}
+
             />
         )
     }
 
 
     return (
-        <div className=" shadow p-4 m-4">
+        <div className="m-4">
             <ToastContainer />
             <ReactTooltip />
-            {
-                ShowCompanyForm ? <AddCompany onCancel={onCloseHandler} selectedCompany={selectedCompany} /> : null
-            }
+            <div className="card">
+                <ConfirmDialog visible={visible} onHide={() => setVisible(false)} message="Are you sure you want to proceed?"
+                    header="Confirmation" icon="pi pi-exclamation-triangle" acceptClassName='p-button-danger' accept={DeleteCompany} />
+
+            </div>
 
 
 
@@ -135,13 +166,14 @@ function Company() {
                 </div>
                 <div className="btn-group buttonClass" role="group" aria-label="Basic radio toggle button group">
                     <div>
-                        <button className="btn btn-success  float-end me-2 styles-height" onClick={() => setShowcompanyForm(true)}>
+                        <button className="btn btn-success  float-end me-2 styles-height" onClick={() => AddCompanyForm()
+                        } data-tip="CompanyForm" >
 
                             <i className="bi bi-plus-circle me-1"></i>Add Company
                         </button>
                     </div>
-                    <button className={data === 'companyCard' ? 'btn btn-primary rounded shadow w ' : 'btn btn-outline-primary  rounded w '} data-tip="Company Card data">
-                        <BsFillGridFill className="icondata text-black" onClick={() => { setData("companyCard") }} />
+                    <button className={data === 'companyCard' ? 'btn btn-primary rounded shadow w ' : 'btn btn-outline-primary  rounded w '} data-tip="Company Card data" onClick={() => { setData("companyCard") }}>
+                        <BsFillGridFill className="icondata text-black" />
 
 
                     </button>
@@ -150,9 +182,20 @@ function Company() {
 
             </div>
             <div className={data === 'companyCard' ? 'd-block  ' : 'd-none'}>
-                {
-                    data === 'companyCard' ? <CompanyCard /> : null
-                }
+
+                <div className=" shadow flex-wrap flex-row d-flex border mt-2 Card-data m-auto">
+                    {
+
+                        Company.map((data, index) => {
+                            return (
+                                <CompanyCard key={data.id} data={data} index={index} EditCard={editCompany} DeleteCard={showDeletePrompt} />
+
+                            )
+
+                        })
+
+                    }
+                </div>
             </div>
 
             <div className={data === 'Table' ? 'd-block tabledata  rounded mt-3 ' : 'd-none'}>
@@ -180,7 +223,7 @@ function Company() {
                                         <td>{companyModel.logoName}</td>
                                         <td className="d-flex">
                                             <button className="btn btn-primary " data-tip="update companydata" onClick={() => editCompany(companyModel)}><FaPenAlt /></button>
-                                            <button className="btn btn-danger ms-3 " data-tip="delete companydata" onClick={() => DeleteCompany(index)}
+                                            <button className="btn btn-danger ms-3 " data-tip="delete companydata" onClick={() => { showDeletePrompt(index) }}
                                             >
                                                 <FaTrash /></button>
 
@@ -193,6 +236,8 @@ function Company() {
                     </tbody>
                 </table>
             </div>
+
+           
 
 
 

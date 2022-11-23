@@ -184,7 +184,7 @@ export default function Joinletter() {
                     between you and the company.
                   </li>
                   <li>
-                    f you commit breach of any of the terms of this letter of
+                    If you commit breach of any of the terms of this letter of
                     appointment.
                   </li>
                 </ul>
