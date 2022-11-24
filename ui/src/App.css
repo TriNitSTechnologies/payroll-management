@@ -1,6 +1,7 @@
 
 .sidebar{
   width:220px;
+  height:87vh;
   background-color:aliceblue;
 }
 
@@ -19,7 +20,6 @@
   background-color:rgb(238, 241, 244);
   height:87vh;
   overflow: auto;
-  height: 100%;
 }
 .head{
   background-color: aliceblue;
