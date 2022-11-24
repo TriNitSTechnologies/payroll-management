@@ -65,13 +65,13 @@ function Sidebar() {
         <div className=" d-flex mt-3 selected">
         <div className="m-2 button ">
           <button className="rounded shadow back">
-            <Link to="/report" className="text-decoration-none back">
+            <Link to="/buttons" className="text-decoration-none back">
               <TbAddressBook />
             </Link>
           </button>
         </div>
         <div className="fw-semibold m-2 ">
-          <Link to="/newReport" className="text-decoration-none  text-dark">
+          <Link to="/buttons" className="text-decoration-none  text-dark">
             Reports
           </Link>
         </div>

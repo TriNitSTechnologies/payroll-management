@@ -37,11 +37,11 @@ function Report(props) {
           <div>
             <small className="fs-6">
               <button className="rounded shadow back me-2 ">
-                <Link to="/" className="text-decoration-none back">
+                <Link to="/home" className="text-decoration-none back">
                   <BsHouseFill />
                 </Link>
               </button>
-              <Link to="/" className="text-decoration-none text-dark me-1">
+              <Link to="/home" className="text-decoration-none text-dark me-1">
                 Home
               </Link>
                / Reports

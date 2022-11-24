@@ -38,6 +38,7 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
 import Payslips from "./Components/Payslip/Payslips";
+import Buttons from "./Components/Buttons/Buttons";
 
 function App() {
   let userrouter=useHistory()
@@ -136,6 +137,10 @@ useEffect(()=>{
             <Route path="/Payslip3">
             <Payslip3 />
             </Route>
+            <Route path="/buttons">
+            <Buttons />
+            </Route>
+          
 
             <Route path="/offer-letter">
               <OfferLetter />
