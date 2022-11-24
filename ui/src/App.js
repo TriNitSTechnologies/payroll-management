@@ -44,9 +44,9 @@ import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print"
 import Upload from "./Components/upload-documents/upload-documents";
  
 
-import Attendense from "./Components/Attendense/Attendense";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
+import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
 
 function App() {
   let userrouter=useHistory()
@@ -122,7 +122,7 @@ useEffect(()=>{
               <Settings />
             </Route>
             <Route path="/Attendense" >
-              <Attendense />
+              <AttendenseForm />
             </Route>
 
             <Route path="/documents">

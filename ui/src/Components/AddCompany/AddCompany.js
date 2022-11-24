@@ -21,7 +21,7 @@ function AddCompany(props) {
                 <div>
 
 
-                    <Link to="/" className="text-black text-decoration-none ms-2"> <BsHouseFill className='me-2' />Home</Link>/
+                    <Link to="/home" className="text-black text-decoration-none ms-2"> <BsHouseFill className='me-2' />Home</Link>/
                     <Link to="/Company" className="text-black text-decoration-none">Company</Link>
 
                 </div>
@@ -75,9 +75,9 @@ function AddCompany(props) {
                         <div className="card-header">
                             <h5>Add Company Information</h5>
                         </div>
-                        <div className="card-body ">
-                            <div className="d-flex  justify-content-evenly">
-                                <div className="col-5 m-2 ">
+                        <div className="card-body  p-3">
+                            <div className="d-flex justify-content-evenly">
+                                <div className="col-5">
                                     <Field
                                         className="form-control p-3 "
                                         placeholder="Company Name"
@@ -88,7 +88,7 @@ function AddCompany(props) {
                                         <ErrorMessage name="companyName" />
                                     </div>
                                 </div>
-                                <div className="col-5  m-2">
+                                <div className="col-5 ">
                                     <Field
                                         className="form-control p-3"
                                         placeholder="Mobile Number"
@@ -101,7 +101,7 @@ function AddCompany(props) {
                                 </div>
                             </div>
                             <div className="d-flex justify-content-evenly">
-                                <div className="col-5  m-2">
+                                <div className="col-5">
                                     <Field
                                         className="form-control p-3"
                                         placeholder="Address1"
@@ -112,7 +112,7 @@ function AddCompany(props) {
                                         <ErrorMessage name="addressLine1" />
                                     </div>
                                 </div>
-                                <div className="col-5  m-2">
+                                <div className="col-5">
                                     <Field
                                         className="form-control p-3"
                                         placeholder="Address2"
@@ -125,7 +125,7 @@ function AddCompany(props) {
                                 </div>
                             </div>
                             <div className="d-flex justify-content-evenly">
-                                <div className="col-5  m-2">
+                                <div className="col-5 ">
                                     <Field
                                         className="form-control p-3"
                                         placeholder="Logo Name"
@@ -136,7 +136,7 @@ function AddCompany(props) {
                                         <ErrorMessage name="logoName" />
                                     </div>
                                 </div>
-                                <div className="col-5  m-2">
+                                <div className="col-5">
                                     <Field
                                         className="form-control p-3"
                                         placeholder="State"
@@ -150,7 +150,7 @@ function AddCompany(props) {
                                 </div>
                             </div>
                             <div className="d-flex justify-content-evenly">
-                                <div className="col-5  m-2">
+                                <div className="col-5">
                                     <Field
                                         className="form-control p-3"
                                         placeholder="Town"
@@ -161,11 +161,11 @@ function AddCompany(props) {
                                         <ErrorMessage name="town" />
                                     </div>
                                 </div>
-                                <div className="col-5  m-2">
+                                <div className="col-5 ">
                                     <Field
                                         className="form-control p-3"
                                         placeholder="Pin Code"
-                                        type="text"
+                                        type="number"
                                         name="pinCode"
                                     />
                                     <div className="text-danger">
@@ -173,13 +173,16 @@ function AddCompany(props) {
                                     </div>
 
                                 </div>
-                            </div>
-                        </div>
-                        <div className=" ms-5  mb-2 ">
 
-                            <button className="btn btn-outline-success rounded shadow " data-tip="Saved"> <BsCheckCircleFill className='me-2' />Save</button>
-                            <button className="btn btn-outline-danger ms-3 rounded shadow " onClick={props.onCancel} data-tip="Cancel"><AiOutlineClose className='me-2' />Cancel</button>
+                            </div>
+                            <div className="d-flex ms-4">
+                                <button className="btn btn-outline-success rounded shadow " data-tip="Save company"> <BsCheckCircleFill className='me-2' />Save</button>
+                                <button className="btn btn-outline-danger rounded shadow ms-3 " onClick={props.onCancel} data-tip="Cancel"><AiOutlineClose className='me-2' />Cancel</button>
+                            </div>
+
+                       
                         </div>
+                       
                     </div>
                 </Form>
             </Formik>

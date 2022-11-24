@@ -1,5 +1,6 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit"
 import axios from "axios"
+import { toast, ToastContainer } from "react-toastify";
 
 
 const initialState ={
@@ -9,6 +10,7 @@ const initialState ={
   }
 
 }
+
 
 export const payslipSlice = createSlice({
     name: 'payslip',
@@ -26,6 +28,8 @@ export const payslipSlice = createSlice({
     extraReducers(builder) {
        
       }
+   
+
     
 })
 export const {initpayslipData} = payslipSlice.actions;
