@@ -38,6 +38,10 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
 
+
+import Payslips from "./Components/Payslip/Payslips";
+import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
+
 import Upload from "./Components/upload-documents/upload-documents";
  
 
@@ -118,8 +122,8 @@ useEffect(()=>{
             <Route path="/settings">
               <Settings />
             </Route>
-            <Route path="/Attendense" >
-              <Attendense />
+            <Route path="/attendenseForm" >
+              <AttendenseForm />
             </Route>
 
             <Route path="/documents">
