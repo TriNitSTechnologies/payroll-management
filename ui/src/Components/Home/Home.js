@@ -5,12 +5,15 @@ import { Link } from "react-router-dom";
 import { ImExit } from "react-icons/im";
 import { BsHouseFill } from "react-icons/bs";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import axios from "axios";
+import Loading from "../Loading/Loading";
 function Home() {
 
   const [CompanyLength, setCompanyLength] = useState("");
   const [employeeLength, setEmployeLength] = useState("");
+  // const [loading, setLoading] = useState(true);
+
 
   function getData() {
     const Url = "https://trinitstechnologies.com/demo/api/v1/companies";
@@ -20,10 +23,12 @@ function Home() {
     })
 
   }
+  useEffect(() => {
+   
+      getData();
 
-  getData();
-
-
+   
+  })
   function employeeData() {
     const Url = "https://trinitstechnologies.com/demo/api/v1/employees";
     axios.get(Url).then(response => setEmployeLength(response.data)).catch((error) => {
@@ -32,7 +37,6 @@ function Home() {
     })
 
   }
-
   employeeData();
   return (
     <div>
@@ -87,7 +91,13 @@ function Home() {
                     <b>Employees</b>
                   </div>
                   <div className="fs-4">
-                    <b>{employeeLength.length}</b>
+                    <b>
+
+                      {
+                        !employeeLength && <div>
+                          <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
+                        </div>
+                      }{employeeLength.length}</b>
                   </div>
                 </div>
                 <div className="fs-4 card text-primary ps-2 pe-2">
@@ -106,7 +116,11 @@ function Home() {
                     <b>Companies</b>
                   </div>
                   <div className="fs-4">
-                    <b>{CompanyLength.length}</b>
+
+                    <b> {!CompanyLength && <div>
+                      <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
+
+                    </div>}{CompanyLength.length}</b>
                   </div>
                 </div>
                 <div className="fs-4 card text-primary ps-2 pe-2">
