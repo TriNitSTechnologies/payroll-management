@@ -22,15 +22,29 @@ import Appointment from "./Components/Appointment/appointment";
 import React from "react";
 import MyProfile from "./Components/My-Profile/My-Profile";
 import OfferLetter from "./Components/Documents/Appointment";
+import Reports from "./Components/NewReport/Reports";
+import "primereact/resources/themes/lara-light-indigo/theme.css"; 
+import "primereact/resources/primereact.min.css";                
+import "primeicons/primeicons.css";                              
+import Joinletter from "./Components/Offer Letter/offerletter";
+import Payslip1 from "./Components/Payslip1/Payslip1";
+import Payslip2 from "./Components/Payslip2/Payslip2";
+import Payslip3 from "./Components/Payslip3/Payslip3";
 import Notifications from "./Components/Notifications/Notifications";
 import MainHead from "./Components/MainPage/Main-Head";
-
-
+import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print";
 
 import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
+
+import Upload from "./Components/upload-documents/upload-documents";
  
+
+import Attendense from "./Components/Attendense/Attendense";
+import Payslips from "./Components/Payslip/Payslips";
+import Buttons from "./Components/Buttons/Buttons";
+
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -104,8 +118,15 @@ useEffect(()=>{
             <Route path="/settings">
               <Settings />
             </Route>
+            <Route path="/Attendense" >
+              <Attendense />
+            </Route>
+
             <Route path="/documents">
               <Documents />
+            </Route>
+            <Route path="/Payslips">
+              <Payslips/>
             </Route>
             <Route path="/home" exact>
               <Home />
@@ -113,6 +134,22 @@ useEffect(()=>{
             <Route path="/appointment">
               <Appointment />
             </Route>
+            <Route path="/newReport">
+            <Reports />
+            </Route>
+            <Route path="/Payslip1">
+            <Payslip1 />
+            </Route>
+            <Route path="/Payslip2">
+            <Payslip2 />
+            </Route>
+            <Route path="/Payslip3">
+            <Payslip3 />
+            </Route>
+            <Route path="/buttons">
+            <Buttons />
+            </Route>
+          
 
             <Route path="/offer-letter">
               <OfferLetter />
@@ -120,9 +157,22 @@ useEffect(()=>{
             <Route path="profile">
               <MyProfile />
             </Route>
+            <Route path="PrintAppoiement">
+              <PrintAppoiement />
+            </Route>
             <Route path="/notifications">
               <Notifications/>
             </Route>
+ 
+            <Route path="/uploadD">
+              <Upload/>
+            </Route>
+
+          
+         <Route path='/Payslip4'>
+         <Payslip4 />
+         </Route>
+
             </>}
           </Switch>
         </div>

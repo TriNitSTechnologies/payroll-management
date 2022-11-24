@@ -6,6 +6,7 @@ import * as Yup from "yup";
 export default function Register() {
   return (
     <>
+    <div className="background  ">
       <Formik
         initialValues={{
           username: "",
@@ -32,20 +33,17 @@ export default function Register() {
             });
         }}
       >
-        <div className="formbg">
-          <h1 className="text-center  mb-2 fontstyless fw-bold   ">
-            TriNitS Technologies Pvt Ltd
-          </h1>
-
-          <Form className="border formdata shadow-lg rounded-4 m-4 p-4 w-75 m-auto">
+        <div className="formbg ">
+         
+          <Form className="border formdata shadow-lg rounded-4 formformate p-3  w-25 ">
             <div className="text-center">
-              <h3>Register</h3>
+              <h2>Register</h2>
               <p>Access to our dashboard</p>
             </div>
             <div>
               <label className=" p-2">NAME</label>
               <div>
-                <Field name="firstName" className="form-control p-2" />
+                <Field name="firstName" className="form-control p-1" />
               </div>
               <div className="text-danger">
                 <ErrorMessage name="firstName" />
@@ -54,7 +52,7 @@ export default function Register() {
             <div>
               <label className="mt-1 p-2">Email Address</label>
                <div>
-                <Field name="username" className="form-control p-2" />
+                <Field name="username" className="form-control p-1" />
               </div>
               <div className="text-danger">
                 <ErrorMessage name="username" />
@@ -63,7 +61,7 @@ export default function Register() {
             <div>
               <label className="mt-1  p-2">Password</label>
               <div>
-                <Field name="password" className="form-control p-2 " />
+                <Field name="password" className="form-control p-1 " />
               </div>
               <div className="text-danger">
                 <ErrorMessage name="password" />
@@ -74,7 +72,7 @@ export default function Register() {
               <div>
                 <Field
                   name="conformationpassword"
-                  className="form-control p-2"
+                  className="form-control p-1"
                 />
               </div>
               <div className="text-danger">
@@ -85,7 +83,7 @@ export default function Register() {
             <div className="mt-3 rounded-4" bg-success>
               <button className=" buttoncolor rounded-3 p-2 text-light">
                 Register
-              </button>
+              </button> 
             </div>
             <div className="login-or">
               <span className="or-line"></span>
@@ -98,6 +96,7 @@ export default function Register() {
           </Form>
         </div>
       </Formik>
+      </div>
     </>
   );
 }

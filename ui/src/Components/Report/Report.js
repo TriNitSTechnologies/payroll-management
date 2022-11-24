@@ -2,20 +2,15 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import { BsHouseFill } from "react-icons/bs";
+
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { initpayslipData } from "../Store/PayslipSlice";
 
-import Documents from "../Documents/Documents";
-
-
-
 const PAYSLIP_URL ="https://trinitstechnologies.com/demo/api/v1/payroll?authorization=12"
-function Report() {
-
+function Report(props) {
  const dispatch= useDispatch();
  const history = useHistory();
-
   function fetchPayslip(event){
     const payload =event;
     if(payload){
@@ -24,7 +19,7 @@ function Report() {
       .then((response)=>{
         let data = response.data;
         dispatch(initpayslipData(data))
-        history.push('/documents')
+        history.push('/Payslips')
       })
       .catch((error)=>alert.error("error whill fetching the data"+error));
     }
@@ -34,17 +29,19 @@ function Report() {
   }
 
   return (
+
     <div>
+
       <div className="card m-4 pay shadow ">
         <div className="card-body d-flex justify-content-between ">
           <div>
             <small className="fs-6">
               <button className="rounded shadow back me-2 ">
-                <Link to="/" className="text-decoration-none back">
+                <Link to="/home" className="text-decoration-none back">
                   <BsHouseFill />
                 </Link>
               </button>
-              <Link to="/" className="text-decoration-none text-dark me-1">
+              <Link to="/home" className="text-decoration-none text-dark me-1">
                 Home
               </Link>
                / Reports
@@ -75,6 +72,7 @@ function Report() {
           grossSalary: Yup.string().trim().required("Gross salary is required"),
         })}
         onSubmit={(values) => {
+
           fetchPayslip(values)
           console.log("value" + values)
           alert(JSON.stringify(values));

@@ -2,13 +2,14 @@ import { ErrorMessage, Field, Form, Formik, } from 'formik';
 import * as Yup from 'yup';
 import './Appointment.css'
 
-export default function OfferLetter() {
+export default function OfferLetter(props) {
 
   
 
-  function Formsubmithandler(event){
-      event.preventDefault();
-  }
+  // function Formsubmithandler(event){
+  //     event.preventDefault();
+  // }
+
 
   return (
     <div  className="border py-2 p-1 doc-home-log">
@@ -55,10 +56,11 @@ export default function OfferLetter() {
 
       })}
       onSubmit={(values)=>{
+        props.DataTransfer(values)
         alert(JSON.stringify(values, null, 2))
       }}
     >
-      <Form onSubmit={Formsubmithandler}>
+      <Form >
       <div className="card m-3  shadow ">
         <div class="card-header bg-white">
           <h4>Basic details</h4>
@@ -233,7 +235,7 @@ export default function OfferLetter() {
 
 
         <span className="ms-3">
-          <button className="btn btn-primary btn-lg mx-3 ">Generate</button>
+          <button  className="btn btn-primary btn-lg mx-3 "  type="submit" >Generate</button>
         </span>
         </Form>
 

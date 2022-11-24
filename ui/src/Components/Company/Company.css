@@ -21,7 +21,7 @@
   
   .widthinc{
     background-color: white;
-    width: 53vw;
+    width: 60vw;
   }
  .w{
    height: 8vh;
@@ -34,6 +34,39 @@
     
   }
   .styles-height{
-    height: 9vh;
+    height: 8vh;
   }
+
+  .company-Carddata{
+    width: 300px;
+    height: 300px;
+  }
+  .Card-data{
+    background-color: white;
+  }
+  .company-Carddata:hover{
+    background-color:#d3d9ec;
+   
+  }
+
   
+  /* .invisible:hover{
+    background-color: #d3d9ec;
+
+    visibility: visible !important;
+   
+  } */
+  .Company-NotFound{
+    font-size: 30px;
+    margin-top: 10%;
+    
+    color: rgb(255, 0, 0);
+  }
+  .update{
+    visibility: hidden;
+  }
+  .visibleButton:hover .update{
+    visibility: visible;
+  }
+
+ 

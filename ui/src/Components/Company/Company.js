@@ -5,6 +5,8 @@ import { FaListUl } from "react-icons/fa";
 import { BsFillGridFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { ConfirmDialog } from 'primereact/confirmdialog';
+
 
 import './Company.css';
 import ReactTooltip from 'react-tooltip';
@@ -18,12 +20,18 @@ import CompanyCard from "../CompanyCard/CompanyCard";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddCompany from "../AddCompany/AddCompany";
+import Loading from "../Loading/Loading";
 
 
 
 const COMPANY_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
 function Company() {
     const [Company, setCompanydata] = useState([]);
+
+    const [visible, setVisible] = useState(false);
+    const [selectedIndex, setSelectedIndex] = useState();
+
+    const [loading, setLoading] = useState(true);
 
 
     const [data, setData] = useState("Table");
@@ -48,19 +56,19 @@ function Company() {
     }
     function DeleteCompany(index) {
 
-        let value = window.confirm('Are you sure to delete this?')
+        let value = Company[selectedIndex];
 
         if (value) {
-            let model = Company[index];
 
-            let url = COMPANY_URL + "/" + model.id
+
+            let url = COMPANY_URL + "/" + value.id
             axios.delete(url).then(data => {
                 toast.success("Sucessfully deleted !", {
                     position: toast.POSITION.BOTTOM_LEFT
                 });
             })
             setCompanydata(previousModels => {
-                previousModels.splice(index, 1);
+                previousModels.splice(selectedIndex, 1);
                 return previousModels.slice();
 
 
@@ -76,11 +84,16 @@ function Company() {
 
     function getData() {
         const Url = COMPANY_URL;
-        axios.get(Url).then(response => setCompanydata(response.data)).catch((error) => {
+        axios.get(Url).then(response => {
+            setCompanydata(response.data);
+            setLoading(false);
+
+        }).catch((error) => {
 
             toast.error("Error occured !", {
                 position: toast.POSITION.TOP_CENTER
             });
+            setLoading(false);
         })
 
     }
@@ -91,8 +104,39 @@ function Company() {
     }
 
     useEffect(() => {
-        getData();
+        setTimeout(() => {
+            getData();
+
+        })
+
     }, []);
+    if (loading) {
+        return <div>
+            <b><Loading /></b>
+        </div>
+    }
+
+    function AddCompanyForm() {
+        setShowcompanyForm(true);
+        setselectedCompany({
+            companyName: '',
+            mobileNumber: '',
+            addressLine1: '',
+            addressLine2: '',
+            logoName: '',
+            state: '',
+            town: '',
+            pinCode: ''
+
+        })
+
+
+    }
+    function showDeletePrompt(index) {
+        setVisible(true);
+        setSelectedIndex(index);
+
+    }
 
     if (ShowCompanyForm) {
         return (
@@ -101,25 +145,28 @@ function Company() {
                 selectedCompany={selectedCompany}
                 onAddCompnay={handleSave}
                 initialValues={selectedCompany}
+
             />
         )
     }
 
 
     return (
-        <div className=" shadow p-4 m-4">
+        <div className="m-4">
             <ToastContainer />
             <ReactTooltip />
-            {
-                ShowCompanyForm ? <AddCompany onCancel={onCloseHandler} selectedCompany={selectedCompany} /> : null
-            }
+            <div className="card">
+                <ConfirmDialog visible={visible} onHide={() => setVisible(false)} message="Are you sure you want to proceed?"
+                    header="Confirmation" icon="pi pi-exclamation-triangle" acceptClassName='p-button-danger' accept={DeleteCompany} />
+
+            </div>
 
 
 
             <div className=" border-none shadow border p-3 rounded maindata-button w-100">
                 <div>
                     <button className=" border border-white shadow rounded"><ImHome3 className="icondata" /></button>
-                    <Link to="/" className="text-black text-decoration-none ms-2">Home</Link>/
+                    <Link to="/home" className="text-black text-decoration-none ms-2">Home</Link>/
                     <Link to="/Company" className="text-black text-decoration-none">Company</Link>
 
                 </div>
@@ -135,13 +182,14 @@ function Company() {
                 </div>
                 <div className="btn-group buttonClass" role="group" aria-label="Basic radio toggle button group">
                     <div>
-                        <button className="btn btn-success  float-end me-2 styles-height" onClick={() => setShowcompanyForm(true)}>
+                        <button className="btn btn-success  float-end me-2 styles-height" onClick={() => AddCompanyForm()
+                        } data-tip="CompanyForm" >
 
-                            <i className="bi bi-plus-circle me-1"></i>Add Company
+                            <i className="bi bi-plus-circle me-1 text-wrap"></i>Add Company
                         </button>
                     </div>
-                    <button className={data === 'companyCard' ? 'btn btn-primary rounded shadow w ' : 'btn btn-outline-primary  rounded w '} data-tip="Company Card data">
-                        <BsFillGridFill className="icondata text-black" onClick={() => { setData("companyCard") }} />
+                    <button className={data === 'companyCard' ? 'btn btn-primary rounded shadow w ' : 'btn btn-outline-primary  rounded w '} data-tip="Company Card data" onClick={() => { setData("companyCard") }}>
+                        <BsFillGridFill className="icondata text-black" />
 
 
                     </button>
@@ -150,14 +198,25 @@ function Company() {
 
             </div>
             <div className={data === 'companyCard' ? 'd-block  ' : 'd-none'}>
-                {
-                    data === 'companyCard' ? <CompanyCard /> : null
-                }
+
+                <div className=" shadow flex-wrap flex-row d-flex border mt-2 Card-data m-auto">
+                    {
+
+                        Company.map((data, index) => {
+                            return (
+                                <CompanyCard key={data.id} data={data} index={index} EditCard={editCompany} DeleteCard={showDeletePrompt} />
+
+                            )
+
+                        })
+
+                    }
+                </div>
             </div>
 
             <div className={data === 'Table' ? 'd-block tabledata  rounded mt-3 ' : 'd-none'}>
-                <h5 className="mt-2 ms-2">Project Summery</h5>
-                <table className=" table table-hover mt-3 table-rounded">
+                <h5 className="mt-2 ms-2">Companies</h5>
+                <table className=" table table-hover  mt-3 companyTable table-rounded">
                     <tbody>
                         <tr>
 
@@ -168,19 +227,20 @@ function Company() {
                             <th>Logo Name</th>
                             <th>Status</th>
                         </tr>
+
                         {
                             Company.map((companyModel, index) => {
                                 return (
-                                    <tr key={companyModel.id}>
+                                    <tr className="visibleButton" key={companyModel.id}>
                                         <td> <img src={trinits} alt="trinits logo" style={{ width: '35px' }} className="me-2" />
                                             {companyModel.companyName}</td>
                                         <td>{companyModel.mobileNumber}</td>
                                         <td>{companyModel.addressLine1}</td>
                                         <td>{companyModel.addressLine2}</td>
                                         <td>{companyModel.logoName}</td>
-                                        <td className="d-flex">
-                                            <button className="btn btn-primary " data-tip="update companydata" onClick={() => editCompany(companyModel)}><FaPenAlt /></button>
-                                            <button className="btn btn-danger ms-3 " data-tip="delete companydata" onClick={() => DeleteCompany(index)}
+                                        <td className="d-flex ">
+                                            <button className="btn btn-primary update" data-tip="update companydata" onClick={() => editCompany(companyModel)}><FaPenAlt /></button>
+                                            <button className="btn btn-danger ms-3 update" data-tip="delete companydata" onClick={() => { showDeletePrompt(index) }}
                                             >
                                                 <FaTrash /></button>
 
@@ -192,10 +252,8 @@ function Company() {
                         }
                     </tbody>
                 </table>
+                {!Company.length && <div className="text-center Company-NotFound">No Companies are Available</div>}
             </div>
-
-
-
         </div>
     )
 }
