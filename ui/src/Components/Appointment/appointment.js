@@ -1,4 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import "./appointment.css";
 
@@ -32,8 +34,7 @@ export default function Appointment(props) {
         hrName: Yup.string().required("HR Name is requried"),
       })}
       onSubmit={(values) =>{
-        props.DataTransfer(values)
-        alert(JSON.stringify(values));
+        props.Appdata(values)
       }}
     >
       <div>

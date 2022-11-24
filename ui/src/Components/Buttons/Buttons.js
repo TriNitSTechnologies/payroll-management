@@ -2,8 +2,12 @@ import './Buttons.css';
 import { SelectButton } from "primereact/selectbutton";
 import { useState } from "react";
 import { BsHouseFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
+import Appointment from '../Appointment/appointment';
+import { useDispatch } from 'react-redux';
+import { appoienment } from '../Store/AppoiementSlice';
+
 export default function Buttons() {
   const [value2, setValue2] = useState("");
   const reportsOptions = [
@@ -11,6 +15,8 @@ export default function Buttons() {
     "Appointment Letter",
      "PayslipS",
   ];
+  const dispatch = useDispatch();
+  const history=useHistory()
  function DataTransfer(data){
     let obj = {
       selectedPage: value2,
@@ -18,6 +24,20 @@ export default function Buttons() {
     }
     alert(JSON.stringify(obj))
   }
+
+
+  function Appoiementdata(data1){
+    let obj1={
+      selectedPage:value2,
+      fromObj: data1
+    }
+    dispatch(appoienment(obj1))
+
+
+    history.push('documents')
+
+  }
+
 return (
     <>
       <div className="  h-over-flow-auto border butt border-3 rounded m-4">
@@ -62,7 +82,7 @@ return (
         {value2 === "Appointment Letter" && (
           <>
             <div>
-             
+             <Appointment Appdata={Appoiementdata}  />
             </div>
           </>
         )}

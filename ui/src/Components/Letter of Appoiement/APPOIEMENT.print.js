@@ -1,36 +1,38 @@
-export default function PrintAppoiement() {
+
+export default function PrintAppoiement(props) {
+  let AppointmentData=props.appoiementsendData;
   return (
-    <div className="bg-white w-75 m-auto shadow border">
+    <div className="bg-white w-75 m-auto shadow border p-2">
       <div className="border-bottom p-3">
         <div className="">
           <h5 className="text-end me-3">
-            TriNitS Technologies Private Limited
+            {AppointmentData.companyName}
           </h5>
           <h6 className="text-end me-3">
-            No. 6-2-204, Naidupeta, Andhra Pradesh, India -
+            {AppointmentData.companyAddress}
           </h6>
           <h6 className="text-end me-3 ">524421, Andhra Pradesh, 524421</h6>
         </div>
       </div>
 
       <div className="float-end me-5 mt-3 ">
-        <b>16/11/2020</b>
+        <b>{AppointmentData.currentDate}</b>
       </div>
       <div className="mt-5 fs-2  text-center">
         <b> Letter of Appointment </b>
       </div>
       <div className="p-5">
         <p>
-          Dear <b> Mallika Pulivarthi,</b>
+          Dear <b> {AppointmentData.employeeName},</b>
         </p>
         <div>
-          Appointment as <b>Junior Software engineer</b>
+          Appointment as <b>{AppointmentData.jobTitle}</b>
         </div>
         <div>
           <p>
             We refer to your recent interview for the position and are please to
-            advise that we are offering you the position with TriNitS
-            Technologies Private Limited effective from 03/11/22 under the
+            advise that we are offering you the position with   
+                <span className="ms-1 fw-bold">{AppointmentData.companyName}</span> effective from {AppointmentData.employeeJoiningDate} under the
             following terms and conditions:
           </p>
         </div>
@@ -177,19 +179,19 @@ export default function PrintAppoiement() {
         <div>
           <div>Sincerely, </div>
           <div className="mt-3">
-            <b>venky</b>
+            <b>{AppointmentData.hrName}</b>
           </div>
           <div>hr</div>
-          <div>TriNitS Technologies Private Limited</div>
+          <div>{AppointmentData.companyName}</div>
         </div>
         <div className="mt-5">
           <div className="mb-3">
             I agree to the appointment and accept the above terms and conditions
             of service
           </div>
-          <div>Name: Mallika Pulivarthi</div>
+          <div>Name: {AppointmentData.employeeName}</div>
           <div>Employee ID : TRINITS-2</div>
-          <div>Date: 22/11/2022</div>
+          <div>Date: {AppointmentData.acceptanceLastDate}</div>
           <div className="mt-3">
             Signature: ...................................
           </div>
