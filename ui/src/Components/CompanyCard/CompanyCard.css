@@ -1,7 +1,4 @@
-.company-Carddata{
-    width: 250px;
-    height: 200px;
-  }
+
   .imagedata{
     font-size: 30px;
   }
@@ -9,3 +6,11 @@
     color: darkgreen;
     
   }
+
+  .Editcard{
+    visibility: hidden;
+  }
+  .visibledata:hover .Editcard{
+    visibility: visible;
+  }
+  

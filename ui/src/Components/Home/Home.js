@@ -4,7 +4,40 @@ import { GiTakeMyMoney } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { ImExit } from "react-icons/im";
 import { BsHouseFill } from "react-icons/bs";
+
+import { useEffect, useState } from "react";
+import axios from "axios";
+import Loading from "../Loading/Loading";
 function Home() {
+
+  const [CompanyLength, setCompanyLength] = useState("");
+  const [employeeLength, setEmployeLength] = useState("");
+  // const [loading, setLoading] = useState(true);
+
+
+  function getData() {
+    const Url = "https://trinitstechnologies.com/demo/api/v1/companies";
+    axios.get(Url).then(response => setCompanyLength(response.data)).catch((error) => {
+
+
+    })
+
+  }
+  useEffect(() => {
+   
+      getData();
+
+   
+  })
+  function employeeData() {
+    const Url = "https://trinitstechnologies.com/demo/api/v1/employees";
+    axios.get(Url).then(response => setEmployeLength(response.data)).catch((error) => {
+
+
+    })
+
+  }
+  employeeData();
   return (
     <div>
       <div className="dashboard-card p-4">
@@ -21,7 +54,6 @@ function Home() {
             <div className="card">
               <div className="d-flex justify-content-between p-3 shadow">
                 <div>
-                  {" "}
                   <span className="back rounded shadow ms-2 p-2">
                     {" "}
                     <BsHouseFill />
@@ -49,38 +81,55 @@ function Home() {
             </div>
           </div>
         </div>
+
         <div className=" home-main-logi justify-content-between mt-3">
           <div className="employe-card rounded  w-35 p-2 text-white shadow">
-            <div className="d-flex justify-content-between">
-              <div>
+            <Link to="/employees" className="text-decoration-none  text-white">
+              <div className="d-flex justify-content-between">
                 <div>
-                  <b> Employess</b>
+                  <div>
+                    <b>Employees</b>
+                  </div>
+                  <div className="fs-4">
+                    <b>
+
+                      {
+                        !employeeLength && <div>
+                          <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
+                        </div>
+                      }{employeeLength.length}</b>
+                  </div>
                 </div>
-                <div className="fs-4">
-                  <b> 700</b>
+                <div className="fs-4 card text-primary ps-2 pe-2">
+                  <div className="fs-1">
+                    <MdOutlinePeopleAlt />
+                  </div>
                 </div>
               </div>
-              <div className="fs-4 card text-primary ps-2 pe-2">
-                <div className="fs-1">
-                  <MdOutlinePeopleAlt />
-                </div>
-              </div>
-            </div>
+            </Link>
           </div>
-          <div className="d-flex justify-content-between w-35 company-card p-2 rounded text-white  shadow">
-            <div>
-              <div>
-                <b>Companies</b>
+          <div className="company-card rounded  w-35 p-2 text-white shadow">
+            <Link to="/company" className="text-decoration-none  text-white">
+              <div className="d-flex justify-content-between">
+                <div>
+                  <div>
+                    <b>Companies</b>
+                  </div>
+                  <div className="fs-4">
+
+                    <b> {!CompanyLength && <div>
+                      <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
+
+                    </div>}{CompanyLength.length}</b>
+                  </div>
+                </div>
+                <div className="fs-4 card text-primary ps-2 pe-2">
+                  <div className="fs-1">
+                    <HiOutlineBuildingOffice2 />
+                  </div>
+                </div>
               </div>
-              <div className="fs-4">
-                <b>30</b>
-              </div>
-            </div>
-            <div className="card text-black">
-              <div className="fs-1 company-icon-color ps-2 pe-2">
-                <HiOutlineBuildingOffice2 />
-              </div>
-            </div>
+            </Link>
           </div>
           <div className="leave-card rounded  w-35 p-2 text-white shadow">
             <div className="d-flex justify-content-between">
@@ -89,7 +138,7 @@ function Home() {
                   <b> Leaves</b>
                 </div>
                 <div className="fs-4">
-                  <b> 700</b>
+                  <b>700</b>
                 </div>
               </div>
               <div className="fs-4 card text-danger ps-2 pe-2">

@@ -2,7 +2,7 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import * as Yup from "yup";
 import "./appointment.css";
 
-export default function Appointment() {
+export default function Appointment(props) {
   return (
     <Formik
       initialValues={{
@@ -32,6 +32,7 @@ export default function Appointment() {
         hrName: Yup.string().required("HR Name is requried"),
       })}
       onSubmit={(values) =>{
+        props.DataTransfer(values)
         alert(JSON.stringify(values));
       }}
     >

@@ -1,46 +1,72 @@
 .maindata-button{
     display: flex;
     justify-content: space-between;
+    background-color: white;
     
     
   }
   .icondata{
-    font-size: 20px;
+    font-size: 17px;
     color: blue;
    
   }
   
-  .widthinc{
-    height: 10vh;
-   
-  }
+  
   .data{
     display: flex;
     justify-content: space-between;
-    width: 95vw;
-  
-  }
-  .buttonClass{
-    width: 10vw;
-   
-  }
-  
-  /* .updatedata{
-    background-color: rgb(7, 194, 7);
-    border: 3px solid green;
-    color: white;
     
-  } */
   
+  }
   
-  
-  
-  .w{
+  .widthinc{
+    background-color: white;
+    width: 60vw;
+  }
+ .w{
    height: 8vh;
    
   }
   .tabledata{
     width: 100%;
+    background-color: white;
+    overflow: auto;
     
   }
+  .styles-height{
+    height: 8vh;
+  }
+
+  .company-Carddata{
+    width: 300px;
+    height: 300px;
+  }
+  .Card-data{
+    background-color: white;
+  }
+  .company-Carddata:hover{
+    background-color:#d3d9ec;
+   
+  }
+
   
+  /* .invisible:hover{
+    background-color: #d3d9ec;
+
+    visibility: visible !important;
+   
+  } */
+  .Company-NotFound{
+    font-size: 30px;
+    margin-top: 10%;
+    
+    color: rgb(255, 0, 0);
+  }
+  .update{
+    visibility: hidden;
+  }
+  .visibleButton:hover .update{
+    visibility: visible;
+  }
+
+ 

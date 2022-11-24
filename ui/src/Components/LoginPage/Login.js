@@ -1,13 +1,25 @@
-import axios from "axios";
+
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useDispatch  } from "react-redux";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
+import { logindata } from "../Store/LoginSlice";
+
+
 
 export default function Login() {
+  const dispatch = useDispatch();
+  
+
   return (
     <>
-      <div className="w-100">
+
+    
+   
+
+      <div className="w-100 h-100 background ">
         <Formik
+       
           initialValues={{
             username: "",
             password: "",
@@ -17,20 +29,17 @@ export default function Login() {
             password: Yup.string().required("Password is Required").trim(),
           })}
           onSubmit={(values) => {
-            axios
-              .post(
-                "https://trinitstechnologies.com/demo/api/v1/user/login",
-                values
-              )
-              .then((response) => {});
+
+            console.log(values)
+            dispatch(logindata(values))
+            
+            
           }}
         >
-          <div className="formbg">
-            <h1 className="text-center mt-1 mb-4 fontstyless fw-bold   ">
-              TriNitS Technologies Pvt Ltd
-            </h1>
+          <div className="formbg  " >
+          
 
-            <Form className="border shadow-lg rounded-4 m-4 p-4 w-75 m-auto">
+            <Form className="border shadow-lg  formformate p-2 rounded-4  w-25 ">
               <div className="text-center">
                 <h2>Login</h2>
                 <p>Access to our dashboard</p>
@@ -38,7 +47,7 @@ export default function Login() {
               <div>
                 <label className="mt-2 p-2">Email Address</label>
                 <div>
-                  <Field name="username" className="form-control p-3" />
+                  <Field name="username" className="form-control p-2" />
                 </div>
                 <div className="text-danger">
                   <ErrorMessage name="username" />
@@ -47,7 +56,7 @@ export default function Login() {
               <div>
                 <label className="mt-2 p-2">Password</label>
                 <div>
-                  <Field name="password" className="form-control p-3 " />
+                  <Field name="password" className="form-control p-2 " />
                 </div>
                 <div className="text-danger">
                   <ErrorMessage name="password" />
@@ -65,7 +74,7 @@ export default function Login() {
               </div>
 
               <div className="mt-3 rounded-4 " bg-success>
-                <button className=" buttoncolor rounded-3 p-2 text-light">
+                <button type="submit" className=" buttoncolor rounded-3 p-2 text-light">
                   Login
                 </button>
               </div>
@@ -81,6 +90,12 @@ export default function Login() {
           </div>
         </Formik>
       </div>
+      {/* <div className="w-50">
+      <img src={payroll} alt="circle" className="w-100" />
+      </div> */}
+    
     </>
   );
+
+  
 }
