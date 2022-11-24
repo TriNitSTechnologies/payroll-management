@@ -4,6 +4,7 @@ import { useState } from "react";
 import { BsHouseFill } from "react-icons/bs";
 import { Link } from "react-router-dom";
 import Report from "../Report/Report";
+import { Button } from 'bootstrap';
 export default function Buttons() {
   const [value2, setValue2] = useState("");
   const reportsOptions = [
@@ -50,6 +51,9 @@ return (
               setValue2(e.value);
             }}
           />
+        
+
+         
            {value2 === "Offer-Letter'S" && (
             <>
              <div>
@@ -58,6 +62,7 @@ return (
             </>
           )}
         </div>
+     
 
         {value2 === "Appointment Letter" && (
           <>
@@ -66,6 +71,7 @@ return (
             </div>
           </>
         )}
+        
 
       
          {value2 === "PayslipS" && (
@@ -75,7 +81,8 @@ return (
             </div>
           </>
         )}
-      </div>
+        </div>
+    
     </>
   );
 }
