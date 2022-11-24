@@ -38,8 +38,17 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
 import "primereact/resources/primereact.min.css";                  //core css
 import "primeicons/primeicons.css";                                //icons
 
+
 import Payslips from "./Components/Payslip/Payslips";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
+
+import Upload from "./Components/upload-documents/upload-documents";
+ 
+
+import Attendense from "./Components/Attendense/Attendense";
+import Payslips from "./Components/Payslip/Payslips";
+import Buttons from "./Components/Buttons/Buttons";
+
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -141,6 +150,10 @@ useEffect(()=>{
             <Route path="/Payslip3">
             <Payslip3 />
             </Route>
+            <Route path="/buttons">
+            <Buttons />
+            </Route>
+          
 
             <Route path="/offer-letter">
               <OfferLetter />
@@ -154,10 +167,16 @@ useEffect(()=>{
             <Route path="/notifications">
               <Notifications/>
             </Route>
+ 
+            <Route path="/uploadD">
+              <Upload/>
+            </Route>
+
           
          <Route path='/Payslip4'>
          <Payslip4 />
          </Route>
+
             </>}
           </Switch>
         </div>
