@@ -44,6 +44,7 @@ import Upload from "./Components/upload-documents/upload-documents";
 import Attendense from "./Components/Attendense/Attendense";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
+import Reimbursement from "./Components/Reimbursement/Reimbursement";
 
 function App() {
   let userrouter=useHistory()
@@ -77,12 +78,14 @@ useEffect(()=>{
         <Header hidesidebar={handlesidebarstatus}/>
         </>}
       </div>
-      <div className="d-flex">
+      <div className="d-flex ">
+        <div className="">
         {isUserLoggedIn && <>
         <div className={sidebarclass}>
           <Sidebar />
         </div>
         </>}
+        </div>
         <div className="main">
           <Switch>
           {!isUserLoggedIn && <>
@@ -114,6 +117,9 @@ useEffect(()=>{
             </Route>
             <Route path="/employees">
               <Employees />
+            </Route>
+            <Route path="/reimbursement">
+              <Reimbursement/>
             </Route>
             <Route path="/settings">
               <Settings />

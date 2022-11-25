@@ -7,7 +7,7 @@ import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import "./Sidebar.css";
 import { Link, useLocation } from "react-router-dom";
 import { BiUserCheck } from "react-icons/bi";
-
+import { GiTakeMyMoney } from "react-icons/gi";
 function Sidebar() {
   const locationobj = useLocation();
   const pathname = locationobj.pathname;
@@ -64,7 +64,7 @@ function Sidebar() {
       </div>
       <div className={pathname === "/report" ? " sidebar-item" : ""}>
         <div className=" d-flex mt-3 selected">
-<div className="m-2 button ">
+          <div className="m-2 button ">
           <button className="rounded shadow back">
             <Link to="/buttons" className="text-decoration-none back">
               <TbAddressBook />
@@ -92,8 +92,22 @@ function Sidebar() {
               Documents
             </Link>
           </div>
-
-
+        </div>
+      </div>
+      <div className={pathname === "/reimbursement" ? " sidebar-item" : ""}>
+        <div className="d-flex mt-3  selected">
+          <div className="m-2 button ">
+            <button className="rounded shadow back">
+              <Link to="/reimbursement" className="text-decoration-none back ">
+                <GiTakeMyMoney />
+              </Link>
+            </button>
+          </div>
+          <div className="fw-semibold m-2 ">
+            <Link to="/reimbursement" className="text-decoration-none text-dark ">
+              Reimbursement
+            </Link>
+          </div>
         </div>
       </div>
 

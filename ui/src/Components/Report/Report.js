@@ -149,13 +149,9 @@ function Report(props) {
             </div>
           </div>
           <div className=" ms-4 mb-2">
-            <button className="btn btn-primary btn-lg" type="submit"
-   
-          >
-                  
-              Get Payslip
-             
-            </button>
+            <button className="btn btn-primary btn-lg" type="submit">
+                  Get Payslip
+             </button>
           </div>
         </Form>
       </Formik>
