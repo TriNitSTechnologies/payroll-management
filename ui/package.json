@@ -28,7 +28,8 @@
     "spinners-react": "^1.0.7",
     "tooltip": "^1.6.1",
     "web-vitals": "^2.1.4",
-    "yup": "^0.32.11"
+    "yup": "^0.32.11",
+    "yup-password": "^0.2.2"
   },
   "scripts": {
     "start": "react-scripts start",

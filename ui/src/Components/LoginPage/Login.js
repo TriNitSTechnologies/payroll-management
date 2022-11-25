@@ -4,12 +4,18 @@ import { useDispatch  } from "react-redux";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { logindata } from "../Store/LoginSlice";
+import YupPassword from 'yup-password'
+
+YupPassword(Yup)
+
 
 
 
 export default function Login() {
   const dispatch = useDispatch();
   
+  const Yup = require('yup')
+require('yup-password')(Yup)
 
   return (
     <>
@@ -17,7 +23,7 @@ export default function Login() {
     
    
 
-      <div className="w-100 h-100 background ">
+      <div className="w-100  h-100 background ">
         <Formik
        
           initialValues={{
@@ -25,7 +31,7 @@ export default function Login() {
             password: "",
           }}
           validationSchema={Yup.object({
-            username: Yup.string().required("Email Address is Required").trim(),
+            username: Yup.string().required("Email Address is Required").trim().email('Invalid email'),
             password: Yup.string().required("Password is Required").trim(),
           })}
           onSubmit={(values) => {
@@ -39,7 +45,7 @@ export default function Login() {
           <div className="formbg  " >
           
 
-            <Form className="border shadow-lg  formformate p-2 rounded-4  w-25 ">
+            <Form className="border shadow-lg  formformate p-3 rounded-4  w-25 ">
               <div className="text-center">
                 <h2>Login</h2>
                 <p>Access to our dashboard</p>
@@ -56,7 +62,7 @@ export default function Login() {
               <div>
                 <label className="mt-2 p-2">Password</label>
                 <div>
-                  <Field name="password" className="form-control p-2 " />
+                  <Field name="password" type="password" className="form-control p-2 " />
                 </div>
                 <div className="text-danger">
                   <ErrorMessage name="password" />
