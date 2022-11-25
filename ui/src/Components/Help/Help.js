@@ -1,8 +1,9 @@
 import { BsCameraVideo, BsFileEarmarkBarGraph} from "react-icons/bs";
 // import {MdOutlineMessage} from "react-icons/bs";
 import { BsQuestionLg} from "react-icons/bs";
+import { BiMessageDetail } from "react-icons/bi";
 import { IoChevronForwardOutline } from "react-icons/io5";
-import { FaRegCommentAlt } from "react-icons/fa";
+
 
 import "./Help.css";
 
@@ -49,21 +50,9 @@ function Help() {
             </div>
             <div className="w-25 p-2 m-2">
             <div><h2>Get in touch</h2></div>
-            <div className="card">
-                <div className="d-flex">
-                    <div>
-                        <b>Chat Support</b>
-
-                    </div>
-                    <div className="chatData bg-info"> <FaRegCommentAlt className=" " /></div>
-                </div>
-             
-                {/* <h5 >Chat Support 
-                    
-                       
-                        
-                        </h5> */}
-                <div className="p-4 ">Chat with us live from 10 AM to 5.30PM</div>
+            <div className="card mt-4 border">
+                <h5>Chat Support <BiMessageDetail  className="float-end mb-3 card bg-info"/></h5>
+            <div className="p-4 ">Chat with us live from 10 AM to 5.30PM</div>
                 
                 </div>
                 <div className="card  mt-4 border">
