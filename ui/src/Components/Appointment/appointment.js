@@ -35,7 +35,7 @@ export default function Appointment(props) {
       })}
       onSubmit={(values) =>{
         props.Appdata(values)
-      }}
+      }} 
     >
       <div>
         <Form>
