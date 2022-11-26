@@ -106,7 +106,7 @@ function Header(props) {
               <ul className="dropdown-menu mt-3 ms-2 shadow">
                 <li className=" dropdown-style mt-1 p-1">
                   <Link
-                    to="/profile"
+                    to="/selectprofile"
                     className="text-decoration-none fs-5 ms-3 "
                   >
                     <i className="bi bi-person text-dark"></i>
