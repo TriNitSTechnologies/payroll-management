@@ -17,7 +17,7 @@ export default function Login() {
   const Yup = require('yup')
 require('yup-password')(Yup)
 
-function Login() {
+function LoginButton() {
   const {isValid} = useFormikContext();
   return (
     <button disabled={!isValid} className=" buttoncolor rounded-3 p-2 text-light" type="submit">
@@ -89,7 +89,7 @@ function Login() {
               </div>
 
               <div className="mt-3 rounded-4 " bg-success>
-                <Login/>
+                <LoginButton/>
                 
               </div>
               <div className="login-or">
