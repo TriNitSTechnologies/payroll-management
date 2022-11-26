@@ -7,40 +7,34 @@ import { BsHouseFill } from "react-icons/bs";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Loading from "../Loading/Loading";
+
 function Home() {
 
   const [CompanyLength, setCompanyLength] = useState("");
   const [employeeLength, setEmployeLength] = useState("");
-  // const [loading, setLoading] = useState(true);
+
 
 
   function getData() {
     const Url = "https://trinitstechnologies.com/demo/api/v1/companies";
     axios.get(Url).then(response => setCompanyLength(response.data)).catch((error) => {
-
-
+    })
+  }
+  useEffect(() => {
+    getData();
+  },[])
+  function employeeData() {
+    const Url = "https://trinitstechnologies.com/demo/api/v1/employees";
+    axios.get(Url).then(response => setEmployeLength(response.data)).catch((error) => {
     })
 
   }
   useEffect(() => {
-   
-      getData();
-
-   
-  })
-  function employeeData() {
-    const Url = "https://trinitstechnologies.com/demo/api/v1/employees";
-    axios.get(Url).then(response => setEmployeLength(response.data)).catch((error) => {
-
-
-    })
-
-  }
-  employeeData();
+    employeeData();
+  },[])
   return (
     <div>
-      <div className="dashboard-card p-5">
+      <div className="dashboard-card p-4">
         <div className="rounded admin-card ">
           <div className="d-flex fs-4 justify-content-between  p-3 ">
             <div>
@@ -49,7 +43,7 @@ function Home() {
             <div>{new Date().toDateString()}</div>
           </div>
         </div>
-        <div className="d-flex mt-4 justify-content-between">
+        <div className=" home-main-logi mt-4 justify-content-between">
           <div className="w-45">
             <div className="card">
               <div className="d-flex justify-content-between p-3 shadow">
@@ -81,33 +75,8 @@ function Home() {
             </div>
           </div>
         </div>
-        <div className="d-flex justify-content-between mt-3">
 
-          <div className="employe-card rounded  w-35 p-2 text-white shadow">
-            <Link to="/employees" className="text-decoration-none  text-white">
-              <div className="d-flex justify-content-between">
-                <div>
-                  <div>
-                    <b>Employees</b>
-                  </div>
-                  <div className="fs-4">
-                    <b>
-
-                      {
-                        !employeeLength && <div>
-                          <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
-                        </div>
-                      }{employeeLength.length}</b>
-                  </div>
-                </div>
-                <div className="fs-4 card text-primary ps-2 pe-2">
-                  <div className="fs-1">
-                    <MdOutlinePeopleAlt />
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div>
+        <div className=" home-main-logi justify-content-between mt-3">
           <div className="company-card rounded  w-35 p-2 text-white shadow">
             <Link to="/company" className="text-decoration-none  text-white">
               <div className="d-flex justify-content-between">
@@ -116,11 +85,10 @@ function Home() {
                     <b>Companies</b>
                   </div>
                   <div className="fs-4">
-
-                    <b> {!CompanyLength && <div>
+                    <b> {!CompanyLength ? <div>
                       <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
 
-                    </div>}{CompanyLength.length}</b>
+                    </div> : CompanyLength.length}</b>
                   </div>
                 </div>
                 <div className="fs-4 card text-primary ps-2 pe-2">
@@ -131,6 +99,31 @@ function Home() {
               </div>
             </Link>
           </div>
+
+          <div className="employe-card rounded  w-35 p-2 text-white shadow">
+            <Link to="/employees" className="text-decoration-none  text-white">
+              <div className="d-flex justify-content-between">
+                <div>
+                  <div>
+                    <b>Employees</b>
+                  </div>
+                  <div className="fs-4">
+                    {
+                      !employeeLength ? <div>
+                        <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
+                      </div> : employeeLength.length
+                    }
+                  </div>
+                </div>
+                <div className="fs-4 card text-primary ps-2 pe-2">
+                  <div className="fs-1">
+                    <MdOutlinePeopleAlt />
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
+
           <div className="leave-card rounded  w-35 p-2 text-white shadow">
             <div className="d-flex justify-content-between">
               <div>

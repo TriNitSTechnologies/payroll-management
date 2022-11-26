@@ -7,8 +7,7 @@ import Report from "../Report/Report";
 import Appointment from '../Appointment/appointment';
 import { useDispatch } from 'react-redux';
 import { appoienment } from '../Store/AppoiementSlice';
-
-
+import { Button } from 'bootstrap';
 
 export default function Buttons() {
   const [value2, setValue2] = useState("");
@@ -34,10 +33,7 @@ export default function Buttons() {
       fromObj: data1
     }
     dispatch(appoienment(obj1))
-
-
     history.push('documents')
-
   }
 
 return (
@@ -72,6 +68,9 @@ return (
               setValue2(e.value);
             }}
           />
+        
+
+         
            {value2 === "Offer-Letter'S" && (
             <>
              <div>
@@ -80,6 +79,7 @@ return (
             </>
           )}
         </div>
+     
 
         {value2 === "Appointment Letter" && (
           <>
@@ -88,6 +88,7 @@ return (
             </div>
           </>
         )}
+        
 
       
          {value2 === "PayslipS" && (
@@ -97,7 +98,8 @@ return (
             </div>
           </>
         )}
-      </div>
+        </div>
+    
     </>
   );
 }
