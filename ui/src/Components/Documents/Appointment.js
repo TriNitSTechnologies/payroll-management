@@ -2,7 +2,7 @@ import { ErrorMessage, Field, Form, Formik, } from 'formik';
 import * as Yup from 'yup';
 import './Appointment.css'
 
-export default function OfferLetter(props) {
+export default function Appointment(props) {
 
   
 
@@ -41,22 +41,22 @@ export default function OfferLetter(props) {
 
       }} 
       validationSchema={Yup.object({
-          firstName:Yup.string().trim().min(10,'Enter minimum 10 characters').required(' First name is required'),
-          lastName:Yup.string().trim().min(10,'Enter minimum 10 characters').required('Last name is required'),
-          email:Yup.string().trim().email(' You have entering invalid email address').required('Email is required'),
-          companyName:Yup.string().trim().min(8,'Enter minimum 8 characters' ).required('Company name is required'),
-          addressLine1:Yup.string().trim().min(10,'Enter address minimum 10 characters').required('Company address is required'),
+          firstName:Yup.string().trim().required(' First name is required'),
+          lastName:Yup.string().trim().required('Last name is required'),
+          email:Yup.string().trim().required('Email is required'),
+          companyName:Yup.string().trim().required('Company name is required'),
+          addressLine1:Yup.string().trim().required('Company address is required'),
           date:Yup.string().trim().required('Date is required'),
-          empName:Yup.string().trim().min(10,'Enter minimum 10 characters').required('Employee name is required'),
-          designation:Yup.string().trim().min(8,'Enter minimum 8 characters ').required('Designation  is required'),
+          empName:Yup.string().trim().required('Employee name is required'),
+          designation:Yup.string().trim().required('Designation  is required'),
           doj:Yup.string().trim().required('Date of Joining is required'),
-          empNo:Yup.string().trim().min(8,'Enter minimum 8 numbers').required('Employee number is required'),
-          hrname:Yup.string().trim().min(10,'Enter minimum 10 characters').required('Hr name is required'),
-          hrdesignaation:Yup.string().trim().min(10,'Enter minimum 10 characters').required('Hr designation is required'),
+          empNo:Yup.string().trim().required('Employee number is required'),
+          hrname:Yup.string().trim().required('Hr name is required'),
+          hrdesignaation:Yup.string().trim().required('Hr designation is required'),
 
       })}
       onSubmit={(values)=>{
-        props.DataTransfer(values)
+        props.OfferLetter(values)
         alert(JSON.stringify(values, null, 2))
       }}
     >

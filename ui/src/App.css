@@ -1,6 +1,7 @@
 
 .sidebar{
   width:220px;
+  height:87vh;
   background-color:aliceblue;
 }
 
@@ -18,8 +19,7 @@
   width:100% ;
   background-color:rgb(238, 241, 244);
   height:87vh;
-  overflow: auto;
-  height: 100%;
+  overflow-y: auto;
 }
 .head{
   background-color: aliceblue;
@@ -135,10 +135,36 @@ box-shadow: 5px 5px 10px lightgray;
   width:24%
 }
 
-.font{
-  font-size: 25px;
-  color: blue;
+
+.home-main-logi{
+  display: flex;
+  
 }
+
+@media screen and (max-width:850px){
+  .home-main-logi{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-content: center;
+  }
+
+  .w-45{
+    width: 100%;
+    margin:5px;
+  }
+
+  .w-35{
+    width: 100%;
+    margin: 5px;
+  }
+ 
+
+}
+
+
+
+
 .flex{
   display: flex;
 justify-content: space-between;
@@ -151,15 +177,15 @@ flex-wrap: wrap;
 }
 .button1{
   background-color: rgb(19, 143, 19);
-color: white;
-border: none;
-font-size: 20px;
+ color: white;
+ font-size: 20px;
+ border:none;
 }
 
-.button1:hover{
+.button2:hover{
   background-color:white;
   color: green;
-  border:green
+  border:1px solid green;
 }
 .cardsize{
   height: 300px;
@@ -178,7 +204,7 @@ font-size: 20px;
 }
 .font1{
  
-  margin-left: 30%;
+  margin-left: 25%;
 }
 .font2{
  
@@ -286,6 +312,36 @@ padding-top: 5%;
   height: 90px;
   width: 90px;
 }
+
+
+.load{
+  justify-content: center;
+  margin-top: 20%;
+  text-align: center;
+  font-size: 20px;
+}
+.font4{
+  font-size: 30%;
+  color: rgb(250, 33, 33);
+}
+.employeeavailable{
+  font-size: 60px;
+  color:rgb(23, 26, 187);
+
+
+}
+.employee{
+  visibility: hidden;
+}
+.employeehover:hover .employee{
+  visibility: visible;
+ }
+.cardhover:hover{
+  background-color: #dadee0;
+}
+
 .ccolor:hover{
   background-color: #f8f9fc;
+
 }
+

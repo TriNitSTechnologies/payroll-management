@@ -1,7 +1,7 @@
 import { SelectButton } from "primereact/selectbutton";
 import { useState } from "react";
-import Appointment from "../Appointment/appointment";
-import OfferLetter from "../Documents/Appointment";
+import OfferLetter from "../Appointment/OfferLetter";
+import Appointment from "../Documents/Appointment";
 import PrintAppoiement from "../Letter of Appoiement/APPOIEMENT.print";
 import Report from "../Report/Report";
 
