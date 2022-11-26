@@ -4,6 +4,7 @@
   "private": true,
   "homepage": "https://trinitstechnologies.com/demo/payroll",
   "dependencies": {
+    "@popperjs/core": "^2.11.6",
     "@react-icons/all-files": "^4.1.0",
     "@reduxjs/toolkit": "^1.9.0",
     "@testing-library/jest-dom": "^5.16.5",
