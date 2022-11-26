@@ -32,7 +32,8 @@
     "tooltip": "^1.6.1",
     "web-vitals": "^2.1.4",
     "yup": "^0.32.11",
-    "yup-password": "^0.2.2"
+    "yup-password": "^0.2.2",
+    "bootstrap": "^5.2.3"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -59,6 +60,6 @@
     ]
   },
   "devDependencies": {
-    "bootstrap": "^5.2.3"
+    
   }
 }
