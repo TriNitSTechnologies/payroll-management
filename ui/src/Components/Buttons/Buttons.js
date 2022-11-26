@@ -5,6 +5,8 @@ import { BsHouseFill } from "react-icons/bs";
 import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
 import { useDispatch } from 'react-redux';
+import { appointment } from '../Store/AppointmentSlice';
+import Appointment from '../Documents/Appointment';
 import { offerletterReducer } from '../Store/Offer-LetterSlice';
 import OfferLetter from '../Appointment/OfferLetter';
 import { Button } from 'bootstrap';
@@ -27,6 +29,17 @@ export default function Buttons() {
     dispatch(offerletterReducer(obj))
     history.push("./documents")
   }
+
+
+  function Appoiementdata(data1){
+    let obj1={
+      selectedPage:value2,
+      fromObj: data1
+    }
+    dispatch(appointment(obj1))
+    history.push('./documents')
+  }
+
 return (
     <>
       <div className="  h-over-flow-auto border butt border-3 rounded m-4">
@@ -72,7 +85,8 @@ return (
         {value2 === "Appointment Letter" && (
           <>
             <div>
-             
+             <Appointment Appdata={Appoiementdata}  />
+
             </div>
           </>
         )}
