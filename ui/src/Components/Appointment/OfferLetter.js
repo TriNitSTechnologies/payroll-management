@@ -1,4 +1,6 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import "./appointment.css";
 
@@ -33,7 +35,6 @@ export default function OfferLetter(props) {
       })}
       onSubmit={(values) =>{
         props.OfferLetter(values)
-        alert(JSON.stringify(values));
       }}
     >
       <div>
