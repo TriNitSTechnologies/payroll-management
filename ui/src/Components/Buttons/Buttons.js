@@ -5,7 +5,7 @@ import { BsHouseFill } from "react-icons/bs";
 import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
 import { useDispatch } from 'react-redux';
-import { appointment } from '../Store/AppoiementSlice';
+import { appointment } from '../Store/AppointmentSlice';
 import Appointment from '../Documents/Appointment';
 import { offerletterReducer } from '../Store/Offer-LetterSlice';
 import OfferLetter from '../Appointment/OfferLetter';

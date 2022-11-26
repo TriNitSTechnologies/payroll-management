@@ -4,7 +4,7 @@ import { configureStore } from "@reduxjs/toolkit";
 import loginSlice  from "./LoginSlice";
 import offerletterReducer  from "./Offer-LetterSlice";
 import payslipReducer  from "./PayslipSlice";
-import appointmentReducer from "./AppoiementSlice";
+import appointmentReducer from "./AppointmentSlice";
 
 export default  configureStore({
     reducer :{
