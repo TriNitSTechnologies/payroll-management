@@ -15,6 +15,8 @@ import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
 import Payslip4 from "./Components/Payslip4/Payslip4";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 
 import Mainbody from "./Components/MainPage/Main-Body";
 import { useSelector } from "react-redux";
