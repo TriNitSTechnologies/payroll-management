@@ -2,7 +2,7 @@ import { ErrorMessage, Field, Form, Formik, } from 'formik';
 import * as Yup from 'yup';
 import './Appointment.css'
 
-export default function OfferLetter(props) {
+export default function Appointment(props) {
 
   
 

@@ -4,9 +4,9 @@ import { useState } from "react";
 import { BsHouseFill } from "react-icons/bs";
 import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
-import OfferLetter from '../Documents/Appointment';
 import { useDispatch } from 'react-redux';
 import { offerletterReducer } from '../Store/Offer-LetterSlice';
+import OfferLetter from '../Appointment/OfferLetter';
 
 
 

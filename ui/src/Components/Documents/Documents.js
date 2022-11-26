@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Joinletter from "../Offer Letter/offerletter";
+import Joinletter from "../Joinletter/Joinletter";
 import "./../../App.css";
 
 
