@@ -34,7 +34,8 @@ export default function OfferLetter(props) {
         hrName: Yup.string().required("HR Name is requried"),
       })}
       onSubmit={(values) =>{
-      }} 
+        props.OfferLetter(values)
+      }}
     >
       <div>
         <Form>
@@ -76,7 +77,6 @@ export default function OfferLetter(props) {
                   <small className="text-danger">
                     <ErrorMessage name="companyAddress" />
                   </small>
-                  
                 </div>
               </div>
               <div className="d-flex justify-content-evenly">
@@ -85,7 +85,7 @@ export default function OfferLetter(props) {
                     className="form-control p-3"
                     name="currentDate"
                     placeholder="Current date"
-                    type="text"
+                    type="date"
                   />
                   <small className="text-danger">
                     <ErrorMessage name="currentDate" />
@@ -144,7 +144,7 @@ export default function OfferLetter(props) {
                     className="form-control p-3"
                     name="employeeJoiningDate"
                     placeholder="Employee joining date"
-                    type="text"
+                    type="date"
                   />
                   <small className="text-danger">
                     <ErrorMessage name="employeeJoiningDate" />
@@ -157,7 +157,7 @@ export default function OfferLetter(props) {
                     className="form-control p-3"
                     name="acceptanceLastDate"
                     placeholder="Acceptance last date"
-                    type="text"
+                    type="date"
                   />
                   <small className="text-danger">
                     <ErrorMessage name="acceptanceLastDate" />

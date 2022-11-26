@@ -7,23 +7,27 @@ import Report from "../Report/Report";
 import { useDispatch } from 'react-redux';
 import { appoienment } from '../Store/AppoiementSlice';
 import Appointment from '../Documents/Appointment';
+import { offerletterReducer } from '../Store/Offer-LetterSlice';
+import OfferLetter from '../Appointment/OfferLetter';
 import { Button } from 'bootstrap';
 
 export default function Buttons() {
   const [value2, setValue2] = useState("");
+  const history = useHistory();
+  
   const reportsOptions = [
     "Offer-Letter",
     "Appointment Letter",
      "PayslipS",
   ];
   const dispatch = useDispatch();
-  const history=useHistory()
- function DataTransfer(data){
+ function OfferLetterData(data){
     let obj = {
       selectedPage: value2,
       formObj: data
     }
-    alert(JSON.stringify(obj))
+    dispatch(offerletterReducer(obj))
+    history.push("./documents")
   }
 
 
@@ -68,13 +72,10 @@ return (
               setValue2(e.value);
             }}
           />
-        
-
-         
-           {value2 === "Offer-Letter'S" && (
+           {value2 === "Offer-Letter" && (
             <>
              <div>
-
+            <OfferLetter  OfferLetter={OfferLetterData} />
              </div>
             </>
           )}

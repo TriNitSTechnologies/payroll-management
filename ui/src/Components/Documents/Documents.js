@@ -2,20 +2,26 @@ import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import PrintAppoiement from "../Letter of Appoiement/APPOIEMENT.print";
 import "./../../App.css";
+import Joinletter from "../Joinletter/Joinletter";
 
-export default function Documents() {
-   const appoiememtleter= useSelector(state=>state.appoiement.appoienment)
-    return (
+
+export default function Documents(props) {
+ 
+  const offerLeeter = useSelector(
+    (state) => state.OfferLetterSlice.offerletter
+  );
+ 
+  return (
+    <>
+     
+
+      {offerLeeter.selectedPage == "Offer-Letter" && (
         <>
-            <Link to='/offer-letter'>Offerleter</Link>
-            {/* <Joinletter />    */}
-
-            {appoiememtleter.selectedPage == "Appointment Letter" &&
-            <>
-            <PrintAppoiement appoiementsendData={appoiememtleter.fromObj}/>
-            </>
-        }
+          <div id="joinLetter">
+            <Joinletter JoinletterData={offerLeeter.formObj} />
+          </div>
         </>
-       
-    )
+      )}
+    </>
+  );
 }

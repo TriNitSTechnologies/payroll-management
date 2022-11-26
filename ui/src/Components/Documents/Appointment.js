@@ -3,13 +3,9 @@ import * as Yup from 'yup';
 import './Appointment.css'
 
 export default function Appointment(props) {
-
-  
-
   // function Formsubmithandler(event){
   //     event.preventDefault();
   // }
-
 
   return (
     <div  className="border py-2 p-1 doc-home-log">
@@ -107,10 +103,6 @@ export default function Appointment(props) {
                <div className='text-danger fw-light'><ErrorMessage name="address1" /></div>
                
             </div>
-            
-
-
-              
            
           </div>
           

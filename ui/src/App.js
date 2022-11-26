@@ -20,9 +20,10 @@ import { useSelector } from "react-redux";
 import React from "react";
 import MyProfile from "./Components/My-Profile/My-Profile";
 import Reports from "./Components/NewReport/Reports";
-import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
-import "primereact/resources/primereact.min.css";                  //core css
-import "primeicons/primeicons.css"; 
+import "primereact/resources/themes/lara-light-indigo/theme.css"; 
+import "primereact/resources/primereact.min.css";                
+import "primeicons/primeicons.css";                              
+import Joinletter from "./Components/Joinletter/Joinletter";
 import Details from "./Components/Details/details";
 import SelectProfile from "./Components/Selected-profile/selected-profile";
 import Payslip1 from "./Components/Payslip1/Payslip1";
