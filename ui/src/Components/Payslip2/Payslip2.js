@@ -1,4 +1,5 @@
 import { useSelector } from "react-redux";
+import { ToastContainer } from "react-toastify";
 import sss from  "../Image/logo-dark.png";
 import './Payslip2.css';
 export default function Payslip2() {
@@ -30,6 +31,7 @@ export default function Payslip2() {
                         <h6 className="text-center"><b>FOR THE MONTH OF November 2022</b></h6>
                     </div>
                     <div className="p2body mt-2">
+                   
                         <table className=" w-100">
                             <tbody>
                                 <tr>

@@ -2,28 +2,23 @@
 import { Link } from "react-router-dom";
 
 import { FaListUl } from "react-icons/fa";
-import { BsFillGridFill } from "react-icons/bs";
+import { BsFillGridFill, BsHouseFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ConfirmDialog } from 'primereact/confirmdialog';
 
-
+import { FaOdnoklassniki } from "react-icons/fa";
 import './Company.css';
 import ReactTooltip from 'react-tooltip';
-import { ImHome3 } from "react-icons/im";
-import { FaTrash } from "react-icons/fa";
-import { FaPenAlt } from "react-icons/fa";
 
+import { AiFillEdit } from "react-icons/ai";
+import { AiFillRest } from "react-icons/ai";
 import trinits from '../Image/photo_2022-11-16_13-15-16.jpg'
-
 import CompanyCard from "../CompanyCard/CompanyCard";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddCompany from "../AddCompany/AddCompany";
 import Loading from "../Loading/Loading";
-
-
-
 const COMPANY_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
 function Company() {
     const [Company, setCompanydata] = useState([]);
@@ -165,7 +160,7 @@ function Company() {
 
             <div className=" border-none shadow border p-3 rounded maindata-button w-100">
                 <div>
-                    <button className=" border border-white shadow rounded"><ImHome3 className="icondata" /></button>
+                    <button className=" border border-white shadow rounded"><BsHouseFill className="icondata text-dark" /></button>
                     <Link to="/home" className="text-black text-decoration-none ms-2">Home</Link>/
                     <Link to="/Company" className="text-black text-decoration-none">Company</Link>
 
@@ -175,7 +170,7 @@ function Company() {
                 </div>
 
             </div>
-            <div className=" w-100 mt-3 d-flex justify-content-between">
+            <div className=" w-100 mt-3 d-flex justify-content-between flex-wrap">
                 <div className="shadow border rounded widthinc p-3">
                     <b>Total:{Company.length}</b>
 
@@ -185,15 +180,15 @@ function Company() {
                         <button className="btn btn-success  float-end me-2 styles-height" onClick={() => AddCompanyForm()
                         } data-tip="CompanyForm" >
 
-                            <i className="bi bi-plus-circle me-1 text-wrap"></i>Add Company
+                            <i className="bi bi-plus-circle me-1"></i>Add Company
                         </button>
                     </div>
-                    <button className={data === 'companyCard' ? 'btn btn-primary rounded shadow w ' : 'btn btn-outline-primary  rounded w '} data-tip="Company Card data" onClick={() => { setData("companyCard") }}>
+                    <button className={data === 'companyCard' ? 'btn btn-primary rounded shadow w ' : 'btn btn-outline-primary  rounded w '} data-tip="Card view" onClick={() => { setData("companyCard") }}>
                         <BsFillGridFill className="icondata text-black" />
 
 
                     </button>
-                    <button className={data === 'Table' ? "btn btn-primary w rounded shadow ms-2 " : 'btn btn-outline-primary w rounded ms-2'} for="btnradio1" onClick={() => { setData("Table") }} data-tip="Company Table data"><FaListUl className="icondata text-black" /> </button>
+                    <button className={data === 'Table' ? "btn btn-primary w rounded shadow ms-2 " : 'btn btn-outline-primary w rounded ms-2'} for="btnradio1" onClick={() => { setData("Table") }} data-tip=" Table view"><FaListUl className="icondata text-black" /> </button>
                 </div>
 
             </div>
@@ -239,10 +234,10 @@ function Company() {
                                         <td>{companyModel.addressLine2}</td>
                                         <td>{companyModel.logoName}</td>
                                         <td className="d-flex ">
-                                            <button className="btn btn-primary update" data-tip="update companydata" onClick={() => editCompany(companyModel)}><FaPenAlt /></button>
-                                            <button className="btn btn-danger ms-3 update" data-tip="delete companydata" onClick={() => { showDeletePrompt(index) }}
+                                            <button className="btn btn-outline-primary update" data-tip="update companydata" onClick={() => editCompany(companyModel)}><AiFillEdit className="font3" /></button>
+                                            <button className="btn btn-outline-danger ms-3 update" data-tip="delete companydata" onClick={() => { showDeletePrompt(index) }}
                                             >
-                                                <FaTrash /></button>
+                                                <AiFillRest className="font3" /></button>
 
                                         </td>
 
@@ -252,7 +247,10 @@ function Company() {
                         }
                     </tbody>
                 </table>
-                {!Company.length && <div className="text-center Company-NotFound">No Companies are Available</div>}
+                {!Company.length && <div className="text-center">
+                    <FaOdnoklassniki className="text-blue nodata-avail"/>
+                   <h1 className="text-secondary fst-italic"> No companies are available</h1>
+                    </div>}
             </div>
         </div>
     )
