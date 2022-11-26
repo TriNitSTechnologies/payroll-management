@@ -42,33 +42,33 @@ export default function PrintAppoiement(props) {
             <div className="">
               <h5 className="text-end me-3">{AppointmentData.companyName}</h5>
               <h6 className="text-end me-3">
-                {AppointmentData.companyAddress}
+                {AppointmentData.addressLine1}
               </h6>
-              <h6 className="text-end me-3 ">524421, Andhra Pradesh, 524421</h6>
+              <h6 className="text-end me-3 "> {AppointmentData.address1 }</h6>
             </div>
           </div>
 
           <div className="float-end me-5 mt-3 ">
-            <b>{AppointmentData.currentDate}</b>
+            <b>{AppointmentData.date}</b>
           </div>
           <div className="mt-5 fs-2  text-center">
             <b> Letter of Appointment </b>
           </div>
           <div className="p-5">
-            <p>
-              Dear <b> {AppointmentData.employeeName},</b>
-            </p>
+            <div className="mb-2">
+              Dear <b> {AppointmentData.empName},</b>
+              </div>
             <div>
-              Appointment as <b>{AppointmentData.jobTitle}</b>
+              Appointment as <b>{AppointmentData.designation}</b>
             </div>
             <div>
               <p>
                 We refer to your recent interview for the position and are
                 please to advise that we are offering you the position with
-                <span className="ms-1 fw-bold">
-                  {AppointmentData.companyName}
-                </span>{" "}
-                effective from {AppointmentData.employeeJoiningDate} under the
+                <span className="ms-1 me-1 ">
+                  <b>{AppointmentData.companyName}</b>
+                </span>
+                effective from <b>{AppointmentData.doj}</b> under the
                 following terms and conditions:
               </p>
             </div>
@@ -213,10 +213,10 @@ export default function PrintAppoiement(props) {
             </div>
             <div>
               <div>Sincerely, </div>
-              <div className="mt-3">
-                <b>{AppointmentData.hrName}</b>
+              <div className="mt-1">
+                <b>{AppointmentData.hrname}</b>
               </div>
-              <div>hr</div>
+              <div>{AppointmentData.hrdesignaation}</div>
               <div>{AppointmentData.companyName}</div>
             </div>
             <div className="mt-5">
@@ -224,9 +224,9 @@ export default function PrintAppoiement(props) {
                 I agree to the appointment and accept the above terms and
                 conditions of service
               </div>
-              <div>Name: {AppointmentData.employeeName}</div>
-              <div>Employee ID : TRINITS-2</div>
-              <div>Date: {AppointmentData.acceptanceLastDate}</div>
+              <div>Name: {AppointmentData.empName}</div>
+              <div>Employee ID : {AppointmentData.empNo}</div>
+              <div>Date: {AppointmentData.date}</div>
               <div className="mt-3">
                 Signature: ...................................
               </div>

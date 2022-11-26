@@ -4,9 +4,9 @@ import { useState } from "react";
 import { BsHouseFill } from "react-icons/bs";
 import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
-import Appointment from '../Appointment/appointment';
 import { useDispatch } from 'react-redux';
 import { appoienment } from '../Store/AppoiementSlice';
+import Appointment from '../Documents/Appointment';
 
 
 
@@ -34,8 +34,6 @@ export default function Buttons() {
       fromObj: data1
     }
     dispatch(appoienment(obj1))
-
-
     history.push('documents')
 
   }
@@ -85,6 +83,7 @@ return (
           <>
             <div>
              <Appointment Appdata={Appoiementdata}  />
+
             </div>
           </>
         )}

@@ -18,15 +18,12 @@ import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 import MainPage from "./Components/MainPage/Main-Head";
 import Mainbody from "./Components/MainPage/Main-Body";
 import { useSelector } from "react-redux";
-import Appointment from "./Components/Appointment/appointment";
 import React from "react";
 import MyProfile from "./Components/My-Profile/My-Profile";
-import OfferLetter from "./Components/Documents/Appointment";
 import Reports from "./Components/NewReport/Reports";
 import "primereact/resources/themes/lara-light-indigo/theme.css"; 
 import "primereact/resources/primereact.min.css";                
 import "primeicons/primeicons.css";                              
-import Joinletter from "./Components/Offer Letter/offerletter";
 import Payslip1 from "./Components/Payslip1/Payslip1";
 import Payslip2 from "./Components/Payslip2/Payslip2";
 import Payslip3 from "./Components/Payslip3/Payslip3";
@@ -44,6 +41,8 @@ import Upload from "./Components/upload-documents/upload-documents";
 import Attendense from "./Components/Attendense/Attendense";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
+import Appointment from "./Components/Documents/Appointment";
+import OfferLetter from "./Components/Appointment/OfferLetter";
 
 function App() {
   let userrouter=useHistory()
