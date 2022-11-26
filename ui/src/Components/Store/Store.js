@@ -10,7 +10,7 @@ export default  configureStore({
     reducer :{
         login:loginSlice,
         payslip:payslipReducer,
-        appoiement: appoiementReducer
+        appoiement: appoiementReducer,
         OfferLetterSlice:offerletterReducer
     }
 

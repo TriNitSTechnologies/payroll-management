@@ -37,7 +37,7 @@ export default function Buttons() {
       fromObj: data1
     }
     dispatch(appoienment(obj1))
-    history.push('documents')
+    history.push('./documents')
   }
 
 return (

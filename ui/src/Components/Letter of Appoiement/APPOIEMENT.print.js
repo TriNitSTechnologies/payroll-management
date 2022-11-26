@@ -40,35 +40,35 @@ export default function PrintAppoiement(props) {
         >
           <div className="border-bottom p-3">
             <div className="">
-              <h5 className="text-end me-3">{AppointmentData.companyName}</h5>
+              <h5 className="text-end me-3">{AppointmentData?.companyName}</h5>
               <h6 className="text-end me-3">
-                {AppointmentData.addressLine1}
+                {AppointmentData?.addressLine1}
               </h6>
-              <h6 className="text-end me-3 "> {AppointmentData.address1 }</h6>
+              <h6 className="text-end me-3 "> {AppointmentData?.address1}</h6>
             </div>
           </div>
 
           <div className="float-end me-5 mt-3 ">
-            <b>{AppointmentData.date}</b>
+            <b>{AppointmentData?.date}</b>
           </div>
           <div className="mt-5 fs-2  text-center">
             <b> Letter of Appointment </b>
           </div>
           <div className="p-5">
             <div className="mb-2">
-              Dear <b> {AppointmentData.empName},</b>
+              Dear <b> {AppointmentData?.empName},</b>
               </div>
             <div>
-              Appointment as <b>{AppointmentData.designation}</b>
+              Appointment as <b>{AppointmentData?.designation}</b>
             </div>
             <div>
               <p>
                 We refer to your recent interview for the position and are
                 please to advise that we are offering you the position with
                 <span className="ms-1 me-1 ">
-                  <b>{AppointmentData.companyName}</b>
+                  <b>{AppointmentData?.companyName}</b>
                 </span>
-                effective from <b>{AppointmentData.doj}</b> under the
+                effective from <b>{AppointmentData?.doj}</b> under the
                 following terms and conditions:
               </p>
             </div>
@@ -214,19 +214,19 @@ export default function PrintAppoiement(props) {
             <div>
               <div>Sincerely, </div>
               <div className="mt-1">
-                <b>{AppointmentData.hrname}</b>
+                <b>{AppointmentData?.hrname}</b>
               </div>
-              <div>{AppointmentData.hrdesignaation}</div>
-              <div>{AppointmentData.companyName}</div>
+              <div>{AppointmentData?.hrdesignaation}</div>
+              <div>{AppointmentData?.companyName}</div>
             </div>
             <div className="mt-5">
               <div className="mb-3">
                 I agree to the appointment and accept the above terms and
                 conditions of service
               </div>
-              <div>Name: {AppointmentData.empName}</div>
-              <div>Employee ID : {AppointmentData.empNo}</div>
-              <div>Date: {AppointmentData.date}</div>
+              <div>Name: {AppointmentData?.empName}</div>
+              <div>Employee ID : {AppointmentData?.empNo}</div>
+              <div>Date: {AppointmentData?.date}</div>
               <div className="mt-3">
                 Signature: ...................................
               </div>

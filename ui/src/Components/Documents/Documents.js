@@ -10,6 +10,9 @@ export default function Documents(props) {
   const offerLeeter = useSelector(
     (state) => state.OfferLetterSlice.offerletter
   );
+  const appointmentLetter = useSelector(
+    (state) => state.appoiement.appoienment
+  );
  
   return (
     <>
@@ -19,6 +22,13 @@ export default function Documents(props) {
         <>
           <div id="joinLetter">
             <Joinletter JoinletterData={offerLeeter.formObj} />
+          </div>
+        </>
+      )}
+      {appointmentLetter.selectedPage == "Appointment Letter" && (
+        <>
+          <div id="joinLetter">
+            <PrintAppoiement appoiementsendData={appointmentLetter.fromObj} />
           </div>
         </>
       )}
