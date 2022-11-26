@@ -24,8 +24,9 @@ export const payslipSlice = createSlice({
 
     },
     extraReducers(builder) {
-       
+                
       }
+      
     
 })
 export const {initpayslipData} = payslipSlice.actions;

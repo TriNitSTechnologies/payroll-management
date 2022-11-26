@@ -1,41 +1,69 @@
-export default function Joinletter() {
+
+import  { useEffect, useRef, useState } from "react";
+import { useReactToPrint } from "react-to-print";
+// import {ComponentToPrint } from "react-to-print"
+
+import React from "react";
+export default function Joinletter(props) {
+  const componentRef = useRef();
+  const [style, setStyle] = useState(false)
+
+  let joinLetterData = props.JoinletterData;
+  const handlePrint = useReactToPrint({
+    
+    content: (() => {
+      let addClass = document.getElementById("offerLetter").classList;
+      addClass.add("w-100")
+      setStyle(true)
+      return  componentRef.current}),
+    documentTitle:"Offer-letter"
+  });
+  useEffect(()=>{
+    let addClass = document.getElementById("offerLetter").classList;
+    addClass.remove("w-100")
+    setStyle(false)
+  },[style])
     return (
-      <div className="bg-white w-75 m-auto shadow border">
+      <>
+      <div className="ms-2">
+          <button className="btn btn-primary" onClick={handlePrint}>Print the Offer letter</button>
+      </div>
+      <div id="offerLetter" className="bg-white w-75 m-auto shadow border p-2"  ref={componentRef} >
         <div className="border-bottom p-3">
           <div className="">
             <h5 className="text-end me-3">
-              TriNitS Technologies Private Limited
+              {joinLetterData.companyName}
             </h5>
             <h6 className="text-end me-3">
-              No. 6-2-204, Naidupeta, Andhra Pradesh, India -
+             {joinLetterData.addressLine1}
             </h6>
             <h6 className="text-end me-3 ">524421, Andhra Pradesh, 524421</h6>
           </div>
         </div>
   
         <div className="float-end me-5 mt-3 ">
-          <b>16/11/2020</b>
+          <b>{joinLetterData.date}</b>
         </div>
         <div className="mt-5 fs-2  text-center"><b>Offer Letter</b></div>
         <div className="p-5">
-          <p><b>Dear Trinits Technologies,</b></p>
+          <p><b>Dear {joinLetterData.empName},</b></p>
           <div>
             <p>
               Congratulations! We are pleased to confirm that you have been
-              selected to work for TriNitS Technologies Private Limited. We are
+              selected to work for {joinLetterData.companyName}. We are
               delighted to make you the following job offer:
             </p>
           </div>
           <div>
             <p>
               The position we are offering you is that of se with an annual cost
-              to company of 1222220. This position reports to venky.
+              to company of 1222220. This position reports to {joinLetterData.empName}.
             </p>
           </div>
           <div>
             <p>
               {" "}
-              We would like you to start work on 12-11-2022. Please report to
+              We would like you to start work on {joinLetterData.doj}. Please report to
               venky for documentation and orientation. If this date is not
               acceptable, please contact me immediately. On joining, you will be
               invited to our HR tool (XPayroll) in which you may be required to
@@ -45,25 +73,25 @@ export default function Joinletter() {
           <div>
             <p>
               Please sign the enclosed copy of this letter and return it to me by
-              12-11-2022 to indicate your acceptance of this offer.
+              {joinLetterData.doj} to indicate your acceptance of this offer.
             </p>
           </div>
           <div>
             <p>
               We are confident you will be able to make a significant contribution
-              to the success of TriNitS Technologies Private Limited and look
+              to the success of {joinLetterData.companyName} and look
               forward to working with you.
             </p>
           </div>
           <div className="mb-2">Sincerely,</div>
           <div className="mb-5">
-            <div>venky</div>
-            <div>TriNitS Technologies Private Limited</div>
+            <div>{joinLetterData.hrname}</div>
+            <div>{joinLetterData.companyName}</div>
           </div>
   
           <div className="mb-5">
             <div>Accepted by,</div>
-            <div>Trinits Technologies</div>
+            <div>{joinLetterData.companyName}</div>
           </div>
   
           <div>
@@ -232,6 +260,9 @@ export default function Joinletter() {
           </div>
         </div>
       </div>
+    
+      
+      </>
     );
   }
   
