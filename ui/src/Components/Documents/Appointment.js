@@ -3,13 +3,9 @@ import * as Yup from 'yup';
 import './Appointment.css'
 
 export default function Appointment(props) {
-
-  
-
   // function Formsubmithandler(event){
   //     event.preventDefault();
   // }
-
 
   return (
     <div  className="border py-2 p-1 doc-home-log">
@@ -41,11 +37,9 @@ export default function Appointment(props) {
 
       }} 
       validationSchema={Yup.object({
-          firstName:Yup.string().trim().required(' First name is required'),
-          lastName:Yup.string().trim().required('Last name is required'),
-          email:Yup.string().trim().required('Email is required'),
           companyName:Yup.string().trim().required('Company name is required'),
           addressLine1:Yup.string().trim().required('Company address is required'),
+          address1:Yup.string().trim().required('Company address1 is required'),
           date:Yup.string().trim().required('Date is required'),
           empName:Yup.string().trim().required('Employee name is required'),
           designation:Yup.string().trim().required('Designation  is required'),
@@ -56,54 +50,11 @@ export default function Appointment(props) {
 
       })}
       onSubmit={(values)=>{
-        props.OfferLetter(values)
-        alert(JSON.stringify(values, null, 2))
+        props.Appdata(values)
       }}
     >
       <Form >
-      <div className="card m-3  shadow ">
-        <div class="card-header bg-white">
-          <h4>Basic details</h4>
-          <p className='fw-light'>Organized and secure</p>
-        </div>
-        <div className="card-body pay  ">
-          <div className="d-flex basic-details-log justify-content-evenly">
-            <div className="col-5 m-2 main-cont-sag">
-              <Field
-                name='firstName'
-                className="form-control p-3 "
-                placeholder="First name"
-                type="text"
-              />
-              <div className='text-danger fw-light'><ErrorMessage name="firstName" /></div>
-            </div>
-            <div className="col-5  m-2 main-cont-sag">
-              <Field
-                name='lastName'
-                className="form-control p-3"
-                placeholder="Last name"
-                type="text"
-              />
-               <div className='text-danger fw-light'><ErrorMessage name="lastName" /></div>
-            </div>
-          </div>
-          <div className="d-flex basic-details-log justify-content-evenly">
-            <div className="col-5  m-2 main-cont-sag">
-              <Field
-                name="email"
-                className="form-control p-3 "
-                placeholder="Email address"
-                type="text"
-              />
-               <div className='text-danger fw-light'><ErrorMessage name="email" /></div>
-            </div>
-
-            <div className="col-5  m-2"></div>
-              
-          </div>
-          
-        </div>
-      </div>
+     
 
       <div className="card m-3  shadow ">
         <div class="card-header bg-white">
@@ -140,9 +91,18 @@ export default function Appointment(props) {
                 type="Date"
               />
                <div className='text-danger fw-light'><ErrorMessage name="date" /></div>
+               
             </div>
-            <div className="col-5  m-2 main-cont-sag"></div>
-              
+            <div className="col-5  m-2 main-cont-sag">
+              <Field
+                name="address1"
+                className="form-control p-3"
+                placeholder=" Company Address 2"
+                type="address1"
+              />
+               <div className='text-danger fw-light'><ErrorMessage name="address1" /></div>
+               
+            </div>
            
           </div>
           

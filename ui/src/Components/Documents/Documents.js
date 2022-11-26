@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import Joinletter from "../Joinletter/Joinletter";
+import PrintAppoiement from "../LetterofAppoinment/Appointment.print";
 import "./../../App.css";
+import Joinletter from "../Joinletter/Joinletter";
 
 
 export default function Documents(props) {
@@ -9,10 +10,9 @@ export default function Documents(props) {
   const offerLeeter = useSelector(
     (state) => state.OfferLetterSlice.offerletter
   );
-  
-  console.log("offerLeeter " + JSON.stringify(offerLeeter));
-
-  
+  const appointmentLetter = useSelector(
+    (state) => state.appointment.appointment
+  );
  
   return (
     <>
@@ -22,6 +22,13 @@ export default function Documents(props) {
         <>
           <div id="joinLetter">
             <Joinletter JoinletterData={offerLeeter.formObj} />
+          </div>
+        </>
+      )}
+      {appointmentLetter.selectedPage == "Appointment Letter" && (
+        <>
+          <div id="joinLetter">
+            <PrintAppoiement appoiementsendData={appointmentLetter.fromObj} />
           </div>
         </>
       )}

@@ -1,8 +1,8 @@
 import { SelectButton } from "primereact/selectbutton";
 import { useState } from "react";
-import OfferLetter from "../Appointment/OfferLetter";
+import Offerleter from "../Appointment/OfferLetter";
 import Appointment from "../Documents/Appointment";
-import PrintAppoiement from "../Letter of Appoiement/APPOIEMENT.print";
+import PrintAppoiement from "../LetterofAppoinment/Appointment.print";
 import Report from "../Report/Report";
 
 export default function Reports() {
@@ -48,7 +48,7 @@ export default function Reports() {
         {value2 === "Offer-Letter" && (
           <>
             <div>
-              <OfferLetter DataTransfer={DataTransfer} />
+              <Offerleter  DataTransfer={DataTransfer} />
             </div>
           </>
         )}
