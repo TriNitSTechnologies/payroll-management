@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import PrintAppoiement from "../Letter of Appoiement/APPOIEMENT.print";
+import PrintAppoiement from "../LetterofAppoinment/Appointment.print";
 import "./../../App.css";
 import Joinletter from "../Joinletter/Joinletter";
 
@@ -11,7 +11,7 @@ export default function Documents(props) {
     (state) => state.OfferLetterSlice.offerletter
   );
   const appointmentLetter = useSelector(
-    (state) => state.appoiement.appoienment
+    (state) => state.appointment.appointment
   );
  
   return (

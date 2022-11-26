@@ -5,7 +5,7 @@ import { BsHouseFill } from "react-icons/bs";
 import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
 import { useDispatch } from 'react-redux';
-import { appoienment } from '../Store/AppoiementSlice';
+import { appointment } from '../Store/AppoiementSlice';
 import Appointment from '../Documents/Appointment';
 import { offerletterReducer } from '../Store/Offer-LetterSlice';
 import OfferLetter from '../Appointment/OfferLetter';
@@ -36,7 +36,7 @@ export default function Buttons() {
       selectedPage:value2,
       fromObj: data1
     }
-    dispatch(appoienment(obj1))
+    dispatch(appointment(obj1))
     history.push('./documents')
   }
 

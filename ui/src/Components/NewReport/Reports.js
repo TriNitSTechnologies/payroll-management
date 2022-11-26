@@ -2,7 +2,7 @@ import { SelectButton } from "primereact/selectbutton";
 import { useState } from "react";
 import Offerleter from "../Appointment/OfferLetter";
 import Appointment from "../Documents/Appointment";
-import PrintAppoiement from "../Letter of Appoiement/APPOIEMENT.print";
+import PrintAppoiement from "../LetterofAppoinment/Appointment.print";
 import Report from "../Report/Report";
 
 export default function Reports() {
