@@ -1,5 +1,5 @@
 
-import { ErrorMessage, Field, Form, Formik } from "formik";
+import { ErrorMessage, Field, Form, Formik, useFormikContext } from "formik";
 import { useDispatch  } from "react-redux";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
@@ -16,6 +16,15 @@ export default function Login() {
   
   const Yup = require('yup')
 require('yup-password')(Yup)
+
+function Login() {
+  const {isValid} = useFormikContext();
+  return (
+    <button disabled={!isValid} className=" buttoncolor rounded-3 p-2 text-light" type="submit">
+      Login
+    </button>
+  );
+}
 
   return (
     <>
@@ -80,9 +89,8 @@ require('yup-password')(Yup)
               </div>
 
               <div className="mt-3 rounded-4 " bg-success>
-                <button type="submit" className=" buttoncolor rounded-3 p-2 text-light">
-                  Login
-                </button>
+                <Login/>
+                
               </div>
               <div className="login-or">
                 <span className="or-line"></span>
