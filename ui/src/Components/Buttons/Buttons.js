@@ -7,8 +7,7 @@ import Report from "../Report/Report";
 import { useDispatch } from 'react-redux';
 import { offerletterReducer } from '../Store/Offer-LetterSlice';
 import OfferLetter from '../Appointment/OfferLetter';
-
-
+import { Button } from 'bootstrap';
 
 export default function Buttons() {
   const [value2, setValue2] = useState("");
@@ -26,7 +25,6 @@ export default function Buttons() {
       formObj: data
     }
     dispatch(offerletterReducer(obj))
-    alert(JSON.stringify(obj))
     history.push("./documents")
   }
 return (
@@ -69,6 +67,7 @@ return (
             </>
           )}
         </div>
+     
 
         {value2 === "Appointment Letter" && (
           <>
@@ -77,6 +76,7 @@ return (
             </div>
           </>
         )}
+        
 
       
          {value2 === "PayslipS" && (
@@ -86,7 +86,8 @@ return (
             </div>
           </>
         )}
-      </div>
+        </div>
+    
     </>
   );
 }

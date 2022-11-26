@@ -1,0 +1,36 @@
+.contain-lo:hover{
+    background-color:#2F47BA;
+    color: #fff;
+    transition: 0.8s;
+}
+
+.my-profile-set{
+    overflow: auto;
+}
+
+.main-row{
+    width: 99%;
+}
+
+@media screen and (max-width:850px){
+    .main-row{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 100%;
+    }
+    
+    .main-v{
+        width: 100%;
+        margin: 5px;
+    }
+    
+    .main-button-lot{
+        display: flex;
+        justify-content:space-between;
+        align-items: center;
+    }
+
+    
+}

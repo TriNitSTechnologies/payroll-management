@@ -1,10 +1,11 @@
 import { useSelector } from "react-redux";
 import sss from  "../Image/logo-dark.png";
 import './Payslip1.css';
+
+import React, { useRef } from 'react';
 export default function Payslip1() {
     const payslipData= useSelector((state)=>state.payslip.payslipData);
  
-   
     return (
         <>
             <div className=" mann  w-100  m-auto  m-4 p-4">
@@ -19,6 +20,7 @@ export default function Payslip1() {
                             <h6 className="b"> {payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2}, {payslipData.companyDetails.state},  {payslipData.companyDetails.pinCode}.</h6>
                             <h6 className="b"></h6>
                             <h5 className="c">Pay Slip for the month of {payslipData.dateOfMonth}
+
                             
                             </h5>
                         </div>

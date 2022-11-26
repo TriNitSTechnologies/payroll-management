@@ -15,7 +15,7 @@ import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
 import Payslip4 from "./Components/Payslip4/Payslip4";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
-import MainPage from "./Components/MainPage/Main-Head";
+
 import Mainbody from "./Components/MainPage/Main-Body";
 import { useSelector } from "react-redux";
 import React from "react";
@@ -25,25 +25,20 @@ import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";                
 import "primeicons/primeicons.css";                              
 import Joinletter from "./Components/Joinletter/Joinletter";
+import OfferLetter from "./Components/Documents/Appointment";
+import Details from "./Components/Details/details";
+import SelectProfile from "./Components/Selected-profile/selected-profile";
 import Payslip1 from "./Components/Payslip1/Payslip1";
 import Payslip2 from "./Components/Payslip2/Payslip2";
 import Payslip3 from "./Components/Payslip3/Payslip3";
 import Notifications from "./Components/Notifications/Notifications";
 import MainHead from "./Components/MainPage/Main-Head";
 import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print";
-
-import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
-import "primereact/resources/primereact.min.css";                  //core css
-import "primeicons/primeicons.css";                                //icons
-
 import Upload from "./Components/upload-documents/upload-documents";
- 
-
-import Attendense from "./Components/Attendense/Attendense";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
-import OfferLetter from "./Components/Appointment/OfferLetter";
 import Appointment from "./Components/Documents/Appointment";
+import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
 
 function App() {
   let userrouter=useHistory()
@@ -119,7 +114,7 @@ useEffect(()=>{
               <Settings />
             </Route>
             <Route path="/Attendense" >
-              <Attendense />
+              <AttendenseForm />
             </Route>
 
             <Route path="/documents">
@@ -168,12 +163,27 @@ useEffect(()=>{
               <Upload/>
             </Route>
 
+
+            <Route path='/profile'>
+              <MyProfile/>
+            </Route>
+
+            <Route path='/details'>
+                <Details/>
+            </Route>
+
+            <Route path='/selectprofile'>
+              <SelectProfile />
+            </Route>
+
+
           
          <Route path='/Payslip4'>
          <Payslip4 />
          </Route>
 
             </>}
+
           </Switch>
         </div>
       </div>

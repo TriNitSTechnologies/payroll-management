@@ -18,14 +18,17 @@ export default function EmployeeForm({ onCancel, onaddeddata, initialValues }) {
     <div>
       <div
         className=' m-4 shadow  p-3 rounded text '>
-        <Link to="/" > <AiFillHome className="font border border-white shadow rounded " /> Home </Link>/Employee
+        <Link to="/" className="text-decoration-none text-dark" > <AiFillHome className="font border border-white shadow rounded " /> Home </Link>/Employee
         <div className=" float-end">
           <h4 className="text-dark">Employees</h4>
         </div>
       </div>
-      <div className="border p-4 shadow m-4 text rounded">
-        <div> <h3 className="text-center text-dark ">EmployeeForm</h3></div>
-        <div className="border  w-100 p-4 shadow m-auto bg-white rounded">
+      <div className="card m-4 text  rounded">
+      <div className="card-header" ><h5>EmployeeForm</h5> 
+        </div>
+        
+        
+        
           <Formik
             initialValues={initialValues}
             validationSchema={Yup.object({
@@ -74,17 +77,7 @@ export default function EmployeeForm({ onCancel, onaddeddata, initialValues }) {
                       position: toast.POSITION.BOTTOM_LEFT
                     }));
               }
-            }}
-
-
-
-
-
-
-
-
-
-          >
+            }} >
 
             <Form >
               <div className="d-flex mt-2 m-4">
@@ -135,16 +128,18 @@ export default function EmployeeForm({ onCancel, onaddeddata, initialValues }) {
               </div>
               <div className="mt-2 m-4">
                 <ReactTooltip />
-                <button className="btn btn-outline-info " data-tip="save Employee data" ><AiOutlineCheckCircle className="font2" /></button>
-                <button className="btn btn-outline-danger ms-3  " data-tip="cancel Form" onClick={onCancel}><AiOutlineCloseCircle className="font2" /></button>
+                <button className="btn btn-outline-success " data-tip="save Employee " ><AiOutlineCheckCircle className="font3" />Save</button>
+                <button className="btn btn-outline-danger ms-3  " data-tip="cancel Form" onClick={onCancel}><AiOutlineCloseCircle className="font3" />cancle</button>
               </div>
 
             </Form>
 
-
+          
           </Formik>
+          
         </div>
-      </div>
-      </div>
+     </div>
+     
+    
       )
 }
