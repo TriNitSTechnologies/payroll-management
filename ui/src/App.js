@@ -44,6 +44,7 @@ import Upload from "./Components/upload-documents/upload-documents";
 import Attendense from "./Components/Attendense/Attendense";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
+import Payrollattendance from "./Components/Payrollattendance/Payrollattendance";
 
 function App() {
   let userrouter=useHistory()
@@ -121,6 +122,10 @@ useEffect(()=>{
             <Route path="/Attendense" >
               <Attendense />
             </Route>
+            <Route path="/payrollattendance" >
+              <Payrollattendance />
+            </Route>
+            
 
             <Route path="/documents">
               <Documents />

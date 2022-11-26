@@ -6,6 +6,7 @@ import { Dropdown } from 'primereact/dropdown';
 import { InputMask } from 'primereact/inputmask';
 import { InputNumber } from 'primereact/inputnumber';
 import { InputTextarea } from 'primereact/inputtextarea';
+import { Link } from 'react-router-dom';
 
 
 
@@ -31,8 +32,11 @@ function Attendense() {
 
 
     return (
+        
         <div>
-
+                <div>
+                    <Link to="/payrollattendance">Payrollattendance</Link>
+                </div>
             <div className="card w-75  shadow m-auto">
                 <h5 className='card-header'>Change Attendance</h5>
 

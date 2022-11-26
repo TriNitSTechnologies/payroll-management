@@ -115,7 +115,7 @@ export default function Employees() {
 
   if (loading) {
     return (
-      <div className="load">
+      <div className="load ">
         <b> Loading Employee data.....
           <CircleLoader color="blue" />
         </b>
@@ -216,7 +216,7 @@ export default function Employees() {
 
         <div className="text" >
         
-          <table className={card == 'table' ? "table table-hover  mt-4 rounded  " : "d-none"}>
+          <table className={card == 'table' ? "table table-hover  mt-4 rounded" : "d-none"}>
           
             <tbody>
            
