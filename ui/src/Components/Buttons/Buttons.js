@@ -2,22 +2,30 @@ import './Buttons.css';
 import { SelectButton } from "primereact/selectbutton";
 import { useState } from "react";
 import { BsHouseFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
+import { useDispatch } from 'react-redux';
+import { offerletterReducer } from '../Store/Offer-LetterSlice';
+import OfferLetter from '../Appointment/OfferLetter';
 import { Button } from 'bootstrap';
+
 export default function Buttons() {
   const [value2, setValue2] = useState("");
+  const history = useHistory();
+  
   const reportsOptions = [
     "Offer-Letter",
     "Appointment Letter",
      "PayslipS",
   ];
- function DataTransfer(data){
+  const dispatch = useDispatch();
+ function OfferLetterData(data){
     let obj = {
       selectedPage: value2,
       formObj: data
     }
-    alert(JSON.stringify(obj))
+    dispatch(offerletterReducer(obj))
+    history.push("./documents")
   }
 return (
     <>
@@ -51,13 +59,10 @@ return (
               setValue2(e.value);
             }}
           />
-        
-
-         
-           {value2 === "Offer-Letter'S" && (
+           {value2 === "Offer-Letter" && (
             <>
              <div>
-
+            <OfferLetter  OfferLetter={OfferLetterData} />
              </div>
             </>
           )}

@@ -18,34 +18,26 @@ import ForgotPassword from "./Components/LoginPage/ForgotPassword";
 
 import Mainbody from "./Components/MainPage/Main-Body";
 import { useSelector } from "react-redux";
-import Appointment from "./Components/Appointment/appointment";
 import React from "react";
 import MyProfile from "./Components/My-Profile/My-Profile";
+import Reports from "./Components/NewReport/Reports";
+import "primereact/resources/themes/lara-light-indigo/theme.css"; 
+import "primereact/resources/primereact.min.css";                
+import "primeicons/primeicons.css";                              
+import Joinletter from "./Components/Joinletter/Joinletter";
 import OfferLetter from "./Components/Documents/Appointment";
-
-import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
-import "primereact/resources/primereact.min.css";                  //core css
-import "primeicons/primeicons.css"; 
 import Details from "./Components/Details/details";
 import SelectProfile from "./Components/Selected-profile/selected-profile";
-
-import Reports from "./Components/NewReport/Reports";                             
-
 import Payslip1 from "./Components/Payslip1/Payslip1";
 import Payslip2 from "./Components/Payslip2/Payslip2";
 import Payslip3 from "./Components/Payslip3/Payslip3";
 import Notifications from "./Components/Notifications/Notifications";
 import MainHead from "./Components/MainPage/Main-Head";
 import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print";
-
-
-                          
-
 import Upload from "./Components/upload-documents/upload-documents";
- 
-
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
+import Appointment from "./Components/Documents/Appointment";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
 
 function App() {
