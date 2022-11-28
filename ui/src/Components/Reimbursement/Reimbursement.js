@@ -100,7 +100,7 @@ export default function Reimbursement(){
       </div>
     
       <div className=" ms-4 mb-2">
-        <button className="btn btn-primary btn-lg" type="submit"> REQUEST REIMBURSEMENT  </button>
+        <button className="btn btn-primary btn-lg" type="submit"> Request reimbursement</button>
       </div>
         
        
