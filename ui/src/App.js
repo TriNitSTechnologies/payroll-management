@@ -35,10 +35,11 @@ import PrintAppoiement from "./Components/LetterofAppointment/Appointment.print"
 import Upload from "./Components/upload-documents/upload-documents";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
+import Reimbursement from "./Components/Reimbursement/Reimbursement";
 import Appointment from "./Components/Documents/Appointment";
 import OfferLetter from "./Components/Appointment/OfferLetter";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
-
+import Payslip5 from "./Components/payslip5/payslip5";
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -56,7 +57,7 @@ useEffect(()=>{
   }else{
     userrouter.push("/")
   }
-},[isUserLoggedIn])
+},[isUserLoggedIn]);
 
 
 
@@ -71,12 +72,14 @@ useEffect(()=>{
         <Header hidesidebar={handlesidebarstatus}/>
         </>}
       </div>
-      <div className="d-flex">
+      <div className="d-flex ">
+        <div className="">
         {isUserLoggedIn && <>
         <div className={sidebarclass}>
           <Sidebar />
         </div>
         </>}
+        </div>
         <div className="main">
           <Switch>
           {!isUserLoggedIn && <>
@@ -108,6 +111,9 @@ useEffect(()=>{
             </Route>
             <Route path="/employees">
               <Employees />
+            </Route>
+            <Route path="/reimbursement">
+              <Reimbursement/>
             </Route>
             <Route path="/settings">
               <Settings />
@@ -170,6 +176,10 @@ useEffect(()=>{
 
             <Route path='/selectprofile'>
               <SelectProfile />
+            </Route>
+
+            <Route path='/Payslip5'>
+              <Payslip5/>
             </Route>
 
 

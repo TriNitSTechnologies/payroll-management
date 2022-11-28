@@ -7,9 +7,10 @@ import { Tooltip } from 'primereact/tooltip';
 import Payslip2 from "../Payslip2/Payslip2";
 import Payslip3 from "../Payslip3/Payslip3";
 import Payslip4 from "../Payslip4/Payslip4";
+import Payslip5 from "../payslip5/payslip5";
 export default function Payslips() {
     const [value1, setValue1] = useState("Payslip1");
- const options = ["Format 1", "Format 2", "Format 3","Format 4"];
+ const options = ["Format 1", "Format 2", "Format 3","Format 4","Format 5"];
 return (
         <>
         <div className="card m-4 pay shadow ">
@@ -55,6 +56,16 @@ return (
                 </div>
             </>
             }
+
+            {value1 === 'Format 5'&& (
+              <>
+              <div>
+                <Payslip5/>
+              </div>
+              </>
+
+
+            )}
              </>
                )
 }
