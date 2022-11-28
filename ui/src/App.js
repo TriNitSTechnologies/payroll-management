@@ -66,7 +66,7 @@ useEffect(()=>{
   }else{
     userrouter.push("/")
   }
-},[isUserLoggedIn])
+},[isUserLoggedIn]);
 
 
 
@@ -185,7 +185,7 @@ useEffect(()=>{
               <SelectProfile />
             </Route>
 
-            <Route path='/payslip5'>
+            <Route path='/Payslip5'>
               <Payslip5/>
             </Route>
 
