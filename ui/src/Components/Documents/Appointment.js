@@ -63,7 +63,10 @@ export default function Appointment(props) {
         </div>
         <div className="card-body pay ">
           <div className="d-flex basic-details-log justify-content-evenly">
-            <div className="col-5 m-2 main-cont-sag">
+            <div className="col-5 m-2 main-cont-sag ">
+              <div className='mb-3 fw-bold'>
+                Company Name
+              </div>
               <Field
                 name="companyName"
                 className="form-control p-3 "
@@ -73,10 +76,14 @@ export default function Appointment(props) {
                <div className='text-danger fw-light'><ErrorMessage name="companyName" /></div>
             </div>
             <div className="col-5  m-2 main-cont-sag">
-              <Field
+              <div className='mb-3 fw-bold'>
+                Company Address
+              </div>
+                
+                <Field
                 name="addressLine1"
                 className="form-control p-3"
-                placeholder="Company addresss"
+                placeholder="Company address"
                 type="text"
               />
                <div className='text-danger fw-light'><ErrorMessage name="addressLine1" /></div>
@@ -84,7 +91,10 @@ export default function Appointment(props) {
           </div>
           <div className="d-flex basic-details-log justify-content-evenly">
             <div className="col-5  m-2 main-cont-sag">
-              <Field
+              <div className='mb-3 fw-bold'>
+                Date Of Month / Year
+              </div>
+                <Field
                 name="date"
                 className="form-control p-3"
                 placeholder="Date Of Month /year"
@@ -94,7 +104,10 @@ export default function Appointment(props) {
                
             </div>
             <div className="col-5  m-2 main-cont-sag">
-              <Field
+              <div className='mb-3 fw-bold'>
+                Company Address 2
+              </div>
+                <Field
                 name="address1"
                 className="form-control p-3"
                 placeholder=" Company Address 2"
@@ -111,21 +124,25 @@ export default function Appointment(props) {
 
       <div className="card m-3  shadow ">
         <div class="card-header bg-white">
-          <h4>Employee details</h4>
+          <h4>Employee Details</h4>
           <p className='fw-light'>Let every one know the essentials so they're fully prepared</p>
         </div>
         <div className="card-body pay ">
           <div className="d-flex basic-details-log justify-content-evenly">
             <div className="col-5 m-2 main-cont-sag ">
+            
+            <div className='mb-3 fw-bold'>Employee Name</div>
               <Field
                 name='empName'
                 className="form-control p-3 "
                 placeholder="Employee name"
                 type="text"
               />
+
                <div className='text-danger fw-light'><ErrorMessage name="empName" /></div>
             </div>
             <div className="col-5  m-2 main-cont-sag">
+              <div className='mb-3 fw-bold'>Employee Designation</div>
               <Field
                 name="designation"
                 className="form-control p-3"
@@ -137,6 +154,7 @@ export default function Appointment(props) {
           </div>
           <div className="d-flex basic-details-log justify-content-evenly">
             <div className="col-5  m-2 main-cont-sag">
+              <div className='mb-3 fw-bold'>Date Of Joinging</div>
               <Field
                 name="doj"
                 className="form-control p-3"
@@ -146,6 +164,7 @@ export default function Appointment(props) {
                <div className='text-danger fw-light'><ErrorMessage name="doj" /></div>
             </div>
             <div className='col-5 m-2 main-cont-sag'>
+              <div className='mb-3 fw-bold'>Employee Id</div>
             <Field
                 name="empNo"
                 className="form-control p-3"
@@ -171,6 +190,7 @@ export default function Appointment(props) {
         <div className="card-body pay ">
           <div className=" d-flex basic-details-log justify-content-evenly  ">
             <div className=" col-5 main-cont-sag m-2 ">
+              <div className='mb-3 fw-bold'>HR Name</div>
               <Field
                 name="hrname"
                 className="form-control  p-3 "
@@ -180,6 +200,7 @@ export default function Appointment(props) {
                <div className='text-danger fw-light'><ErrorMessage name="hrname" /></div>
             </div>
             <div className=" m-2 col-5  main-cont-sag ">
+              <div className='mb-3 fw-bold'>HR Designation</div>
               <Field
                 name="hrdesignaation"
                 className="form-control  p-3"
