@@ -10,7 +10,7 @@ import Payslip4 from "../Payslip4/Payslip4";
 import Payslip5 from "../payslip5/payslip5";
 export default function Payslips() {
     const [value1, setValue1] = useState("Payslip1");
- const options = ["Payslip1", "Payslip2", "Payslip3","Payslip4","Payslip5"];
+ const options = ["Format 1", "Format 2", "Format 3","Format 4","Format 5"];
 return (
         <>
         <div className="card m-4 pay shadow ">
@@ -24,40 +24,40 @@ return (
         </div>
       </div>
             <div>
-                <div className=" ms-4   button-content-width ">
+                <div className=" m-5 button-content-width ">
                     <SelectButton   value={value1}
                         options={options}
                         onChange={(e) => setValue1(e.value)} />
              <Tooltip/>
              </div>
             </div>
-            {value1 === 'Payslip1' && <>
+            {value1 === 'Format 1' && <>
                 <div>
                     <Payslip1 />
                 </div>
             </>}
             <div >
-            {value1 === 'Payslip2' && <>
+            {value1 === 'Format 2' && <>
                 <div >
                     <Payslip2 />
                 </div>
             </>
             }
             </div>
-            {value1 === 'Payslip3' && <>
+            {value1 === 'Format 3' && <>
                 <div>
                     <Payslip3 />
                 </div>
             </>
             }
-              {value1 === 'Payslip4' && <>
+              {value1 === 'Format 4' && <>
                 <div>
                     <Payslip4 />
                 </div>
             </>
             }
 
-            {value1 === 'Payslip5'&& (
+            {value1 === 'Format 5'&& (
               <>
               <div>
                 <Payslip5/>

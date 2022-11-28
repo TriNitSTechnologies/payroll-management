@@ -18,7 +18,7 @@ export default function Buttons() {
   const reportsOptions = [
     "Offer-Letter",
     "Appointment Letter",
-     "PayslipS",
+     "Payslips",
   ];
   const dispatch = useDispatch();
  function OfferLetterData(data){
@@ -42,7 +42,7 @@ export default function Buttons() {
 
 return (
     <>
-      <div className="  h-over-flow-auto border butt border-3 rounded m-4">
+      <div className="h-over-flow-auto border butt border-2 rounded m-4">
     
      <div className="card m-4 pay shadow ">
         <div className="card-body d-flex justify-content-between ">
@@ -93,7 +93,7 @@ return (
         
 
       
-         {value2 === "PayslipS" && (
+         {value2 === "Payslips" && (
           <>
              <div>
               <Report DataTransfer={DataTransfer}/>

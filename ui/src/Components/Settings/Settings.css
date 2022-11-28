@@ -1,8 +1,5 @@
 
-/* .button-content-width{
-    width: 23%;
-    text-decoration: none;
-} */
+
 .height-content{
     height: calc(100vh - 335px);
     background-color: white;
@@ -17,25 +14,11 @@ justify-content: center;
   
    color: blue;  
 }
-/* .width-input{
-    width: 10%;
-    border: none;
-} */
+
 .h-80px{
    height: 80px; 
 }
-.p-buttonset .p-button:first-of-type {
-    border-top-right-radius: 0;
-    border-bottom-right-radius: 0;
-    width: 150px !important;
-    height: 64px !important;
-}
-.p-buttonset .p-button:last-of-type {
-    border-top-left-radius: 0;
-    border-bottom-left-radius: 0;
-    width: 150px !important;
-    height: 64px !important;
-}
+
 .row {
     --bs-gutter-x: 1.5rem;
     --bs-gutter-y: 0;
