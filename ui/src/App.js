@@ -39,6 +39,7 @@ import Reimbursement from "./Components/Reimbursement/Reimbursement";
 import Appointment from "./Components/Documents/Appointment";
 import OfferLetter from "./Components/Appointment/OfferLetter";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
+import Payslip5 from "./Components/payslip5/payslip5";
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -56,7 +57,7 @@ useEffect(()=>{
   }else{
     userrouter.push("/")
   }
-},[isUserLoggedIn])
+},[isUserLoggedIn]);
 
 
 
@@ -175,6 +176,10 @@ useEffect(()=>{
 
             <Route path='/selectprofile'>
               <SelectProfile />
+            </Route>
+
+            <Route path='/Payslip5'>
+              <Payslip5/>
             </Route>
 
 
