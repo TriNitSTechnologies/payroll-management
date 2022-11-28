@@ -2,15 +2,18 @@ import { ErrorMessage, Field, Form, Formik } from "formik";
 import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import { BsHouseFill } from "react-icons/bs";
+import { ToastContainer, toast } from 'react-toastify';
 
 import axios from "axios";
 import { useDispatch } from "react-redux";
 import { initpayslipData } from "../Store/PayslipSlice";
+import { useState } from "react";
 
 const PAYSLIP_URL ="https://trinitstechnologies.com/demo/api/v1/payroll?authorization=12"
 function Report(props) {
  const dispatch= useDispatch();
  const history = useHistory();
+
   function fetchPayslip(event){
     const payload =event;
     if(payload){
@@ -21,16 +24,22 @@ function Report(props) {
         dispatch(initpayslipData(data))
         history.push('/Payslips')
       })
-      .catch((error)=>alert.error("error whill fetching the data"+error));
+      .catch((error)=>
+      {
+        toast.error(""+error.response.data);
+    
+      });
     }
     event.preventDefault();
 
 
   }
 
+
   return (
 
     <div>
+      <ToastContainer />
 
       <div className="card m-4 pay shadow ">
         <div className="card-body d-flex justify-content-between ">
@@ -60,7 +69,7 @@ function Report(props) {
           noOfWorkingDays: "",
           grossSalary: "",
         }}
-        validationSchema={Yup.object({
+         validationSchema={Yup.object({
           companyName: Yup.string().trim().required("Company name is required"),
           empNo: Yup.string().trim().required("Employee no is required"),
           paymentMonth: Yup.string()
@@ -152,6 +161,7 @@ function Report(props) {
             <button className="btn btn-primary btn-lg" type="submit">
                   Get Payslip
              </button>
+
           </div>
         </Form>
       </Formik>
