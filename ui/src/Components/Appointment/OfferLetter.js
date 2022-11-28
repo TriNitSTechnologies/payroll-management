@@ -56,6 +56,7 @@ export default function OfferLetter(props) {
             <div className="card-body pay">
               <div className="d-flex  justify-content-evenly">
                 <div className="col-5 m-2">
+                  <div className="mb-3 fw-bold">Company Name</div>
                   <Field
                     className="form-control p-3  "
                     name="companyName"
@@ -68,6 +69,8 @@ export default function OfferLetter(props) {
                   </small>
                 </div>
                 <div className="col-5  m-2">
+                <div className="mb-3 fw-bold">Company Address</div>
+
                   <Field
                     className="form-control p-3"
                     name="companyAddress"
@@ -81,6 +84,7 @@ export default function OfferLetter(props) {
               </div>
               <div className="d-flex justify-content-evenly">
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Current Date</div>
                   <Field
                     className="form-control p-3"
                     name="currentDate"
@@ -92,6 +96,7 @@ export default function OfferLetter(props) {
                   </small>
                 </div>
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Employee Name</div>
                   <Field
                     className="form-control p-3"
                     name="employeeName"
@@ -105,6 +110,7 @@ export default function OfferLetter(props) {
               </div>
               <div className="d-flex justify-content-evenly">
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Job Title</div>
                   <Field
                     className="form-control p-3"
                     name="jobTitle"
@@ -116,6 +122,7 @@ export default function OfferLetter(props) {
                   </small>
                 </div>
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Annual CTC</div>
                   <Field
                     className="form-control p-3"
                     name="annualCTC"
@@ -129,6 +136,7 @@ export default function OfferLetter(props) {
               </div>
               <div className="d-flex justify-content-evenly">
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Manager Name</div>
                   <Field
                     className="form-control p-3"
                     name="managerName"
@@ -140,6 +148,7 @@ export default function OfferLetter(props) {
                   </small>
                 </div>
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Employee Joining Date</div>
                   <Field
                     className="form-control p-3"
                     name="employeeJoiningDate"
@@ -153,6 +162,7 @@ export default function OfferLetter(props) {
               </div>
               <div className="d-flex justify-content-evenly">
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Acceptance Last Date</div>
                   <Field
                     className="form-control p-3"
                     name="acceptanceLastDate"
@@ -164,6 +174,7 @@ export default function OfferLetter(props) {
                   </small>
                 </div>
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">HR Name</div>
                   <Field
                     className="form-control p-3"
                     name="hrName"
@@ -177,7 +188,7 @@ export default function OfferLetter(props) {
               </div>
 
               <div className="d-flex justify-content-evenly">
-                <div className="col-5  ">
+                <div>
                   <div className="form-check">
                     <input
                       className="form-check-input"
@@ -185,13 +196,13 @@ export default function OfferLetter(props) {
                       value=""
                       id="flexCheckChecked"
                     />
-                    <label
-                      className="form-check-label "
+                   <label
+                      className="form-check-label"
                       htmlFor="flexCheckChecked"
                     >
-                      Include Xpayroll generated salary structure from annual
-                      CTC
+                      Include Xpayroll generated salary structure from annual CTC
                     </label>
+
                   </div>
                 </div>
                 <div className="col-5  m-2"></div>
