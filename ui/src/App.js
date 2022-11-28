@@ -47,6 +47,7 @@ import Upload from "./Components/upload-documents/upload-documents";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
+import Payslip5 from "./Components/payslip5/payslip5";
 
 function App() {
   let userrouter=useHistory()
@@ -182,6 +183,10 @@ useEffect(()=>{
 
             <Route path='/selectprofile'>
               <SelectProfile />
+            </Route>
+
+            <Route path='/payslip5'>
+              <Payslip5/>
             </Route>
 
 
