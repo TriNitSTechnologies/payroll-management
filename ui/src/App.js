@@ -20,7 +20,6 @@ import Mainbody from "./Components/MainPage/Main-Body";
 import { useSelector } from "react-redux";
 import React from "react";
 import MyProfile from "./Components/My-Profile/My-Profile";
-import Reports from "./Components/NewReport/Reports";
 import "primereact/resources/themes/lara-light-indigo/theme.css"; 
 import "primereact/resources/primereact.min.css";                
 import "primeicons/primeicons.css";                              
@@ -32,7 +31,7 @@ import Payslip2 from "./Components/Payslip2/Payslip2";
 import Payslip3 from "./Components/Payslip3/Payslip3";
 import Notifications from "./Components/Notifications/Notifications";
 import MainHead from "./Components/MainPage/Main-Head";
-import PrintAppoiement from "./Components/LetterofAppoinment/Appointment.print";
+import PrintAppoiement from "./Components/LetterofAppointment/Appointment.print";
 import Upload from "./Components/upload-documents/upload-documents";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
@@ -128,9 +127,6 @@ useEffect(()=>{
             </Route>
             <Route path="/appointment">
               <Appointment />
-            </Route>
-            <Route path="/newReport">
-            <Reports />
             </Route>
             <Route path="/Payslip1">
             <Payslip1 />

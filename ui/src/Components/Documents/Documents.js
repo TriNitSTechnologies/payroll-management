@@ -1,6 +1,6 @@
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import PrintAppoiement from "../LetterofAppoinment/Appointment.print";
+import PrintAppoiement from "../LetterofAppointment/Appointment.print";
 import "./../../App.css";
 import Joinletter from "../Joinletter/Joinletter";
 
