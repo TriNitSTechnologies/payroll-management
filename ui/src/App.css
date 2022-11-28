@@ -1,13 +1,14 @@
 
 .sidebar{
   width:220px;
-  height:87vh;
+  height:100vh;
   background-color:aliceblue;
 }
 
 
 .sidebar-collapse{
-  width:63px ;
+  width:60px ;
+  height:100vh;
   overflow: hidden;
 }
 
@@ -18,8 +19,9 @@
 .main{
   width:100% ;
   background-color:rgb(238, 241, 244);
-  height:87vh;
-  overflow-y: auto;
+  height:100vh;
+  overflow: auto;
+  height: 100%;
 }
 .head{
   background-color: aliceblue;
