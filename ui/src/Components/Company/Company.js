@@ -11,8 +11,6 @@ import { ConfirmDialog } from 'primereact/confirmdialog';
 import './Company.css';
 import ReactTooltip from 'react-tooltip';
 import { ImHome3 } from "react-icons/im";
-import { FaTrash } from "react-icons/fa";
-import { FaPenAlt } from "react-icons/fa";
 
 import trinits from '../Image/photo_2022-11-16_13-15-16.jpg'
 
@@ -21,20 +19,15 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddCompany from "../AddCompany/AddCompany";
 import Loading from "../Loading/Loading";
-
-
-
+import { AiFillEdit, AiFillRest } from "react-icons/ai";
 const COMPANY_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
 function Company() {
     const [Company, setCompanydata] = useState([]);
 
     const [visible, setVisible] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState();
-
     const [loading, setLoading] = useState(true);
-
-
-    const [data, setData] = useState("Table");
+const [data, setData] = useState("Table");
     const [ShowCompanyForm, setShowcompanyForm] = useState(false);
     const [selectedCompany, setselectedCompany] = useState({
         companyName: '',
@@ -47,20 +40,13 @@ function Company() {
         pinCode: ''
 
     });
-
-
-
     function onCloseHandler() {
         setShowcompanyForm(false);
 
     }
     function DeleteCompany(index) {
-
-        let value = Company[selectedIndex];
-
-        if (value) {
-
-
+let value = Company[selectedIndex];
+if (value) {
             let url = COMPANY_URL + "/" + value.id
             axios.delete(url).then(data => {
                 toast.success("Sucessfully deleted !", {
@@ -97,8 +83,7 @@ function Company() {
         })
 
     }
-
-    function handleSave(showForm) {
+function handleSave(showForm) {
         setShowcompanyForm(false);
         getData();
     }
@@ -115,8 +100,7 @@ function Company() {
             <b><Loading /></b>
         </div>
     }
-
-    function AddCompanyForm() {
+function AddCompanyForm() {
         setShowcompanyForm(true);
         setselectedCompany({
             companyName: '',
@@ -155,11 +139,7 @@ function Company() {
         <div className="m-4">
             <ToastContainer />
             <ReactTooltip />
-            <div className="card">
-                <ConfirmDialog visible={visible} onHide={() => setVisible(false)} message="Are you sure you want to proceed?"
-                    header="Confirmation" icon="pi pi-exclamation-triangle" acceptClassName='p-button-danger' accept={DeleteCompany} />
-
-            </div>
+            
 
 
 
@@ -175,14 +155,14 @@ function Company() {
                 </div>
 
             </div>
-            <div className=" w-100 mt-3 d-flex justify-content-between">
+            <div className=" w-100 mt-3 d-flex  flex-wrap justify-content-between">
                 <div className="shadow border rounded widthinc p-3">
                     <b>Total:{Company.length}</b>
 
                 </div>
                 <div className="btn-group buttonClass" role="group" aria-label="Basic radio toggle button group">
                     <div>
-                        <button className="btn btn-success  float-end me-2 styles-height" onClick={() => AddCompanyForm()
+                        <button className="btn btn-success AddCompanybg float-end me-2 styles-height" onClick={() => AddCompanyForm()
                         } data-tip="CompanyForm" >
 
                             <i className="bi bi-plus-circle me-1 text-wrap"></i>Add Company
@@ -239,10 +219,10 @@ function Company() {
                                         <td>{companyModel.addressLine2}</td>
                                         <td>{companyModel.logoName}</td>
                                         <td className="d-flex ">
-                                            <button className="btn btn-primary update" data-tip="update companydata" onClick={() => editCompany(companyModel)}><FaPenAlt /></button>
-                                            <button className="btn btn-danger ms-3 update" data-tip="delete companydata" onClick={() => { showDeletePrompt(index) }}
+                                            <button className="btn btn-outline-primary update" data-tip="update companydata" onClick={() => editCompany(companyModel)}><AiFillEdit className="font3" /></button>
+                                            <button className="btn btn-outline-danger ms-3 update" data-tip="delete companydata" onClick={() => { showDeletePrompt(index) }}
                                             >
-                                                <FaTrash /></button>
+                                                <AiFillRest className="font3" /> </button>
 
                                         </td>
 
@@ -253,6 +233,11 @@ function Company() {
                     </tbody>
                 </table>
                 {!Company.length && <div className="text-center Company-NotFound">No Companies are Available</div>}
+            </div>
+            <div className="card">
+                <ConfirmDialog visible={visible} onHide={() => setVisible(false)} message="Are you sure you want to Delete?"
+                    header="Confirmation" icon="pi pi-exclamation-triangle" acceptClassName='p-button-danger' accept={DeleteCompany} />
+
             </div>
         </div>
     )

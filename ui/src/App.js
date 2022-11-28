@@ -41,7 +41,7 @@ import "primeicons/primeicons.css";                                //icons
 import Upload from "./Components/upload-documents/upload-documents";
  
 
-import Attendense from "./Components/Attendense/Attendense";
+
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
 import Payrollattendance from "./Components/Payrollattendance/Payrollattendance";
@@ -119,9 +119,7 @@ useEffect(()=>{
             <Route path="/settings">
               <Settings />
             </Route>
-            <Route path="/Attendense" >
-              <Attendense />
-            </Route>
+          
             <Route path="/payrollattendance" >
               <Payrollattendance />
             </Route>

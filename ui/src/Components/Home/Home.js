@@ -4,10 +4,11 @@ import { GiTakeMyMoney } from "react-icons/gi";
 import { Link } from "react-router-dom";
 import { ImExit } from "react-icons/im";
 import { BsHouseFill } from "react-icons/bs";
+import { CircleLoader } from 'react-spinners';
 
 import { useEffect, useState } from "react";
 import axios from "axios";
-import Loading from "../Loading/Loading";
+
 function Home() {
 
   const [CompanyLength, setCompanyLength] = useState("");
@@ -24,20 +25,17 @@ function Home() {
 
   }
   useEffect(() => {
-   
-      getData();
-
-   
-  })
+    getData();
+  }, []);
   function employeeData() {
     const Url = "https://trinitstechnologies.com/demo/api/v1/employees";
     axios.get(Url).then(response => setEmployeLength(response.data)).catch((error) => {
-
-
     })
-
   }
-  employeeData();
+  useEffect(() => {
+    employeeData();
+  }, []);
+
   return (
     <div>
       <div className="dashboard-card p-5">
@@ -82,6 +80,34 @@ function Home() {
           </div>
         </div>
         <div className="d-flex justify-content-between mt-3">
+          <div className="company-card rounded  w-35 p-2 text-white shadow">
+            <Link to="/company" className="text-decoration-none  text-white">
+              <div className="d-flex justify-content-between">
+                <div>
+                  <div>
+                    <b>Companies</b>
+                  </div>
+                  <div className="fs-4">
+
+                    <b>
+                      {
+                        !CompanyLength ? <div>
+                        
+                          <CircleLoader color="white" />
+
+                        </div> : CompanyLength.length
+                      }
+                    </b>
+                  </div>
+                </div>
+                <div className="fs-4 card text-primary ps-2 pe-2">
+                  <div className="fs-1">
+                    <HiOutlineBuildingOffice2 />
+                  </div>
+                </div>
+              </div>
+            </Link>
+          </div>
 
           <div className="employe-card rounded  w-35 p-2 text-white shadow">
             <Link to="/employees" className="text-decoration-none  text-white">
@@ -94,10 +120,12 @@ function Home() {
                     <b>
 
                       {
-                        !employeeLength && <div>
-                          <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
-                        </div>
-                      }{employeeLength.length}</b>
+                        !employeeLength ? <div>
+                          <CircleLoader color="white" />
+                        </div> : employeeLength.length
+                      }
+                    </b>
+
                   </div>
                 </div>
                 <div className="fs-4 card text-primary ps-2 pe-2">
@@ -108,7 +136,7 @@ function Home() {
               </div>
             </Link>
           </div>
-          <div className="company-card rounded  w-35 p-2 text-white shadow">
+          {/* <div className="company-card rounded  w-35 p-2 text-white shadow">
             <Link to="/company" className="text-decoration-none  text-white">
               <div className="d-flex justify-content-between">
                 <div>
@@ -117,10 +145,14 @@ function Home() {
                   </div>
                   <div className="fs-4">
 
-                    <b> {!CompanyLength && <div>
-                      <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
-
-                    </div>}{CompanyLength.length}</b>
+                    <b>
+                      {
+                        !CompanyLength ? <div>
+                        <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
+  
+                      </div> :CompanyLength.length
+                      }
+                    </b>
                   </div>
                 </div>
                 <div className="fs-4 card text-primary ps-2 pe-2">
@@ -130,7 +162,7 @@ function Home() {
                 </div>
               </div>
             </Link>
-          </div>
+          </div> */}
           <div className="leave-card rounded  w-35 p-2 text-white shadow">
             <div className="d-flex justify-content-between">
               <div>

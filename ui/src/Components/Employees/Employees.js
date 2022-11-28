@@ -181,7 +181,7 @@ export default function Employees() {
 
         </div>
 
-        <div className="w-100 flex  mt-3 ">
+        <div className="w-100 flex mt-3 ">
           <div className="shadow w-75 rounded text-dark text p-4 ">
             <b> Total: {employeemodel.length}</b>
           </div>
@@ -191,7 +191,7 @@ export default function Employees() {
           </div>
           <div className="mt-2 p-2">
 
-            <button className={card == 'Card' ? " btn btn-primary p-2 " : "btn btn-outline-primary p-2"} data-tip="Card view" >< AiOutlineAppstore onClick={() => setcard("Card")} className="font2 " /></button>
+            <button className={card == 'Card' ? " btn btn-primary p-2 " : "btn btn-outline-primary p-2"} data-tip="Card view" >< AiOutlineAppstore onClick={() => setcard("Card")} className="font2 "/></button>
             <button className={card == 'table' ? "btn btn-primary p-2 ms-1" : "btn btn-outline-primary p-2 ms-1"} data-tip="Table view"><AiOutlineBars onClick={() => setcard("table")} className="font2" /> </button>
           </div>
         </div>
