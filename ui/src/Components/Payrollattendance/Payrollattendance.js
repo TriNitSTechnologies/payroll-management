@@ -1,10 +1,17 @@
+import { useState } from "react";
 import { AiFillEdit } from "react-icons/ai";
 
+
+
 export default function Payrollattendance() {
-  
+    const[setpay,setshowpay]=useState(false);
+
+
+
     return (
 
         <div className=" m-4 ">
+           
             <table className="table table-hover text rounded shadow">
                 <tbody>
                     <tr>
@@ -23,7 +30,7 @@ export default function Payrollattendance() {
                         <td>19:00</td>
                         <td>10:00</td>
                         <td>-NA-</td>
-                        <td><button className=" btn btn-outline-primary ms-4"><AiFillEdit className="font3" /></button></td>
+                        <td><button className=" btn btn-outline-primary ms-4"onClick={()=>setshowpay(true)} ><AiFillEdit className="font3" /></button></td>
                     </tr>
                     <tr>
                         <td>2-12-2022</td>

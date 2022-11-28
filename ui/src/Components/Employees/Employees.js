@@ -100,10 +100,7 @@ export default function Employees() {
   }
   function oncancelForm() {
     setshowForm(false);
-    toast.success("Successfully canceled the form",
-      {
-        position: toast.POSITION.BOTTOM_LEFT
-      });
+   
   }
 
   useEffect(() => {
@@ -214,9 +211,9 @@ export default function Employees() {
 
 
 
-        <div className="text" >
+        <div className="overflow-auto " >
         
-          <table className={card == 'table' ? "table table-hover  mt-4 rounded" : "d-none"}>
+          <table className={card == 'table' ? "table table-hover mt-4 rounded text " : "d-none"}>
           
             <tbody>
            
