@@ -13,7 +13,7 @@ export default function ForgotPassword() {
         }}
         validationSchema={Yup.object({
           
-          conformationemail: Yup.string().required("Email is required").trim(),
+          conformationemail: Yup.string().required("Email is required").trim().email('Invalid email'),
          
         })}
         onSubmit={(values) => {
@@ -32,7 +32,7 @@ export default function ForgotPassword() {
             <div>
               <label className="mt-2 p-2">Email Address</label>
               <div>
-                <Field name="conformationemail" className="form-control p-2"  />
+                <Field name="conformationemail" type="email" className="form-control p-2"  />
               </div>
               <div className="text-danger">
                 <ErrorMessage name="conformationemail" />

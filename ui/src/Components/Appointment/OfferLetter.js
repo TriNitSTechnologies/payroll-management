@@ -1,8 +1,10 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import "./appointment.css";
 
-export default function Appointment(props) {
+export default function OfferLetter(props) {
   return (
     <Formik
       initialValues={{
@@ -32,8 +34,7 @@ export default function Appointment(props) {
         hrName: Yup.string().required("HR Name is requried"),
       })}
       onSubmit={(values) =>{
-        props.DataTransfer(values)
-        alert(JSON.stringify(values));
+        props.OfferLetter(values)
       }}
     >
       <div>
@@ -44,13 +45,13 @@ export default function Appointment(props) {
                 <small className="fs-6">Home </small>
               </div>
               <div>
-                <h5>Appointment Letter</h5>
+                <h5>Offer Letter</h5>
               </div>
             </div>
           </div>
           <div className="card m-4 shadow ">
             <div className="card-header">
-              <h5>Appointment letter details</h5>
+              <h5>Offer letter details</h5>
             </div>
             <div className="card-body pay">
               <div className="d-flex  justify-content-evenly">
@@ -84,7 +85,7 @@ export default function Appointment(props) {
                     className="form-control p-3"
                     name="currentDate"
                     placeholder="Current date"
-                    type="text"
+                    type="date"
                   />
                   <small className="text-danger">
                     <ErrorMessage name="currentDate" />
@@ -143,7 +144,7 @@ export default function Appointment(props) {
                     className="form-control p-3"
                     name="employeeJoiningDate"
                     placeholder="Employee joining date"
-                    type="text"
+                    type="date"
                   />
                   <small className="text-danger">
                     <ErrorMessage name="employeeJoiningDate" />
@@ -156,7 +157,7 @@ export default function Appointment(props) {
                     className="form-control p-3"
                     name="acceptanceLastDate"
                     placeholder="Acceptance last date"
-                    type="text"
+                    type="date"
                   />
                   <small className="text-danger">
                     <ErrorMessage name="acceptanceLastDate" />
