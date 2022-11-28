@@ -2,22 +2,44 @@ import './Buttons.css';
 import { SelectButton } from "primereact/selectbutton";
 import { useState } from "react";
 import { BsHouseFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
+import { useDispatch } from 'react-redux';
+import { appointment } from '../Store/AppointmentSlice';
+import Appointment from '../Documents/Appointment';
+import { offerletterReducer } from '../Store/Offer-LetterSlice';
+import OfferLetter from '../Appointment/OfferLetter';
+import { Button } from 'bootstrap';
+
 export default function Buttons() {
   const [value2, setValue2] = useState("");
+  const history = useHistory();
+  
   const reportsOptions = [
     "Offer-Letter",
     "Appointment Letter",
      "PayslipS",
   ];
- function DataTransfer(data){
+  const dispatch = useDispatch();
+ function OfferLetterData(data){
     let obj = {
       selectedPage: value2,
       formObj: data
     }
-    alert(JSON.stringify(obj))
+    dispatch(offerletterReducer(obj))
+    history.push("./documents")
   }
+
+
+  function Appoiementdata(data1){
+    let obj1={
+      selectedPage:value2,
+      fromObj: data1
+    }
+    dispatch(appointment(obj1))
+    history.push('./documents')
+  }
+
 return (
     <>
       <div className="  h-over-flow-auto border butt border-3 rounded m-4">
@@ -50,22 +72,25 @@ return (
               setValue2(e.value);
             }}
           />
-           {value2 === "Offer-Letter'S" && (
+           {value2 === "Offer-Letter" && (
             <>
              <div>
-
+            <OfferLetter  OfferLetter={OfferLetterData} />
              </div>
             </>
           )}
         </div>
+     
 
         {value2 === "Appointment Letter" && (
           <>
             <div>
-             
+             <Appointment Appdata={Appoiementdata}  />
+
             </div>
           </>
         )}
+        
 
       
          {value2 === "PayslipS" && (
@@ -75,7 +100,8 @@ return (
             </div>
           </>
         )}
-      </div>
+        </div>
+    
     </>
   );
 }

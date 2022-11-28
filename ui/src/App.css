@@ -138,6 +138,35 @@ box-shadow: 5px 5px 10px lightgray;
 }
 
 
+.home-main-logi{
+  display: flex;
+  
+}
+
+@media screen and (max-width:850px){
+  .home-main-logi{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-content: center;
+  }
+
+  .w-45{
+    width: 100%;
+    margin:5px;
+  }
+
+  .w-35{
+    width: 100%;
+    margin: 5px;
+  }
+ 
+
+}
+
+
+
+
 .flex{
   display: flex;
 justify-content: space-between;
@@ -317,3 +346,4 @@ padding-top: 5%;
   background-color: #f8f9fc;
 
 }
+
