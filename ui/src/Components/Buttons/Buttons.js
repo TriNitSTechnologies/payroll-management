@@ -8,6 +8,7 @@ import { appointment } from '../Store/AppointmentSlice';
 import Appointment from '../Documents/Appointment';
 import { offerletterReducer } from '../Store/Offer-LetterSlice';
 import OfferLetter from '../Appointment/OfferLetter';
+import { useState } from 'react';
 export default function Buttons() {
   const [value2, setValue2] = useState("Offer-Letter");
   const history = useHistory();
