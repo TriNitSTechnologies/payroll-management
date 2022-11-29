@@ -1,0 +1,38 @@
+.my-details-app{
+    overflow: auto;
+   
+}
+
+.edit-link {
+    border: 1px solid #EBECF1;
+    padding: 12px;
+    display: block;
+    border-radius: 5px;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+}
+
+.detail-row{
+    width:99%;
+    /* margin: auto; */
+}
+
+
+
+
+@media screen and (max-width:850px){
+    .detail-row{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-content: center;
+        width: 100%;
+    }
+    
+    .details{
+        width: 100%;
+        margin: 5px;
+    }
+    
+}

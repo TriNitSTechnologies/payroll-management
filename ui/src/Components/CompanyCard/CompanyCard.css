@@ -1,0 +1,16 @@
+
+  .imagedata{
+    font-size: 30px;
+  }
+  .width-card{
+    color: darkgreen;
+    
+  }
+
+  .Editcard{
+    visibility: hidden;
+  }
+  .visibledata:hover .Editcard{
+    visibility: visible;
+  }
+  

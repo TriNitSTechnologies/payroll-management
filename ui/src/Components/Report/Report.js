@@ -1,20 +1,56 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import { BsHouseFill } from "react-icons/bs";
-function Report() {
+import { ToastContainer, toast } from 'react-toastify';
+
+import axios from "axios";
+import { useDispatch } from "react-redux";
+import { initpayslipData } from "../Store/PayslipSlice";
+import { useState } from "react";
+
+const PAYSLIP_URL ="https://trinitstechnologies.com/demo/api/v1/payroll?authorization=12"
+function Report(props) {
+ const dispatch= useDispatch();
+ const history = useHistory();
+
+  function fetchPayslip(event){
+    const payload =event;
+    if(payload){
+      axios
+      .post(PAYSLIP_URL,payload)
+      .then((response)=>{
+        let data = response.data;
+        dispatch(initpayslipData(data))
+        history.push('/Payslips')
+      })
+      .catch((error)=>
+      {
+        toast.error(""+error.response.data);
+    
+      });
+    }
+    event.preventDefault();
+
+
+  }
+
+
   return (
+
     <div>
+      <ToastContainer />
+
       <div className="card m-4 pay shadow ">
         <div className="card-body d-flex justify-content-between ">
           <div>
             <small className="fs-6">
               <button className="rounded shadow back me-2 ">
-                <Link to="/" className="text-decoration-none back">
+                <Link to="/home" className="text-decoration-none back">
                   <BsHouseFill />
                 </Link>
               </button>
-              <Link to="/" className="text-decoration-none text-dark me-1">
+              <Link to="/home" className="text-decoration-none text-dark me-1">
                 Home
               </Link>
                / Reports
@@ -33,18 +69,21 @@ function Report() {
           noOfWorkingDays: "",
           grossSalary: "",
         }}
-        validationSchema={Yup.object({
+         validationSchema={Yup.object({
           companyName: Yup.string().trim().required("Company name is required"),
           empNo: Yup.string().trim().required("Employee no is required"),
           paymentMonth: Yup.string()
             .trim()
-            .required("date of month/year is required"),
+            .required("Date of month/year is required"),
           noOfWorkingDays: Yup.string()
             .trim()
             .required("No of working days is required"),
           grossSalary: Yup.string().trim().required("Gross salary is required"),
         })}
         onSubmit={(values) => {
+
+          fetchPayslip(values)
+          console.log("value" + values)
           alert(JSON.stringify(values));
         }}
       >
@@ -119,8 +158,12 @@ function Report() {
             </div>
           </div>
           <div className=" ms-4 mb-2">
-            <button className="btn btn-primary btn-lg" type="submit">
-              Get Payslip
+            <button className="btn btn-primary btn-lg" type="submit"
+   
+    >
+                  
+          Get Payslip
+             
             </button>
           </div>
         </Form>
@@ -128,4 +171,5 @@ function Report() {
     </div>
   );
 }
+
 export default Report;
