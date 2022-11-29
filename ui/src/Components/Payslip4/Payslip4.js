@@ -1,13 +1,25 @@
 import "./Payslip4.css";
-import { React } from "react";
+import { React,useRef } from "react";
 import telegram from "./../../Image/trinits.jpg";
 import { useSelector } from "react-redux";
+import { toast } from 'react-toastify';
 
+import { useReactToPrint } from "react-to-print";
 
 function Payslip4() {
  const payslipData= useSelector((state)=>state.payslip.payslipData);
+ const componentRef=useRef();
+ const handleprint=useReactToPrint({
+    content:()=> componentRef.current,
+    documentTitle:'emp-data',
+    onAfterPrint:()=>toast.success('Print success')
 
+ });
   return (
+<>
+<div className="mt-4">
+   
+        <div ref={componentRef} style={{width:'100%'}}>
     <div className=" bg-white w-80  m-auto padding p-5 mb-5">
       <div>
         <div className="   Larger    ">
@@ -219,6 +231,13 @@ function Payslip4() {
         </div>
       </div>
     </div>
+  
+    </div>
+    </div>
+
+</>
+  
+
   );
 }
 export default Payslip4;

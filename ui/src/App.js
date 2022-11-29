@@ -33,6 +33,10 @@ import Notifications from "./Components/Notifications/Notifications";
 import MainHead from "./Components/MainPage/Main-Head";
 import PrintAppoiement from "./Components/LetterofAppointment/Appointment.print";
 import Upload from "./Components/upload-documents/upload-documents";
+
+
+
+
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
 import Reimbursement from "./Components/Reimbursement/Reimbursement";
@@ -40,6 +44,7 @@ import Appointment from "./Components/Documents/Appointment";
 import OfferLetter from "./Components/Appointment/OfferLetter";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
 import Payslip5 from "./Components/payslip5/payslip5";
+
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -146,6 +151,13 @@ useEffect(()=>{
             <Route path="/buttons">
             <Buttons />
             </Route>
+            <Route path="/React.PureComponent ">
+            <React.PureComponent />
+            </Route>
+            <Route path="/Print">
+            <Print/>
+            </Route>
+            
           
 
             <Route path="/offer-letter">
