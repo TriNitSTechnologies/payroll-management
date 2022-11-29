@@ -3,7 +3,18 @@ import { SelectButton } from "primereact/selectbutton";
 import { BsHouseFill } from "react-icons/bs";
 import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
+
+import { Button } from 'bootstrap';
+import Appraisal from '../Appraisal-Form/Appraisal-form';
 import { useDispatch } from 'react-redux';
+import { AppraisalStatus } from '../Store/AppraisalSlice';
+
+  
+ 
+ 
+   
+
+
 import { appointment } from '../Store/AppointmentSlice';
 import Appointment from '../Documents/Appointment';
 import { offerletterReducer } from '../Store/Offer-LetterSlice';
@@ -16,17 +27,31 @@ export default function Buttons() {
     "Offer-Letter",
     "Appointment Letter",
     "Payslips",
+    "Appraisal"
   ];
   const dispatch = useDispatch();
   function OfferLetterData(data) {
+
     let obj = {
       selectedPage: value2,
       formObj: data
     }
-    dispatch(offerletterReducer(obj))
-    history.push("./documents")
+  dispatch(offerletterReducer(obj))
+  history.push("./documents")
+
   }
- function Appoiementdata(data1) {
+
+  function appraisalForm(data){
+    let obj = {
+      selectedPage: value2,
+      formObj: data
+    }
+
+    dispatch(AppraisalStatus(obj))
+    alert(JSON.stringify('obj'))
+    history.push('./appdocument')
+  }
+  function Appoiementdata(data1) {
     let obj1 = {
       selectedPage: value2,
       fromObj: data1
@@ -35,7 +60,13 @@ export default function Buttons() {
     history.push('./documents')
   }
 
-  return (
+ 
+return (
+
+   
+ 
+
+ 
     <>
       <div className="h-over-flow-auto border butt border-2 rounded m-2">
 
@@ -76,7 +107,22 @@ export default function Buttons() {
 
           </>
         )}
-      </div>
+
+
+        {value2 === "Appraisal" &&(
+          <>
+            <div>
+                <Appraisal appraisalForm={appraisalForm}/>
+            </div>
+          </>
+        )}
+
+
+        </div>
+    
+   
+
+     
 
 
       {value2 === "Appointment Letter" && (
