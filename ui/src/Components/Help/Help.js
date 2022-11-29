@@ -1,4 +1,4 @@
-import { BsCameraVideo, BsFileEarmarkBarGraph} from "react-icons/bs";
+import { BsCameraVideo, BsFileEarmarkBarGraph, BsHouseFill} from "react-icons/bs";
 
 import { BsQuestionLg} from "react-icons/bs";
 import { BiMessageDetail } from "react-icons/bi";
@@ -7,18 +7,39 @@ import { SlSupport } from "react-icons/sl";
 
 
 import "./Help.css";
+import { Link } from "react-router-dom";
 
 
 
 function Help() {
-    return (
+    return (<>
+        <div className="card m-4 shadow ">
+      <div className="card-body d-flex justify-content-between ">
+        <div>
+          <small className="fs-6">
+            <button className="rounded shadow  me-2 border-none">
+              <Link to="/home" className="text-decoration-none ">
+                <BsHouseFill />
+              </Link>
+            </button>
+            <Link to="/home" className="text-decoration-none text-dark me-1">
+              Home
+            </Link>
+            / Help
+          </small>
+        </div>
+        <div>
+            <h5>Help</h5>
+          </div>
+        </div>
+        </div>
       
-          <div className="w-100 ">
+          <div className="widthdata card ms-4 ">
             <div className=" card helpdata border">
                 <div className="card-header"><h3>Get Help</h3></div>
                 <h4 className="p-2 text-danger"> Quick Links</h4>
-                <div className="d-flex bd-highlight  p-2">
-                  <div className=""> <BsFileEarmarkBarGraph className="fs-5" /> Xpayroll Account Setup Guide </div>
+                <div className="d-flex bd-highlight mb-3 p-2">
+                  <div className=""> <BsFileEarmarkBarGraph className="fs-5" /> payroll management Account Setup Guide </div>
                     <div className=" ff" > <BsFileEarmarkBarGraph className="fs-5" /> How do I a custom salary structure?</div> 
                   
                 </div>
@@ -36,7 +57,7 @@ function Help() {
                 </div>
 
                 <div><h4 className="p-2  text-danger">Help Videos</h4></div>
-                <div className="d-flex bd-highlight mb-3 p-2">
+                <div className="d-flex bd-highlight mb-3 p-1">
                     <div className=""> <BsCameraVideo  className="fs-5"/> Excuting a payroll</div>
                     <div className="aa"> <BsCameraVideo  className="fs-5"/> Xpayroll-User Access</div>
 
@@ -51,27 +72,13 @@ function Help() {
 
             </div>
             <div className="">
-                <button className="btn btn-outline-danger"><SlSupport className="fs-2 p-1 " /><a href="mailto:support@trinitstechnologies.com"> Support As</a> </button>
+                <button className="btn btn-success"><SlSupport className="fs-2 p-1 bg-danger " /><a href="mailto:support@trinitstechnologies.com"> Support As</a> </button>
               
             </div>
-            {/* <div className="w-25 p-2 m-2">
-            <div><h2>Get in touch</h2></div>
-            <div className="card mt-4 border">
-                <h5>Chat Support <BiMessageDetail  className="float-end mb-3 card bg-info"/></h5>
-            <div className="p-4 ">Chat with us live from 10 AM to 5.30PM</div>
-                
-                </div>
-                <div className="card  mt-4 border">
-                    <h5>Mail Support <BsQuestionLg className="float-end mb-3 card bg-info " /></h5>
-                    <div className="p-4  ">Please email  us at support@opfin.com</div>
-
-                </div>
-            </div> */}
-
-
+           
 
         </div>
-
+        </>
     )
 }
 export default Help;

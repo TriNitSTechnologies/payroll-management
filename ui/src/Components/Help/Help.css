@@ -25,13 +25,16 @@
     margin-left: 115px;
    }
    .ff{
-    margin-left: 220px;
+    margin-left: 132px;
    }
    .chatData{
     width: 30px;
     height: 30px;
     border: 1px solid black;
 
+   }
+   .widthdata{
+    width: 96%;
    }
    
    
