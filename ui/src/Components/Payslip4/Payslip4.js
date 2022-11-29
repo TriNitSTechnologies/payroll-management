@@ -1,11 +1,10 @@
 import "./Payslip4.css";
 import { React,useRef } from "react";
-import telegram from "./../../Image/trinits.jpg";
+// import telegram from "./../Image/trinits.jpg";
+import sss from "../Image/logo-dark.png";
 import { useSelector } from "react-redux";
 import { toast } from 'react-toastify';
-
 import { useReactToPrint } from "react-to-print";
-
 function Payslip4() {
  const payslipData= useSelector((state)=>state.payslip.payslipData);
  const componentRef=useRef();
@@ -24,18 +23,21 @@ function Payslip4() {
       <div>
         <div className="   Larger    ">
           <div>
-            <table className="w-100 border">
+            <table className="w-100 ">
               <tr>
                 <th className="d-flex">
-                  <div>
+                  <div className=" w-25 ">
                     <tr>
                       <th>
-                       
-                        <img className="payslip-logo" src={telegram} alt="" />
+                                <img src={sss} alt="this is img" className="imege1 ms-3" />
+                           
+                        {/* <img className="payslip-logo" src= {telegram} alt="" /> */}
+                      
+                        {/* <img src={sss} alt="this is img" className="imege " /> */}
                       </th>
                     </tr>
                   </div>
-                  <div className="ms-5 text-center">
+                  <div className="ms-5 text-center w-75">
                     <h4>{payslipData.companyDetails.companyName}</h4>
                     <h5 className="">{payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2},{payslipData.companyDetails.state},  {payslipData.companyDetails.pinCode}.</h5>
                      <h6 className="p23">Pay Slip for the month of {payslipData.dateOfMonth} </h6>
