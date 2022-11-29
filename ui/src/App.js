@@ -154,9 +154,7 @@ useEffect(()=>{
             <Route path="/React.PureComponent ">
             <React.PureComponent />
             </Route>
-            <Route path="/Print">
-            <Print/>
-            </Route>
+        
             
           
 
