@@ -161,7 +161,7 @@ useEffect(()=>{
               <Notifications/>
             </Route>
  
-            <Route path="/uploadD">
+            <Route path="/uploaddocs">
               <Upload/>
             </Route>
 
