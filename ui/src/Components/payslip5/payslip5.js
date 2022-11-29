@@ -7,7 +7,7 @@ export default function Payslip5(){
     const payslipData= useSelector((state)=>state.payslip.payslipData);
     return(
         <div>
-               <button className='btn btn-outline-primary float-end m-4'>Print</button> 
+              
 
             <div className='bg-white w-100  m-auto padding p-5 mb-5'>
             <div className=' m-auto padding p-5 mb-5 w-80 shadow'>
