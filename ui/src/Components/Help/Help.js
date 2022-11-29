@@ -35,7 +35,7 @@ function Help() {
         </div>
       
           <div className="widthdata card ms-4 ">
-            <div className=" card helpdata border">
+            <div className=" card  border">
                 <div className="card-header"><h3>Get Help</h3></div>
                 <h4 className="p-2 text-danger"> Quick Links</h4>
                 <div className="d-flex bd-highlight mb-3 p-2">
@@ -52,14 +52,14 @@ function Help() {
                     <div className="dd "> <BsFileEarmarkBarGraph className="fs-5" /> How do I create one-time payment?</div>
                 </div>
                 <div className="d-flex bd-highlight mb-3 p-2">
-                    <div className=""><BsFileEarmarkBarGraph className="fs-5" />  When will Xpayroll pay my TDS/PF/ESI/PT dues?</div>
+                    <div className=""><BsFileEarmarkBarGraph className="fs-5" />  When will payroll pay my TDS/PF/ESI/PT dues?</div>
                     <div className="cc " > <BsFileEarmarkBarGraph className="fs-5" /> How do I pay Reimbursement to on Employee?</div>
                 </div>
 
                 <div><h4 className="p-2  text-danger">Help Videos</h4></div>
                 <div className="d-flex bd-highlight mb-3 p-1">
-                    <div className=""> <BsCameraVideo  className="fs-5"/> Excuting a payroll</div>
-                    <div className="aa"> <BsCameraVideo  className="fs-5"/> Xpayroll-User Access</div>
+                    <div className="p-1"> <BsCameraVideo  className="fs-5"/> Excuting a payroll</div>
+                    <div className="aa"> <BsCameraVideo  className="fs-5"/> payroll-User Access</div>
 
                 </div>
                 <div className="d-flex bd-highlight mb-3 p-2">
@@ -71,10 +71,11 @@ function Help() {
                 <div className="text-primary p-2"><b>Search help for more articles <IoChevronForwardOutline className="fs-5" /></b></div>
 
             </div>
-            <div className="">
+          
+            {/* <div className="">
                 <button className="btn btn-success"><SlSupport className="fs-2 p-1 " /><a href="mailto:support@trinitstechnologies.com"> Support As</a> </button>
               
-            </div>
+            </div> */}
            
 
         </div>
