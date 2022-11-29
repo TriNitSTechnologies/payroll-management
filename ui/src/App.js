@@ -43,11 +43,9 @@ import Payslips from "./Components/Payslip/Payslips";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
 
 import Upload from "./Components/upload-documents/upload-documents";
- 
-
-import Attendense from "./Components/Attendense/Attendense";
-import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
+import Print from "./Components/Print/Print";
+
 
 function App() {
   let userrouter=useHistory()
@@ -153,6 +151,13 @@ useEffect(()=>{
             <Route path="/buttons">
             <Buttons />
             </Route>
+            <Route path="/React.PureComponent ">
+            <React.PureComponent />
+            </Route>
+            <Route path="/Print">
+            <Print/>
+            </Route>
+            
           
 
             <Route path="/offer-letter">

@@ -41,26 +41,7 @@ function Report(props) {
     <div>
       <ToastContainer />
 
-      <div className="card m-4 pay shadow ">
-        <div className="card-body d-flex justify-content-between ">
-          <div>
-            <small className="fs-6">
-              <button className="rounded shadow back me-2 ">
-                <Link to="/home" className="text-decoration-none back">
-                  <BsHouseFill />
-                </Link>
-              </button>
-              <Link to="/home" className="text-decoration-none text-dark me-1">
-                Home
-              </Link>
-               / Reports
-            </small>
-          </div>
-          <div>
-            <h5>Payslip Report</h5>
-          </div>
-        </div>
-      </div>
+  
       <Formik
         initialValues={{
           companyName: "",
