@@ -7,7 +7,8 @@
 
 
 .sidebar-collapse{
-  width:63px ;
+  width:60px ;
+  height:87vh;
   overflow: hidden;
 }
 
@@ -19,7 +20,7 @@
   width:100% ;
   background-color:rgb(238, 241, 244);
   height:87vh;
-  overflow-y: auto;
+  overflow: auto;
 }
 .head{
   background-color: aliceblue;
