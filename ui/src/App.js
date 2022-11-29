@@ -12,6 +12,9 @@ import Documents from "./Components/Documents/Documents";
 import Help from "./Components/Help/Help";
 import Refer from "./Components/Refer/Refer";
 
+import AddressProof from "./Components/AddressProof/AddressProof";
+import AddressProofForm from "./Components/AddressProofForm/AddressProofForm";
+
 function App() {
   return (
     <div>
@@ -50,6 +53,13 @@ function App() {
             <Route path="/refer">
               <Refer />
             </Route>
+            <Route path="/addressProof">
+              <AddressProof />
+              </Route>
+              <Route path="/addressProof">
+                <AddressProofForm />
+              </Route>
+            
         
           </Switch>
         </div>

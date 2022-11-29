@@ -4,6 +4,9 @@ import { AiFillSetting } from "react-icons/ai";
 import { MdOutlinePeopleAlt } from "react-icons/md";
 import { BsHouseFill } from "react-icons/bs";
 import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
+import { VscReferences } from "react-icons/vsc";
+import { SiHelpdesk } from "react-icons/si";
+
 import "./Sidebar.css";
 import { Link } from "react-router-dom";
 function Sidebar() {
@@ -13,7 +16,7 @@ function Sidebar() {
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
             <Link to="/" className="text-decoration-none back">
-              <BsHouseFill/>
+              <BsHouseFill />
             </Link>
           </button>
         </div>
@@ -27,7 +30,7 @@ function Sidebar() {
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
             <Link to="/company" className="text-decoration-none back">
-              <HiOutlineBuildingOffice2/>
+              <HiOutlineBuildingOffice2 />
             </Link>
           </button>
         </div>
@@ -41,7 +44,7 @@ function Sidebar() {
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
             <Link to="/employees" className="text-decoration-none back">
-             <MdOutlinePeopleAlt/>
+              <MdOutlinePeopleAlt />
             </Link>
           </button>
         </div>
@@ -65,6 +68,49 @@ function Sidebar() {
           </Link>
         </div>
       </div>
+      <div className="selected d-flex mt-3">
+        <div className="m-2 ms-3 ">
+          <button className="rounded shadow back">
+            <Link to="/help" className="text-decoration-none back">
+              <SiHelpdesk />
+            </Link>
+          </button>
+        </div>
+        <div className="fw-semibold m-2 ">
+          <Link to="/help" className="text-decoration-none  text-dark">
+            Help
+          </Link>
+        </div>
+      </div> 
+      <div className="selected d-flex mt-3">
+        <div className="m-2 ms-3 ">
+          <button className="rounded shadow back">
+            <Link to="/addressProof" className="text-decoration-none back">
+             
+            </Link>
+          </button>
+        </div>
+        <div className="fw-semibold m-2 ">
+          <Link to="/addressProof" className="text-decoration-none  text-dark">
+          AddressProof
+          </Link>
+        </div>
+      </div> 
+      <div className="selected d-flex mt-3">
+        <div className="m-2 ms-3 ">
+          <button className="rounded shadow back">
+            <Link to="/refer" className="text-decoration-none back">
+              <VscReferences />
+            </Link>
+          </button>
+        </div>
+        <div className="fw-semibold m-2 ">
+          <Link to="/refer" className="text-decoration-none  text-dark">
+          Refer
+          </Link>
+        </div>
+      </div>
+     
       <div className="selected d-flex mt-3 bottum">
         <div className="m-2 ms-3 ">
           <button className="rounded shadow back">
@@ -77,20 +123,12 @@ function Sidebar() {
           <Link to="/documents" className="text-decoration-none text-dark ">
             Documents
           </Link>
-          </div>
-          
-       
+        </div>
+
+
       </div>
-      <div className="fw-semibold m-2 ">
-        <Link to="/help" className="text-decoration-none text-dark">
-          Help
-        </Link>
-      </div>
-      <div className="fw-semibold m-2 ">
-        <Link to="/refer" className="text-decoration-none text-dark">
-         Refer
-        </Link>
-      </div>
+
+
       <div className="selected d-flex mt-3 w-100 p-2  position-absolute">
         <div className=" ms-3 ">
           <button className="rounded shadow back">

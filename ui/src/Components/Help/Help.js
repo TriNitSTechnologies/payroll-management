@@ -1,17 +1,19 @@
 import { BsCameraVideo, BsFileEarmarkBarGraph} from "react-icons/bs";
-// import {MdOutlineMessage} from "react-icons/bs";
+
 import { BsQuestionLg} from "react-icons/bs";
 import { BiMessageDetail } from "react-icons/bi";
 import { IoChevronForwardOutline } from "react-icons/io5";
+import { SlSupport } from "react-icons/sl";
 
 
 import "./Help.css";
 
 
+
 function Help() {
     return (
       
-          <div className="w-100 d-flex">
+          <div className="w-100 ">
             <div className=" card helpdata border">
                 <div className="card-header"><h3>Get Help</h3></div>
                 <h4 className="p-2 text-danger"> Quick Links</h4>
@@ -48,7 +50,11 @@ function Help() {
                 <div className="text-primary p-2"><b>Search help for more articles <IoChevronForwardOutline className="fs-5" /></b></div>
 
             </div>
-            <div className="w-25 p-2 m-2">
+            <div className="">
+                <button className="btn btn-outline-danger"><SlSupport className="fs-2 p-1 " /><a href="mailto:support@trinitstechnologies.com"> Support As</a> </button>
+              
+            </div>
+            {/* <div className="w-25 p-2 m-2">
             <div><h2>Get in touch</h2></div>
             <div className="card mt-4 border">
                 <h5>Chat Support <BiMessageDetail  className="float-end mb-3 card bg-info"/></h5>
@@ -60,7 +66,7 @@ function Help() {
                     <div className="p-4  ">Please email  us at support@opfin.com</div>
 
                 </div>
-            </div>
+            </div> */}
 
 
 

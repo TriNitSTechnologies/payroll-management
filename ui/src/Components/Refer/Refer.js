@@ -68,8 +68,8 @@ function Refer (){
       </div>
       <div className="w-50 m-2 p-2">
 
-        <b>Email Address <AiOutlineMail /></b>
-        <input type="Email Address"className="form-control"  placeholder="EmailAddress" name="EmailAddress"{...formik.getFieldProps("EmailAddress")} />
+        <b>Email Address </b>
+        <input type="Email Address"className="form-control"  placeholder="EmailAddress" name="EmailAddress"{...formik.getFieldProps("EmailAddress")} /> 
         {
            <div className="text-danger">
            <small>{formik.errors.EmailAddress}</small>
