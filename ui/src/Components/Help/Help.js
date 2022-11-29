@@ -72,7 +72,7 @@ function Help() {
 
             </div>
             <div className="">
-                <button className="btn btn-success"><SlSupport className="fs-2 p-1 bg-danger " /><a href="mailto:support@trinitstechnologies.com"> Support As</a> </button>
+                <button className="btn btn-success"><SlSupport className="fs-2 p-1 " /><a href="mailto:support@trinitstechnologies.com"> Support As</a> </button>
               
             </div>
            
