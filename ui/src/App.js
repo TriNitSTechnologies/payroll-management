@@ -15,37 +15,35 @@ import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
 import Payslip4 from "./Components/Payslip4/Payslip4";
 import ForgotPassword from "./Components/LoginPage/ForgotPassword";
-import MainPage from "./Components/MainPage/Main-Head";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import Mainbody from "./Components/MainPage/Main-Body";
 import { useSelector } from "react-redux";
-import Appointment from "./Components/Appointment/appointment";
 import React from "react";
 import MyProfile from "./Components/My-Profile/My-Profile";
-import OfferLetter from "./Components/Documents/Appointment";
-import Reports from "./Components/NewReport/Reports";
 import "primereact/resources/themes/lara-light-indigo/theme.css"; 
 import "primereact/resources/primereact.min.css";                
 import "primeicons/primeicons.css";                              
-import Joinletter from "./Components/Offer Letter/offerletter";
+import Joinletter from "./Components/Joinletter/Joinletter";
+import Details from "./Components/Details/details";
+import SelectProfile from "./Components/Selected-profile/selected-profile";
 import Payslip1 from "./Components/Payslip1/Payslip1";
 import Payslip2 from "./Components/Payslip2/Payslip2";
 import Payslip3 from "./Components/Payslip3/Payslip3";
 import Notifications from "./Components/Notifications/Notifications";
 import MainHead from "./Components/MainPage/Main-Head";
-import PrintAppoiement from "./Components/Letter of Appoiement/APPOIEMENT.print";
+import PrintAppoiement from "./Components/LetterofAppointment/Appointment.print";
+import Upload from "./Components/upload-documents/upload-documents";
 
-import "primereact/resources/themes/lara-light-indigo/theme.css";  //theme
-import "primereact/resources/primereact.min.css";                  //core css
-import "primeicons/primeicons.css";                                //icons
+
 
 
 import Payslips from "./Components/Payslip/Payslips";
-import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
-
-import Upload from "./Components/upload-documents/upload-documents";
 import Buttons from "./Components/Buttons/Buttons";
-import Print from "./Components/Print/Print";
-
+import Reimbursement from "./Components/Reimbursement/Reimbursement";
+import Appointment from "./Components/Documents/Appointment";
+import OfferLetter from "./Components/Appointment/OfferLetter";
+import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
+import Payslip5 from "./Components/payslip5/payslip5";
 
 function App() {
   let userrouter=useHistory()
@@ -64,7 +62,7 @@ useEffect(()=>{
   }else{
     userrouter.push("/")
   }
-},[isUserLoggedIn])
+},[isUserLoggedIn]);
 
 
 
@@ -79,12 +77,14 @@ useEffect(()=>{
         <Header hidesidebar={handlesidebarstatus}/>
         </>}
       </div>
-      <div className="d-flex">
+      <div className="d-flex ">
+        <div className="">
         {isUserLoggedIn && <>
         <div className={sidebarclass}>
           <Sidebar />
         </div>
         </>}
+        </div>
         <div className="main">
           <Switch>
           {!isUserLoggedIn && <>
@@ -117,10 +117,13 @@ useEffect(()=>{
             <Route path="/employees">
               <Employees />
             </Route>
+            <Route path="/reimbursement">
+              <Reimbursement/>
+            </Route>
             <Route path="/settings">
               <Settings />
             </Route>
-            <Route path="/attendenseForm" >
+            <Route path="/Attendense" >
               <AttendenseForm />
             </Route>
 
@@ -135,9 +138,6 @@ useEffect(()=>{
             </Route>
             <Route path="/appointment">
               <Appointment />
-            </Route>
-            <Route path="/newReport">
-            <Reports />
             </Route>
             <Route path="/Payslip1">
             <Payslip1 />
@@ -177,12 +177,31 @@ useEffect(()=>{
               <Upload/>
             </Route>
 
+
+            <Route path='/profile'>
+              <MyProfile/>
+            </Route>
+
+            <Route path='/details'>
+                <Details/>
+            </Route>
+
+            <Route path='/selectprofile'>
+              <SelectProfile />
+            </Route>
+
+            <Route path='/Payslip5'>
+              <Payslip5/>
+            </Route>
+
+
           
          <Route path='/Payslip4'>
          <Payslip4 />
          </Route>
 
             </>}
+
           </Switch>
         </div>
       </div>
