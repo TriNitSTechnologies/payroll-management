@@ -15,7 +15,7 @@ import ReactTooltip from "react-tooltip";
 import { BiPrinter } from "react-icons/bi";
 export default function Payslips() {
   const [value1, setValue1] = useState("Payslip1");
-  const options = ["Payslip 1", "Payslip 2", "Payslip 3", "Payslip 4", "Payslip 5"];
+  const options = ["Format 1", "Format 2", "Format 3", "Format 4", "Format 5"];
   const componentRef = useRef();
   const handleprint = useReactToPrint({
     content: () => componentRef.current,
@@ -68,33 +68,33 @@ export default function Payslips() {
           <div className="a1a ">
 
 
-            {value1 === 'Payslip 1' && <>
+            {value1 === 'Format 1' && <>
               <div>
                 <Payslip1 />
               </div>
             </>}
             <div >
-              {value1 === 'Payslip 2' && <>
+              {value1 === 'Format 2' && <>
                 <div >
                   <Payslip2 />
                 </div>
               </>
               }
             </div>
-            {value1 === 'Payslip 3' && <>
+            {value1 === 'Format 3' && <>
               <div>
                 <Payslip3 />
               </div>
             </>
             }
-            {value1 === 'Payslip 4' && <>
+            {value1 === 'Format 4' && <>
               <div>
                 <Payslip4 />
               </div>
             </>
             }
 
-            {value1 === 'Payslip 5' && (
+            {value1 === 'Format 5' && (
               <>
                 <div>
                   <Payslip5 />
