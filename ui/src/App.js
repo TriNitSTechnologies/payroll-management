@@ -47,6 +47,9 @@ import Upload from "./Components/upload-documents/upload-documents";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
+import Appraisal from "./Components/Appraisal-Form/Appraisal-form";
+import AppraisalLetter from "./Components/Appraisal-Letter/Appraisal-letter";
+import AppraisalDocument from "./Components/Appraisal-Doc/Appraisal-Doc";
 
 function App() {
   let userrouter=useHistory()
@@ -182,6 +185,18 @@ useEffect(()=>{
 
             <Route path='/selectprofile'>
               <SelectProfile />
+            </Route>
+
+            <Route path='/appraisal'>
+              <Appraisal/>
+            </Route>
+
+            <Route path='/appletter'>
+                <AppraisalLetter/>
+            </Route>
+
+            <Route path='/appdocument'>
+              <AppraisalDocument/>
             </Route>
 
 

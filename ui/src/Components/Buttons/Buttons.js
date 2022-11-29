@@ -2,23 +2,34 @@ import './Buttons.css';
 import { SelectButton } from "primereact/selectbutton";
 import { useState } from "react";
 import { BsHouseFill } from "react-icons/bs";
-import { Link } from "react-router-dom";
+import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
 import { Button } from 'bootstrap';
+import Appraisal from '../Appraisal-Form/Appraisal-form';
+import { useDispatch } from 'react-redux';
+import { AppraisalStatus } from '../Store/AppraisalSlice';
 export default function Buttons() {
   const [value2, setValue2] = useState("");
+  const history = useHistory()
   const reportsOptions = [
     "Offer-Letter",
     "Appointment Letter",
      "PayslipS",
+     "Appraisal"
   ];
- function DataTransfer(data){
+  const dispatch = useDispatch();
+ function appraisalForm(data){
+   
     let obj = {
       selectedPage: value2,
       formObj: data
     }
-    alert(JSON.stringify(obj))
+    dispatch(AppraisalStatus(obj))
+    alert(JSON.stringify('obj'))
+    history.push('./appdocument')
   }
+
+ 
 return (
     <>
       <div className="  h-over-flow-auto border butt border-3 rounded m-4">
@@ -81,6 +92,16 @@ return (
             </div>
           </>
         )}
+
+        {value2 === "Appraisal" &&(
+          <>
+            <div>
+                <Appraisal appraisalForm={appraisalForm}/>
+            </div>
+          </>
+        )}
+
+
         </div>
     
     </>
