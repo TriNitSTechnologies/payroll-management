@@ -39,19 +39,9 @@ export default function OfferLetter(props) {
     >
       <div>
         <Form>
-          <div className="card m-4 pay shadow ">
-            <div className="card-body d-flex justify-content-between ">
-              <div>
-                <small className="fs-6">Home </small>
-              </div>
-              <div>
-                <h5>Offer Letter</h5>
-              </div>
-            </div>
-          </div>
-          <div className="card m-4 shadow ">
+          <div className="card mt-4  shadow ">
             <div className="card-header">
-              <h5>Offer letter details</h5>
+              <h4 className="fw-bold">Offer letter details</h4>
             </div>
             <div className="card-body pay">
               <div className="d-flex  justify-content-evenly">
@@ -210,7 +200,7 @@ export default function OfferLetter(props) {
             </div>
           </div>
 
-          <div className=" ms-4  ">
+          <div className=" mt-3 ">
             <button className="btn btn-primary btn-lg ">GENERATE LETTER</button>
           </div>
         </Form>

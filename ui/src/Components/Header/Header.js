@@ -18,7 +18,7 @@ function Header(props) {
     );
   }
   return (
-    <div className="border d-flex shadow">
+    <div className="border d-flex shadow h-100">
       <div className="d-flex">
         <div>
           <img
