@@ -129,7 +129,7 @@ function Sidebar() {
                 AddressProof
               </Link>
             </div>
-          </div>
+         </div>
           <div className="selected d-flex mt-3">
             <div className="m-2 ms-3 ">
               <button className="rounded shadow back">
