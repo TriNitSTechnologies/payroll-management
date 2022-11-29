@@ -32,35 +32,12 @@ function Report(props) {
     }
     event.preventDefault();
 
-
   }
-
 
   return (
 
     <div>
       <ToastContainer />
-
-      <div className="card m-4 pay shadow ">
-        <div className="card-body d-flex justify-content-between ">
-          <div>
-            <small className="fs-6">
-              <button className="rounded shadow back me-2 ">
-                <Link to="/home" className="text-decoration-none back">
-                  <BsHouseFill />
-                </Link>
-              </button>
-              <Link to="/home" className="text-decoration-none text-dark me-1">
-                Home
-              </Link>
-               / Reports
-            </small>
-          </div>
-          <div>
-            <h5>Payslip Report</h5>
-          </div>
-        </div>
-      </div>
       <Formik
         initialValues={{
           companyName: "",
@@ -90,7 +67,7 @@ function Report(props) {
         <Form>
           <div className="card m-4 shadow ">
             <div className="card-header">
-              <h5>Payslip details</h5>
+              <h5 className="fw-bold">Payslip details</h5>
             </div>
             <div className="card-body pay  ">
               <div className="d-flex  justify-content-evenly">

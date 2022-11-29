@@ -12,7 +12,7 @@ import OfferLetter from '../Appointment/OfferLetter';
 import { Button } from 'bootstrap';
 
 export default function Buttons() {
-  const [value2, setValue2] = useState("");
+  const [value2, setValue2] = useState("Offer-Letter");
   const history = useHistory();
   
   const reportsOptions = [
@@ -42,7 +42,7 @@ export default function Buttons() {
 
 return (
     <>
-      <div className="h-over-flow-auto border butt border-2 rounded m-4">
+      <div className="h-over-flow-auto border butt border-2 rounded m-2">
     
      <div className="card m-4 pay shadow ">
         <div className="card-body d-flex justify-content-between ">
@@ -64,7 +64,7 @@ return (
           </div>
         </div>
       </div>
-        <div className="m-5 from-control">
+        <div className="m-4 from-control">
           <SelectButton
             value={value2}
             options={reportsOptions}
