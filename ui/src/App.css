@@ -7,9 +7,11 @@
 
 
 .sidebar-collapse{
-  width:60px ;
+  width:63px ;
+  overflow:hidden;
   height:87vh;
-  overflow: hidden;
+ 
+
 }
 
 .bgform{
