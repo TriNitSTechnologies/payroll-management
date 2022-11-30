@@ -40,6 +40,11 @@ import Appointment from "./Components/Documents/Appointment";
 import OfferLetter from "./Components/Appointment/OfferLetter";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
 import Payslip5 from "./Components/payslip5/payslip5";
+import Bonafide from "./Components/Bonafide/bonafide";
+
+
+
+
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -187,6 +192,10 @@ useEffect(()=>{
          <Route path='/Payslip4'>
          <Payslip4 />
          </Route>
+
+         <Route path="/bonafide">
+            <Bonafide />
+          </Route>
 
             </>}
 
