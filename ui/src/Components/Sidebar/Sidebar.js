@@ -8,6 +8,8 @@ import "./Sidebar.css";
 import { Link, useLocation } from "react-router-dom";
 import { BiUserCheck } from "react-icons/bi";
 import { GiTakeMyMoney } from "react-icons/gi";
+import { SiHelpdesk } from "react-icons/si";
+import { VscReferences } from "react-icons/vsc";
 import ReactTooltip from "react-tooltip";
 function Sidebar() {
   const locationobj = useLocation();
@@ -15,10 +17,11 @@ function Sidebar() {
 
   return (
     
-    <div className="border weit h-100 shadow bgrd position-relative">
+
+    <div className="border weit h-100 shadow bgrd position-relative ">
       <ReactTooltip/>
       <div className={pathname === "/home" ? " sidebar-item" : ''}>
-        <div className="d-flex mt-3 selected " data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right" >
+        <div className="d-flex mt-2 selected " data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right" >
           <div className="m-2 button ">
             <button className="rounded shadow back" type="button" data-tip="Dashboard">
               <Link to="/home" className="text-decoration-none back">
@@ -34,7 +37,7 @@ function Sidebar() {
         </div>
       </div>
       <div className={pathname === "/company" ? " sidebar-item" : ''}>
-        <div className="d-flex mt-3 selected">
+        <div className="d-flex mt-2  selected">
           <div className="m-2  button ">
             <button className="rounded shadow back" data-tip="Companys">
               <Link to="/company" className="text-decoration-none back">
@@ -50,7 +53,7 @@ function Sidebar() {
         </div>
       </div>
       <div className={pathname === "/employees" ? " sidebar-item" : ""}>
-        <div className="d-flex mt-3 selected">
+        <div className="d-flex mt-2  selected">
           <div className="m-2 button ">
             <button className="rounded shadow back" data-tip="Employees">
               <Link to="/employees" className="text-decoration-none back">
@@ -66,7 +69,9 @@ function Sidebar() {
         </div>
       </div>
       <div className={pathname === "/buttons" ? " sidebar-item" : ""}>
-        <div className=" d-flex mt-3 selected">
+
+        <div className=" d-flex mt-2  selected">
+
           <div className="m-2 button ">
           <button className="rounded shadow back" data-tip="Reports">
             <Link to="/buttons" className="text-decoration-none back">
@@ -81,11 +86,16 @@ function Sidebar() {
         </div>
         </div>
       </div>
+     
+      
       <div className={pathname === "/documents" ? " sidebar-item" : ""}>
-        <div className="d-flex mt-3  selected">
+        <div className="d-flex mt-2   selected">
           <div className="m-2 button ">
             <button className="rounded shadow back" data-tip="Documents">
+
+
               <Link to="/uploaddocs" className="text-decoration-none back ">
+
                 <HiDocumentText />
               </Link>
             </button>
@@ -98,7 +108,9 @@ function Sidebar() {
         </div>
       </div>
       <div className={pathname === "/reimbursement" ? " sidebar-item" : ""}>
-        <div className="d-flex mt-3  selected">
+
+        <div className="d-flex mt-2   selected">
+
           <div className="m-2 button ">
             <button className="rounded shadow back" data-tip="Reimbursement">
               <Link to="/reimbursement" className="text-decoration-none back ">
@@ -114,7 +126,7 @@ function Sidebar() {
         </div>
       </div>
       <div className={pathname === "/attendenseForm" ? " sidebar-item" : ""}>
-        <div className=" d-flex mt-3 selected">
+        <div className=" d-flex mt-2  selected">
           <div className="m-2 button ">
 
             <button className="rounded shadow back" data-tip="Attendance">
@@ -132,9 +144,42 @@ function Sidebar() {
           </div>
         </div>
       </div>
+      <div className={pathname === "/refer" ? " sidebar-item" : ""}>
+        <div className=" d-flex mt-2  selected">
+          <div className="m-2 button ">
+          <button className="rounded shadow back" data-tip="Refer">
+            <Link to="/refer" className="text-decoration-none back">
+              <VscReferences />
+            </Link>
+          </button>
+        </div>
+        <div className="fw-semibold m-2 ">
+          <Link to="/refer" className="text-decoration-none  text-dark">
+          Refer
+          </Link>
+        </div>
+        </div>
+      </div>
+     
+      <div className={pathname === "/help" ? " sidebar-item" : ""}>
+        <div className=" d-flex mt-2  selected">
+          <div className="m-2 button ">
+          <button className="rounded shadow back" data-tip="Help">
+            <Link to="/help" className="text-decoration-none back">
+              <SiHelpdesk />
+            </Link>
+          </button>
+        </div>
+        <div className="fw-semibold m-2 ">
+          <Link to="/help" className="text-decoration-none  text-dark">
+          Help
+          </Link>
+        </div>
+        </div>
+      </div>
+     
 
-
-      <div className=" mt-3 w-100  position-absolute selected">
+      <div className=" mt-2 w-100  position-absolute selected">
         <div className={pathname === "/settings" ? " sidebar-item " : ""}>
           <div className="d-flex">
             <div className=" button m-2">

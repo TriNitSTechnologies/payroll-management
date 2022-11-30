@@ -1,0 +1,40 @@
+
+
+.maincontainer{
+    display: flex;
+   justify-content: between;
+
+    
+}
+/* .helpdata{
+   
+} */
+.bb{
+    margin-left: 232px;
+}
+.aa{
+    margin-left: 242px;
+}
+   .cc{
+    margin-left: 103px;
+   }
+   .dd{
+    margin-left: 265px;
+   }
+   .ee{
+    margin-left: 115px;
+   }
+   .ff{
+    margin-left: 132px;
+   }
+   .chatData{
+    width: 30px;
+    height: 30px;
+    border: 1px solid black;
+
+   }
+   .widthdata{
+    width: 96%;
+   }
+   
+   
