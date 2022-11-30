@@ -1,0 +1,32 @@
+.height {
+    height: 870px;
+    width: 75%;
+    /* background-color:#006699; */
+
+    background-color: azure;
+    
+}
+  
+
+  .ht {
+    height: 550px;
+    width: 75%;
+    background-color:aliceblue
+    
+
+    
+  }
+
+  .ml{
+    margin-left: 300px;
+  }
+  
+  .space{
+    margin-inline-start: 75px;
+  }
+
+  .Goback{
+    margin-bottom: 20px;
+  }
+
+ 

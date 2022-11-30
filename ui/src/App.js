@@ -45,6 +45,12 @@ import Attendense from "./Components/Attendense/Attendense";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
 
+
+ import Salary from "./Components/Salary/Salary"
+ import Preview from "./Components/Preview/Preview"
+
+
+
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -172,6 +178,15 @@ useEffect(()=>{
          <Route path='/Payslip4'>
          <Payslip4 />
          </Route>
+
+         <Route path="/salary">
+          <Salary />
+        </Route>
+
+        <Route path="/Preview">
+          <Preview />
+        </Route>
+
 
             </>}
           </Switch>
