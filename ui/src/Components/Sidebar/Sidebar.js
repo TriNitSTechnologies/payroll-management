@@ -85,13 +85,13 @@ function Sidebar() {
         <div className="d-flex mt-3  selected">
           <div className="m-2 button ">
             <button className="rounded shadow back" data-tip="Documents">
-              <Link to="/documents" className="text-decoration-none back ">
+              <Link to="/uploaddocs" className="text-decoration-none back ">
                 <HiDocumentText />
               </Link>
             </button>
           </div>
           <div className="fw-semibold m-2 ">
-            <Link to="/documents" className="text-decoration-none text-dark ">
+            <Link to="/uploaddocs" className="text-decoration-none text-dark ">
               Documents
             </Link>
           </div>

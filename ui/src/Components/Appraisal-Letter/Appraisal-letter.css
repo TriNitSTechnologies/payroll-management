@@ -1,0 +1,14 @@
+.app-let-tag{
+    width: 70vw;
+    background-color:white;
+}
+
+@media print{
+    .app-let-tag{
+        width: 100%;
+    }
+
+    .data-lo-print{
+        margin-top: 50%;
+    }
+}
