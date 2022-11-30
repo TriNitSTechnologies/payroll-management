@@ -10,6 +10,11 @@ import Company from "./Components/Company/Company";
 import Employees from "./Components/Employees/Employees";
 import Settings from "./Components/Settings/Settings";
 import Documents from "./Components/Documents/Documents";
+
+import Help from "./Components/Help/Help";
+import Refer from "./Components/Refer/Refer";
+import AddressProof from "./Components/AddressProof/AddressProof";
+import AddressProofForm from "./Components/AddressProofForm/AddressProofForm";
 import { useEffect, useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
@@ -33,29 +38,19 @@ import Notifications from "./Components/Notifications/Notifications";
 import MainHead from "./Components/MainPage/Main-Head";
 import PrintAppoiement from "./Components/LetterofAppointment/Appointment.print";
 import Upload from "./Components/upload-documents/upload-documents";
-
-
-
-
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
 import Reimbursement from "./Components/Reimbursement/Reimbursement";
 import Appointment from "./Components/Documents/Appointment";
 import OfferLetter from "./Components/Appointment/OfferLetter";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
-
 import Appraisal from "./Components/Appraisal-Form/Appraisal-form";
 import AppraisalLetter from "./Components/Appraisal-Letter/Appraisal-letter";
 import AppraisalDocument from "./Components/Appraisal-Doc/Appraisal-Doc";
 
 import Payslip5 from "./Components/payslip5/payslip5";
-
-
-
  import Salary from "./Components/Salary/Salary"
  import Preview from "./Components/Preview/Preview"
-
-
 
 function App() {
   let userrouter = useHistory()
@@ -99,6 +94,7 @@ function App() {
         </div>
         <div className="main">
           <Switch>
+          
             {!isUserLoggedIn && <>
 
               <Route path="/report">
@@ -219,6 +215,12 @@ function App() {
                 <Payslip5 />
 
               </Route>
+              <Route path="/help">
+              <Help />
+            </Route>
+            <Route path="/refer">
+              <Refer />
+            </Route>
 
 
 
@@ -228,6 +230,7 @@ function App() {
 
             </>
             }
+
 
           </Switch>
         </div>
