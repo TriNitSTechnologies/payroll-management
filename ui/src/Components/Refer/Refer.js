@@ -10,14 +10,14 @@ function Refer() {
   const formik = useFormik({
     initialValues: {
       Name: "",
-      EmailAddress: "",
+      Emailaddress: "",
       PhoneNumber: "",
 
     },
     validationSchema: Yup.object({
       Name: Yup.string().trim().required("Name is reuired"),
-      EmailAddress: Yup.string().trim().required("EmailAddress is required"),
-      PhoneNumber: Yup.string().trim().required("PhoneNumber is required")
+      Emailaddress: Yup.string().trim().required("Email address is required"),
+      PhoneNumber: Yup.string().trim().required("Phone number is required")
 
 
     }),
@@ -78,10 +78,10 @@ function Refer() {
             <div className="w-50 m-2 p-2">
 
               <b>Email address </b>
-              <input type="Email address" className="form-control" placeholder="Email address" name="EmailAddress"{...formik.getFieldProps("EmailAddress")} />
+              <input type="email" className="form-control" placeholder="Email address" name="Emailaddress"{...formik.getFieldProps("Emailaddress")} />
               {
                 <div className="text-danger">
-                  <small>{formik.errors.EmailAddress}</small>
+                  <small>{formik.errors.Emailaddress}</small>
                 </div>
               }
             </div>
