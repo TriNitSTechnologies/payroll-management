@@ -7,17 +7,20 @@ import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
 import "./Sidebar.css";
 import { Link, useLocation } from "react-router-dom";
 import { BiUserCheck } from "react-icons/bi";
-
+import { GiTakeMyMoney } from "react-icons/gi";
+import ReactTooltip from "react-tooltip";
 function Sidebar() {
   const locationobj = useLocation();
   const pathname = locationobj.pathname;
 
   return (
+    
     <div className="border weit h-100 shadow bgrd position-relative">
-      <div className={pathname === "/" ? " sidebar-item" : ''}>
-        <div className="d-flex mt-3 selected">
+      <ReactTooltip/>
+      <div className={pathname === "/home" ? " sidebar-item" : ''}>
+        <div className="d-flex mt-3 selected " data-bs-toggle="tooltip" data-bs-placement="right" data-bs-title="Tooltip on right" >
           <div className="m-2 button ">
-            <button className="rounded shadow back">
+            <button className="rounded shadow back" type="button" data-tip="Dashboard">
               <Link to="/home" className="text-decoration-none back">
                 <BsHouseFill />
               </Link>
@@ -33,7 +36,7 @@ function Sidebar() {
       <div className={pathname === "/company" ? " sidebar-item" : ''}>
         <div className="d-flex mt-3 selected">
           <div className="m-2  button ">
-            <button className="rounded shadow back">
+            <button className="rounded shadow back" data-tip="Companys">
               <Link to="/company" className="text-decoration-none back">
                 <HiOutlineBuildingOffice2 />
               </Link>
@@ -41,7 +44,7 @@ function Sidebar() {
           </div>
           <div className="fw-semibold m-2 ">
             <Link to="/company" className="text-decoration-none  text-dark">
-              Company
+              Companys
             </Link>
           </div>
         </div>
@@ -49,7 +52,7 @@ function Sidebar() {
       <div className={pathname === "/employees" ? " sidebar-item" : ""}>
         <div className="d-flex mt-3 selected">
           <div className="m-2 button ">
-            <button className="rounded shadow back">
+            <button className="rounded shadow back" data-tip="Employees">
               <Link to="/employees" className="text-decoration-none back">
                 <MdOutlinePeopleAlt />
               </Link>
@@ -62,10 +65,10 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      <div className={pathname === "/report" ? " sidebar-item" : ""}>
+      <div className={pathname === "/buttons" ? " sidebar-item" : ""}>
         <div className=" d-flex mt-3 selected">
-<div className="m-2 button ">
-          <button className="rounded shadow back">
+          <div className="m-2 button ">
+          <button className="rounded shadow back" data-tip="Reports">
             <Link to="/buttons" className="text-decoration-none back">
               <TbAddressBook />
             </Link>
@@ -81,46 +84,61 @@ function Sidebar() {
       <div className={pathname === "/documents" ? " sidebar-item" : ""}>
         <div className="d-flex mt-3  selected">
           <div className="m-2 button ">
-            <button className="rounded shadow back">
-              <Link to="/documents" className="text-decoration-none back ">
+            <button className="rounded shadow back" data-tip="Documents">
+              <Link to="/uploaddocs" className="text-decoration-none back ">
                 <HiDocumentText />
               </Link>
             </button>
           </div>
           <div className="fw-semibold m-2 ">
-            <Link to="/documents" className="text-decoration-none text-dark ">
+            <Link to="/uploaddocs" className="text-decoration-none text-dark ">
               Documents
             </Link>
           </div>
-
-
         </div>
       </div>
-
-    
-      <div className={pathname === "/Attendense" ? " sidebar-item" : ""}>
+      <div className={pathname === "/reimbursement" ? " sidebar-item" : ""}>
+        <div className="d-flex mt-3  selected">
+          <div className="m-2 button ">
+            <button className="rounded shadow back" data-tip="Reimbursement">
+              <Link to="/reimbursement" className="text-decoration-none back ">
+                <GiTakeMyMoney />
+              </Link>
+            </button>
+          </div>
+          <div className="fw-semibold m-2 ">
+            <Link to="/reimbursement" className="text-decoration-none text-dark ">
+              Reimbursement
+            </Link>
+          </div>
+        </div>
+      </div>
+      <div className={pathname === "/attendenseForm" ? " sidebar-item" : ""}>
         <div className=" d-flex mt-3 selected">
           <div className="m-2 button ">
-            <button className="rounded shadow back">
+
+            <button className="rounded shadow back" data-tip="Attendance">
               <Link to="/Attendense" className="text-decoration-none back">
+
                 <BiUserCheck />
               </Link>
             </button>
           </div>
           <div className="fw-semibold m-2 ">
-            <Link to="/Attendense" className="text-decoration-none  text-dark">
-            Attendance
+            <Link to="/attendenseForm" className="text-decoration-none  text-dark">
+              Attendance
+
             </Link>
           </div>
         </div>
       </div>
 
-      
+
       <div className=" mt-3 w-100  position-absolute selected">
         <div className={pathname === "/settings" ? " sidebar-item " : ""}>
           <div className="d-flex">
             <div className=" button m-2">
-              <button className="rounded shadow back">
+              <button className="rounded shadow back" data-tip="Settings">
                 <Link to="/settings" className="text-decoration-none back">
                   <AiFillSetting />
                 </Link>
