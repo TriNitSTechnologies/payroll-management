@@ -1,8 +1,10 @@
 import { ErrorMessage, Field, Form, Formik } from "formik";
+import { useDispatch } from "react-redux";
+import { useHistory } from "react-router-dom";
 import * as Yup from "yup";
 import "./appointment.css";
 
-export default function Appointment(props) {
+export default function OfferLetter(props) {
   return (
     <Formik
       initialValues={{
@@ -32,29 +34,19 @@ export default function Appointment(props) {
         hrName: Yup.string().required("HR Name is requried"),
       })}
       onSubmit={(values) =>{
-        props.DataTransfer(values)
-        alert(JSON.stringify(values));
+        props.OfferLetter(values)
       }}
     >
       <div>
         <Form>
-          <div className="card m-4 pay shadow ">
-            <div className="card-body d-flex justify-content-between ">
-              <div>
-                <small className="fs-6">Home </small>
-              </div>
-              <div>
-                <h5>Appointment Letter</h5>
-              </div>
-            </div>
-          </div>
-          <div className="card m-4 shadow ">
+          <div className="card mt-4  shadow ">
             <div className="card-header">
-              <h5>Appointment letter details</h5>
+              <h4 className="fw-bold">Offer letter details</h4>
             </div>
             <div className="card-body pay">
               <div className="d-flex  justify-content-evenly">
                 <div className="col-5 m-2">
+                  <div className="mb-3 fw-bold">Company Name</div>
                   <Field
                     className="form-control p-3  "
                     name="companyName"
@@ -67,6 +59,8 @@ export default function Appointment(props) {
                   </small>
                 </div>
                 <div className="col-5  m-2">
+                <div className="mb-3 fw-bold">Company Address</div>
+
                   <Field
                     className="form-control p-3"
                     name="companyAddress"
@@ -80,17 +74,19 @@ export default function Appointment(props) {
               </div>
               <div className="d-flex justify-content-evenly">
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Current Date</div>
                   <Field
                     className="form-control p-3"
                     name="currentDate"
                     placeholder="Current date"
-                    type="text"
+                    type="date"
                   />
                   <small className="text-danger">
                     <ErrorMessage name="currentDate" />
                   </small>
                 </div>
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Employee Name</div>
                   <Field
                     className="form-control p-3"
                     name="employeeName"
@@ -104,6 +100,7 @@ export default function Appointment(props) {
               </div>
               <div className="d-flex justify-content-evenly">
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Job Title</div>
                   <Field
                     className="form-control p-3"
                     name="jobTitle"
@@ -115,6 +112,7 @@ export default function Appointment(props) {
                   </small>
                 </div>
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Annual CTC</div>
                   <Field
                     className="form-control p-3"
                     name="annualCTC"
@@ -128,6 +126,7 @@ export default function Appointment(props) {
               </div>
               <div className="d-flex justify-content-evenly">
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Manager Name</div>
                   <Field
                     className="form-control p-3"
                     name="managerName"
@@ -139,11 +138,12 @@ export default function Appointment(props) {
                   </small>
                 </div>
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Employee Joining Date</div>
                   <Field
                     className="form-control p-3"
                     name="employeeJoiningDate"
                     placeholder="Employee joining date"
-                    type="text"
+                    type="date"
                   />
                   <small className="text-danger">
                     <ErrorMessage name="employeeJoiningDate" />
@@ -152,17 +152,19 @@ export default function Appointment(props) {
               </div>
               <div className="d-flex justify-content-evenly">
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">Acceptance Last Date</div>
                   <Field
                     className="form-control p-3"
                     name="acceptanceLastDate"
                     placeholder="Acceptance last date"
-                    type="text"
+                    type="date"
                   />
                   <small className="text-danger">
                     <ErrorMessage name="acceptanceLastDate" />
                   </small>
                 </div>
                 <div className="col-5  m-2">
+                  <div className="mb-3 fw-bold">HR Name</div>
                   <Field
                     className="form-control p-3"
                     name="hrName"
@@ -176,7 +178,7 @@ export default function Appointment(props) {
               </div>
 
               <div className="d-flex justify-content-evenly">
-                <div className="col-5  ">
+                <div>
                   <div className="form-check">
                     <input
                       className="form-check-input"
@@ -184,13 +186,13 @@ export default function Appointment(props) {
                       value=""
                       id="flexCheckChecked"
                     />
-                    <label
-                      className="form-check-label "
+                   <label
+                      className="form-check-label"
                       htmlFor="flexCheckChecked"
                     >
-                      Include Xpayroll generated salary structure from annual
-                      CTC
+                      Include Xpayroll generated salary structure from annual CTC
                     </label>
+
                   </div>
                 </div>
                 <div className="col-5  m-2"></div>
@@ -198,7 +200,7 @@ export default function Appointment(props) {
             </div>
           </div>
 
-          <div className=" ms-4  ">
+          <div className=" mt-3 ">
             <button className="btn btn-primary btn-lg ">GENERATE LETTER</button>
           </div>
         </Form>

@@ -17,6 +17,7 @@ function Sidebar() {
 
   return (
     
+
     <div className="border weit h-100 shadow bgrd position-relative ">
       <ReactTooltip/>
       <div className={pathname === "/home" ? " sidebar-item" : ''}>
@@ -68,7 +69,9 @@ function Sidebar() {
         </div>
       </div>
       <div className={pathname === "/buttons" ? " sidebar-item" : ""}>
+
         <div className=" d-flex mt-2  selected">
+
           <div className="m-2 button ">
           <button className="rounded shadow back" data-tip="Reports">
             <Link to="/buttons" className="text-decoration-none back">
@@ -89,20 +92,25 @@ function Sidebar() {
         <div className="d-flex mt-2   selected">
           <div className="m-2 button ">
             <button className="rounded shadow back" data-tip="Documents">
-              <Link to="/documents" className="text-decoration-none back ">
+
+
+              <Link to="/uploaddocs" className="text-decoration-none back ">
+
                 <HiDocumentText />
               </Link>
             </button>
           </div>
           <div className="fw-semibold m-2 ">
-            <Link to="/documents" className="text-decoration-none text-dark ">
+            <Link to="/uploaddocs" className="text-decoration-none text-dark ">
               Documents
             </Link>
           </div>
         </div>
       </div>
       <div className={pathname === "/reimbursement" ? " sidebar-item" : ""}>
+
         <div className="d-flex mt-2   selected">
+
           <div className="m-2 button ">
             <button className="rounded shadow back" data-tip="Reimbursement">
               <Link to="/reimbursement" className="text-decoration-none back ">
