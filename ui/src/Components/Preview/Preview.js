@@ -4,7 +4,7 @@ function Preview() {
   return (
     <div>
       <div className=" border p-4 shadow m-auto mt-4 mb-4 rounded height ">
-        <div className="mb-2 ms-2 fw-black">Offer Letter|Salary Preview</div>
+        <div className="mb-2 ms-2 fw-black">Offer Letter| <small className="fw-semibold">Salary Preview</small></div>
         <h2 className="fw-bold ms-2 ">Salary Preview</h2>
 
         <div className="w-75 fw-black  p-4 shadow m-auto mt-4 mb-4 rounded ht  ms-1">
@@ -63,16 +63,16 @@ function Preview() {
         </div>
             
             <div className="fw-black">
-       <div>
-        <small>
+       <div className="mb-3">
+        <small className="fw-semibold">
             Estimated taxable income at the end of FY:0
         </small>
         <div>
-        <small>Estimated monthly in-hand salary:10,000</small>
+        <small className="fw-semibold">Estimated monthly in-hand salary:10,000</small>
         </div>
        </div>
          
-         <small>*Estimated taxable tax, assuming 01/11/2022 as the hiring date, and zero post income. actual</small>
+         <small>* Estimated taxable tax, assuming 01/11/2022 as the hiring date, and zero post income. actual</small>
          <div>
             <small>TDS might be different, depending on employee's joining date, past income, tax</small>
          </div>

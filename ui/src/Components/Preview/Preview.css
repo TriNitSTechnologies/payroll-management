@@ -1,9 +1,9 @@
 .height {
-    height: 870px;
+    height: auto;
     width: 75%;
     /* background-color:#006699; */
 
-    background-color: azure;
+    background-color: white;
     
 }
   
@@ -11,7 +11,7 @@
   .ht {
     height: 550px;
     width: 75%;
-    background-color:aliceblue
+    background-color:white
     
 
     
