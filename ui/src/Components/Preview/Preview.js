@@ -9,54 +9,54 @@ function Preview() {
 
         <div className="w-75 fw-black  p-4 shadow m-auto mt-4 mb-4 rounded ht  ms-1">
           <div className="d-flex">
-            <div>
+            <div className="">
               <h3>Salary breakup</h3>
 
-              <div class="shadow p-3 mb-4 rounded">
-                <span>Salary Component</span>
-                <span className="ms-3">Amount</span>
+              <div class="border p-3 mb-4 rounded d-flex justify-content-between">
+                <div>Salary Component</div>
+                <div className="ms-3 ">Amount</div>
               </div>
 
-              <div class="shadow p-3 mb-4 rounded">
-                <span>Basic Salary</span>
-                <span className="ms-3">5,000</span>
+              <div class="border p-3 mb-4 rounded d-flex justify-content-between ">
+                <div>Basic Salary</div>
+                <div className="float-end">5,000</div>
               </div>
 
-              <div class="shadow p-3 mb-4 rounded">
-                <span>HRA</span>
-                <span className="ms-3">2,500</span>
+              <div class="border p-3 mb-4 rounded d-flex justify-content-between">
+                <div>HRA</div>
+                <div className="ms-3">2,500</div>
               </div>
 
-              <div class="shadow p-3 mb-4 rounded">
-                <span>Special Allowance</span>
-                <span className="ms-3">1,500</span>
+              <div class="border p-3 mb-4 rounded  d-flex justify-content-between ">
+                <div>Special Allowance</div>
+                <div className="ms-3">1,500</div>
               </div>
 
-              <div class="shadow p-3 mb-4 rounded">
-                <span>Leave & Travel Allowance</span>
-                <span className="ms-3">1,000</span>
+              <div class="border p-3 mb-4 rounded d-flex justify-content-between">
+                <div>Leave & Travel Allowance</div>
+                <div className="ms-3">1,000</div>
               </div>
 
-              <div class="shadow p-3 mb-4 rounded">
-                <span>Total</span>
-                <span className="ms-3">10,000</span>
+              <div class="border p-3 mb-4 rounded d-flex justify-content-between ">
+                <div>Total</div>
+                <div className="ms-3">10,000</div>
               </div>
             </div>
 
             <div className="ms-5">
 
              <h3> Deducations</h3>
-              <div class="shadow p-3 mb-4 rounded">
-                <span>Deducation</span>
-                <span className="ms-3">Amount</span>
+              <div class="border p-3 mb-4 rounded d-flex justify-content-between">
+                <div>Deducation</div>
+                <div className="ms-3">Amount</div>
               </div>
-              <div class="shadow p-3 mb-4 rounded">
-                <span>TDS (estimate)*</span>
-                <span className="ms-3">0</span>
+              <div class="border p-3 mb-4 rounded d-flex justify-content-between ">
+                <div>TDS (estimate)*</div>
+                <div className="ms-3">0</div>
               </div>
-              <div class="shadow p-3  mb-4 rounded">
-                <span>Total</span>
-                <span className="ms-3">0</span>
+              <div class="border p-3  mb-4 rounded d-flex justify-content-between">
+                <div>Total</div>
+                <div className="ms-3">0</div>
               </div>
             </div>
           </div>
@@ -84,7 +84,7 @@ function Preview() {
 
          <div className="mt-2">
 
-            <button className="btn btn-primary ">Go back</button>
+            <button className="btn btn-primary">Go back</button>
          </div>
       </div>
       </div>
