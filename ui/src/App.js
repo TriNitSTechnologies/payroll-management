@@ -49,6 +49,8 @@ import AppraisalLetter from "./Components/Appraisal-Letter/Appraisal-letter";
 import AppraisalDocument from "./Components/Appraisal-Doc/Appraisal-Doc";
 
 import Payslip5 from "./Components/payslip5/payslip5";
+import Bonafide from "./Components/Bonafide/bonafide";
+
 function App() {
   let userrouter = useHistory()
   const [sidebarstatus, setSidebarStatus] = useState(false);
@@ -91,7 +93,116 @@ function App() {
         </div>
         <div className="main">
           <Switch>
+          {!isUserLoggedIn && <>
+            
+            <Route path="/report">
+              <Report />
+            </Route>
+            <Route path="/forgot-password">
+              <ForgotPassword />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="/" exact>
+            <Mainbody/>
+            </Route>
+            
+            <Route path="/login">
+              <Login />
+            </Route>
+          </> }
+             
+            {isUserLoggedIn && <>
+            <Route path="/report">
+              <Report />
+            </Route>
+            <Route path="/company">
+              <Company />
+            </Route>
+            <Route path="/employees">
+              <Employees />
+            </Route>
+            <Route path="/reimbursement">
+              <Reimbursement/>
+            </Route>
+            <Route path="/settings">
+              <Settings />
+            </Route>
+            <Route path="/Attendense" >
+              <AttendenseForm />
+            </Route>
+
+            <Route path="/documents">
+              <Documents />
+            </Route>
+            <Route path="/Payslips">
+              <Payslips/>
+            </Route>
+            <Route path="/home" exact>
+              <Home />
+            </Route>
+            <Route path="/appointment">
+              <Appointment />
+            </Route>
+            <Route path="/Payslip1">
+            <Payslip1 />
+            </Route>
+            <Route path="/Payslip2">
+            <Payslip2 />
+            </Route>
+            <Route path="/Payslip3">
+            <Payslip3 />
+            </Route>
+            <Route path="/buttons">
+            <Buttons />
+            </Route>
           
+
+            <Route path="/offer-letter">
+              <OfferLetter />
+            </Route>
+            <Route path="profile">
+              <MyProfile />
+            </Route>
+            <Route path="PrintAppoiement">
+              <PrintAppoiement />
+            </Route>
+            <Route path="/notifications">
+              <Notifications/>
+            </Route>
+ 
+            <Route path="/uploadD">
+              <Upload/>
+            </Route>
+
+
+            <Route path='/profile'>
+              <MyProfile/>
+            </Route>
+
+            <Route path='/details'>
+                <Details/>
+            </Route>
+
+            <Route path='/selectprofile'>
+              <SelectProfile />
+            </Route>
+
+            <Route path='/Payslip5'>
+              <Payslip5/>
+            </Route>
+
+
+          
+         <Route path='/Payslip4'>
+         <Payslip4 />
+         </Route>
+
+         <Route path="/bonafide">
+            <Bonafide />
+          </Route>
+
             {!isUserLoggedIn && <>
 
               <Route path="/report">
@@ -110,6 +221,7 @@ function App() {
               <Route path="/login">
                 <Login />
               </Route>
+
             </>}
 
             {isUserLoggedIn && <>
