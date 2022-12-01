@@ -4,9 +4,15 @@ import com.trinitstechnologies.payroll.dto.CompanyDetailsDto;
 import com.trinitstechnologies.payroll.dto.EmployeeDataDto;
 import com.trinitstechnologies.payroll.dto.EmployeePayrollDataDto;
 import com.trinitstechnologies.payroll.dto.PayrollRequestDataDto;
+import com.trinitstechnologies.payroll.model.CompanyDetailsModel;
+import com.trinitstechnologies.payroll.model.EmployeeDetailsModel;
+import com.trinitstechnologies.payroll.repository.CompanyDetailsRepository;
+import com.trinitstechnologies.payroll.repository.EmployeeDetailsRepository;
 import com.trinitstechnologies.payroll.service.PayrollService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.BeanUtils;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Repository;
 import org.springframework.stereotype.Service;
 import org.springframework.util.StringUtils;
 
@@ -23,121 +29,11 @@ import java.util.Optional;
 @Slf4j
 @Service
 public class PayrollServiceImpl implements PayrollService {
-    List<CompanyDetailsDto> companyDetailsList = new ArrayList<>();
-    List<EmployeeDataDto> employeeDataDtoList = new ArrayList<>();
+    @Autowired
+    private EmployeeDetailsRepository employeeDetailsRepository;
 
-    public List<CompanyDetailsDto> getCompanies() {
-        final List<CompanyDetailsDto> CompanyDetailsDtoList = generateCompanies();
-        return CompanyDetailsDtoList;
-    }
-
-    public CompanyDetailsDto createCompany(CompanyDetailsDto dto) {
-        final List<CompanyDetailsDto> CompanyDetailsDtoList = generateCompanies();
-        dto.setId((long) (Math.random() * 100000));
-
-        if (Objects.isNull(dto)) {
-            throw new RuntimeException("CompanyDetail dto is null");
-        }
-
-        Optional<CompanyDetailsDto> companyDetailsDto = CompanyDetailsDtoList.stream()
-                .filter(companyDetails -> companyDetails.getCompanyName()
-                        .equalsIgnoreCase(dto.getCompanyName())).findFirst();
-        if (companyDetailsDto.isPresent()) {
-            throw new RuntimeException("Another company exist with the given name " + dto.getCompanyName());
-        }
-
-        CompanyDetailsDtoList.add(dto);
-        return dto;
-    }
-
-
-    public CompanyDetailsDto updateCompanyDetails(Long companyId, CompanyDetailsDto dto) {
-        final List<CompanyDetailsDto> companyDetailsDtoList = generateCompanies();
-
-        if (Objects.isNull(dto)) {
-            throw new RuntimeException("Company details can't be null");
-        }
-
-        Optional<CompanyDetailsDto> first = companyDetailsDtoList.stream()
-                .filter(user -> companyId.equals(user.getId())).findFirst();
-        if (!first.isPresent()) {
-            throw new RuntimeException("Company not exist with the given id " + companyId);
-        }
-
-        final CompanyDetailsDto findFirst = first.get();
-        BeanUtils.copyProperties(dto, findFirst);
-        return dto;
-    }
-
-    public Boolean deleteCompany(Long companyId) {
-        final List<CompanyDetailsDto> companyDetailsDtoList = generateCompanies();
-        Optional<CompanyDetailsDto> first = companyDetailsDtoList.stream()
-                .filter(user -> companyId.equals(user.getId())).findFirst();
-        if (!first.isPresent()) {
-            throw new RuntimeException("Company not exist with the given id " + companyId);
-        }
-
-        final CompanyDetailsDto findFirst = first.get();
-        companyDetailsDtoList.remove(findFirst);
-        return true;
-    }
-
-    public List<EmployeeDataDto> getEmployees() {
-        final List<EmployeeDataDto> EmployeeDataDtoList = generateEmployees();
-
-        return EmployeeDataDtoList;
-    }
-
-    public EmployeeDataDto createEmployee(EmployeeDataDto dto) {
-        final List<EmployeeDataDto> employeeDataDtoList = generateEmployees();
-        dto.setId((long) (Math.random() * 100000));
-
-        if (Objects.isNull(dto)) {
-            throw new RuntimeException("Employee dto is null");
-        }
-
-        Optional<EmployeeDataDto> employeeData = employeeDataDtoList.stream()
-                .filter(companyDetails -> companyDetails.getEmpNo()
-                        .equalsIgnoreCase(dto.getEmpNo())).findFirst();
-        if (employeeData.isPresent()) {
-            throw new RuntimeException("Another employee exist with the given emp no " + dto.getEmpNo());
-        }
-
-        employeeDataDtoList.add(dto);
-        return dto;
-    }
-
-
-    public EmployeeDataDto updateEmployee(Long employeeId, EmployeeDataDto dto) {
-        final List<EmployeeDataDto> employeeDataDtoList = generateEmployees();
-
-        if (Objects.isNull(dto)) {
-            throw new RuntimeException("Employee details can't be null");
-        }
-
-        Optional<EmployeeDataDto> first = employeeDataDtoList.stream()
-                .filter(user -> employeeId.equals(user.getId())).findFirst();
-        if (!first.isPresent()) {
-            throw new RuntimeException("Invalid employee id " + employeeId);
-        }
-
-        final EmployeeDataDto findFirst = first.get();
-        BeanUtils.copyProperties(dto, findFirst);
-        return dto;
-    }
-
-    public Boolean deleteEmployee(Long employeeId) {
-        final List<EmployeeDataDto> EmployeeDataDtoList = generateEmployees();
-        Optional<EmployeeDataDto> first = EmployeeDataDtoList.stream()
-                .filter(user -> employeeId.equals(user.getId())).findFirst();
-        if (!first.isPresent()) {
-            throw new RuntimeException("Can't delete employee, Invalid employee id " + employeeId);
-        }
-
-        final EmployeeDataDto findFirst = first.get();
-        employeeDataDtoList.remove(findFirst);
-        return true;
-    }
+    @Autowired
+    private CompanyDetailsRepository companyDetailsRepository;
 
     @Override
     public EmployeePayrollDataDto generatePayrollData(PayrollRequestDataDto dto) {
@@ -159,25 +55,29 @@ public class PayrollServiceImpl implements PayrollService {
             throw new RuntimeException("Gross salary can't be less than 1000");
         }
 
-        List<EmployeeDataDto> employees = getEmployees();
-        Optional<EmployeeDataDto> employeeData = employees.stream()
-                .filter(employee -> empNo.equalsIgnoreCase(employee.getEmpNo())).findFirst();
+        Optional<EmployeeDetailsModel> employeeData = employeeDetailsRepository.getEmployeeByEmpNo(empNo);
+
 
         if (!employeeData.isPresent()) {
             throw new RuntimeException("No employee available with the given id " + empNo);
         }
 
-        List<CompanyDetailsDto> companies = getCompanies();
-        Optional<CompanyDetailsDto> companyDetailsData = companies.stream()
-                .filter(employee -> companyName.equalsIgnoreCase(employee.getCompanyName())).findFirst();
-
-        if (!companyDetailsData.isPresent()) {
-            throw new RuntimeException("No company available with the given name. " + empNo);
+        Optional<CompanyDetailsModel> companyByCompanyName = companyDetailsRepository.getCompanyByCompanyName(companyName);
+        if (!companyByCompanyName.isPresent()) {
+            throw new RuntimeException("No company available with the given name. " + companyName);
         }
 
         EmployeePayrollDataDto payrollDataDto = new EmployeePayrollDataDto();
-        payrollDataDto.setEmployeeData(employeeData.get());
-        payrollDataDto.setCompanyDetails(companyDetailsData.get());
+        EmployeeDetailsModel employeeDetailsModel = employeeData.get();
+        EmployeeDataDto employeeDataDto = new EmployeeDataDto();
+        BeanUtils.copyProperties(employeeDetailsModel, employeeDataDto);
+        payrollDataDto.setEmployeeData(employeeDataDto);
+
+        CompanyDetailsModel companyDetailsModel = companyByCompanyName.get();
+        CompanyDetailsDto companyDetailsDto = new CompanyDetailsDto();
+        BeanUtils.copyProperties(companyDetailsModel, companyDetailsDto);
+
+        payrollDataDto.setCompanyDetails(companyDetailsDto);
         payrollDataDto.setNoOfWorkingDays(dto.getNoOfWorkingDays());
         payrollDataDto.setDateOfMonth(LocalDate.now().toString());//TODO set correct here.
 
@@ -219,43 +119,5 @@ public class PayrollServiceImpl implements PayrollService {
     }
 
 
-    private List<EmployeeDataDto> generateEmployees() {
-        if (employeeDataDtoList.isEmpty()) {
-            for (int i = 0; i < 10; i++) {
-                EmployeeDataDto user = new EmployeeDataDto();
-                user.setId(i + 1);
-                user.setDesignation("Software engineer");
-                user.setBankAccount("5020223" + ((int) (Math.random() * 10000)));
-                user.setDoj(LocalDate.now().minusMonths(((int) (Math.random() * 10))));
-                user.setEmpName("TriNitS" + i);
-                user.setPan("PAN" + (int) (Math.random() * 100000));
-                user.setEmpNo("TRINITS-" + (i + 1));
-
-                employeeDataDtoList.add(user);
-            }
-        }
-        return employeeDataDtoList;
-    }
-
-
-    private List<CompanyDetailsDto> generateCompanies() {
-        if (companyDetailsList.isEmpty()) {
-            for (int i = 0; i < 10; i++) {
-                CompanyDetailsDto user = new CompanyDetailsDto();
-                user.setId(i + 1);
-                user.setAddressLine1("Naidupeta " + i);
-                user.setAddressLine2("Nellore " + i);
-                user.setCreatedDate(LocalDate.now());
-                user.setCompanyName("TriNitS Technlogogies " + i);
-                user.setLogoName("trinits.jpg");
-                user.setLandMark("Muncipality office");
-                user.setPinCode("524421");
-                user.setTown("Nellore");
-                user.setState("Andhra pradesh");
-                user.setMobileNumber("95000" + ((int) Math.random() * 100000));
-                companyDetailsList.add(user);
-            }
-        }
-        return companyDetailsList;
-    }
 }
+

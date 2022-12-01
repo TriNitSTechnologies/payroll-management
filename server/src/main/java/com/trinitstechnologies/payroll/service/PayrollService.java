@@ -22,22 +22,22 @@ public interface PayrollService {
     double BONUS = 1;
 
 
-    List<CompanyDetailsDto> getCompanies();
+    //List<CompanyDetailsDto> getCompanies();
 
-    CompanyDetailsDto createCompany(CompanyDetailsDto dto);
+    //CompanyDetailsDto createCompany(CompanyDetailsDto dto);
 
-    CompanyDetailsDto updateCompanyDetails(Long companyId, CompanyDetailsDto dto);
+    //CompanyDetailsDto updateCompanyDetails(Long companyId, CompanyDetailsDto dto);
 
-    Boolean deleteCompany(Long companyId);
+    //Boolean deleteCompany(Long companyId);
 
 
-    List<EmployeeDataDto> getEmployees();
+    //List<EmployeeDataDto> getEmployees();
 
-    EmployeeDataDto createEmployee(EmployeeDataDto dto);
+    //EmployeeDataDto createEmployee(EmployeeDataDto dto);
 
-    EmployeeDataDto updateEmployee(Long companyId, EmployeeDataDto dto);
+    //EmployeeDataDto updateEmployee(Long companyId, EmployeeDataDto dto);
 
-    Boolean deleteEmployee(Long companyId);
+    //Boolean deleteEmployee(Long companyId);
 
     EmployeePayrollDataDto generatePayrollData(PayrollRequestDataDto dto);
 }

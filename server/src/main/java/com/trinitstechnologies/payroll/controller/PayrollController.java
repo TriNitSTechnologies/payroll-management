@@ -24,20 +24,11 @@ public class PayrollController {
     private PayrollService payrollService;
 
     @PostMapping
-    public ResponseEntity<EmployeePayrollDataDto> generatePayrollData(@RequestBody PayrollRequestDataDto dto,
-                                                                      @RequestParam(name = "authorization", required = false) String authorizationParam,
-                                                                      HttpServletRequest request) {
+    public ResponseEntity<EmployeePayrollDataDto> generatePayrollData(@RequestBody PayrollRequestDataDto dto) {
         if (Objects.isNull(dto)) {
             throw new RuntimeException("Request dto is null");
         }
 
-        String header = request.getHeader("Authorization-key");
-
-        //This is just backward compatiblity from swagger
-        header = Objects.nonNull(header) ? header : authorizationParam;
-        if (!StringUtils.hasText(header)) {
-            throw new UnAuthorizedException("Your are not authorized");
-        }
 
         return ResponseEntity.ok(payrollService.generatePayrollData(dto));
     }

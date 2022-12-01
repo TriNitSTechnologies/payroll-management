@@ -92,8 +92,6 @@ public class leaveCalenderServiceImpl implements LeaveCalenderService {
           LeaveCalenderModel leaveCalenderModel = findById.get();
           BeanUtils.copyProperties(leaveCalenderModel,dto);
 
-//          List<LeaveCalenderModel> leaves = leaveCalenderRepository.findById(leaveCalenderModel.getId());
-//         List<String>
       }
         return dto;
     }
