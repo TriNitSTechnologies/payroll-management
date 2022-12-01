@@ -49,6 +49,8 @@ import AppraisalLetter from "./Components/Appraisal-Letter/Appraisal-letter";
 import AppraisalDocument from "./Components/Appraisal-Doc/Appraisal-Doc";
 
 import Payslip5 from "./Components/payslip5/payslip5";
+ import Salary from "./Components/Salary/Salary"
+ import Preview from "./Components/Preview/Preview"
 import Bonafide from "./Components/Bonafide/bonafide";
 
 function App() {
@@ -218,6 +220,13 @@ function App() {
                 <Mainbody />
               </Route>
 
+         <Route path="/salary">
+          <Salary />
+        </Route>
+
+        <Route path="/Preview">
+          <Preview />
+        </Route>
               <Route path="/login">
                 <Login />
               </Route>
