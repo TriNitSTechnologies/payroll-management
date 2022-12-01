@@ -201,7 +201,7 @@ function App() {
 
          <Route path="/bonafide">
             <Bonafide />
-          </Route>
+          </Route></>}
 
             {!isUserLoggedIn && <>
 
@@ -335,7 +335,9 @@ function App() {
 
 
           </Switch>
+          
         </div>
+        
       </div>
     </div>
   );
