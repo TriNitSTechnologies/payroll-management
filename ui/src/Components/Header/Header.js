@@ -2,12 +2,14 @@ import "./Header.css";
 import logo from "../Image/logo-dark.png";
 import business from "../Image/download.jpeg";
 import photo from "../Image/pexels-photo.jpeg";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { loginSlice } from "../Store/LoginSlice";
 import { Link } from "react-router-dom";
 import { FiLogIn } from "react-icons/fi";
 
 function Header(props) {
+
+  const username = useSelector((state) =>state.login.username)
   let userdispatch = useDispatch();
   function logoutuser() {
     userdispatch(
@@ -139,7 +141,8 @@ function Header(props) {
                 data-bs-toggle="dropdown"
                 aria-hidden="false"
               >
-                Trinits technologies
+                {/* Trinits technologies */}
+                {username}
               </button>
               <ul className="dropdown-menu mt-3 ms-2 shadow">
                 <li className=" dropdown-style mt-1 p-1">

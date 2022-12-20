@@ -13,8 +13,7 @@ import Documents from "./Components/Documents/Documents";
 
 import Help from "./Components/Help/Help";
 import Refer from "./Components/Refer/Refer";
-import AddressProof from "./Components/AddressProof/AddressProof";
-import AddressProofForm from "./Components/AddressProofForm/AddressProofForm";
+
 import { useEffect, useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
@@ -28,7 +27,7 @@ import MyProfile from "./Components/My-Profile/My-Profile";
 import "primereact/resources/themes/lara-light-indigo/theme.css";
 import "primereact/resources/primereact.min.css";
 import "primeicons/primeicons.css";
-import Joinletter from "./Components/Joinletter/Joinletter";
+
 import Details from "./Components/Details/details";
 import SelectProfile from "./Components/Selected-profile/selected-profile";
 import Payslip1 from "./Components/Payslip1/Payslip1";
@@ -49,9 +48,9 @@ import AppraisalLetter from "./Components/Appraisal-Letter/Appraisal-letter";
 import AppraisalDocument from "./Components/Appraisal-Doc/Appraisal-Doc";
 
 import Payslip5 from "./Components/payslip5/payslip5";
- import Salary from "./Components/Salary/Salary"
- import Preview from "./Components/Preview/Preview"
-import Bonafide from "./Components/Bonafide/bonafide";
+import Salary from "./Components/Salary/Salary"
+import Preview from "./Components/Preview/Preview"
+
 
 function App() {
   let userrouter = useHistory()
@@ -95,121 +94,11 @@ function App() {
         </div>
         <div className="main">
           <Switch>
-          {!isUserLoggedIn && <>
-            
-            <Route path="/report">
-              <Report />
-            </Route>
-            <Route path="/forgot-password">
-              <ForgotPassword />
-            </Route>
-            <Route path="/register">
-              <Register />
-            </Route>
-            <Route path="/" exact>
-            <Mainbody/>
-            </Route>
-            
-            <Route path="/login">
-              <Login />
-            </Route>
-          </> }
-             
-            {isUserLoggedIn && <>
-            <Route path="/report">
-              <Report />
-            </Route>
-            <Route path="/company">
-              <Company />
-            </Route>
-            <Route path="/employees">
-              <Employees />
-            </Route>
-            <Route path="/reimbursement">
-              <Reimbursement/>
-            </Route>
-            <Route path="/settings">
-              <Settings />
-            </Route>
-            <Route path="/Attendense" >
-              <AttendenseForm />
-            </Route>
-
-            <Route path="/documents">
-              <Documents />
-            </Route>
-            <Route path="/Payslips">
-              <Payslips/>
-            </Route>
-            <Route path="/home" exact>
-              <Home />
-            </Route>
-            <Route path="/appointment">
-              <Appointment />
-            </Route>
-            <Route path="/Payslip1">
-            <Payslip1 />
-            </Route>
-            <Route path="/Payslip2">
-            <Payslip2 />
-            </Route>
-            <Route path="/Payslip3">
-            <Payslip3 />
-            </Route>
-            <Route path="/buttons">
-            <Buttons />
-            </Route>
-          
-
-            <Route path="/offer-letter">
-              <OfferLetter />
-            </Route>
-            <Route path="profile">
-              <MyProfile />
-            </Route>
-            <Route path="PrintAppoiement">
-              <PrintAppoiement />
-            </Route>
-            <Route path="/notifications">
-              <Notifications/>
-            </Route>
- 
-            <Route path="/uploadD">
-              <Upload/>
-            </Route>
-
-
-            <Route path='/profile'>
-              <MyProfile/>
-            </Route>
-
-            <Route path='/details'>
-                <Details/>
-            </Route>
-
-            <Route path='/selectprofile'>
-              <SelectProfile />
-            </Route>
-
-            <Route path='/Payslip5'>
-              <Payslip5/>
-            </Route>
-
-
-          
-         <Route path='/Payslip4'>
-         <Payslip4 />
-         </Route>
-
-         <Route path="/bonafide">
-            <Bonafide />
-          </Route></>}
+           
 
             {!isUserLoggedIn && <>
 
-              <Route path="/report">
-                <Report />
-              </Route>
+
               <Route path="/forgot-password">
                 <ForgotPassword />
               </Route>
@@ -220,13 +109,7 @@ function App() {
                 <Mainbody />
               </Route>
 
-         <Route path="/salary">
-          <Salary />
-        </Route>
 
-        <Route path="/Preview">
-          <Preview />
-        </Route>
               <Route path="/login">
                 <Login />
               </Route>
@@ -274,6 +157,14 @@ function App() {
               <Route path="/Payslip3">
                 <Payslip3 />
               </Route>
+              <Route path='/Payslip4'>
+                <Payslip4 />
+              </Route>
+              <Route path='/Payslip5'>
+                <Payslip5 />
+
+              </Route>
+
               <Route path="/buttons">
                 <Buttons />
               </Route>
@@ -298,8 +189,13 @@ function App() {
               </Route>
 
 
-              <Route path='/profile'>
-                <MyProfile />
+             
+              <Route path="/salary">
+                <Salary />
+              </Route>
+
+              <Route path="/Preview">
+                <Preview />
               </Route>
 
               <Route path='/details'>
@@ -322,31 +218,25 @@ function App() {
                 <AppraisalDocument />
               </Route>
 
-              <Route path='/Payslip5'>
-                <Payslip5 />
-
-              </Route>
+              
               <Route path="/help">
-              <Help />
-            </Route>
-            <Route path="/refer">
-              <Refer />
-            </Route>
-
-
-
-              <Route path='/Payslip4'>
-                <Payslip4 />
+                <Help />
+              </Route>
+              <Route path="/refer">
+                <Refer />
               </Route>
 
+
+
+             
             </>
             }
 
 
           </Switch>
-          
+
         </div>
-        
+
       </div>
     </div>
   );
