@@ -9,7 +9,7 @@ export default function Payslip5(){
         <div>
               
 
-            <div className=' w-100 p222  m-auto padding p-5 mb-5'>
+            <div className=' w-100   m-auto padding p-5 mb-5'>
             <div className=' m-auto bg-white padding p-5 mb-5 w-80 shadow'>
                 <div className='w-100   d-flex '>
                     <div className='w-20'>
@@ -78,10 +78,10 @@ export default function Payslip5(){
                             <div className='w-70 '>
                                 <div className='fw-bold text-center'>Earnings</div>
                             </div>
-                            <div className='w-15'>
+                            <div className='w-25'>
                                 <div className='fw-bold'>Full</div>
                             </div>
-                            <div className='w-15'>
+                            <div className='w-25'>
                                 <div className='fw-bold'>Actual</div>
 
                             </div>
@@ -110,7 +110,7 @@ export default function Payslip5(){
 
 
                             </div>
-                            <div className='w-15 m-2'>
+                            <div className='w-25 m-2'>
 
                                 <div>{payslipData.basic}</div>
                                 <div>{payslipData.hra}</div>
@@ -123,7 +123,7 @@ export default function Payslip5(){
 
 
                             </div>
-                            <div className='w-15 m-2'>
+                            <div className='w-25 m-2'>
 
 
                                 <div>{payslipData.basic}</div>
@@ -156,10 +156,10 @@ export default function Payslip5(){
                             <div className='w-70 m-2 '>
                                 <div><b>Total Earnings:INR</b></div>
                             </div>
-                            <div className='w-15 m-2'>
+                            <div className='w-25 m-2'>
                                 <div>{payslipData.totalSalary}</div>
                             </div>
-                            <div className='w-15 m-2'>
+                            <div className='w-25 m-2'>
                                 <div>{payslipData.totalSalary}</div>
 
                             </div>

@@ -12,7 +12,7 @@ export default function Payslip6(){
         <>
         <div className=' w-100   m-auto padding p-5 mb-5'>
         <div className=' m-auto  padding p-5 mb-5 shadow w-90 bg-light'>
-        <div className='w-80   d-flex '>
+        <div className='w-100   d-flex '>
                     <div className='w-20'>
                     {<img src={img}  width={150} height={120}/>}
                     </div>
