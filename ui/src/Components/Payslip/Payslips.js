@@ -13,9 +13,10 @@ import { Link } from "react-router-dom";
 import { useReactToPrint } from "react-to-print";
 import ReactTooltip from "react-tooltip";
 import { BiPrinter } from "react-icons/bi";
+import Payslip6 from "../payslip6/payslip6";
 export default function Payslips() {
   const [value1, setValue1] = useState("Payslip1");
-  const options = ["Format 1", "Format 2", "Format 3", "Format 4", "Format 5"];
+  const options = ["Format 1", "Format 2", "Format 3", "Format 4", "Format 5", "Format 6"];
   const componentRef = useRef();
   const handleprint = useReactToPrint({
     content: () => componentRef.current,
@@ -101,9 +102,21 @@ export default function Payslips() {
                 </div>
               </>
             )}
+            
+            {value1 === 'Format 6' && (
+                <>
+                  <div>
+                    <Payslip6 />
+                  </div>
+                </>
+              )}
+            
           </div>
+      
+
 
         </div>
+       
 
 
       </div>

@@ -52,6 +52,7 @@ import Payslip5 from "./Components/payslip5/payslip5";
  import Salary from "./Components/Salary/Salary"
  import Preview from "./Components/Preview/Preview"
 import Bonafide from "./Components/Bonafide/bonafide";
+import Payslip6 from "./Components/payslip6/payslip6";
 
 function App() {
   let userrouter = useHistory()
@@ -324,6 +325,10 @@ function App() {
 
               <Route path='/Payslip5'>
                 <Payslip5 />
+
+              </Route>
+              <Route path='/Payslip6'>
+                <Payslip6 />
 
               </Route>
               <Route path="/help">

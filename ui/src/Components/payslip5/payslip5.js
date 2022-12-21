@@ -13,9 +13,9 @@ export default function Payslip5(){
             <div className=' m-auto bg-white padding p-5 mb-5 w-80 shadow'>
                 <div className='w-100   d-flex '>
                     <div className='w-20'>
-                    {<img src={img}  width={250} height={100}/>}
+                    {<img src={img}  width={140} height={100}/>}
                     </div>
-                    <div className='text-center w-50 m-auto'>
+                    <div className='text-center  m-auto'>
                         <h2>{payslipData.companyDetails.companyName} </h2>
                         <h6>{payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2}, {payslipData.companyDetails.state},  {payslipData.companyDetails.pinCode}.</h6>
                         <h4>Payslip for the month of {payslipData.dateOfMonth}</h4>
@@ -63,7 +63,7 @@ export default function Payslip5(){
                                 <div>Indian Bank</div>
                                 <div><br></br></div>
                                 <div><br></br></div>
-                                <div>TN/MAS/1569888/000/0010344</div>
+                                <div>1001034467</div>
                                 <div><br></br></div>
                                 <div>0.5</div>
                                 <div>0.5</div>
