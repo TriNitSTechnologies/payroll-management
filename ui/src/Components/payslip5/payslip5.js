@@ -9,8 +9,8 @@ export default function Payslip5(){
         <div>
               
 
-            <div className='bg-white w-100  m-auto padding p-5 mb-5'>
-            <div className=' m-auto padding p-5 mb-5 w-80 shadow'>
+            <div className=' w-100 p222  m-auto padding p-5 mb-5'>
+            <div className=' m-auto bg-white padding p-5 mb-5 w-80 shadow'>
                 <div className='w-100   d-flex '>
                     <div className='w-20'>
                     {<img src={img}  width={250} height={100}/>}
