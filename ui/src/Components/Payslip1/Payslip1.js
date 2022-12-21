@@ -20,9 +20,9 @@ export default function Payslip1() {
 
             <div  ref={componentRef} style={{ width: '100%' }}>
                 <ToastContainer />
-<div className=" mt-4 p222 w-100">
+<div className=" mt-4  p222 w-100">
 
-                <div className="w-100  shadow  ">
+                <div className="w-100 p-5 mb-5 shadow  ">
                     <div className=" mann2 m-auto mt-3  w-75">
                         <div className="header1 m-auto ms-2 m-4 d-flex">
                             <div className=" header1a w-25 mt-1">

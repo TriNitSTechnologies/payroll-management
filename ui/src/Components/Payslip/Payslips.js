@@ -48,7 +48,7 @@ export default function Payslips() {
 
 
 
-      <div className="d-flex border m-2 justify-content-between p-2">
+      <div className="d-flex  m-1 bg-white  rounded ms-4 justify-content-between p-2">
         <div className="">
           <SelectButton value={value1}
             options={options}
@@ -58,7 +58,7 @@ export default function Payslips() {
         <div className=" ">
 
 
-          <ReactTooltip className="bg-danger" />
+          <ReactTooltip />
           <button type="submit" className="btn btn-primary p-2 ps-4 pe-5" data-tip=" Print Button" onClick={handleprint}> <BiPrinter className="  mr-3 text-bold " />Print </button>
 
         </div>
