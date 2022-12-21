@@ -71,9 +71,6 @@ function App() {
     }
   }, [isUserLoggedIn]);
 
-
-
-
   return (
     <div>
       <div className="head">
@@ -94,11 +91,7 @@ function App() {
         </div>
         <div className="main">
           <Switch>
-           
-
             {!isUserLoggedIn && <>
-
-
               <Route path="/forgot-password">
                 <ForgotPassword />
               </Route>
@@ -187,9 +180,6 @@ function App() {
               <Route path="/uploaddocs">
                 <Upload />
               </Route>
-
-
-             
               <Route path="/salary">
                 <Salary />
               </Route>
@@ -218,21 +208,15 @@ function App() {
                 <AppraisalDocument />
               </Route>
 
-              
+
               <Route path="/help">
                 <Help />
               </Route>
               <Route path="/refer">
                 <Refer />
               </Route>
-
-
-
-             
             </>
             }
-
-
           </Switch>
 
         </div>

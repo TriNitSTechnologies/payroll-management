@@ -141,7 +141,7 @@ function Header(props) {
                 data-bs-toggle="dropdown"
                 aria-hidden="false"
               >
-                {/* Trinits technologies */}
+               
                 {username}
               </button>
               <ul className="dropdown-menu mt-3 ms-2 shadow">
