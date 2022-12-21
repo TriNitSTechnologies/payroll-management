@@ -9,6 +9,9 @@ import AppraisalReducer from "./AppraisalSlice"
 
 import appointmentReducer from "./AppointmentSlice";
 
+import addressproofReducer from "./AddressProofSlice";
+
+
 
 export default  configureStore({
     reducer :{
@@ -17,7 +20,9 @@ export default  configureStore({
         Appraisaldata:AppraisalReducer,
 
         appointment: appointmentReducer,
-        OfferLetterSlice:offerletterReducer
+        OfferLetterSlice:offerletterReducer,
+        Address:addressproofReducer,
+        
 
     }
 

@@ -3,11 +3,10 @@ import { SelectButton } from "primereact/selectbutton";
 import { BsHouseFill } from "react-icons/bs";
 import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
-
-import { Button } from 'bootstrap';
 import Appraisal from '../Appraisal-Form/Appraisal-form';
 import { useDispatch } from 'react-redux';
 import { AppraisalStatus } from '../Store/AppraisalSlice';
+
 
   
  
@@ -20,6 +19,13 @@ import Appointment from '../Documents/Appointment';
 import { offerletterReducer } from '../Store/Offer-LetterSlice';
 import OfferLetter from '../Appointment/OfferLetter';
 import { useState } from 'react';
+import AddressProof from '../Documents/AddressProof/AddressProof';
+import { Application } from '../Store/AddressProofSlice';
+
+
+
+
+ 
 export default function Buttons() {
   const [value2, setValue2] = useState("Offer-Letter");
   const history = useHistory();
@@ -27,7 +33,8 @@ export default function Buttons() {
     "Offer-Letter",
     "Appointment Letter",
     "Payslips",
-    "Appraisal"
+    "Appraisal",
+     "Address Proof"
   ];
   const dispatch = useDispatch();
   function OfferLetterData(data) {
@@ -59,6 +66,15 @@ export default function Buttons() {
     dispatch(appointment(obj1))
     history.push('./documents')
   }
+  function addressproofdata(data3) {
+    let obj3 = {
+      selectedPage: value2,
+      fromObj: data3
+    }
+    dispatch(Application(obj3))
+    history.push('./letterofaddress')
+  }
+
 
  
 return (
@@ -116,6 +132,16 @@ return (
             </div>
           </>
         )}
+        {value2 === "Address Proof" &&(
+          <>
+            <div>
+                <AddressProof AddressProof={addressproofdata}/>
+            </div>
+          </>
+        )} 
+       
+
+       
 
 
         </div>

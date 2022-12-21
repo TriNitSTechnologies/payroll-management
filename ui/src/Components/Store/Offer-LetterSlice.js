@@ -7,7 +7,7 @@ const initialState ={
 
     }
 }
-export const OfferLetter = createSlice  ({
+export const OfferLetter = createSlice({
 
     name:"Offer Letter",
     initialState,

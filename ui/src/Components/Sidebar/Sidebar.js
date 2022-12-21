@@ -88,7 +88,7 @@ function Sidebar() {
       </div>
      
       
-      <div className={pathname === "/documents" ? " sidebar-item" : ""}>
+      <div className={pathname === "/uploaddocs" ? " sidebar-item" : ""}>
         <div className="d-flex mt-2   selected">
           <div className="m-2 button ">
             <button className="rounded shadow back" data-tip="Documents">
@@ -125,7 +125,7 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      <div className={pathname === "/attendenseForm" ? " sidebar-item" : ""}>
+      <div className={pathname === "/Attendense" ? " sidebar-item" : ""}>
         <div className=" d-flex mt-2  selected">
           <div className="m-2 button ">
 
@@ -177,6 +177,7 @@ function Sidebar() {
         </div>
         </div>
       </div>
+     
      
 
       <div className=" mt-2 w-100  position-absolute selected">

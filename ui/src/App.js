@@ -13,8 +13,8 @@ import Documents from "./Components/Documents/Documents";
 
 import Help from "./Components/Help/Help";
 import Refer from "./Components/Refer/Refer";
-import AddressProof from "./Components/AddressProof/AddressProof";
-import AddressProofForm from "./Components/AddressProofForm/AddressProofForm";
+import AddressProof from "./Components/Documents/AddressProof/AddressProof";
+// import AddressProofForm from "./Components/AddressProofForm/AddressProofForm";
 import { useEffect, useState } from "react";
 import Register from "./Components/LoginPage/Register";
 import Login from "./Components/LoginPage/Login";
@@ -49,6 +49,8 @@ import AppraisalLetter from "./Components/Appraisal-Letter/Appraisal-letter";
 import AppraisalDocument from "./Components/Appraisal-Doc/Appraisal-Doc";
 
 import Payslip5 from "./Components/payslip5/payslip5";
+import AddressProofLetter from "./Components/AddressproofLetter/AddressproofLetter";
+import Letterofaddress from "./Components/Letterofaddress/Letterofaddress";
 function App() {
   let userrouter = useHistory()
   const [sidebarstatus, setSidebarStatus] = useState(false);
@@ -144,6 +146,9 @@ function App() {
               <Route path="/appointment">
                 <Appointment />
               </Route>
+              <Route path="/addressProof">
+              <AddressProof />
+            </Route>
               <Route path="/Payslip1">
                 <Payslip1 />
               </Route>
@@ -175,6 +180,10 @@ function App() {
               <Route path="/uploaddocs">
                 <Upload />
               </Route>
+              <Route path="/addressProofLetter">
+                <AddressProofLetter />
+              </Route>
+
 
 
               <Route path='/profile'>
@@ -211,6 +220,11 @@ function App() {
             <Route path="/refer">
               <Refer />
             </Route>
+            <Route path="/letterofaddress">
+              <Letterofaddress />
+            </Route>
+            
+        
 
 
 

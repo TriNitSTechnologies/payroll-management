@@ -3,6 +3,7 @@ import { useSelector } from "react-redux";
 import PrintAppoiement from "../LetterofAppointment/Appointment.print";
 import "./../../App.css";
 import Joinletter from "../Joinletter/Joinletter";
+import AddressProofLetter from "../AddressproofLetter/AddressproofLetter";
 
 
 export default function Documents(props) {
@@ -13,6 +14,10 @@ export default function Documents(props) {
   const appointmentLetter = useSelector(
     (state) => state.appointment.appointment
   );
+  
+  // const addressProof = useSelector(
+  //   (state) => state.Address.addressProof
+  // );
  
   return (
     <>
@@ -33,6 +38,14 @@ export default function Documents(props) {
           </div>
         </>
       )}
+      {/* {addressProof.selectedPage === "Address Proof" &&(
+        <>
+         <div>
+        <AddressProofLetter addressletter={addressProof.fromObj} />
+      </div>
+        </>
+      )} */}
+     
     </>
   );
 }

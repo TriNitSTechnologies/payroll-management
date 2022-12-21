@@ -71,9 +71,9 @@ function Help() {
                 <div className="text-primary p-2"><b>Search help for more articles <IoChevronForwardOutline className="fs-5" /></b></div>
 
             </div>
-          
-            {/* <div className="">
-                <button className="btn btn-success"><SlSupport className="fs-2 p-1 " /><a href="mailto:support@trinitstechnologies.com"> Support As</a> </button>
+{/*           
+            <div className="">
+                <button className="btn btn-secondary"><SlSupport className="fs-2 p-1 " /><a href="mailto:support@trinitstechnologies.com"> Support As</a> </button>
               
             </div> */}
            
