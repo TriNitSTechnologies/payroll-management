@@ -6,7 +6,6 @@ import { BsFillGridFill, BsHouseFill } from "react-icons/bs";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { ConfirmDialog } from 'primereact/confirmdialog';
-
 import { FaOdnoklassniki } from "react-icons/fa";
 import './Company.css';
 import ReactTooltip from 'react-tooltip';
@@ -211,7 +210,7 @@ function Company() {
 
             <div className={data === 'Table' ? 'd-block tabledata  rounded mt-3 ' : 'd-none'}>
                 <h5 className="mt-2 ms-2">Companies</h5>
-                <table className=" table table-hover  mt-3 companyTable table-rounded">
+                <table className=" table table-hover  mt-3 companyTable table-rounded" >
                     <tbody>
                         <tr>
 
@@ -233,7 +232,7 @@ function Company() {
                                         <td>{companyModel.addressLine1}</td>
                                         <td>{companyModel.addressLine2}</td>
                                         <td>{companyModel.logoName}</td>
-                                        <td className="d-flex ">
+                                        <td>
                                             <button className="btn btn-outline-primary update" data-tip="update companydata" onClick={() => editCompany(companyModel)}><AiFillEdit className="font3" /></button>
                                             <button className="btn btn-outline-danger ms-3 update" data-tip="delete companydata" onClick={() => { showDeletePrompt(index) }}
                                             >

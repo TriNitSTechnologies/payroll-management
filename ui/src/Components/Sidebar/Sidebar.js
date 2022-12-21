@@ -125,7 +125,7 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      <div className={pathname === "/attendenseForm" ? " sidebar-item" : ""}>
+      <div className={pathname === "/Attendense" ? " sidebar-item" : ""}>
         <div className=" d-flex mt-2  selected">
           <div className="m-2 button ">
 
