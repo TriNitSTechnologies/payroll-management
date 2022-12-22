@@ -37,12 +37,12 @@ import Notifications from "./Components/Notifications/Notifications";
 import MainHead from "./Components/MainPage/Main-Head";
 import PrintAppoiement from "./Components/LetterofAppointment/Appointment.print";
 import Upload from "./Components/upload-documents/upload-documents";
+import Payrollattendance from "./Components/Payrollattendance/Payrollattendance";
 import Payslips from "./Components/Payslip/Payslips";
 import Buttons from "./Components/Buttons/Buttons";
 import Reimbursement from "./Components/Reimbursement/Reimbursement";
 import Appointment from "./Components/Documents/Appointment";
 import OfferLetter from "./Components/Appointment/OfferLetter";
-import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
 import Appraisal from "./Components/Appraisal-Form/Appraisal-form";
 import AppraisalLetter from "./Components/Appraisal-Letter/Appraisal-letter";
 import AppraisalDocument from "./Components/Appraisal-Doc/Appraisal-Doc";
@@ -52,6 +52,7 @@ import Payslip5 from "./Components/payslip5/payslip5";
  import Preview from "./Components/Preview/Preview"
 import Bonafide from "./Components/Bonafide/bonafide";
 import Payslip6 from "./Components/payslip6/payslip6";
+
 
 
 function App() {
@@ -93,6 +94,8 @@ function App() {
         </div>
         <div className="main">
           <Switch>
+
+          
             {!isUserLoggedIn && <>
               <Route path="/forgot-password">
                 <ForgotPassword />
@@ -103,9 +106,7 @@ function App() {
               <Route path="/" exact>
                 <Mainbody />
               </Route>
-
-
-              <Route path="/login">
+             <Route path="/login">
                 <Login />
               </Route>
 
@@ -127,8 +128,8 @@ function App() {
               <Route path="/settings">
                 <Settings />
               </Route>
-              <Route path="/Attendense" >
-                <AttendenseForm />
+              <Route path="/Payrollattendance" >
+                <Payrollattendance />
               </Route>
 
               <Route path="/documents">

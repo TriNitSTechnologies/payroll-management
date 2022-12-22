@@ -9,27 +9,23 @@ import { ConfirmDialog } from 'primereact/confirmdialog';
 import { FaOdnoklassniki } from "react-icons/fa";
 import './Company.css';
 import ReactTooltip from 'react-tooltip';
-
-import { AiFillEdit } from "react-icons/ai";
-import { AiFillRest } from "react-icons/ai";
 import trinits from '../Image/photo_2022-11-16_13-15-16.jpg'
 import CompanyCard from "../CompanyCard/CompanyCard";
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddCompany from "../AddCompany/AddCompany";
 import Loading from "../Loading/Loading";
+import { AiFillEdit, AiFillRest } from "react-icons/ai";
 const COMPANY_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
 function Company() {
     const [Company, setCompanydata] = useState([]);
 
     const [visible, setVisible] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState();
-
     const [loading, setLoading] = useState(true);
-
-
-    const [data, setData] = useState("Table");
+const [data, setData] = useState("Table");
     const [ShowCompanyForm, setShowcompanyForm] = useState(false);
+
     const [selectedCompany, setselectedCompany] = useState({
         companyName: '',
         mobileNumber: '',
@@ -41,20 +37,13 @@ function Company() {
         pinCode: ''
 
     });
-
-
-
     function onCloseHandler() {
         setShowcompanyForm(false);
 
     }
     function DeleteCompany(index) {
-
-        let value = Company[selectedIndex];
-
-        if (value) {
-
-
+let value = Company[selectedIndex];
+if (value) {
             let url = COMPANY_URL + "/" + value.id
             axios.delete(url).then(data => {
                 toast.success("Sucessfully deleted !", {
@@ -91,8 +80,7 @@ function Company() {
         })
 
     }
-
-    function handleSave(showForm) {
+function handleSave(showForm) {
         setShowcompanyForm(false);
         getData();
     }
@@ -109,8 +97,7 @@ function Company() {
             <b><Loading /></b>
         </div>
     }
-
-    function AddCompanyForm() {
+function AddCompanyForm() {
         setShowcompanyForm(true);
         setselectedCompany({
             companyName: '',
@@ -149,11 +136,7 @@ function Company() {
         <div className="m-4">
             <ToastContainer />
             <ReactTooltip />
-            <div className="card">
-                <ConfirmDialog visible={visible} onHide={() => setVisible(false)} message="Are you sure you want to proceed?"
-                    header="Confirmation" icon="pi pi-exclamation-triangle" acceptClassName='p-button-danger' accept={DeleteCompany} />
-
-            </div>
+            
 
 
 
@@ -164,19 +147,21 @@ function Company() {
                     <Link to="/Company" className="text-black text-decoration-none">Company</Link>
 
                 </div>
+                
                 <div>
                     <b>Companies</b>
                 </div>
 
             </div>
-            <div className=" w-100 mt-3 d-flex justify-content-between flex-wrap">
-                <div className="shadow border rounded widthinc p-3">
+
+            <div className=" w-100 mt-3 d-flex  flex-wrap justify-content-between">
+             <div className="shadow border rounded widthinc p-3">
                     <b>Total:{Company.length}</b>
 
                 </div>
                 <div className="btn-group buttonClass" role="group" aria-label="Basic radio toggle button group">
                     <div>
-                        <button className="btn btn-success  float-end me-2 styles-height" onClick={() => AddCompanyForm()
+                        <button className="btn btn-success AddCompanybg float-end me-2 styles-height" onClick={() => AddCompanyForm()
                         } data-tip="CompanyForm" >
 
                             <i className="bi bi-plus-circle me-1"></i>Add Company
@@ -191,6 +176,7 @@ function Company() {
                 </div>
 
             </div>
+           
             <div className={data === 'companyCard' ? 'd-block  ' : 'd-none'}>
 
                 <div className=" shadow flex-wrap flex-row d-flex border mt-2 Card-data m-auto">
@@ -232,11 +218,13 @@ function Company() {
                                         <td>{companyModel.addressLine1}</td>
                                         <td>{companyModel.addressLine2}</td>
                                         <td>{companyModel.logoName}</td>
+                                         
                                         <td>
                                             <button className="btn btn-outline-primary update" data-tip="update companydata" onClick={() => editCompany(companyModel)}><AiFillEdit className="font3" /></button>
                                             <button className="btn btn-outline-danger ms-3 update" data-tip="delete companydata" onClick={() => { showDeletePrompt(index) }}
                                             >
                                                 <AiFillRest className="font3" /></button>
+
 
                                         </td>
 
@@ -250,6 +238,11 @@ function Company() {
                     <FaOdnoklassniki className="text-blue nodata-avail"/>
                    <h1 className="text-secondary fst-italic"> No companies are available</h1>
                     </div>}
+            </div>
+            <div className="card">
+                <ConfirmDialog visible={visible} onHide={() => setVisible(false)} message="Are you sure you want to Delete?"
+                    header="Confirmation" icon="pi pi-exclamation-triangle" acceptClassName='p-button-danger' accept={DeleteCompany} />
+
             </div>
         </div>
     )

@@ -109,8 +109,8 @@ function Sidebar() {
       </div>
       <div className={pathname === "/reimbursement" ? " sidebar-item" : ""}>
 
-        <div className="d-flex mt-2   selected">
-
+      <div className="d-flex mt-2   selected">
+ 
           <div className="m-2 button ">
             <button className="rounded shadow back" data-tip="Reimbursement">
               <Link to="/reimbursement" className="text-decoration-none back ">
@@ -125,22 +125,22 @@ function Sidebar() {
           </div>
         </div>
       </div>
-      <div className={pathname === "/Attendense" ? " sidebar-item" : ""}>
+      <div className={pathname === "/payrollattendance" ? " sidebar-item" : ""}>
         <div className=" d-flex mt-2  selected">
           <div className="m-2 button ">
 
             <button className="rounded shadow back" data-tip="Attendance">
               <Link to="/Attendense" className="text-decoration-none back">
 
-                <BiUserCheck />
+                 <BiUserCheck />
               </Link>
             </button>
           </div>
           <div className="fw-semibold m-2 ">
-            <Link to="/attendenseForm" className="text-decoration-none  text-dark">
-              Attendance
 
-            </Link>
+            <Link to="/payrollattendance" className="text-decoration-none  text-dark">
+            Attendance
+           </Link>
           </div>
         </div>
       </div>

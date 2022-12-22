@@ -38,8 +38,8 @@
   }
 
   .company-Carddata{
-    width: 300px;
-    height: 300px;
+    width: 260px;
+    height: 270px;
   }
   .Card-data{
     background-color: white;
@@ -55,9 +55,17 @@
   .visibleButton:hover .update{
     visibility: visible;
   }
+  .AddCompanybg:hover{
+    color:green;
+    background-color: white;
+    border: 1px solid green;
+  }
+
+
   .nodata-avail{
     font-size: 60px;
     color: blue;
     margin-top: 10%;
   }
+
  
