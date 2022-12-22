@@ -1,0 +1,30 @@
+.border-right{
+    border-right: 1px solid black;
+    
+    
+}
+.border-bottom{
+    border-bottom: 1px solid black;
+    
+}
+ 
+.w-70{
+    width: 70%;
+}
+.w-20{
+    width:20px;
+   
+    
+}
+.border1{
+    border: 1px solid black;
+}
+.m-4{
+    background-color: white;
+}
+.p-4{
+    background-color: white;
+}
+.w-80{
+    width: 100%;
+}

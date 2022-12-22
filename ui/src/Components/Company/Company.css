@@ -49,19 +49,6 @@
    
   }
 
-  
-  /* .invisible:hover{
-    background-color: #d3d9ec;
-
-    visibility: visible !important;
-   
-  } */
-  .Company-NotFound{
-    font-size: 30px;
-    margin-top: 10%;
-    
-    color: rgb(255, 0, 0);
-  }
   .update{
     visibility: hidden;
   }
@@ -72,6 +59,13 @@
     color:green;
     background-color: white;
     border: 1px solid green;
+  }
+
+
+  .nodata-avail{
+    font-size: 60px;
+    color: blue;
+    margin-top: 10%;
   }
 
  

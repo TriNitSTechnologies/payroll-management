@@ -13,20 +13,18 @@ function Home() {
 
   const [CompanyLength, setCompanyLength] = useState("");
   const [employeeLength, setEmployeLength] = useState("");
-  // const [loading, setLoading] = useState(true);
+
 
 
   function getData() {
     const Url = "https://trinitstechnologies.com/demo/api/v1/companies";
     axios.get(Url).then(response => setCompanyLength(response.data)).catch((error) => {
-
-
     })
-
   }
   useEffect(() => {
     getData();
-  }, []);
+  },[])
+  
   function employeeData() {
     const Url = "https://trinitstechnologies.com/demo/api/v1/employees";
     axios.get(Url).then(response => setEmployeLength(response.data)).catch((error) => {
@@ -36,9 +34,10 @@ function Home() {
     employeeData();
   }, []);
 
+    
   return (
     <div>
-      <div className="dashboard-card p-5">
+      <div className="dashboard-card p-4">
         <div className="rounded admin-card ">
           <div className="d-flex fs-4 justify-content-between  p-3 ">
             <div>
@@ -47,7 +46,7 @@ function Home() {
             <div>{new Date().toDateString()}</div>
           </div>
         </div>
-        <div className="d-flex mt-4 justify-content-between">
+        <div className=" home-main-logi mt-4 justify-content-between">
           <div className="w-45">
             <div className="card">
               <div className="d-flex justify-content-between p-3 shadow">
@@ -108,7 +107,6 @@ function Home() {
               </div>
             </Link>
           </div>
-
           <div className="employe-card rounded  w-35 p-2 text-white shadow">
             <Link to="/employees" className="text-decoration-none  text-white">
               <div className="d-flex justify-content-between">
@@ -117,6 +115,7 @@ function Home() {
                     <b>Employees</b>
                   </div>
                   <div className="fs-4">
+
                     <b>
 
                       {
@@ -125,8 +124,7 @@ function Home() {
                         </div> : employeeLength.length
                       }
                     </b>
-
-                  </div>
+                    </div>
                 </div>
                 <div className="fs-4 card text-primary ps-2 pe-2">
                   <div className="fs-1">
@@ -136,7 +134,8 @@ function Home() {
               </div>
             </Link>
           </div>
-          
+
+
           <div className="leave-card rounded  w-35 p-2 text-white shadow">
             <div className="d-flex justify-content-between">
               <div>

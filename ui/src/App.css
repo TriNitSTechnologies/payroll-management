@@ -1,13 +1,17 @@
 
 .sidebar{
   width:220px;
+  height:87vh;
   background-color:aliceblue;
 }
 
 
 .sidebar-collapse{
-  width:63px ;
-  overflow: hidden;
+  width:60px ;
+  overflow:hidden;
+  height:87vh;
+ 
+
 }
 
 .bgform{
@@ -19,7 +23,6 @@
   background-color:rgb(238, 241, 244);
   height:87vh;
   overflow: auto;
-  height: 100%;
 }
 .head{
   background-color: aliceblue;
@@ -134,6 +137,35 @@ box-shadow: 5px 5px 10px lightgray;
 .w-35{
   width:24%
 }
+
+
+.home-main-logi{
+  display: flex;
+  
+}
+
+@media screen and (max-width:850px){
+  .home-main-logi{
+    display: flex;
+    flex-direction: column;
+    flex-wrap:wrap;
+    align-content: center;
+  }
+
+  .w-45{
+    width: 100%;
+    margin:5px;
+  }
+
+  .w-35{
+    width: 100%;
+    margin: 5px;
+  }
+ 
+
+}
+
+
 
 
 .flex{
@@ -316,3 +348,4 @@ padding-top: 5%;
   background-color: #f8f9fc;
 
 }
+

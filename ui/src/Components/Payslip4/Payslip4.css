@@ -6,6 +6,15 @@
     border: none;
 }
 
-.w-80{
+/* .w-80{
     width: 80%;
+    border: none;
+} */
+.imege1{
+    height:9vw;
+    border: none;
+
+}
+.border1{
+    border: 1px solid black;
 }
