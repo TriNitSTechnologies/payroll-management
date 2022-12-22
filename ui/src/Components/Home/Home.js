@@ -136,33 +136,7 @@ function Home() {
               </div>
             </Link>
           </div>
-          {/* <div className="company-card rounded  w-35 p-2 text-white shadow">
-            <Link to="/company" className="text-decoration-none  text-white">
-              <div className="d-flex justify-content-between">
-                <div>
-                  <div>
-                    <b>Companies</b>
-                  </div>
-                  <div className="fs-4">
-
-                    <b>
-                      {
-                        !CompanyLength ? <div>
-                        <i class="fa fa-spinner fa-spin fa-1x fa-fw"></i>
-  
-                      </div> :CompanyLength.length
-                      }
-                    </b>
-                  </div>
-                </div>
-                <div className="fs-4 card text-primary ps-2 pe-2">
-                  <div className="fs-1">
-                    <HiOutlineBuildingOffice2 />
-                  </div>
-                </div>
-              </div>
-            </Link>
-          </div> */}
+          
           <div className="leave-card rounded  w-35 p-2 text-white shadow">
             <div className="d-flex justify-content-between">
               <div>
