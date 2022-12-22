@@ -1,17 +1,27 @@
 import { useState } from "react";
 import { AiFillEdit } from "react-icons/ai";
+import PayRollAttendenseForm from "../PayrollAttendanceForm/PayrollAttandanceForm";
 
 
-
+import ReactTooltip from 'react-tooltip'
 export default function Payrollattendance() {
-    const[setpay,setshowpay]=useState(false);
+    const [attendance, setAttendanse] = useState(false);
 
+    function closeHandler() {
+        setAttendanse(false);
+
+    }
+
+    if (attendance) {
+        return (
+            <PayRollAttendenseForm cancel={closeHandler} />
+        )
+    }
 
 
     return (
-
         <div className=" m-4 ">
-           
+            <ReactTooltip />
             <table className="table table-hover text rounded shadow">
                 <tbody>
                     <tr>
@@ -30,7 +40,11 @@ export default function Payrollattendance() {
                         <td>19:00</td>
                         <td>10:00</td>
                         <td>-NA-</td>
-                        <td><button className=" btn btn-outline-primary ms-4"onClick={()=>setshowpay(true)} ><AiFillEdit className="font3" /></button></td>
+
+
+
+                        <td><button className=" btn btn-outline-primary ms-4" onClick={() => { setAttendanse(true) }} data-tip="update"><AiFillEdit className="font3" /></button></td>
+
                     </tr>
                     <tr>
                         <td>2-12-2022</td>
@@ -39,7 +53,7 @@ export default function Payrollattendance() {
                         <td>19:00</td>
                         <td>10:00</td>
                         <td>-NA-</td>
-                        <td><button className=" btn btn-outline-primary ms-4"><AiFillEdit className="font3" /></button></td>
+                        <td><button className=" btn btn-outline-primary ms-4" onClick={() => { setAttendanse(true) }} data-tip="update"><AiFillEdit className="font3" /></button></td>
                     </tr>
                     <tr>
                         <td>3-12-2022</td>
@@ -48,7 +62,7 @@ export default function Payrollattendance() {
                         <td>19:00</td>
                         <td>10:00</td>
                         <td>-NA-</td>
-                        <td><button className=" btn btn-outline-primary ms-4"><AiFillEdit className="font3" /></button></td>
+                        <td><button className=" btn btn-outline-primary ms-4" onClick={() => { setAttendanse(true) }} data-tip="update"><AiFillEdit className="font3" /></button></td>
                     </tr>
                     <tr>
                         <td>4-12-2022</td>
@@ -57,7 +71,7 @@ export default function Payrollattendance() {
                         <td>19:00</td>
                         <td>10:00</td>
                         <td>-NA-</td>
-                        <td><button className=" btn btn-outline-primary ms-4"><AiFillEdit className="font3" /></button></td>
+                        <td><button className=" btn btn-outline-primary ms-4" onClick={() => { setAttendanse(true) }} data-tip="update"><AiFillEdit className="font3" /></button></td>
                     </tr>
                     <tr>
                         <td>5-12-2022</td>
@@ -66,15 +80,18 @@ export default function Payrollattendance() {
                         <td>19:00</td>
                         <td>10:00</td>
                         <td>-NA-</td>
-                        <td><button className=" btn btn-outline-primary ms-4"><AiFillEdit className="font3" /></button></td>
+                        <td><button className=" btn btn-outline-primary ms-4" onClick={() => { setAttendanse(true) }} data-tip="update"><AiFillEdit className="font3" /></button></td>
                     </tr>
 
                     <tr>
                         <td>6-12-2022</td>
                         <td colSpan="5" className="text-center"><b>Weekend</b></td>
 
-                        <td><button className=" btn btn-outline-primary ms-4"><AiFillEdit className="font3" /></button></td>
+                        <td><button className=" btn btn-outline-primary ms-4 " onClick={() => setAttendanse(true)} data-tip="update"><AiFillEdit className="font3" /></button></td>
                     </tr>
+
+
+
                 </tbody>
             </table>
         </div>
