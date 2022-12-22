@@ -1,6 +1,5 @@
 import "./Payslip4.css";
 import { React, useRef } from "react";
-// import telegram from "./../Image/trinits.jpg";
 import sss from "../Image/logo-dark.png";
 import { useSelector } from "react-redux";
 import { toast } from 'react-toastify';
@@ -12,107 +11,92 @@ function Payslip4() {
     content: () => componentRef.current,
     documentTitle: 'emp-data',
     onAfterPrint: () => toast.success('Print success')
-
   });
   return (
     <>
-      <div className=" p-4 m-4  p222">
-
+      <div className=" p-4 m-4  color">
         <div ref={componentRef} style={{ width: '100%' }}>
           <div className=" bg-white m-2 p-2  m-auto padding ">
             <div>
               <div className=" Larger ">
                 <div className="w-100">
-
-                  
-                    <div className="d-flex border1  w-100 ">
-                      <div className=" w-50  ">
-                     
-
-                          <img src={sss} alt="this is img" className="imege1 m-1 ms-4" />
-
-                          {/* <img className="payslip-logo" src= {telegram} alt="" /> */}
-
-                    
-                      </div>
-                      <div className=" text-center w-50">
-                        <h4>{payslipData.companyDetails.companyName}</h4>
-                        <h6 className="">{payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2},{payslipData.companyDetails.state},  {payslipData.companyDetails.pinCode}.</h6>
-                        <h6 className="p23">Pay Slip for the month of {payslipData.dateOfMonth} </h6>
-                      </div>
+                  <div className="d-flex border1  w-100 ">
+                    <div className=" w-50  ">
+                      <img src={sss} alt="this is img" className="imege1 m-1 ms-4" />
                     </div>
-                 
-
+                    <div className=" text-center w-50">
+                      <h4>{payslipData.companyDetails.companyName}</h4>
+                      <h6>{payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2},{payslipData.companyDetails.state},  {payslipData.companyDetails.pinCode}.</h6>
+                      <h6 className="p23">Pay Slip for the month of {payslipData.dateOfMonth} </h6>
+                    </div>
+                  </div>
                 </div>
                 <div className=" mt-2 ">
                   <table className="w-100  ">
                     <tr>
-                      <th className="">Emp Code</th>
+                      <th >Emp Code</th>
 
-                      <th className="">{payslipData.employeeData.empNo}</th>
-                      <th className="">DOJ</th>
-                      <th className="">{payslipData.employeeData.doj}</th>
+                      <th>{payslipData.employeeData.empNo}</th>
+                      <th>DOJ</th>
+                      <th>{payslipData.employeeData.doj}</th>
+                    </tr>
+                    <tr>
+                      <th> Global Id</th>
+
+                      <th></th>
+
+                      <th>Global DOJ</th>
+
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <th>Emp Name</th>
+                      <th>{payslipData.employeeData.empName}</th>
+                      <th>DOB</th>
+                      <th></th>
+                    </tr>
+                    <tr>
+                      <th>Location</th>
+                      <th></th>
+                      <th>Gender</th>
+                      <th></th>
                     </tr>
 
                     <tr>
-                      <th className=""> Global Id</th>
-
-                      <th className=""></th>
-
-                      <th className="">Global DOJ</th>
-
-                      <th className=""></th>
+                      <th>Unit Code</th>
+                      <th></th>
+                      <th>PAN</th>
+                      <th>{payslipData.employeeData.pan}</th>
                     </tr>
                     <tr>
-                      <th className="">Emp Name</th>
-                      <th className="">{payslipData.employeeData.empName}</th>
-                      <th className="">DOB</th>
-                      <th className=""></th>
+                      <th>Designation</th>
+                      <th>{payslipData.employeeData.designation}</th>
+                      <th>PF No</th>
+                      <th></th>
                     </tr>
                     <tr>
-                      <th className="">Location</th>
-                      <th className=""></th>
-                      <th className="">Gender</th>
-                      <th className=""></th>
+                      <th>Bank Ac No</th>
+                      <th>{payslipData.employeeData.bankAccount}</th>
+                      <th>PF UAN</th>
+                      <th></th>
                     </tr>
 
                     <tr>
-                      <th className="">Unit Code</th>
-                      <th className=""></th>
-                      <th className="">PAN</th>
-                      <th className="">{payslipData.employeeData.pan}</th>
+                      <th>Bank Ac Name</th>
+                      <th></th>
+                      <th>EPS NO</th>
+                      <th></th>
                     </tr>
 
                     <tr>
-                      <th className="">Designation</th>
-                      <th className="">{payslipData.employeeData.designation}</th>
-                      <th className="">PF No</th>
-                      <th className=""></th>
+                      <th>Grade</th>
+                      <th></th>
+                      <th>ESI No</th>
+                      <th></th>
                     </tr>
 
                     <tr>
-                      <th className="">Bank Ac No</th>
-                      <th className="">{payslipData.employeeData.bankAccount}</th>
-                      <th className="">PF UAN</th>
-                      <th className=""></th>
-                    </tr>
-
-                    <tr>
-                      <th className="">Bank Ac Name</th>
-                      <th className=""></th>
-                      <th className="">EPS NO</th>
-                      <th className=""></th>
-                    </tr>
-
-                    <tr>
-                      <th className="">Grade</th>
-                      <th className=""></th>
-                      <th className="">ESI No</th>
-                      <th className=""></th>
-                    </tr>
-
-                    <tr>
-                      <th colspan="7" className="text bg-secondary text-center">
+                      <th colspan="7" className="textcolorss  text-center">
                         Standard Days:31, Payable Days:31.00 ,Loss of Pay Days:0.00 ,
                         LOP Reversal Days:0.00 , Arrear Days:0.00
                       </th>
@@ -120,114 +104,110 @@ function Payslip4() {
                   </table>
                   <table className="w-100 ">
                     <tr>
-                      <th className="">EARNINGS</th>
+                      <th>EARNINGS</th>
 
-                      <th className="">MONTHLY RATE</th>
+                      <th>MONTHLY RATE</th>
 
-                      <th className="">CURRENT MONTH</th>
+                      <th>CURRENT MONTH</th>
 
-                      <th className="">ARREAR(+/-)</th>
+                      <th>ARREAR(+/-)</th>
 
-                      <th className="">TOTAL</th>
+                      <th>TOTAL</th>
 
-                      <th className="">DEDUCTIONS</th>
+                      <th>DEDUCTIONS</th>
 
-                      <th className="">TOTAL</th>
+                      <th>TOTAL</th>
                     </tr>
 
                     <tr>
-                      <td className="">BASIC</td>
+                      <td>BASIC</td>
 
-                      <td className="">{payslipData.basic}</td>
+                      <td>{payslipData.basic}</td>
 
-                      <td className=""></td>
-
-                      <td className=""></td>
-
-                      <td className=""></td>
-
-                      <td className="">P.F.</td>
-                      <td className=""></td>
-                    </tr>
-
-                    <tr>
-                      <td className="">HOUSE RENT ALLOWANCE</td>
-
-                      <td className="">{payslipData.hra}</td>
-
-                      <td className=""></td>
-
-                      <td className=""></td>
-
-                      <td className=""></td>
-                      <td className="">PROFESSION TAX</td>
-                      <td className="">{payslipData.professionalTax}</td>
-                    </tr>
-                    <tr>
-                      <td className="">PERSONAL ALLOWANCE</td>
-
-                      <td className=""></td>
-                      <td className=""></td>
-                      <td className=""></td>
-                      <td className=""></td>
                       <td></td>
+
+                      <td></td>
+
+                      <td></td>
+
+                      <td>P.F.</td>
                       <td></td>
                     </tr>
-                    <tr>
-                      <td className="">ADVANCE STATUTORY BONUS</td>
 
-                      <td className="">{payslipData.bonus}</td>
-                      <td className=""></td>
-                      <td className=""></td>
-                      <td className=""></td>
+                    <tr>
+                      <td>HOUSE RENT ALLOWANCE</td>
+
+                      <td>{payslipData.hra}</td>
+
+                      <td></td>
+
+                      <td></td>
+
+                      <td></td>
+                      <td>PROFESSION TAX</td>
+                      <td>{payslipData.professionalTax}</td>
+                    </tr>
+                    <tr>
+                      <td>PERSONAL ALLOWANCE</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                       <td></td>
                       <td></td>
                     </tr>
                     <tr>
-                      <td className="">REMOTE WORKING ALLOWANCE</td>
-
-                      <td className=""></td>
-                      <td className=""></td>
-                      <td className=""></td>
-                      <td className=""></td>
+                      <td>ADVANCE STATUTORY BONUS</td>
+                      <td>{payslipData.bonus}</td>
                       <td></td>
                       <td></td>
-                    </tr>
-                    <tr>
-                      <td className="">BOOKS AND JOURNALS</td>
-
-                      <td className=""></td>
-                      <td className=""></td>
-                      <td className=""></td>
-                      <td className=""></td>
+                      <td></td>
                       <td></td>
                       <td></td>
                     </tr>
                     <tr>
-                      <td className="">PROFESSIONAL PURSUIT</td>
+                      <td>REMOTE WORKING ALLOWANCE</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>BOOKS AND JOURNALS</td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                    </tr>
+                    <tr>
+                      <td>PROFESSIONAL PURSUIT</td>
 
-                      <td className=""></td>
-                      <td className=""></td>
-                      <td className=""></td>
-                      <td className=""></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
+                      <td></td>
                       <td></td>
                       <td></td>
                     </tr>
                     <tr className="text ">
-                      <th className="">PROFESSIONAL PURSUIT</th>
+                      <th>PROFESSIONAL PURSUIT</th>
                       <td></td>
-                      <th className=""></th>
-                      <th className=""></th>
-                      <th className=""></th>
-                      <th className="">TOTAL DEDUCTIONS</th>
-                      <th className="">{payslipData.totalDeduction}</th>
+                      <th></th>
+                      <th></th>
+                      <th></th>
+                      <th>TOTAL DEDUCTIONS</th>
+                      <th>{payslipData.totalDeduction}</th>
                     </tr>
                   </table>
                 </div>
                 <table className="w-100  text-start  ">
                   <tr >
-                    <td className="">
-                     <b> NET PAY :</b><span>  (...   RUPEES   ONLY)</span>
+                    <td>
+                      <b> NET PAY :</b><span>  (...   RUPEES   ONLY)</span>
                     </td>
 
                     <td className="text-center"><b>{payslipData.netSalary}</b></td>
@@ -236,13 +216,9 @@ function Payslip4() {
               </div>
             </div>
           </div>
-
         </div>
       </div>
-
     </>
-
-
   );
 }
 export default Payslip4;
