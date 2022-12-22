@@ -9,8 +9,6 @@ import { ConfirmDialog } from 'primereact/confirmdialog';
 import { FaOdnoklassniki } from "react-icons/fa";
 import './Company.css';
 import ReactTooltip from 'react-tooltip';
-import { AiFillEdit } from "react-icons/ai";
-import { AiFillRest } from "react-icons/ai";
 import trinits from '../Image/photo_2022-11-16_13-15-16.jpg'
 import CompanyCard from "../CompanyCard/CompanyCard";
 import { ToastContainer, toast } from 'react-toastify';
