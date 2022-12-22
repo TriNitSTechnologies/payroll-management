@@ -15,7 +15,7 @@ export default function Payslip2(props) {
 
     return (
         <>
-            <div className="ptn  mt-4">
+            <div className="ptn p222 p-5 mb-5 mt-4">
          
 
                 <div className=" ptn2" ref={componentRef}>
@@ -23,7 +23,7 @@ export default function Payslip2(props) {
                     <ToastContainer />
                     <div className="w-100 border p222 text center">
                     
-                        <div className=" w-75 shadow aaa  m-auto p-2 ">
+                        <div className=" w-100 shadow aaa  m-auto p-4 m-4 ">
                             <div className=" p2header  d-flex   ">
                                 <div className="p2header1 w-25">
                                     <img src={sss} alt="ts is img" className="imege w-75 mt-2 ms-3" />

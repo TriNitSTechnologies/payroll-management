@@ -76,11 +76,13 @@ return (
               <small className="fs-6">
                 <button className="rounded shadow back me-2 ">
                   <Link to="/home" className="text-decoration-none back">
-                    <BsHouseFill />
-
-                  </Link>
+                    <BsHouseFill /></Link>
+            
                 </button>
-                / Reports
+                <Link to="/home" className="text-decoration-none text-dark me-1">
+                Home
+              </Link>
+             / Reports
               </small>
             </div>
             <div>

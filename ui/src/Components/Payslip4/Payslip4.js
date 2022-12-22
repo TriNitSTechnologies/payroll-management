@@ -19,7 +19,7 @@ function Payslip4() {
       <div className="mt-4 p-5 mb-5 p222">
 
         <div ref={componentRef} style={{ width: '100%' }}>
-          <div className=" bg-white w-75  m-auto padding p-5 mb-5">
+          <div className=" bg-white m-4 p-4  m-auto padding ">
             <div>
               <div className=" Larger ">
                 <div className="w-100">
@@ -29,7 +29,7 @@ function Payslip4() {
                       <div className=" w-50  ">
                      
 
-                          <img src={sss} alt="this is img" className="imege1 ms-3" />
+                          <img src={sss} alt="this is img" className="imege1 m-1 ms-4" />
 
                           {/* <img className="payslip-logo" src= {telegram} alt="" /> */}
 
@@ -44,7 +44,7 @@ function Payslip4() {
                  
 
                 </div>
-                <div className=" mt-3 ">
+                <div className=" mt-4 ">
                   <table className="w-100  ">
                     <tr>
                       <th className="">Emp Code</th>
@@ -224,13 +224,13 @@ function Payslip4() {
                     </tr>
                   </table>
                 </div>
-                <table className="w-100 mt-2  text-start  ">
-                  <tr>
-                    <th className="">
-                      NET PAY <br /> (RUPEES THIRTY EIGHT THOUSAND EIGHTY NINE ONLY)
-                    </th>
+                <table className="w-100  text-start  ">
+                  <tr >
+                    <td className="">
+                     <b> NET PAY :</b><span>  (...   RUPEES   ONLY)</span>
+                    </td>
 
-                    <th className="text-center">{payslipData.netSalary}</th>
+                    <td className="text-center"><b>{payslipData.netSalary}</b></td>
                   </tr>
                 </table>
               </div>

@@ -335,7 +335,7 @@ function App() {
 
 
 
-              <Route path='/Payslip4'>
+       <Route path='/Payslip4'>
                 <Payslip4 />
               </Route>
 

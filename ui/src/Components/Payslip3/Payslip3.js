@@ -21,7 +21,7 @@ export default function Payslip3() {
 
                 <div className="w-100  ">
 
-                    <div className="w-75  border  aaa  m-auto mt-4 p-4  ">
+                    <div className="w-100  border  aaa  m-auto mt-4 p-4  ">
                         <div className="d-flex w-100 h-100  ">
                             <div className=" w-50 p3h  ">
                                 <img src={sss} alt="this is img" className="imege nmr w-75 mt-2   h-75 ms-3" />
