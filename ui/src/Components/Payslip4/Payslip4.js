@@ -16,10 +16,10 @@ function Payslip4() {
   });
   return (
     <>
-      <div className="mt-1 p-5 mb-5 p222">
+      <div className=" p-4 m-4  p222">
 
         <div ref={componentRef} style={{ width: '100%' }}>
-          <div className=" bg-white m-3 p-4  m-auto padding ">
+          <div className=" bg-white m-2 p-2  m-auto padding ">
             <div>
               <div className=" Larger ">
                 <div className="w-100">
@@ -44,7 +44,7 @@ function Payslip4() {
                  
 
                 </div>
-                <div className=" mt-1 ">
+                <div className=" mt-2 ">
                   <table className="w-100  ">
                     <tr>
                       <th className="">Emp Code</th>

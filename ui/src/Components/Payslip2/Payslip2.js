@@ -15,15 +15,15 @@ export default function Payslip2(props) {
 
     return (
         <>
-            <div className="ptn p222 p-5 mb-5 mt-4">
+            <div className="ptn p222 p-4 mb-3 ">
          
 
-                <div className=" ptn2" ref={componentRef}>
+                <div className=" ptn2 svk " ref={componentRef}>
 
                     <ToastContainer />
-                    <div className="w-100 border p222 text center">
+                    <div className="w-100 border  text center">
                     
-                        <div className=" w-100 shadow aaa  m-auto p-4 m-4 ">
+                        <div className=" w-100 shadow aaa   m-auto p-4 m-4 ">
                             <div className=" p2header  d-flex   ">
                                 <div className="p2header1 w-25">
                                     <img src={sss} alt="ts is img" className="imege w-75 mt-2 ms-3" />
@@ -44,7 +44,7 @@ export default function Payslip2(props) {
                                 <h5 className="text-center"><b>PAY SLIP</b></h5>
                                 <h6 className="text-center"><b>FOR THE MONTH OF November 2022</b></h6>
                             </div>
-                            <div className="p2body mt-1">
+                            <div className="p2body ">
 
                                 <table className=" w-100">
                                     <tbody>
