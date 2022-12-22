@@ -47,9 +47,9 @@
   
   padding-top: 4vh;
   }
-   tbody, td, tfoot, th, thead, tr {
+ tbody, td, tfoot, th, thead, tr {
     border-width: 1px!important;
-  } 
+  }  
   
   .tthh{
     font-weight: bolder;
