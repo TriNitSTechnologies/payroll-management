@@ -217,12 +217,12 @@ function App() {
 
               </Route>
               <Route path="/help">
-                <Help />
-              </Route>
-              <Route path="/refer">
-                <Refer />
-              </Route>
-            </>
+              <Help />
+            </Route>
+            <Route path="/refer">
+              <Refer />
+            </Route>
+              </>
             }
           </Switch>
 
