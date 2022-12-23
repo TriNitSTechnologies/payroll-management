@@ -22,7 +22,7 @@ export default function Payslip1() {
                     <div className=" mann2 m-auto mt-3  w-100">
                     <div className="d-flex w-100 h-100  ">
                             <div className=" w-50   ">
-                                <img src={sss} alt="this is img" className="imege nmr w-75 mt-2   h-75 ms-3" />
+                                <img src={sss} alt="this is img" className="imege pl-10vh w-75 mt-2   h-75 ms-3" />
                             </div>
                             <div className="  mt-3 text-center">
                                 <h4 className="a">{payslipData.companyDetails.companyName} </h4>
