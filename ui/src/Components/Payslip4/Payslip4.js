@@ -31,7 +31,7 @@ function Payslip4() {
                     </div>
                   </div>
                 </div>
-                <div className=" mt-2 ">
+                <div className="mt-2 ">
                   <table className="w-100  ">
                     <tr>
                       <th >Emp Code</th>
