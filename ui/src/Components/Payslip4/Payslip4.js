@@ -96,7 +96,7 @@ function Payslip4() {
                     </tr>
 
                     <tr>
-                      <th colspan="7" className="textcolorss  text-center">
+                      <th colspan="7" className="payslip-bg  text-center">
                         Standard Days:31, Payable Days:31.00 ,Loss of Pay Days:0.00 ,
                         LOP Reversal Days:0.00 , Arrear Days:0.00
                       </th>
