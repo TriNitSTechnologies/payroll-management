@@ -9,6 +9,7 @@ import { AiFillHome } from "react-icons/ai";
 import * as Yup from 'yup';
 import ReactTooltip from "react-tooltip";
 import { Link } from "react-router-dom";
+import { BsHouseFill } from "react-icons/bs";
 
 
 const url = "https://trinitstechnologies.com/demo/api/v1/employees";
@@ -16,12 +17,19 @@ export default function EmployeeForm({ onCancel, onaddeddata, initialValues }) {
 
   return (
     <div>
-      <div
-        className=' m-4 shadow  p-3 rounded text '>
-        <Link to="/" className="text-decoration-none text-dark" > <AiFillHome className="font border border-white shadow rounded " /> Home </Link>/Employee
-        <div className=" float-end">
-          <h4 className="text-dark">Employees</h4>
-        </div>
+      <div className=' m-4 shadow  p-3 rounded text '>
+      <button className="rounded shadow back me-2 ">
+                <Link to="/home" className="text-decoration-none back">
+                  <BsHouseFill />
+                </Link>
+              </button>
+
+          <Link to="/home" className="text-decoration-none text-dark ">  Home </Link>/Employees
+
+          <div className="float-end">
+            <h4 className="text-dark">Employees</h4>
+          </div>
+       
       </div>
       <div className="card m-4 text  rounded">
       <div className="card-header" ><h5>EmployeeForm</h5> 

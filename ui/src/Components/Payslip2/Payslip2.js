@@ -10,20 +10,19 @@ export default function Payslip2(props) {
     const handleprint = useReactToPrint({
         content: () => componentRef.current,
         documentTitle: 'emp-data'
-        // onAfterPrint:()=>toast.success('Print success '),
     });
 
     return (
         <>
-            <div className="ptn  mt-4">
+            <div className="ptn color p-4 mb-3 ">
          
 
-                <div className=" ptn2" ref={componentRef}>
+                <div className=" ptn2 svk " ref={componentRef}>
 
                     <ToastContainer />
-                    <div className="w-100 border p222 text center">
+                    <div className="w-100 border  text center">
                     
-                        <div className=" w-75 shadow aaa  m-auto p-2 ">
+                        <div className=" w-100 shadow aaa   m-auto p-4 m-4 ">
                             <div className=" p2header  d-flex   ">
                                 <div className="p2header1 w-25">
                                     <img src={sss} alt="ts is img" className="imege w-75 mt-2 ms-3" />
@@ -44,7 +43,7 @@ export default function Payslip2(props) {
                                 <h5 className="text-center"><b>PAY SLIP</b></h5>
                                 <h6 className="text-center"><b>FOR THE MONTH OF November 2022</b></h6>
                             </div>
-                            <div className="p2body mt-1">
+                            <div className="p2body ">
 
                                 <table className=" w-100">
                                     <tbody>
@@ -80,10 +79,8 @@ export default function Payslip2(props) {
 
                                             <td className="ps-1"><b>LOP Debit Days</b></td>
                                             <td className="text-center" colspan="2"><b></b></td>
-
-
-                                        </tr>
-                                        <tr className="">
+</tr>
+                                        <tr >
                                             <td className="ps-1"><b>PF Number </b> </td>
                                             <td className="text-center" colspan="2"> </td>
                                             <td></td>
@@ -92,7 +89,7 @@ export default function Payslip2(props) {
 
 
                                         </tr>
-                                        <tr className="">
+                                        <tr >
                                             <td className="ps-1">Earnings</td>
                                             <td className="ps-1">Amount <br></br>
                                                 (Rs)</td>
@@ -102,7 +99,7 @@ export default function Payslip2(props) {
                                             <td className="ps-1">Amount (Rs)</td>
                                             <td className="ps-1">Cumulative(Rs)</td>
                                         </tr>
-                                        <tr className="">
+                                        <tr>
                                             <td className="ps-1 ssn">Basic
                                             </td>
                                             <td className=" text-center">{payslipData.basic}</td>
@@ -111,7 +108,7 @@ export default function Payslip2(props) {
                                             <td>  </td>
                                             <td>   </td>
                                         </tr>
-                                        <tr className="">
+                                        <tr>
                                             <td className="ps-1">House Rent Allowance</td>
                                             <td className=" text-center">{payslipData.hra}</td>
                                             <td></td>
@@ -119,7 +116,7 @@ export default function Payslip2(props) {
                                             <td></td>
                                             <td></td>
                                         </tr>
-                                        <tr className="">
+                                        <tr>
                                             <td className="ps-1">Conveyance Allowance</td>
                                             <td className=" text-center">{payslipData.convAllowance}</td>
                                             <td></td>
@@ -127,7 +124,7 @@ export default function Payslip2(props) {
                                             <td></td>
                                             <td></td>
                                         </tr>
-                                        <tr className="">
+                                        <tr >
                                             <td className="ps-1">Medical Reimbursement</td>
                                             <td className=" text-center">{payslipData.medicalAllowance}</td>
                                             <td></td>
@@ -135,7 +132,7 @@ export default function Payslip2(props) {
                                             <td></td>
                                             <td></td>
                                         </tr>
-                                        <tr className="">
+                                        <tr>
                                             <td className="ps-1">Professional Development Allowance</td>
                                             <td className=" text-center">{payslipData.professionalTax}</td>
                                             <td></td>
@@ -143,7 +140,7 @@ export default function Payslip2(props) {
                                             <td></td>
                                             <td></td>
                                         </tr>
-                                        <tr className="">
+                                        <tr>
                                             <td className="ps-1">Professional Attire Allowance</td>
                                             <td></td>
                                             <td></td>
@@ -151,7 +148,7 @@ export default function Payslip2(props) {
                                             <td></td>
                                             <td></td>
                                         </tr>
-                                        <tr className="">
+                                        <tr>
                                             <td className="ps-1">Leave Travel Allowance</td>
                                             <td className=" text-center">{payslipData.leaveTravelAllowance}</td>
                                             <td></td>
@@ -160,7 +157,7 @@ export default function Payslip2(props) {
                                             <td></td>
                                         </tr>
 
-                                        <tr className="">
+                                        <tr>
                                             <td className="ps-1"><b>Gross Total</b></td>
                                             <td className="text-center"><b>{payslipData.totalSalary}</b></td>
                                             <td></td>
@@ -168,28 +165,23 @@ export default function Payslip2(props) {
                                             <td className=" text-center"> {payslipData.totalDeduction}</td>
                                             <td></td>
                                         </tr>
-                                        <tr className=" hee">
+                                        <tr className="hee">
                                             <td className="ps-1" colSpan="6" ><b>Net Pay :</b>   <span className="ps-3 "><b>RS.  {payslipData.netSalary}</b> </span> </td>
                                           </tr>
-                                        <tr className="  hee">
+                                        <tr className="hee">
                                             <td className="ps-1" colSpan="6" ><b>In Words: Rupees ... Only.</b></td>
 
                                         </tr>
-                                        <tr className="  hee">
+                                        <tr className="hee">
                                             <td className="ps-1" colSpan="6" ><b>Remarks :</b></td>
-
-                                        </tr>
-
-
-                                    </tbody>
+                                              </tr>
+                                               </tbody>
                                 </table>
                              </div> 
-                            {/* <div className="p2footer ">  */}
-
-                                <small><b>Ts is a computer generated Pay Slip. Signature is not required.
+                       <small><b>Ts is a computer generated Pay Slip. Signature is not required.
 
                                     Your salary is strictly confidential and you are expected to maintain its confidentiality. Company reserves the right to take disciplinary action as appropriate in case of breach of confidence.01-November-2022.</b></small>
-                            {/* </div> */}
+        
                         </div>
                     </div>
                 </div>
