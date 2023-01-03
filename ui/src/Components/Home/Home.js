@@ -7,6 +7,7 @@ import { BsHouseFill } from "react-icons/bs";
 
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { getData } from "../Hooks/api";
 
 function Home() {
 
@@ -15,13 +16,9 @@ function Home() {
 
 
 
-  function getData() {
-    const Url = "https://trinitstechnologies.com/demo/api/v1/companies";
-    axios.get(Url).then(response => setCompanyLength(response.data)).catch((error) => {
-    })
-  }
+  
   useEffect(() => {
-    getData();
+    getData(setCompanyLength);
   },[])
   function employeeData() {
     const Url = "https://trinitstechnologies.com/demo/api/v1/employees";

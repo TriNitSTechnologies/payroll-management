@@ -1,0 +1,14 @@
+.body-houver{
+   
+    border: 1px solid skyblue;
+    width: 20vw;
+}
+.body-houver:hover{
+    /* background-color: rgb(223, 217, 207); */
+    background-color: rgb(219, 239, 232);
+}
+
+.icon-size{
+    font-size: 30px;
+    color:blue;
+}
