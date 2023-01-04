@@ -1,40 +1,38 @@
 
 import { ErrorMessage, Field, Form, Formik, useFormikContext } from "formik";
-import { useDispatch  } from "react-redux";
+import { useDispatch } from "react-redux";
 import { Link } from "react-router-dom";
 import * as Yup from "yup";
 import { logindata } from "../Store/LoginSlice";
 import YupPassword from 'yup-password'
+import { toast, ToastContainer } from "react-toastify";
+
 
 YupPassword(Yup)
-
-
-
-
 export default function Login() {
   const dispatch = useDispatch();
-  
-  const Yup = require('yup')
-require('yup-password')(Yup)
 
-function LoginButton() {
-  const {isValid} = useFormikContext();
-  return (
-    <button disabled={!isValid} className=" buttoncolor rounded-3 p-2 text-light" type="submit">
-      Login
-    </button>
-  );
-}
+  const Yup = require('yup')
+  require('yup-password')(Yup)
+
+  function LoginButton() {
+    const { isValid } = useFormikContext();
+    return (
+      <button disabled={!isValid} className=" buttoncolor rounded-3 p-2 text-light" type="submit">
+        Login
+      </button>
+    );
+  }
 
   return (
     <>
 
-    
-   
+
+
 
       <div className="w-100  h-100 background ">
         <Formik
-       
+
           initialValues={{
             username: "",
             password: "",
@@ -45,16 +43,22 @@ function LoginButton() {
           })}
           onSubmit={(values) => {
 
-            console.log(values)
-            dispatch(logindata(values))
+            console.log(values);
+            dispatch(logindata(values));
             
-            
-          }}
-        >
-          <div className="formbg  " >
+            toast.success("Sucessfully Logged in", {
+              position: toast.POSITION.BOTTOM_LEFT
+            });
+
           
 
+           }}
+        >
+          <div className="formbg  " >
+
+
             <Form className="border shadow-lg  formformate p-3 rounded-4  w-25 ">
+              <ToastContainer />
               <div className="text-center">
                 <h2>Login</h2>
                 <p>Access to our dashboard</p>
@@ -89,14 +93,14 @@ function LoginButton() {
               </div>
 
               <div className="mt-3 rounded-4 " bg-success>
-                <LoginButton/>
-                
+                <LoginButton />
+
               </div>
               <div className="login-or">
                 <span className="or-line"></span>
                 <span className="span-or">or</span>
               </div>
-            
+
               <p className="text-center">
                 Don't have an account yet?<Link to="/register"> Register </Link>
               </p>
@@ -107,9 +111,9 @@ function LoginButton() {
       {/* <div className="w-50">
       <img src={payroll} alt="circle" className="w-100" />
       </div> */}
-    
+
     </>
   );
 
-  
+
 }

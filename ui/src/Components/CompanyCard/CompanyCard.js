@@ -16,7 +16,7 @@ export default function CompanyCard({ data, EditCard, DeleteCard, index }) {
             <h6 className="text-center">{data.addressLine1}</h6>
             <h6 className="text-center">{data.addressLine2}</h6>
             <h6 className="text-center">{data.mobileNumber}</h6>
-            <Link to="/logoname" className="text-center">{data.logoName}</Link>
+            <p to="/logoname" className="text-center  text-primary">{data.logoName}</p>
             <div className="m-auto mt-2">
                 <button className="btn btn-outline-primary Editcard" onClick={() => EditCard(data)}><AiFillEdit className="font3" /></button>
 
