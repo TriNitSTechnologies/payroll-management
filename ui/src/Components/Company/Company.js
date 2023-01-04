@@ -15,7 +15,7 @@ import { toast, ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddCompany from "../AddCompany/AddCompany";
 import Loading from "../Loading/Loading";
-import { DeleteCompany, getData } from "../Hooks/api";
+import { getData } from "../Hooks/api";
 import axios from "axios";
 
 const COMPANY_URL = "https://trinitstechnologies.com/demo/api/v1/companies"

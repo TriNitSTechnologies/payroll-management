@@ -1,5 +1,5 @@
 import axios from "axios";
-import { toast } from "react-toastify";
+
 
 const COMPANY_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
  export  async function getData(setData, setLoading) {
@@ -11,6 +11,7 @@ const COMPANY_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
        
 
     }).catch((error) => {
+        
     })
 
 }
