@@ -1,0 +1,13 @@
+
+
+@media screen and (max-width:850px){
+   
+    .app-get-tagged{
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 100%;
+    }
+    .app-anti-tech{
+        width:100%
+    }
+}

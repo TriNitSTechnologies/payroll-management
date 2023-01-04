@@ -1,3 +1,9 @@
+import "./Mainpage.css";
+import { BsHouseFill } from "react-icons/bs";
+import { HiOutlineBuildingOffice2 } from "react-icons/hi2";
+import { TbAddressBook } from "react-icons/tb";
+import { HiDocumentText } from "react-icons/hi2";
+
 export default function Mainbody() {
   return (
     <div>
@@ -42,43 +48,43 @@ export default function Mainbody() {
         <div>
           <h1 className="text-center">Our best features</h1>
           <p className="text-center">
-            Below are some of the best features available in SSStockAlerts .
+            Below are some of the best features available in Trinits Technologies private limited.
           </p>
         </div>
-        <div className="d-flex  ">
-          <div className="card m-4 p-4 w-25 text-center">
+        <div className="d-flex flex-wrap flex-row card-body">
+          <div className="card m-4 p-4 text-center rounded  body-houver shadow">
             <div className="m-2 p-1">
-              <h5>Dashboard</h5>
+            <BsHouseFill className="icon-size"/>
+              <h5 className="mt-3">Dashboard</h5>
               <p>
-                More than 300+ ready-made patterns are available. These can
-                apply based on Daily, Weekly, and Monthly.
+              Trinits Dashboards+ revolutionizes the way information is viewed in the Quickbase reports dashboard by allowing the filtering of multiple reports at the same time.
               </p>
             </div>
           </div>
-          <div className="card m-4 p-4 w-25 text-center">
+          <div className="card m-4 p-4  text-center rounded body-houver shadow">
             <div className="m-2 p-1">
-              <h5>Company</h5>
+            <HiOutlineBuildingOffice2 className="icon-size"/>
+              <h5 className="mt-3">Companies</h5>
               <p>
-                More than 300+ ready-made patterns are available. These can
-                apply based on Daily, Weekly, and Monthly.
+                TriNits Technologies Pvt Ltd  develops the Web pages based on the customer requirements. Product development.
               </p>
             </div>
           </div>
-          <div className="card m-4 p-4 w-25 text-center">
+          <div className="card m-4 p-4  text-center rounded  body-houver shadow">
             <div className="m-2 p-1">
-              <h5>Reports</h5>
+            <TbAddressBook className="icon-size"/>
+              <h5 className="mt-3">Reports</h5>
               <p>
-                More than 300+ ready-made patterns are available. These can
-                apply based on Daily, Weekly, and Monthly.
+              A data report is an analytical tool used to display past, present, and future data to efficiently track and optimize the performance of a company.
               </p>
             </div>
           </div>
-          <div className="card m-4 p-4 w-25 text-center">
+          <div className="card m-4 p-4 text-center rounded  body-houver shadow">
             <div className="m-2 p-1">
-              <h5>Documents</h5>
-              <p>
-                More than 300+ ready-made patterns are available. These can
-                apply based on Daily, Weekly, and Monthly.
+            <HiDocumentText className="icon-size"/>
+              <h5 className="mt-3">Documents</h5>
+              <p className="">
+              Several popular but necessary project documentation templates can help you in your project documentation process.
               </p>
             </div>
           </div>

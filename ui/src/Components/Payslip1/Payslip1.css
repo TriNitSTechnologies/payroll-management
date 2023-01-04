@@ -1,21 +1,11 @@
-.mann{
- 
-    /* background-color: rgba(192, 192, 192, 0.678) */
-  }
+
   .mann2{
-  
-  
-    background-color:white;
-   
-  
-  }
+ background-color:white;
+   }
   .header1{
-  
-    padding-top: 10vh;
+    padding-top: 2vh;
   }
-  
-  
-  .a{
+   .a{
     color: firebrick;
     font-weight: bold;
   }
@@ -29,7 +19,7 @@
   }
   .body1{
   
-  padding-top: 10vh;
+  padding-top: 4vh;
   }
   .body1a {
     color: indigo;
@@ -48,22 +38,19 @@
   }
   .footer1{
   
-  padding-top: 10vh;
+  padding-top: 4vh;
   }
-   tbody, td, tfoot, th, thead, tr {
+ tbody, td, tfoot, th, thead, tr {
     border-width: 1px!important;
-  } 
+  }  
   
   .tthh{
     font-weight: bolder;
     font-size: 20px;
   }
   .hh{
-    height: 8vh;
+    height: 2vh;
     font-size: 16px;
-    
-    
-   
   }
   .net{
     font-size: 20px;
@@ -71,3 +58,8 @@
   .spn{
     font-size: 17px;
   }
+ .imegee{
+  height: 90px;
+  width: 330px;
+ }
+
