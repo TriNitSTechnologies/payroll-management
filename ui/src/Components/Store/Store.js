@@ -8,6 +8,7 @@ import payslipReducer  from "./PayslipSlice";
 import AppraisalReducer from "./AppraisalSlice"
 
 import appointmentReducer from "./AppointmentSlice";
+import relivingletterReduces from "./RelievingSlice";
 
 
 export default  configureStore({
@@ -17,7 +18,12 @@ export default  configureStore({
         Appraisaldata:AppraisalReducer,
 
         appointment: appointmentReducer,
+ Reliving-letter
+        OfferLetterSlice:offerletterReducer,
+        relievingSlices:relivingletterReduces,
+
         OfferLetterSlice:offerletterReducer
+
 
     }
 

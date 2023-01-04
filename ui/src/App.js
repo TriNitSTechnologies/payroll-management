@@ -48,10 +48,33 @@ import AppraisalLetter from "./Components/Appraisal-Letter/Appraisal-letter";
 import AppraisalDocument from "./Components/Appraisal-Doc/Appraisal-Doc";
 
 import Payslip5 from "./Components/payslip5/payslip5";
+ Reliving-letter
+import Reliving from "./Components/Reliving/Reliving";
+import Relievingletterform from "./Components/Relievingletterform/Relievingletterform";
+function App() {
+  let userrouter=useHistory()
+const[sidebarstatus,setSidebarStatus] = useState(false);
+const isUserLoggedIn= useSelector(state=>state.login.isUserLoggedIn)
+const sidebarclass = sidebarstatus ? 'sidebar': "sidebar sidebar-collapse";
+function handlesidebarstatus(){
+  setSidebarStatus((previousstate)=>{
+    return !previousstate;
+  })
+}
+useEffect(()=>{
+  
+  if(isUserLoggedIn){
+    userrouter.push("/home")
+  }else{
+    userrouter.push("/")
+  }
+},[isUserLoggedIn]);
+
  import Salary from "./Components/Salary/Salary"
  import Preview from "./Components/Preview/Preview"
 import Bonafide from "./Components/Bonafide/bonafide";
 import Payslip6 from "./Components/payslip6/payslip6";
+
 
 
 
@@ -94,6 +117,115 @@ function App() {
         </div>
         <div className="main">
           <Switch>
+ Reliving-letter
+          {!isUserLoggedIn && <>
+            
+            <Route path="/report">
+              <Report />
+            </Route>
+            <Route path="/forgot-password">
+              <ForgotPassword />
+            </Route>
+            <Route path="/register">
+              <Register />
+            </Route>
+            <Route path="/" exact>
+            <Mainbody/>
+            </Route>
+            
+            <Route path="/login">
+              <Login />
+            </Route>
+          </> }
+             
+            {isUserLoggedIn && <>
+            <Route path="/report">
+              <Report />
+            </Route>
+            <Route path="/company">
+              <Company />
+            </Route>
+            <Route path="/employees">
+              <Employees />
+            </Route>
+            <Route path="/reimbursement">
+              <Reimbursement/>
+            </Route>
+            <Route path="/settings">
+              <Settings />
+            </Route>
+            <Route path="/Attendense" >
+              <AttendenseForm />
+            </Route>
+
+            <Route path="/documents">
+              <Documents />
+            </Route>
+            <Route path="/Payslips">
+              <Payslips/>
+            </Route>
+            <Route path="/home" exact>
+              <Home />
+            </Route>
+            <Route path="/appointment">
+              <Appointment />
+            </Route>
+            <Route path="/reliving">
+              <Reliving />
+            </Route>
+
+            <Route path="/relievingletterform">
+              <Relievingletterform />
+            </Route>
+            <Route path="/Payslip1">
+            <Payslip1 />
+            </Route>
+            <Route path="/Payslip2">
+            <Payslip2 />
+            </Route>
+            <Route path="/Payslip3">
+            <Payslip3 />
+            </Route>
+            <Route path="/buttons">
+            <Buttons />
+            </Route>
+          
+
+            <Route path="/offer-letter">
+              <OfferLetter />
+            </Route>
+            <Route path="profile">
+              <MyProfile />
+            </Route>
+            <Route path="PrintAppoiement">
+              <PrintAppoiement />
+            </Route>
+            <Route path="/notifications">
+              <Notifications/>
+            </Route>
+ 
+            <Route path="/uploadD">
+              <Upload/>
+            </Route>
+
+
+            <Route path='/profile'>
+              <MyProfile/>
+            </Route>
+
+            <Route path='/details'>
+                <Details/>
+            </Route>
+
+            <Route path='/selectprofile'>
+              <SelectProfile />
+            </Route>
+
+            <Route path='/Payslip5'>
+              <Payslip5/>
+            </Route>
+
+
 
           
             {!isUserLoggedIn && <>
