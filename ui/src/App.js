@@ -40,6 +40,8 @@ import Appointment from "./Components/Documents/Appointment";
 import OfferLetter from "./Components/Appointment/OfferLetter";
 import AttendenseForm from "./Components/AttendanceForm/AttendanceForm";
 import Payslip5 from "./Components/payslip5/payslip5";
+import Reliving from "./Components/Reliving/Reliving";
+import Relievingletterform from "./Components/Relievingletterform/Relievingletterform";
 function App() {
   let userrouter=useHistory()
 const[sidebarstatus,setSidebarStatus] = useState(false);
@@ -133,6 +135,13 @@ useEffect(()=>{
             </Route>
             <Route path="/appointment">
               <Appointment />
+            </Route>
+            <Route path="/reliving">
+              <Reliving />
+            </Route>
+
+            <Route path="/relievingletterform">
+              <Relievingletterform />
             </Route>
             <Route path="/Payslip1">
             <Payslip1 />

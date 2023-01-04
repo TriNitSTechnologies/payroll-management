@@ -10,6 +10,8 @@ import Appointment from '../Documents/Appointment';
 import { offerletterReducer } from '../Store/Offer-LetterSlice';
 import OfferLetter from '../Appointment/OfferLetter';
 import { Button } from 'bootstrap';
+import Relievingletter from '../Documents/Relievingletter/Relievingletter';
+import relivingletterReduces, { relievingSlices } from '../Store/RelievingSlice';
 
 export default function Buttons() {
   const [value2, setValue2] = useState("");
@@ -18,7 +20,9 @@ export default function Buttons() {
   const reportsOptions = [
     "Offer-Letter",
     "Appointment Letter",
+    "Relievingletter",
      "Payslips",
+
   ];
   const dispatch = useDispatch();
  function OfferLetterData(data){
@@ -38,6 +42,17 @@ export default function Buttons() {
     }
     dispatch(appointment(obj1))
     history.push('./documents')
+  }
+
+
+  function Relievingletters(data2){
+    console.log("test " + JSON.stringify(data2))
+    let obj2={
+      selectedPage:value2,
+      fromObj: data2
+    }
+    dispatch(relievingSlices(obj2))
+    history.push('./reliving')
   }
 
 return (
@@ -86,6 +101,14 @@ return (
           <>
             <div>
              <Appointment Appdata={Appoiementdata}  />
+
+            </div>
+          </>
+        )}
+         {value2 === "Relievingletter" && (
+          <>
+            <div>
+             <Relievingletter Relievingletters={Relievingletters}  />
 
             </div>
           </>
