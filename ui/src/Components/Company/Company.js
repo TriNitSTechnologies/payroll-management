@@ -7,11 +7,8 @@ import { ConfirmDialog } from 'primereact/confirmdialog';
 import { FaOdnoklassniki } from "react-icons/fa";
 import './Company.css';
 import ReactTooltip from 'react-tooltip';
-
 import { AiFillEdit } from "react-icons/ai";
 import { AiFillRest } from "react-icons/ai";
-
-
 import trinits from '../Image/photo_2022-11-16_13-15-16.jpg';
 import CompanyCard from "../CompanyCard/CompanyCard";
 import { toast, ToastContainer } from 'react-toastify';
@@ -19,11 +16,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import AddCompany from "../AddCompany/AddCompany";
 import Loading from "../Loading/Loading";
 import { getData } from "../Hooks/api";
-
-
-
 import axios from "axios";
-
 
 
 const COMPANY_URL = "https://trinitstechnologies.com/demo/api/v1/companies"
@@ -33,13 +26,8 @@ function Company() {
     const [visible, setVisible] = useState(false);
     const [selectedIndex, setSelectedIndex] = useState();
     const [loading, setLoading] = useState(true);
-    
-
-
     const [data, setData] = useState("Table");
-
     const [ShowCompanyForm, setShowcompanyForm] = useState(false);
-
     const [selectedCompany, setselectedCompany] = useState({
         companyName: '',
         mobileNumber: '',
@@ -77,7 +65,7 @@ function Company() {
         setShowcompanyForm(true);
         setselectedCompany(Object.assign({}, Company))
     }
-   
+
 
 
 
@@ -97,7 +85,7 @@ function Company() {
 
     }
     function handleSave(showForm) {
-      
+
         setShowcompanyForm(false);
         getData();
     }
@@ -125,18 +113,11 @@ function Company() {
 
         })
     }
-    // function showDeletePrompt(callback) {
-    //     setVisible(true);
-    //     setSelectedIndex(callback);
-
-
-    // }
     function showDeletePrompt(index) {
         setVisible(true);
         setSelectedIndex(index);
 
     }
-
     if (ShowCompanyForm) {
         return (
             <AddCompany
@@ -148,24 +129,16 @@ function Company() {
             />
         )
     }
-
-
     return (
         <div className="m-4">
             <ToastContainer />
             <ReactTooltip />
-           
+
             <div className="card">
                 <ConfirmDialog visible={visible} onHide={() => setVisible(false)} message="Are you sure you want to proceed?"
                     header="Confirmation" icon="pi pi-exclamation-triangle" acceptClassName='p-button-danger' accept={DeleteCompany} />
 
             </div>
-
-
-
-
-
-          
             <div className=" border-none shadow border p-3 rounded maindata-button w-100">
                 <div>
                     <button className=" border border-white shadow rounded"><BsHouseFill className="icondata text-dark" /></button>
@@ -179,7 +152,6 @@ function Company() {
                 </div>
 
             </div>
-
             <div className=" w-100 mt-3 d-flex  flex-wrap justify-content-between">
                 <div className="shadow border rounded widthinc p-3">
                     <b>Total:{Company.length}</b>
@@ -200,14 +172,11 @@ function Company() {
                 </div>
 
             </div>
-           
+
             <div className="mt-3">
 
                 <input type="search" placeholder="Search" onChange={(data) => setSearchcompany(data.target.value)} className="form-control search-style p-3 shadow" />
             </div>
-
-
-           
             <div className={data === 'companyCard' ? 'd-block  ' : 'd-none'}>
 
                 <div className=" shadow flex-wrap flex-row d-flex border mt-2 Card-data m-auto">
@@ -224,12 +193,7 @@ function Company() {
                     }
                 </div>
             </div>
-
-
-
             <div className={data === 'Table' ? 'd-block tabledata  rounded mt-3 ' : 'd-none'}>
-
-
                 <table className=" table table-hover  mt-3 companyTable table-rounded" >
                     <tbody>
                         <h4 className="mt-2">Companies</h4>
