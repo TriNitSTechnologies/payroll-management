@@ -3,23 +3,10 @@ import * as Yup from 'yup';
 import './Appointment.css'
 
 export default function Appointment(props) {
-  // function Formsubmithandler(event){
-  //     event.preventDefault();
-  // }
+  
 
   return (
-    <div  className="border py-2 p-1 doc-home-log">
-      
-      <div className="card m-3 pay shadow ">
-        <div className="card-body d-flex justify-content-between ">
-          <div>
-            <small className="fs-6">Home / company</small>
-          </div>
-          <div>
-            <h5>Document</h5>
-          </div>
-        </div>
-      </div>
+    <div  className="doc-home-log">
     <Formik
       initialValues={{
         firstName:'',
@@ -55,11 +42,11 @@ export default function Appointment(props) {
     >
       <Form >
      
-
+<div className=''>
       <div className="card m-3  shadow ">
         <div class="card-header bg-white">
           <h4>Company details</h4>
-          <p className='fw-light'>Let every one know the essentials so they're fully prepared</p>
+          <div>Let every one know the essentials so they're fully prepared</div>
         </div>
         <div className="card-body pay ">
           <div className="d-flex basic-details-log justify-content-evenly">
@@ -75,7 +62,7 @@ export default function Appointment(props) {
               />
                <div className='text-danger fw-light'><ErrorMessage name="companyName" /></div>
             </div>
-            <div className="col-5  m-2 main-cont-sag">
+            <div className="col-5  m-3 main-cont-sag">
               <div className='mb-3 fw-bold'>
                 Company Address
               </div>
@@ -125,7 +112,7 @@ export default function Appointment(props) {
       <div className="card m-3  shadow ">
         <div class="card-header bg-white">
           <h4>Employee Details</h4>
-          <p className='fw-light'>Let every one know the essentials so they're fully prepared</p>
+          <div>Let every one know the essentials so they're fully prepared</div>
         </div>
         <div className="card-body pay ">
           <div className="d-flex basic-details-log justify-content-evenly">
@@ -184,7 +171,7 @@ export default function Appointment(props) {
       <div className="card m-3  shadow ">
         <div class="card-header bg-white">
           <h4>Human resource</h4>
-          <p className=' fw-light'>Let every one know the essentials so they're fully prepared</p>
+          <div className=' fw-light'>Let every one know the essentials so they're fully prepared</div>
         </div>
         
         <div className="card-body pay ">
@@ -215,9 +202,10 @@ export default function Appointment(props) {
       </div>
 
 
-        <span className="ms-3">
+        <div className="mb-2 mt-2 ">
           <button  className="btn btn-primary btn-lg mx-3 "  type="submit" >Generate</button>
-        </span>
+        </div>
+        </div>
         </Form>
 
        </Formik>

@@ -1,6 +1,7 @@
 .pye{
     padding-top: 10vh;
     background-color: white;
+
     }
     .p2header{
     
@@ -8,21 +9,19 @@
       border:1px solid black;
     
     }
+    .aaa{
+
+      box-shadow: white;
+    } 
    
+   .color{
+    background-color: aliceblue
+   } 
    
-   
-    .hi{
-      height: 5vh;
-  
-    }
-    .hii{
+   .hii{
       
       font-weight:bolder;
-     
-    
-    
-     
-    }
+      }
     
    
     .nmr{
@@ -38,10 +37,7 @@
     .p3h{
       border: 1px solid black;
     }
-    /* .p2header2{
-        color: blueviolet;
-        font-weight: bolder;
-    } */
+  
     .p22{
         color: brown;
         font-weight: bolder;

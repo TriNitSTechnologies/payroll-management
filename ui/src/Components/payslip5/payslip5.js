@@ -7,15 +7,15 @@ export default function Payslip5(){
     const payslipData= useSelector((state)=>state.payslip.payslipData);
     return(
         <div>
-               <button className='btn btn-outline-primary float-end m-4'>Print</button> 
+              
 
-            <div className='bg-white w-100  m-auto padding p-5 mb-5'>
-            <div className=' m-auto padding p-5 mb-5 w-80 shadow'>
+            <div className=' w-100   m-auto padding p-5 mb-5'>
+            <div className=' m-auto bg-white padding p-5 mb-5 w-80 shadow'>
                 <div className='w-100   d-flex '>
                     <div className='w-20'>
-                    {<img src={img}  width={250} height={100}/>}
+                    {<img src={img}  width={140} height={100}/>}
                     </div>
-                    <div className='text-center w-50 m-auto'>
+                    <div className='text-center  m-auto'>
                         <h2>{payslipData.companyDetails.companyName} </h2>
                         <h6>{payslipData.companyDetails.addressLine1}, {payslipData.companyDetails.addressLine2}, {payslipData.companyDetails.state},  {payslipData.companyDetails.pinCode}.</h6>
                         <h4>Payslip for the month of {payslipData.dateOfMonth}</h4>
@@ -63,7 +63,7 @@ export default function Payslip5(){
                                 <div>Indian Bank</div>
                                 <div><br></br></div>
                                 <div><br></br></div>
-                                <div>TN/MAS/1569888/000/0010344</div>
+                                <div>1001034467</div>
                                 <div><br></br></div>
                                 <div>0.5</div>
                                 <div>0.5</div>
@@ -78,10 +78,10 @@ export default function Payslip5(){
                             <div className='w-70 '>
                                 <div className='fw-bold text-center'>Earnings</div>
                             </div>
-                            <div className='w-15'>
+                            <div className='w-25'>
                                 <div className='fw-bold'>Full</div>
                             </div>
-                            <div className='w-15'>
+                            <div className='w-25'>
                                 <div className='fw-bold'>Actual</div>
 
                             </div>
@@ -110,7 +110,7 @@ export default function Payslip5(){
 
 
                             </div>
-                            <div className='w-15 m-2'>
+                            <div className='w-25 m-2'>
 
                                 <div>{payslipData.basic}</div>
                                 <div>{payslipData.hra}</div>
@@ -123,7 +123,7 @@ export default function Payslip5(){
 
 
                             </div>
-                            <div className='w-15 m-2'>
+                            <div className='w-25 m-2'>
 
 
                                 <div>{payslipData.basic}</div>
@@ -156,10 +156,10 @@ export default function Payslip5(){
                             <div className='w-70 m-2 '>
                                 <div><b>Total Earnings:INR</b></div>
                             </div>
-                            <div className='w-15 m-2'>
+                            <div className='w-25 m-2'>
                                 <div>{payslipData.totalSalary}</div>
                             </div>
-                            <div className='w-15 m-2'>
+                            <div className='w-25 m-2'>
                                 <div>{payslipData.totalSalary}</div>
 
                             </div>

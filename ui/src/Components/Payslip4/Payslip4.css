@@ -1,11 +1,18 @@
 .payslip-logo {
     width: 140px;
     height: 98px;
-   
     margin-top: 10px;
     border: none;
 }
 
-.w-80{
-    width: 80%;
+.imege1{
+    height:100px;
+    width: 310px; ;
+    border: none;
+}
+.border1{
+    border: 1px solid black;
+}
+.textcolorss{
+    background-color: rgb(201, 215, 233);
 }

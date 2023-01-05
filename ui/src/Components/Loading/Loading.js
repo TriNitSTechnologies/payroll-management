@@ -1,9 +1,11 @@
+import { CircleLoader } from 'react-spinners';
 import classes from './Loader.module.css';
  
 function Loading() {
     return <div className={classes.appLoader}>
         loading Company data......
-        <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+       
+        <CircleLoader color="blue" />
         
         <span class="sr-only">Loading...</span>
 
