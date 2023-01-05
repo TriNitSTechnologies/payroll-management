@@ -4,7 +4,7 @@ import { BsHouseFill } from "react-icons/bs";
 import { Link, useHistory } from "react-router-dom";
 import Report from "../Report/Report";
 
-import { Button } from 'bootstrap';
+
 import Appraisal from '../Appraisal-Form/Appraisal-form';
 import { useDispatch } from 'react-redux';
 import { AppraisalStatus } from '../Store/AppraisalSlice';
@@ -19,10 +19,10 @@ import { appointment } from '../Store/AppointmentSlice';
 import Appointment from '../Documents/Appointment';
 import { offerletterReducer } from '../Store/Offer-LetterSlice';
 import OfferLetter from '../Appointment/OfferLetter';
- Reliving-letter
+
 import { Button } from 'bootstrap';
 import Relievingletter from '../Documents/Relievingletter/Relievingletter';
-import relivingletterReduces, { relievingSlices } from '../Store/RelievingSlice';
+import  { relievingSlices } from '../Store/RelievingSlice';
 
 
 import { useState } from 'react';
@@ -33,7 +33,7 @@ export default function Buttons() {
  const reportsOptions = [
     "Offer-Letter",
     "Appointment Letter",
- Reliving-letter
+ 
     "Relievingletter",
      "Payslips",
 
@@ -73,7 +73,7 @@ export default function Buttons() {
     history.push('./documents')
   }
 
- Reliving-letter
+
 
   function Relievingletters(data2){
     console.log("test " + JSON.stringify(data2))
@@ -134,7 +134,7 @@ return (
 
           </>
         )}
- Reliving-letter
+ 
          {value2 === "Relievingletter" && (
           <>
             <div>

@@ -51,7 +51,7 @@ export default function Relievingletter(props) {
 
             // alert(JSON.stringify( values,2,null))
             props.Relievingletters(values)
-            console.log(JSON.stringify(values))
+            // console.log(JSON.stringify(values))
 
         }
     })

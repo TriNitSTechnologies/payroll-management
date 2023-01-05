@@ -18,7 +18,7 @@ export default  configureStore({
         Appraisaldata:AppraisalReducer,
 
         appointment: appointmentReducer,
- Reliving-letter
+ 
         OfferLetterSlice:offerletterReducer,
         relievingSlices:relivingletterReduces,
 

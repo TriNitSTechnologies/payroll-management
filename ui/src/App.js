@@ -48,33 +48,33 @@ import AppraisalLetter from "./Components/Appraisal-Letter/Appraisal-letter";
 import AppraisalDocument from "./Components/Appraisal-Doc/Appraisal-Doc";
 
 import Payslip5 from "./Components/payslip5/payslip5";
- Reliving-letter
+ 
 import Reliving from "./Components/Reliving/Reliving";
 import Relievingletterform from "./Components/Relievingletterform/Relievingletterform";
-function App() {
-  let userrouter=useHistory()
-const[sidebarstatus,setSidebarStatus] = useState(false);
-const isUserLoggedIn= useSelector(state=>state.login.isUserLoggedIn)
-const sidebarclass = sidebarstatus ? 'sidebar': "sidebar sidebar-collapse";
-function handlesidebarstatus(){
-  setSidebarStatus((previousstate)=>{
-    return !previousstate;
-  })
-}
-useEffect(()=>{
-  
-  if(isUserLoggedIn){
-    userrouter.push("/home")
-  }else{
-    userrouter.push("/")
-  }
-},[isUserLoggedIn]);
-
- import Salary from "./Components/Salary/Salary"
+import Salary from "./Components/Salary/Salary"
  import Preview from "./Components/Preview/Preview"
 import Bonafide from "./Components/Bonafide/bonafide";
 import Payslip6 from "./Components/payslip6/payslip6";
+// function App() {
+//   let userrouter=useHistory()
+// const[sidebarstatus,setSidebarStatus] = useState(false);
+// const isUserLoggedIn= useSelector(state=>state.login.isUserLoggedIn)
+// const sidebarclass = sidebarstatus ? 'sidebar': "sidebar sidebar-collapse";
+// function handlesidebarstatus(){
+//   setSidebarStatus((previousstate)=>{
+//     return !previousstate;
+//   })
+// }
+// useEffect(()=>{
+  
+//   if(isUserLoggedIn){
+//     userrouter.push("/home")
+//   }else{
+//     userrouter.push("/")
+//   }
+// },[isUserLoggedIn]);
 
+ 
 
 
 
@@ -117,7 +117,7 @@ function App() {
         </div>
         <div className="main">
           <Switch>
- Reliving-letter
+
           {!isUserLoggedIn && <>
             
             <Route path="/report">
@@ -137,7 +137,7 @@ function App() {
               <Login />
             </Route>
           </> }
-             
+{/*              
             {isUserLoggedIn && <>
             <Route path="/report">
               <Report />
@@ -223,7 +223,7 @@ function App() {
 
             <Route path='/Payslip5'>
               <Payslip5/>
-            </Route>
+            </Route> */}
 
 
 

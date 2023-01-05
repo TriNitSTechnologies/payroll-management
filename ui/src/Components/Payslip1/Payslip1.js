@@ -2,7 +2,7 @@ import { useSelector } from "react-redux";
 import sss from "../Image/logo-dark.png";
 import './Payslip1.css';
 import { ToastContainer, toast } from 'react-toastify';
-import Media from 'react-media';
+// import Media from 'react-media';
 import React, { useRef } from 'react';
 import { useReactToPrint } from "react-to-print";
 export default function Payslip1() {
